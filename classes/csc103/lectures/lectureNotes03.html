@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSC 103  How Computers Work</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+<!--     <script>
+      MathJax = {
+        tex: {
+          ams: {
+            multlineWidth: '100%',
+            multlineIndent: '2em'
+          }
+        }
+      };
+    </script> -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      .img-max {
+        max-width: 500px;
+        width:50%;
+      }
+
+      #HIDDENDIV {
+        display: none;
+      }
+
+      #table td {
+          padding: 1em;
+          border: 1px solid black;
+      }
+
+
+      #table.show tr > *:nth-child(1) {
+          display: block;
+      }
+
+      .border-right {
+          border-right: 1px solid black;
+      }
+    </style>
+
+
+
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <!-- <img class="float-right" src="../../images/gw_primary_logo.png" alt="GWU" height="160"> -->
+      <img class="float-right" src="../../../images/SmithLogoStack-cmyk.png" alt="SmithLogo" height="120">
+      <h1 class="display-3 m-0">CSC 103</h1>
+      <p class="lead">How Computers Work</p>
+      <p class="lead">Smith Computer Science </p>
+    </div>
+
+    <div class="container py-0"><!-- was 1-->
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info <span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">TBD 1</a>
+                <a class="dropdown-item" href="#">TBD 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project (if any)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Discord</a>
+                <a class="dropdown-item" href="#">Moodle</a>
+                <a class="dropdown-item" href="#">Repl.it</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes02.html">Next Module</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <br><br>
+
+
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 03: 
+        <br>
+      Representing things with Binary and Logic Gates</h1>
+      <p>
+        <br>
+      </p>
+      <h2>Outline </h2>
+
+      This class we'll discuss:
+      <ul>
+        <li>Review: Binary and its operations</li>
+        <li>More binary operators</li>        
+        <li>Recap: Representing objects using binary</li>        
+        <li>Boolean Logic into Digital Logic</li>
+        <li>The Transistor</li>
+        <li>Logic Gates</li>
+      </ul>
+
+
+
+      <p><br></p><hr><p><br></p>
+
+        <div class="mx-lg-5">
+          <img id="image" class="img-responsive" src="../figures/lecture03/bigPicture-gates.png" alt="" style="width:80%">
+          <br>
+          <span style='color:#888888'>For now, we're looking at the "what?" not the "how?"</span>
+        </div>  
+      <p><br></p><hr><p><br></p>
+
+      <h2>Review: Binary and its operations</h2>
+      <p>
+        We say that binary is a positional number system with a base of 2:
+        <br>
+        \[
+          \begin{alignat}{2}
+            0b11011000001 &=& \: 1*2^{10} \: & + & \: 1*2^9 \: &+& \: 0*2^8 &+& \: 1*2^7 \: &+& \: 1*2^6 \: &+& \: 0*2^5 \: &+& \: 0*2^4 \: &+& \: 0*2^3 \: &+& \: 0*2^2 &+& \: 0*2^1 \: &+& \: 1*2^0 \: & &\qquad\\
+            \qquad        &=& \: 1024     \: & + & \: 512   \: &+& \: 0     &+& \:   128 \: &+& \: 64    \: &+& \:     0 \: &+& \:     0 \: &+& \:     0 \: &+& \: 0     &+& \: 0 \: &+& \: 1 \: &=& \: 1729
+          \end{alignat} 
+        \]
+        <br><br>
+
+        We can do all sorts of arithmetic ( \( +,-,*,\backslash \) ) and logical operations ( \( NOT, OR, AND\) ).
+        <br><br>
+
+        Two additional logical operations to check are: XOR and NAND.
+        <br><br>
+
+
+        <h4>NOR</h4>
+        NOR is the negative or negated OR.
+        <br><br>
+        We can show the effect of this operator using a table:
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">q</th>
+              <th class="tg-0lax">p NOR q</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+          </tbody>
+        </table>
+        <br><br>
+
+
+
+
+        <h4>XOR</h4>
+        XOR (AKA: the exclusive disjunction operator) is a <i>binary</i> operator; <i>it is true if its operands are different</i>.
+        <br><br>
+        We can show the effect of this operator using a table:
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">q</th>
+              <th class="tg-0lax">p XOR q</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+          </tbody>
+        </table>
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture03/xor.png" alt="Exclusive Disjunction" style="width:20%">
+        <br><br>
+        Note: other symbols you might see are: \( p \nleftrightarrow q \text{, }  p\oplus q \text{, } p\veebar q  \text{, } p\not\equiv q \).
+        <br><br>
+
+
+        
+        <h4>NAND</h4>
+        NAND is the negated AND operator.
+        <br><br>
+        We can show the effect of this operator using a table:
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">q</th>
+              <th class="tg-0lax">p NAND q</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+          </tbody>
+        </table>   
+        <br><br>
+
+        <img class="img-fluid" src="../figures/lecture03/nand.png" alt="Conjunction" style="width:20%">
+        <br><br>
+        <span style='color:#888888'>Note that we're labeling on the outside for clarity, but the label refers to the interior of each circle</span>
+        <br><br>
+      </p>
+
+      <p><br></p><hr><p><br></p>
+      
+
+      <h2>What else can we represent with bits?</h2>
+      <p>
+
+
+        <ul>
+          <li>A yes/no piece of information (Also called a <b>Boolean</b> value) \(\checkmark\)</li>
+          <li>numbers \(\checkmark\)</li>
+          <li>letters \(?\)</li>
+          <li>images \(?\)</li>
+          <li>sound \(?\)</li>
+          <li>video \(?\)</li>
+        </ul>
+      </p>
+
+      Let's do images first.
+
+      <br><br>
+
+
+      <h3>Storing Images</h3>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span> :[2 minutes] : How would you store an image in a computer?
+        <br>
+        <div class="container mx-lg-5">
+          <span style='color:#000000'>One possible answer</span>: 
+          <div class="mx-lg-5">
+            <details>
+              <summary>(Wait; then Click)<br><br></summary>
+              <p>
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-xs-6 thumb">                    
+                      <a class="thumbnail" href="#">
+                          <img class="img-responsive" src="../figures/lecture03/invader.png" alt="From space!" style="width:70%">
+                      </a>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-xs-6 thumb">                    
+                      <a class="thumbnail" href="#">
+                          <img class="img-responsive" src="../figures/lecture03/r2d2.png" alt="blip blip bloop" style="width:40%">
+                      </a>
+                  </div>
+                  <br><br>
+                  Which could be saved as a series of 0s and 1s in memory.
+                  <br>
+                  An example is shown below:
+                </div>
+                <br><br>
+                  <img class="img-responsive" src="../figures/lecture03/invaderBits.png" alt="From space!" style="width:34%">
+                  <br>
+                <br><br>
+                How would you store color images?!!!
+                <div class="mx-lg-5">
+                  <details>
+                    <summary>(Wait; then Click)<br><br></summary>
+                    <p>
+                      <img class="img-responsive" src="../figures/lecture03/channels.png" alt="rgb" style="width:70%">
+                    </p>
+                  </details>
+                </div>
+              </p>
+            </details>
+          </div>
+        </div> 
+      </p>
+
+      <br><br>
+
+
+      <h3>Storing letters</h3>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> :[2 minutes] : How would you store a letter in a computer?
+        <br>
+        <div class="container mx-lg-5">
+          <span style='color:#000000'>One possible answer</span>: 
+          <div class="mx-lg-5">
+            <details>
+              <summary>(Wait; then Click)<br><br></summary>
+              <p>
+                Is this a good idea?
+                <br>
+                <img class="img-responsive" src="../figures/lecture03/gridLetter.png" alt="nope" style="width:50%">           
+                <br><br>
+                So, how would you do it?
+                <br>
+                <div class="mx-lg-5">
+                  <details>
+                    <summary>(Wait; then Click)<br><br></summary>
+                    <p>
+                      <img class="img-responsive" src="../figures/lecture03/ascii.png" alt="table" style="width:70%">
+                      <br>
+                      <span style='color:#888888'>(from https://theasciicode.com.ar/)</span>
+                      <br><br>
+                      Note: It's ONLY when we need to print them to a screen (or paper) that the numbers must be converted to shapes.
+                      <br>
+                      in the meantime, the computer just needs to know <b>Oh!, this number is to be treated as a letter</b>!.
+                    </p>
+                  </details>
+                </div>
+
+              </p>
+            </details>
+          </div>
+        </div> 
+        <br><br>
+
+        What do you notice about the storage approach?
+        <br>
+        How many bits do we need?
+
+      </p>
+
+      <br><br>
+
+
+      <h3>Storing Video</h3>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 3</big></b></span> :[2 minutes] : How would you store video?
+        <br>
+        <div class="mx-lg-5">
+          <details>
+            <summary>(Wait; then Click)<br><br></summary>
+            <p>
+              Multiple images would do the trick.
+              <br><br>
+              Note that, for better <i>compression</i>, you could simply store the "changes between frames". 
+            </p>
+          </details>
+        </div>
+
+      </p>
+
+      <br><br>
+
+
+
+      <h3>Storing Sound</h3>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 4</big></b></span> :[2 minutes] : How would you store sound?
+        <br>
+        <div class="mx-lg-5">
+          <details>
+            <summary>(Wait; then Click)<br><br></summary>
+            <p>
+              You could store notes!
+              <br>
+              In physics-terms, that means we just need to store the frequencies and their duration.
+              <br><br>
+              Excellent example <a href="https://www.tinkercad.com/things/8DeBovBdmEl-buzz-music-player">here</a> 
+            </p>
+          </details>
+        </div>
+
+      </p>
+
+      <br><br>
+
+      <h3>What else can we represent with bits?</h3>
+      <p>
+
+
+        <ul>
+          <li>A yes/no piece of information (Also called a <b>Boolean</b> value) \(\checkmark\)</li>
+          <li>numbers \(\checkmark\)</li>
+          <li>letters \(\checkmark\)</li>
+          <li>images \(\checkmark\)</li>
+          <li>sound \(\checkmark\)</li>
+          <li>video \(\checkmark\)</li>
+        </ul>
+      </p>
+
+      <br><br>
+
+      Now the big question ... <b>How do we do this physically (with actual electricity)?</b>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Boolean Logic into Digital Logic</h2>
+      <p>
+        The term "Boolean" comes from a mathematician called George Boole. 
+        <br><br>
+        Several additional rules and derived principles have been developed based on the basic rules seen above; these are called  <a href="https://en.wikipedia.org/wiki/Boolean_algebra">Boolean algebra</a>.
+        <br><br>
+
+        This is important to us because they give us the theoretical basis to perform a large amount of operations with Truth values of the form 0/1, which can be translated to electric circuits.
+
+        <br><br> This is how we go from "conceptual" computation to "actual" computation.
+
+      </p>
+
+      <br><br>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>The Transistor</h2>
+      <p>
+        A transistor is an electronics component that lets electricity pass through from one of its input pins (collector) to one of its output pins (emitter) if there is an input on the third <i>signal</i> pin (base). 
+        <br><br>
+        <img class="img-max" src="../figures/lecture03/transistor.png" alt="magic" style="width:30%">
+        <br><br>
+        The brilliance here is that <i>this allows an electric signal (that can be programmed) to control another electric signal</i>; making the electric component capable of self-guidance.
+
+        To explain how we do this, we'll use an analogy with water and pipes, which contains: 
+        <ul>
+          <li>a water reservoir</li>
+          <li>valves</li>
+          <li>water circuits</li>
+        </ul>
+        <br>
+        <img id="image" class="img-responsive" src="../figures/lecture03/waterTransistor2.png" alt="" style="width:60%">
+        <br><br>
+
+        If you look at the water system, depending on what the "water circuit 2" does, 
+        <ul>
+          <li>the water could come out of the <span style='color:#ff0000'>red</span> path and close the vale;</li>
+          <li>or it could come through the <span style='color:#0000ff'>blue</span> path and open the vale.</li>
+        </ul>
+        <br><br>
+
+        The transistor works like that:
+        <ul>
+          <li>if there is no <b>signal</b> into the <i>base</i>, then current does not flow from <i>collector</i>  to <i>emitter</i>;</li>
+          <li>if there IS a <b>signal</b> into the <i>base</i>, then current flows from the <i>collector</i> into the <i>emitter</i> (and one can use that current to do other things);</li>
+        </ul>
+
+        We can join several of these transistors in different ways to create circuits that reproduce the logic operations seen above: NOT, OR, AND, NOR, NAND, and XOR.
+        <br><br>
+        One example is shown below (no need to memorize):
+        <br>
+        <img class="img-max" src="../figures/lecture03/norTTL.png" alt="magic" style="width:50%">
+        <br>
+        <span style='color:#888888'>The \(  - \kern-0.4em \large{\blacktriangleright} \kern-0.35em | \kern-0.32em -\) symbol is for a <b>diode</b>, this simply lets the current flow in a single direction (that of the arrow).</span>
+        <br><br>
+
+        There are several arrangements like this that can generate the desired outputs. We call these "Logic Gates".
+      </p>
+
+      <br><br>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Logic Gates</h2>
+      <p>
+        A logic gate is a digital circuit that behaves like its boolean operator counterpart.
+        <br><br>
+
+        The Boolean Operations and the Logic gates are shown in the tables below:
+        <br><br>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-xs-6 thumb border-right">                    
+              <a class="thumbnail" href="#">
+                  <img class="img-responsive" src="../figures/lecture03/truthTables.png" alt="truth!" style="width:100%">
+              </a>
+          </div>
+          <div class="col-lg-6 col-md-6 col-xs-6 thumb">                    
+              <a class="thumbnail" href="#">
+                  <img class="img-responsive" src="../figures/lecture03/gates.png" alt="gates" style="width:100%">
+              </a>
+          </div>
+        </div>
+
+        <br><br>
+
+        Let's see one simplified view of a gate in and how the transistors help the logic:
+        <br>
+        <img class="img-responsive" src="../figures/lecture03/andGate.png" alt="and" style="width:70%">
+        <br><br>
+        The transistors act as switches that can let current flow through or not.
+        <br>
+        In this case, the two inputs (a and b) are used to activate the switches (into the <i>base</i> of the transistor) to allow the passage of a default <i>True</i> (current).
+        <br><br>
+        Note that <b>only</b> if both <b>a</b> and <b>b</b> are <b>1</b> does the output of the gate result in <b>1</b>.
+        <br><br>
+        In the water analogy, it is like a pipe with a reservoir in one side and two valves in series. 
+        <br>
+        <img class="img-responsive" src="../figures/lecture03/andWater.png" alt="and" style="width:70%">
+        <br><br>
+        Either both valves are open or no water flows.
+      </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h4>Before next class (Tuesday 09/14)</h4>
+      <br><br>
+      <b>[Due for everyone]</b> 
+      <br>
+      <ul>
+        <li>Homework 1 (in Moodle), due on Tuesday at 11:59 PM.</li>
+        <li>Review the class notes for Quiz #1.</li>
+      </ul>
+      
+
+
+
+  
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes01.html">Previous Module</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Next Module</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+   
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+<!--     <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script> -->
+  </body>
+</html>

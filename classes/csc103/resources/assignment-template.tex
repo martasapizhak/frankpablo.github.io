@@ -1,0 +1,97 @@
+% -------------------------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% -------------------------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+
+\usepackage[parfill]{parskip}
+\parskip=\baselineskip
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{solution}[1][Solution]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries}]}{\end{trivlist}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Submitted by: \studentName\\
+\collaborators}
+\rhead{CSC250 Spring 2021 - Assignment \assignmentnum\\
+\today{}}
+\cfoot{p. \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                             Start here
+% --------------------------------------------------------------
+
+\newcommand{\studentName}{YOUR NAME HERE}
+
+\newcommand{\assignmentnum}{X} % Replace X with the appropriate number
+
+\newcommand{\collaborators}{
+	% Comment out the line below if you worked alone
+	with \textit{COLLABORATORS' NAMES HERE}
+	% Uncomment the line below if you worked alone
+	% \textit{I did not collaborate with anyone on this assignment.}
+}
+
+% -----------------
+% Problem xyz
+% -----------------
+\begin{exercise}{xyz}
+Delete this text and write the problem statement here.
+\end{exercise}
+ 
+\begin{solution}
+Your solution here. 
+
+To cite any resources you used in solving the problem, include a \texttt{\textbackslash{}bibitem\{...\}} entry in the \textbf{References} section, and then call the \texttt{\textbackslash{}cite\{...\}} command like this~\cite{sipser}.
+\end{solution}
+
+% -----------------
+% Problem abc
+% -----------------
+% Use \clearpage to put each subsequent problem on a new page
+\clearpage
+
+\begin{exercise}{abc}
+Delete this text and write the problem statement here.
+\end{exercise}
+ 
+\begin{proof}
+You can also use the \texttt{proof} environment instead of \texttt{solution}, which will give you a nice little box at the end of your argument.
+\end{proof}
+
+% -----------------
+% References
+% -----------------
+\clearpage
+
+\begin{thebibliography}{9}
+\bibitem{sipser} 
+Sipser, Michael. 
+\textit{Introduction to the Theory of Computation.} 
+Course Technology, 2005. ISBN: 9780534950972. 
+ 
+\bibitem{knuthwebsite} 
+Knuth: Computers and Typesetting,
+\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
+\end{thebibliography}
+
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+\end{document}

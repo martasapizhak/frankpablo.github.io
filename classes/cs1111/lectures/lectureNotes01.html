@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSCI 1111 Introduction to Software Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 1111</h1>
+      <p class="lead">Introduction to Software Development</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <!-- NAVBAR-->
+    <div class="container py-0">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures<span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>
+                <a class="dropdown-item" href="#">Codio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./lectureNotes0.html">Previous Module</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes02.html">Next Module</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <p>
+        <hr>
+      </p>
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 01: Computational Thinking, Programming, and Design</h1>
+      <p>
+        <br>
+      </p>
+      <h2>Objectives</h2>
+
+      By the end of this module, you will be able to:
+      <ul>
+        <li> Explain the concept of Abstraction.</li>
+        <li> Differentiate between an algorithm and a program.</li>
+        <li> Demonstrate familiarity with the process of compiling a simple program.</li>
+        <li> Explain the steps for developing program.</li>
+        <li> Explain the concept of the black-box.</li>
+        <li> Differentiate Between Syntax and Semantics.</li>
+      </ul>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Before Starting
+      </h2>
+
+      <ul>
+        <li>You should have read Sections <span style="color: #ff0000; font-weight: bold">1.01 to 1.07</span> in the Codio Course</li>
+        <li>You should familiarize yourself with the Codio Interface. We will do this throughout the course but you should go to the Codio course CS1111-Fall-2020 and complete <b>Module 0: Codio Tutorial For Students</b>.</li>
+      </ul>
+
+      <p>
+        If you do not have your Codio course ready, use any text editor or simple IDE. Some possibilities are:
+      </p>
+      <ul>
+        <li>Write using <a href="https://www.sublimetext.com/">Sublime</a>; compile and run in the Terminal</li>
+        <li>Use IDEs like: IntelliJ, DrJava, or JGrasp</li>
+      </ul> 
+
+      <!-- Link To Piazza  -->
+      <!--
+      <a href="https://piazza.com/class/k54aoxklemz5nd?cid=272_f1" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" target="_blank">Module 1 thread : Codio Reading</a>
+      -->
+      
+
+      <p><br></p><hr><p><br></p>
+
+      <h3>The Abstraction Ladder and The Black Box</h3>
+
+      <p>
+        If it sounds like a Sci-Fi novel, you are not wrong. This is concept allowed humanity to learn more and organize their thoughts.
+      </p>
+
+
+      <div class="containter mx-5">
+        <blockquote class="blockquote">
+          <p class="mb-0">
+            The essence of abstractions is preserving information that is relevant in a given context, and forgetting information that is irrelevant in that context.
+          </p>
+          <footer class="blockquote-footer">John V. Guttag 
+            <cite title="Source Title">
+              MIT
+            </cite>
+          </footer>
+        </blockquote>
+
+        <blockquote class="blockquote">
+          <p class="mb-0">
+            Computer Science is the science of abstraction.
+          </p>
+          <footer class="blockquote-footer">
+            Gabe Parmer 
+            <cite title="Source Title">
+              GWU
+            </cite>
+          </footer>
+        </blockquote>
+      </div>
+
+      <p>
+       <b><big>Abstraction</big></b> is what allow us to have conversations without specifying absurd levels of detail. Think about how you order a Pizza: 
+      </p>
+
+      <div class="container m-5">
+
+        <p>
+          <b>Example 1</b>: Think about how you order a Pizza: 
+        </p>
+
+        <ol>
+          <li>Call the pizza place</li>
+          <li>Ask for a menu Item (pepperonni pizza)</li>
+          <li>Give address and pay information</li>
+          <li>Hang up</li>
+        </ol>
+
+      </div>
+
+      <p>
+        This is a very <b>high-level of abstraction</b> in which the context is clear to both parties and you both already know what every key word means. It is high-level because the <b>details are not needed, only the context</b>.
+      </p>
+
+      <div  class="container m-5">
+        <p>
+          <b>Example 2</b>: If you were teaching an alien (that has never even heard of what a pizza is) to make a pepperonni pizza from scratch, you can't simply say "make me a pepperonni pizza". You'd have to go into great detail about it. Asuming the alien speaks english and all the ingredients are there and they are labeled and identifiable:
+        </p>
+
+        <ol>
+          <li>Place 4 cups of bread flour, 1 teaspoon of sugar, 1 envelope of yeast, and 2 teaspoons of salt in the bowl of a stand mixer.</li>
+          <li>Mix, adding 1.5 cups of water and 2 tablespoons of olive oil and beat until the dough forms into a ball. </li>
+          <li>ETC (you get where this is going)</li>
+        </ol>
+      </div>
+     
+
+      <p>
+        This is a very <b>low-level of abstraction</b> in which <b>the context is not used (much) and great detail is needed</b> to make progress.
+      </p>
+
+      <div class="container m-5">
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span> :[2 minutes] You will be assigned to a random Breakout room. Come up with an activity where it is possible to instruct someone how to succeed using only high-level concepts; Also come up with one activity in which you are usually forced to give very low-level instructions.
+      </div>
+
+      <hr align="center" width=30%>
+
+      <h3>Abstraction in this class</h3>
+
+      <p>
+        In this class, we will use abstraction to <b>analize</b> a problem and <b>design</b> a solution for it.
+      </p>
+
+      <p>
+        <b>Analysis</b>: We will break the problem into parts and identify the high-level steps to follow in order to complete each task. After we understand the problem, we must design a solution.
+      </p>
+
+      <p>
+        <b>Design</b>: We will follow a careful approach to solving problems: 
+      </p>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg">
+            <img class="float-left mx-4" src="../figures/lectureNotes01/HighToLow.png" width="100">
+          </div>
+          <div class="col-lg-10">
+            <p>
+              <ol>
+                <li>High-Level Sketch: first write (or draw) the solution using english (or diagrams)</li>
+                <li>Sanity-Check: try your solution for some test cases and see if the expected solution is obtained</li>
+                <li>Pseudo-Code: Identify which programming elements can be used for each part of the Sketched solution and rewrite the Sketch with the general use of these elements (no details) </li>
+                <li>Code: Write (Edit) each module of the solution using appropriate programming language</li>
+                <li>Correct: fix any <i>spelling</i> errors in your code</li>
+                <li>Test: Teast each module by running it with input for which you expect known output</li>
+                <li>Debug: If you have any unexpected output go back and fix the <i>logic</i> of your program</li>
+              </ol>
+            </p>
+          </div>
+        </div>
+      </div>  
+      <br>
+      <p>
+        Steps 1-3 we call "Planning".
+        <br>
+        <img class="img-fluid mx-auto py-2" src="../figures/lectureNotes01/PlanningProcess.png" width=60%> 
+      </p>
+        <br>
+      <p>  
+        Steps 4-7 we call the ECT process (Edit, Compile, Test):
+        <br>
+        <img class="img-fluid mx-auto py-2" src="../figures/lectureNotes01/ECTprocess.png" width=60%>
+      </p>
+
+      <hr align="center" width=30%>
+
+      <h3>Algorithms vs Programs</h3>
+      <div class="container m-5">
+        <p>
+          <b><big>Algorithm</big></b>: The High-Level steps to solve a problem. This corresponds to the <i>Planning</i> part above.
+        </p>
+        <p>
+          <b><big>Program</big></b>: The algorithm implemented as a set of steps written with correct syntax, and using a set of existing programming features. This corresponds to the <i>ECT</i> part above.
+        </p>
+      </div>
+
+      <hr align="center" width=30%>
+
+      <h3>Planning a Solution</h3>
+
+      <p>
+        This part is mostly creativity, insight, and experience. This is where puzzle solving skills and mathematics, and imagination let you come up with solutions.
+      </p>
+      
+      <div class="container m-5">
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span>:[2 minutes] You will be assigned to a random Breakout room. Please discuss a possible <b>high-level solution</b> (in english) for the following problem:
+        <p>
+          <!--
+          <span style='color:#ff8000'><b><big>If you are given 2 numbers (<b>a</b> and <b>b</b>), how can you find their <b>Greatest Common Divisor</b> (<b>GCD</b>)?</big></b></span> Example: for a:30 and b:48, you should get a GCD of 6.
+        -->
+        <span style='color:#ff8000'><b><big>If you are given any 3 objects (<b>a</b>, <b>b</b>, and <b>c</b>), how can you find the one with the <b>minimum weight</b>?</big></b></span>
+        <br>
+
+          
+        </p>
+        Note: I'll ask one of you to volunteer a description of theirgroup's solution. You can:
+        <ul>
+          <li>Raise your hand in BBUltra and i'll ask let you speak when I call on you, or</li>
+          <li>You can write your solution on the chat</li>
+        </ul>
+      </div>
+
+      <p>
+        <b>What is the point?</b>: 
+        <br>
+        For some problems, it is enough to discuss them in english to solve them and do a sanity check. In this case, sanity checks would mean verifying that your method works for other instances of the same problem.
+        <br>
+        For example, if the weights are represented by numbers, then:
+        <ul>
+          <li>For a:4, b:3, c:2, the minimum should be c</li>
+          <li>For a:4, b:9, c:7, the minimum should be b</li>
+          <li>ETC</li>
+        </ul>
+
+        <b>Have you thought of everything?</b>: 
+        <br>
+        For some problems, you should consider odd cases or problematic ones that might need a decision.
+        <br>
+        For example, if the weights are represented by numbers, then:
+        <ul>
+          <li>For a:4, b:4, c:7, who is the minimum?</li>
+          <li>For a:-7, b:0, c:2, who is the minimum?</li>
+          <li>ETC</li>
+        </ul>
+        <br>
+        <b><big>Terminology: </big></b>Checking (exploring) these sanity-check cases is called <b>exploring the solution space</b>.
+      </p>
+      <br>
+
+      <p>
+        <b>What about the Simplified Code?</b>: 
+        <br>
+        Once you have a proposed solution in english, you can either simplify the language to its minimum representation ot draw a sketch.
+        <br>
+        Here is a simple sketch of an <b>incorrect</b> possible solution for the minimum number problem:
+        <br>
+        <img class="img-fluid mx-auto py-2" src="../figures/lectureNotes01/SketchSmallest.png" width=75%>
+        <br>
+        <b>Why is it wrong!</b>
+        <br>
+        Having a sketch allows you to <b>see</b> your english solution in a compressed form and it might reveal some problems!
+      </p>
+      <p>
+        <b>Pseudo-Code</b>: We'll show you a way of writing this in simplified code form.
+      </p>
+      <p>
+        <b>Sanity Checks</b>: You can try the above options with either method to verify it works.
+      </p>
+      <br>
+
+      <hr align="center" width=30%>
+
+      <h3>Basic ECT process:</h3>
+
+      <div class="container m-5">
+        <span style='color:#06a015'><b><big>Activity 3</big></b></span> :[2 minutes] Go to Codio 1.03 and modify the provided code so that when you press the blue button, the <b>Compilation fails</b> and reports an error.
+        <br>
+        Remove the semicolon at the end of the print instruction and press RUN:
+        <br>
+        <img class="img-fluid mx-auto py-2" src="../figures/lectureNotes01/beforeHW.png" width=60%>
+        <img class="img-fluid mx-auto py-2" src="../figures/lectureNotes01/afterHW.png" width=60%>
+        <br>
+        Now correct the error and press the button again.
+      </div>
+
+      <p>
+        We can also Compile using the <b>Terminal</b>. 
+      </p>
+
+      <div class="container m-5">
+        <span style='color:#06a015'><b><big>Activity 4</big></b></span> :[2 minutes] Go to Codio 1.05 and follow along while I perform the compile and execute actions. We will intentionally cause errors and study what happens.
+      </div>
+
+      <p>
+        Very soon we will be doing more complex things than printing "Hello, World!". At that point, we will work on one of the most important skills in programming (and logic): <b>Debugging</b>.
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>Abstraction when programming: The Black-Box approach</h2>
+
+      <p>
+        The point of planning is to find the <i>general structure</i> of the solution, in terms of a series of steps from <i>operation-to-operatoin</i> or <i>module-to-module</i>.
+        <br>
+        <br>
+        If you get here, you are <i>taking for granted</i> that each module simply does its job. That is treating a module as a <b>black box</b>.
+        <br>
+        Using a module as a black box is like saying: <i>"I don't care how it works, I only need to know what I need to give it and what it gives me in return."</i> 
+      </p>
+      
+      <div  class="container m-5">
+
+        <p>
+          We'll make a rough analogy with ordering a pizza:
+          <br>
+          <img class="img-fluid mx-auto py-2" src="../figures/lectureNotes01/pepperonniOrder.png" width=60%>
+        </p>
+
+        <p>
+          At the high-level, we only need the inputs (pizza order and money) and outputs (actual pizza and receipt).
+        </p>
+
+        <br>
+
+        <p>
+          We're using the pizzeria as a black box. We don't need to know about or participate in what the actual work is:
+          <br>
+          <img class="img-fluid mx-auto py-2" src="../figures/lectureNotes01/PizzaOpenBox.png" width=60%>
+        </p>
+      </div>
+      
+      <p><br></p><hr><p><br></p>
+
+      <h2>Syntax and Semantics</h2>
+
+      <p>
+        We will look into this next class. Just so you have these terms in mind for next class:
+      </p>
+      <div class="container m-5">
+        <p>
+          <b><big>Syntax</big></b>: The set of rules that define well formed <i>sentences</i> in a given language. In other words: <i>Is the spelling correct, given the language (Java)?</i>.
+          <br>
+          Example: the sentence "He!lp the d,og ate the pizza" has incorrect syntax (even if, as a human, you might be able to pick up on the meaning.
+        </p>
+        <p>
+          <b><big>Semantics</big></b>: This looks at the meaning of the <i>sentences</i> rather than at how they are written. In other words, <i>Does the code actually do what we want it to do?</i>.
+          <br>
+          Example: the sentence "Help, the pizza ate the dog!" has correct syntax but it does not reflect what the interlocutor attempted to say:
+          <br>
+          <img class="img-fluid mx-auto py-2" src="../figures/lectureNotes01/dogoPizza.png" width=30%>
+        </p>
+      </div>
+
+      <p><br></p><hr><p><br></p>
+      <h2>
+      Meeting your Classmates
+      </h2>
+
+      <p>
+        We have placed you all in groups of 3 or 4. In order to give you an oportunity to get to know each other a bit more, and to also get some bonus points, we've deviced an activity.
+      <br>
+        The idea is this:
+        <ol>
+          <li>You will go back to your groups and number each other 1, 2, 3, ... This will be your <b>member number</b></li>
+          <li>You will set up some time to meet every one of your groupmates for at least 20 minutes before next Thursday (each one of you needs to meet the others one-on-one). We recommed exchanging emails, phones, etc.</li>
+          <li>During your scheduled meeting, you will interview eachother by asking questions from a special form we've prepared for you.</li>
+          <li>Each of you will use the same form for each of your interviewees.</li>
+          <li>You will use the form that has the same number as the member number chosen above.</li>
+          <li>The forms are linked below (Please fill only one per interviewee and use your gwmail.gwu.edu  email when filling the form):
+            <ol>
+              <li><a href="https://forms.gle/yKRtLhWxJnzkHe6q9">Classmate Interview Form 1</a></li>
+              <li><a href="https://forms.gle/QA1EMwuHTGu7MvVp9">Classmate Interview Form 2</a></li>
+              <li><a href="https://forms.gle/ofDLbyGkdsAKsQAt8">Classmate Interview Form 3</a></li>
+              <li><a href="https://forms.gle/oFxGj9y2M7syv9Pi9">Classmate Interview Form 4</a></li>
+            </ol></li>
+        </ol>
+
+      </p>
+
+
+      <div class="col-xs-0 col-md-2"></div>
+        </div>
+      </div>
+
+      <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes0.html">Previous Module</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes02.html">Next Module</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+   
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </body>
+</html>

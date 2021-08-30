@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSCI 1111 Introduction to Software Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 1111</h1>
+      <p class="lead">Introduction to Software Development</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <!-- NAVBAR-->
+    <div class="container py-0">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img class="img-fluid mx-auto py-2" src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures<span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>
+                <a class="dropdown-item" href="#">Codio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./lectureNotes15.html">Previous Lecture</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes17.html">Next Lecture</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <p>
+        <hr>
+      </p>
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 16: Intro to Scope and Encapsulation</h1>
+      <p>
+        <br>
+      </p>
+
+      <h2>
+        Objectives
+      </h2>
+
+      <p>
+        By the end of this module, you will be able to:
+        <ul>
+          <Li> Demonstrate use of global variables.
+          <Li> Demonstrate variable shadowing or hiding.
+          <Li> Demonstrate ability to put methods in a separate class and use them.
+        </ul>
+      </p>
+      
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Before Starting
+      </h2>
+
+      <!--
+      <ul>
+        <li>Read Sections <span style="color: #ff0000; font-weight: bold">16.01 to 16.03</span> in the Codio Course</li>
+      </ul>
+    -->
+
+      <p>
+        If you do not have your Codio course ready, use any text editor or simple IDE. Some possibilities are:
+      </p>
+      <ul>
+        <li>Write using Sublime; Compile and run in the Terminal</li>
+        <li>Use IDEs like: IntelliJ, DrJava, or JGrasp</li>
+      </ul> 
+<!--
+      <p><br></p><hr><p><br></p>
+
+      <h2>Catching Up</h2>
+
+      <p>
+        Before we move forward, let's catch up (complete any remaining work from the previous module)
+        <br>
+        In this case, make sure we've got:
+        <ol>
+          <li>One-Dimensional Arrays... Declaring, Initializing, and Accessing!</li>
+        </ol>
+
+      </p>
+-->
+
+<!-- SIMHA START -->
+
+<p><br></p><hr><p><br></p>
+<h2>
+Global variables
+</h2>
+
+
+
+<p> 
+Consider the following program:
+     <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/scopeexample.png"><p>
+
+
+<span style='color:#06a015'><b><big>Activity 1</big></b></span>:
+Execute the above program. What does it print?
+<br><br>
+
+
+<p> Let us point out a few things:
+  <ul>
+  <li> The variable <font color="#000000"><tt>x</tt></font> is declared <i>outside</i>
+     any of the methods, including <font color="#000000"><tt>main</tt></font>:
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/scopeexample2.png"><p>
+
+  <P><Li> It is accessible in any method defined in the class:
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/scopeexample3.png"><p>
+
+  <p><li> Such a variable is called a <i>global variable</i>.
+        <Br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  => It's global to all the methods in the class.
+  </ul>
+
+
+
+<span style='color:#06a015'><b><big>Activity 2</big></b></span>:
+Define another global variable, an <font color="#000000"><tt>int</tt></font>, and
+two new void methods with no input parameters: <font color="#000000"><tt>increaseIt()</tt>, and <font color="#000000"><tt>decreaseIt()</tt>, which increase and decrease the new global variable by 1 respectively. 
+Demonstrate its use by printing the values of the variable both before and after modification.
+</font>
+
+
+
+<p> Why are globals useful? Let's look at an example:
+  <ul>
+  <li> Suppose we have the following data in the file <font color="#000000"><tt>file.data</tt></font>.
+   <font size="+1"><font color="#000000"><pre>
+5
+2.0  1.0
+0.5  3.0
+3.1  5.2
+4.0  3.6
+5.0  0.5
+   </pre></font></font>
+  The integer on the first line is the number of points. Then, each
+  line has one <i>(x,y)</i> pair.
+
+  <p><li> Goal: read the points and then compute the minimum, maximum
+    of the <i>x</i> and <i>y</i> values.
+
+  <p><li> Here's the program:
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/pointsexamplepart1.png"><p>
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/pointsexamplepart2.png"><p>
+
+
+  <p><Li> Here, we've conveniently used a single set of
+    globals that is accessed by multiple methods.
+
+  <p><li> If we did NOT use globals, we would have to use
+     return values and parameters.
+  </ul>
+
+
+
+<span style='color:#06a015'><b><big>Activity 3 [Group Work] (3-minutes)</big></b></span>:
+<br>
+<ul>
+  <li>You will be placed in groups of 3 or 4. <b>Note your group number!</b></li>
+  <li>Discuss what it would take to achieve the same results without global variables.
+    <br><p class="mx-5">In other words, if we change <b>readPoints()</b> to read the points into variables that are in main, what do you need to change in the rest of the program in order to compute the same operations (computing the bounds and printing them)?</b>.</p>
+  </li>
+  <li>Write these ideas down and send them in a BBUltra Message <b>To Pablo (not the General Chat)</b> with this format:
+<br>
+<p class="mx-5">
+  <font color="#000000"><tt>Team &lt;team number&gt; ,  Members: &lt;name1&gt;, &lt;name2&gt;, &lt;name3&gt;: &lt;your suggested changes here&gt;</li></tt>
+</ul>
+<br>
+Remeber to <b>Note your group number!</b>, we'll be using it again.
+</p>
+
+<!--
+. Discuss what it would take to achieve the same results without global variables. In other words, if we change <b>readPoints</b> to read the points into variables that are in main, what do you need to change in the rest of the program in order to compute the same operations of <b>computeBounds</b> and <b>printBounds</b>.
+<br><span class="mx-5">you can be general when describing these changes</span>. 
+<br>Write these ideas down and send them in a BBUltra Message <b>To Pablo (not the General Chat)</b> with this format:
+<br>
+<font color="#000000"><tt>Team &lt;team number&gt; ,  Members: &lt;name1&gt;, &lt;name2&gt;, &lt;name3&gt;</tt>: &lt;your suggested changes here&gt;
+-->  
+<!--
+Instead of <font color="#000000"><tt>computeBounds</tt></font>, you can define 
+one method each for the min and max of x values,
+and one method each for the min and max of y values.
+-->
+
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+Variable shadowing and scope
+</h2>
+
+
+
+<P> Consider this program:
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/shadowexample.png"><p>
+  <ul>
+  <li> Consider the method <font color="#000000"><tt>foo</tt></font>:
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/shadowexample2.png"><p>
+  The local definition of a variable with the same name <font color="#000000"><tt>y</tt></font>
+  <i>shadows</i> the name of the global.
+  
+  <p><li> Something similar happens with the method <font color="#000000"><tt>bar</tt></font>:
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/shadowexample3.png"><p>
+  Thus, parameter variables shadow (obscure) global variables
+  of the same name.
+  </ul>
+
+
+
+<p> In general, variables can be defined in any block 
+of code:
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/anothershadowexample.png"><p>
+  <ul>
+  <li> Here, the <font color="#000000"><tt>m</tt></font> and <font color="#000000"><tt>n</tt></font> in <font color="#000000"><tt>main</tt></font>
+    refer to the global <font color="#000000"><tt>m</tt></font> and <font color="#000000"><tt>n</tt></font>
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/anothershadowexample2.png"><p>
+
+  <p><li> However, the <font color="#000000"><tt>m</tt></font> in <font color="#000000"><tt>foo</tt></font> is a local variable
+     that shadows the global one:
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/anothershadowexample3.png"><p>
+
+  <p><Li> The <i>scope</i> of a variable is the block of code
+    that can access a variable.
+
+  <p><li> The <i>scope</i> of the global variable <font color="#000000"><tt>m</tt></font> is
+    any method inside the class.
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/anothershadowexample4.png"><p>
+
+  <p><li> Similarly, one can see the scope of the other variables
+   in method <font color="#000000"><tt>foo</tt></font>, for example <font color="#000000"><tt>m</tt></font>:
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/anothershadowexample5.png"><p>
+
+  <p><li> And the others:
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/anothershadowexample6.png"><p>
+  </ul>
+
+
+
+<p> Now consider this example:
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/loopscopeexample.png"><p>
+
+
+<span style='color:#06a015'><b><big>Activity 4</big></b></span>:
+What gets printed out? The value <font color="#000000"><tt>1</tt></font> repeatedly
+or increasing values of <font color="#000000"><tt>m</tt></font>?
+<!--
+-->
+
+<br><br>
+
+
+<span style='color:#06a015'><b><big>Activity 5</big></b></span>: 
+Open the class <b>AnotherShadowingExample</b> and run it in the 
+<a href="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+AnotherShadowingExample+%7B%0A%09static+int+m+%3D+1%3B+%0A++static+int+n+%3D+2%3B+%0A%0A%09public+static+void+main(String%5B%5D+argv)+%7B%0A++++foo()%3B+//%3C+start+here%0A++++System.out.println(%22m%3D+%22+%2B+m+%2B+%22%3B+n%3D+%22+%2B+n)%3B%0A%09%7D%0A%0A%09static+void+foo()+%7B%0A++++int+m+%3D+3%3B+//+this+is+a+local+m%0A++++for+(int+i%3D0%3B+i%3Cm%3B+i%2B%2B)%7B%0A++++++int+n+%3D+4%3B+//+local+n+(for+each+cycle)%0A++++++System.out.println(n)%3B%0A++++++if+(n+%3E+0)%7B%0A++++++++int+k+%3D+5%3B%0A++++++++System.out.println(k)%3B%0A++++++%7D%0A++++%7D%0A++++%0A++++int+j+%3D+6%3B%0A%09%09j+%3D+j%2B1%3B%0A++++System.out.println(j)%3B%0A%09%7D%0A++%0A%7D%0A&mode=display&curInstr=0">Java Visualizer</a>
+
+Observe the following: 
+  <ul>
+    <li>Examine the variables within each of the scopes and experiment with
+      which ones are shadowed.</li>
+    <li>Add a new method, with parameters that shadow global
+      variables, and with local variables that also shadow other
+      variables.</li>
+    <li>When does shadowing work as expected, and when does it yield a
+      compiler error?</li>
+  </ul>
+  
+<br><br>
+
+
+
+<p><br></p><hr><p><br></p>
+<h2>
+Packaging and encapsulation
+</h2>
+
+<p> Consider the following program:
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/arrayexamplepart1.png"><p>
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/arrayexamplepart2.png"><p>
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/arrayexamplepart3.png"><p>
+  <ul>
+  <li> Here, we see that there is an array and a bunch
+    of methods that "do things" with the array.
+
+  <p><Li> Now, the methods appear to be of general use to
+     a variety of arrays, and could be useful in the future.
+
+  <p><li> Suppose we were to "package" these useful methods
+    into a class called <font color="#000000"><tt>ArrayTool</tt></font> as follows:
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/arraytoolpart1.png"><p>
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/arraytoolpart2.png"><p>
+
+  <p><li> Then, these could be used in the future by
+    any program in the same directory as <font color="#000000"><tt>ArrayTool</tt></font>, e.g., 
+       <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes16/futureapp.png"><p>
+
+  <p><li> This type of packaging is called <i>encapsulation</i>.
+     <ul>
+     <li> Related code can be together.
+     <li> Other programs need not know the details, they can
+        just <i>use</i> (i.e., call) the methods in the class.
+     </ul>
+
+  <p><li> Such encapsulation and re-use is a key part of 
+     how efficiencies are realized in software development.
+
+  </ul>
+
+<h4>Compiling Classes with Dependencies</h4>
+Notice that Compiling FutureApp requires you to do one of two things:
+<ul>
+  <li>You can navigate to the shared folder (code/) and compile in there with:
+    <br><font color="#000000"><tt>javac FutureApp.java</tt></font>. 
+    <br>This will compile both the indicated file and the dependency IF they are in the same folder.</li>
+    <li>Alternatively, if you are compiling from a different directory (workspace/), you can list the series of files to be compiled, like this: 
+      <br><font color="#000000"><tt>javac ArrayTool.java FutureApp.java</tt></font></li>
+</ul>
+
+
+<span style='color:#06a015'><b><big>Activity 6</big></b></span>:
+Try compiling in those two ways. 
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 7 [Group Work]</big></b></span>:
+<br>Instructions:
+<ul>
+  <li>You will be placed in groups of 3 or 4. <b>Go to your previous group number!</b></li>
+  <li>You will be asked to come up with one example program for the group and demo it to a TA or the instructor (only one of you needs to code while the others help).</li>
+  <li>Task: add a new useful method to <font color="#000000"><tt>ArrayTool</tt></font> above
+and use it in a new application (call it <tt>FutureApp2</tt>). Examples are:
+    <ul>
+      <li>Find the Standard Deviation (look it up)</li>
+      <li>Finde the mode (look it up)</li>
+      <li>Find the median (look it up)</li>
+      <li>Find the sum</li>
+    </ul>
+  </li>
+</ul>
+<!--
+-->
+</font>
+
+
+
+<p><br></p><hr><p><br></p>
+<h2>
+Visibility and Encapsulation
+</h2>
+
+
+Consider the following program that is split into two files.  Make
+sure both files are in the same folder/directory.  First,
+VisibilityTest.java:
+<br><br>
+
+<font size="+1"><font color="#000000"><pre>
+public class VisibilityTest {
+    public static int a = 3;
+    static int b = 4;
+    private static int c = 5;
+
+    private static int helper() {
+        return 1;
+    }
+
+    public static int helper2() {
+        return helper() + 1;
+    }
+}
+</pre></font></font>
+
+Second, VisibilityMain.java:
+<br><br>
+
+<font size="+1"><font color="#000000"><pre>
+public class VisibilityMain {
+    public static void main(String[] args) {
+        System.out.println(VisibilityTest.helper());
+        System.out.println(VisibilityTest.helper2());
+        System.out.println(VisibilityTest.a);
+        System.out.println(VisibilityTest.b);
+        System.out.println(VisibilityTest.c);
+    }
+}
+</pre></font></font>
+
+It is quite common to break the main method into a separate class.
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 8 [Group Work] (2 minutes)</big></b></span>: 
+<ul>
+  <li>You will be placed in groups of 3 or 4. <b>Go to your previous group number!</b></li>
+  <li>Discuss what would be needed to Fix the compiler errors from the given example.  Why are there errors?  What are the keywords in the program that are causing the compiler errors?</li>
+  <li>At the end, some groups will be called to share their responses.</li>
+</ul>
+
+<!--
+-->
+</font>
+<br><br>
+
+Programmers can control the <i>visibility</i> of each of the methods
+and global variables within their classes.  
+<ul>
+  <p><li>Visibility controls if a method outside of the class can
+      access the given method/variable.</li></p>
+  <p><li>Visibility is controlled by
+  the <font color="black">public</font>
+  and <font color="black">private</font> keywords</li></p>
+  <p><li><font color="black">public</font> means that the
+      method/variable is accessible outside of the class.</li></p>
+  <p><li><font color="black">private</font> means the opposite.  The
+      symbol is private to the class.</li></p>
+  <p><li>By default, symbols are visible to other classes in the same package (think of this as only files in the same folder).</li></p>
+</ul>
+
+
+
+<span style='color:#06a015'><b><big>Activity 8 answer the following questions</big></b></span>: 
+<br>
+ Why do we want to control visibility?  Why would we want to <i>hide</i>
+  with <font color="black">private</font> any of our
+  methods/variables?  Use the following example as a guide:
+
+  <ul>
+    <li>Our class stores a spreadsheet for all the student
+      grades.</li>
+    <li>It includes methods to add students, add homeworks, and add
+      grades for each student for each homework.</li>
+    <li>It includes a method to retrieve the grade for a student's
+      homework.</li>
+    <li>Why might we want a private global variable?</li>
+    <li>Why might we want private methods?</li>
+  </ul>
+</font>
+
+
+<!-- SIMHA END -->
+
+      
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes15.html">Previous Lecture</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes17.html">Next Lecture</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+      <!--
+    <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script>
+ -->
+  </body>
+</html>

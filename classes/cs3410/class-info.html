@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../images/pabloFaceIcon.png">
+    <title>CSCI 3410 Systems Programming</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 3410</h1>
+      <p class="lead">Systems Programming</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <div class="container py-0"><!-- was 1-->
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img src="../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="./class-info.html">Class Info <span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./schedule.html">Schedule and Lectures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>                
+                <a class="dropdown-item" href="#">TinkerCad</a>
+                <a class="dropdown-item" href="#">CSAPP/3e</a>
+                <a class="dropdown-item" href="./system-setup.html">System-Setup</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-8">
+        <h1>Class Information</h1>
+
+        <p><br></p>
+
+        <h3>Latest Announcements</h3>
+        <p>Important notes from Piazza will also be placed here</p>
+
+        <div class="card bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-header">Welcome to cs3410!!</div>
+          <div class="card-body">
+            <h5 class="card-title">Complete setup!</h5>
+            <p class="card-text">
+              Please complete the setup indicated in lab 0 and lecture 0!.
+              <br>
+              <a href="#office_hours" id="my-link" >Also, Check the info about office Hours.</a>
+              <br>
+            </p>
+          </div>
+        </div>
+
+        <p></p><hr><p></p>
+
+        <h3>Information</h3>
+        <p>These sections contain information about how the class is run</p>
+
+        <!-- Acordion Extra -->
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-light btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Who/Where/When (<i>click to expand</i>)
+                </button>
+              </h2>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                  <b>Professor</b>: Pablo Frank Bolton (pfrank at gwu)
+                  <br>
+                  <strong>Research interests</strong>: <i>Human-Robot Interaction, Robotic Perception, STEM education
+                  </i>
+                  <br>
+                  <strong>Contact for Class stuff</strong>: Use <i>Piazza</i> first (see Course Materials), otherwise, reach out on office hours if possible. If you must, you can also email me.
+                  <br><br>
+
+                  <a id="office_hours"><strong>Office Hours</strong></a>: Thursdays 6 PM to 7 PM Online: Blackboard Collaborate Ultra. 
+                  <!--
+                  Make appointment here: <a href="https://calendar.google.com/calendar/selfsched?sstoken=UUlfYmlBRU85cFg5fGRlZmF1bHR8NzFiZTgxODcyMjczYjgzNTBjMTVhM2RlODBmN2MwYTg">Book Appointment</a>.
+                -->
+
+                  <br><br>
+                  <b>Office Hour Rules</b>: 
+                  <ul>
+                    <li>Office Hours will be <b>thematic</b>. That means that we will discuss 3 or 4 different subjets per session.</li>
+                    <li>If you want some concept reviewed oor an example analyzed, youo should submit a "theme" in the appropriate Piazza post before that week's office hours.</li>
+                    <li>Whilee we can discuss some specific examples, these office hours are focused on clcarifying concepts and working examples (seen in class or past HW solutions). </li>
+                    <li>We'll use the Main Course Room in BBUltra as a waiting room and we'll use a breakout group for any private help sessions.</li>
+                    <li>Show up 5 minutes early.</li>
+                    <!--
+                    <li>Have your question(s) ready and all materials ready so that when you share your screen we can quickly see the problem.</li>
+                    <li>You can show up to the Main Course Room in BBUltra without appointment but do not expect to be helped (there might not be anyone available).</li>
+                    -->
+                  </ul>
+                  <br>                  
+                  <b>Class Schedule</b> (<i>see required attendance rule on Grading Section</i>): 
+                  <ul>
+                    <li>Monday/Wednesday 10:00AM - 11:15PM Online : Blackboard Collaborate Ultra.</li>
+                  </ul>                  
+                  <br>
+                  <b>Lab</b> (<i>see required attendance rule on Grading Section</i>):
+                  <ul>
+                    <li>Thursday (Sec 30) 9:35 – 10:50 am Online: Blackboard Collaborate Ultra</li>
+                    <li>Thursday (Sec 31) 9:35 – 10:50 am Online: Blackboard Collaborate Ultra</li>
+                  </ul>
+
+                  <b>TAs:</b>
+                  TBD
+                  Office Hours: Check Piazza
+                  <br>
+                  <b>UTAs:</b>
+                  TBD
+                  Office Hours: Check Piazza
+                  <br>
+                  <b>LAs:</b>
+                  TBD
+                  Office Hours: Check Piazza
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-light btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Objectives and Structure (<i>click to expand</i>)
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                  Objectives - In completing this class, students will...
+                </p>
+                <ul>
+                  <li>Write software that can sense the environment and interact with it:
+                    <ul>
+                      <li>Collecting data from sensors.</li>
+                      <li>Analyzing the sensor data.</li>
+                      <li>Issuing commands to drive external devices. </li>
+                    </ul>
+                  </li>
+                  <li>Analyze software routines to determine if the physical limitations of the device affect code design. If necessary, rewrite software routines that will operate correctly within the device’s physical limitation constraints. </li>
+                  <li>Write software and configure hardware that accounts for the noisy real-world environment. Examples include debouncing keystrokes and smoothing analog signals to account for spikes.</li>
+                  <li>Design cyber-physical systems that are optimized for speed, computational power, reliability and energy conservation. The cyber-physical systems are composed of software and hardware components that utilize multiple data inputs and outputs.</li>
+                  <li>Correlate desired changes in the functioning of an embedded system to the different parts involved in its construction (hardware, control software, inputs/outputs, memory, communications, etc.)</li>
+                  <li>Demonstrate familiarity with key concepts in circuit design, digital logic, memory management, and the basics of operating systems, networking, and security</li>
+                  <li>Demonstrate familiarity with the underlying system through the different APIs and abstractions, including system support for process and thread control, virtual memory, and networking.</li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <p>
+                  Structure - This class is broken into two main activities: lectures and lab.
+                </p>
+                <ul>                    
+                  <li>
+                    Lectures will discuss the main concepts of systems programming and will be divided into theoretical and practical sessions which will include significant portions of programming (in C). Everyone should have their computers set up and ready to code before every lecture.
+                  </li>
+                  <li>
+                    Labs will help you jump into more significant programming projects. You will program during lab, and be responsible for deliverables.
+                  </li>
+                  <li>
+                    Students are assessed through a combination of individual and group homework, online exercises, lab assignments, and exams. Attendance of both labs and lectures is mandatory (attendance during COVID-19 will be evaluated a bit differently, see <i>Grading</i>).
+                  </li>                  
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-light btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Prerequisites and Student Responsibilities (<i>click to expand</i>)
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                  Prerequisites:
+                </p>
+
+                <ul>
+                  <li>CSCI 2113 Software Engineering</li>
+                  <li>CSCI 2461 Computer Architecture 1</li>
+                </ul>
+
+                <p>
+                  Responsibilities - Students must
+                </p>
+                <ul>
+                  <li>
+                    Attend all classes unless you are sick or there is an emergency. In these cases, please contact the professor. During COVID-19, See Special note on grading.
+                  </li>
+                  <li>
+                    Interact, ask questions, and generally participate in class discussions. Participation is a graded part of the course.
+                  </li>
+                  <li>
+                    Attend all labs, and do work assigned therein. During COVID-19, see Special note on grading.
+                  </li>
+                  <li>
+                    Complete programming problems individually unless working in a group as specified on the assignment in which case you can work only with those group members. We do plagiarism detection so don't throw the course away.
+                  </li>
+                  <li>
+                    When working with a group, it is essential that each group member pull their own, but also that other group members let them do so!
+                  </li>
+                </ul>
+                <p>
+                  Course Philosophies. 
+                </p>
+                <p class="px-4">
+                  Throughout the class, students should focus on adhering to the following general tenets: 
+                </p>
+                <ul>
+                  <li>
+                    Try it! -- A common question is "will this work", or "what will happen in this case". The only reasonable answer is "try it and see!" Your system will not blow up if you program incorrectly, and it is <b>essential</b> to learn to harness trial and error as one of the most effective ways to learn programming.
+                  </li>
+                  <li>
+                    Know your sources, and use them! -- We will provide links and readings throughout the course and we will expect you to complete them in a timely manner.
+                  </li>
+                  <li>
+                    Be proud of your code! -- Properly indent it, simplify it where you can to make it more understandable, and comment it where appropriate. You're taking part in an art that most often is shared, and it matters if others can understand your code!
+                  </li>
+                  <li>
+                    Planning is the best debugging! -- You should never jump into code before thinking about it thoroughly. Design your programs by breaking them into independently implementable chunks, and write + debug them one by one.
+                  </li>
+                  <li>
+                    Practice methodical debugging! -- Spend time "stepping though" your program, statement by statement to understand the logic behind it, and why it is ending up in a buggy state. Do not take a program that doesn't work, and modify smaller parts of it until it works. Understand why it doesn't work, and use that knowledge to change or even rewrite your program!
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h2 class="mb-0">
+                <button class="btn btn-light btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Course Materials (<i>click to expand</i>)
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+              <div class="card-body">
+                <ul>
+                  <li>Webpage for the course (here) <a href="./class-info.html"> Class Info</a></li>
+                  <li>Blackboard and Blackboard Collaborate Ultra (BBUltra)</li>
+                  <li>
+                    <p>
+                      ZyBooks:
+                    </p>
+                    <p>
+                      ZyBooks is a cloud based platform that allows students to complete readings and exercises on subjects related to the upcoming lectures and labs.  
+                    </p> 
+                  </li>
+                  <li>
+                    <p>
+                      TinkerCad:
+                    </p>
+                    <p>
+                      TinkerCad is a cloud based platform that allows for the creation, assigning, completion, testing, and grading (manual or automatic) of simulated electronics assignments. 
+                    </p> 
+                  </li>
+                  <li>Piazza</li>                  
+                  <li> For a detailed view of the Lectures and Activities, go to <a href="./schedule.html">Schedule</a> </li>
+                </ul>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingFive">
+              <h2 class="mb-0">
+                <button class="btn btn-light btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Grading (<i>click to expand</i>)
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                  <b>Grade Calculation</b>:
+                </p>
+                <ul>
+                  <li>Participation:                <b>5%</b></li>
+                  <li>Labs:                         <b>20%</b></li>
+                  <li>Homework Assignments:         <b>20%</b></li>
+                  <li>Project Assignments:          <b>30%</b></li>
+                  <li>Final Exam/Assignment:        <b>25%</b></li>
+                </ul>
+                <p>
+                  <b>Late Submissions</b>:
+                </p>
+                <p>
+                  Normally, we do not accept any late submissions. 
+                </p>
+                <p>
+                  For this semester only, we will give partial credit for small HW assignments and projects (not for prep readings and exercises). The partial credit will be:
+                </p>
+                <ul>
+                  <li>One day late: -25%</li>
+                  <li>After one day, no assignment will be graded.</li>
+                </ul>
+                <p>
+                  Submitting 1 second late is the same as a full day late. Plan ahead and submit early.
+                </p>
+                <br><br>
+                <p>
+                  <b>Prep Activities</b>: Prep activities are readings and exercises that must be completed in TinkerCad or ZyBooks BEFORE the Lectures or Labs. These will be graded in the following way:
+                  <ul>
+                    <li>Reading Only: 100 IF completed the reading on time; 0 otherwise.</li>
+                    <li>Reading And Exercises: 30% is the exercise grade and 70% is for simply completing the reading; 0 otherwise.</li>
+                    <li>Once the deadline arrives, these will be Read-Only with no extensions.</li>
+                  </ul>
+                </p>
+                <hr>
+                <p>
+                  <b>Notes on Grading during COVID-19</b>:
+                </p>
+                <p>
+                  COVID-19 has caused several changes to how we run the class.
+                </p>
+                <br>
+                <p class="px-4">
+                  Participation instead of Attendance:
+                </p>
+                <p class="px-5">
+                  In lieu of attendance, we will be keeping track of in-class and in-lab (synchronous) participation <b>or</b> your participation using asynchronous methods (Piazza, Office-Hours, Codio exercises). 
+                </p>
+                <p class="px-4">
+                  Synchronous vs Asynchronous Materials:
+                </p>
+                <p class="px-5">
+                  During COVID-19, some students might not be able to attend synchronously because of their timezone or their available technology. 
+                </p>
+                <p class="px-5">
+                  If you will not be able to attend (any) lectures and/or labs, you need to register as a fully-asynchronous student with the instructor (send me a detailed explanation using a private message on Piazza). If you miss few synchronous lectures (one or two) then you don't need to do this.
+                </p>
+                <p class="px-5">                  
+                  We will offer asynchronous options that need to be completed in a timely manner. 
+                  For these students, we will have a different way of counting participation:
+                </p>
+                <ul class="px-5">
+                  <li>You will be asked to participate in asynchronous team discussions using Piazza.</li>
+                  <li>If asked to, you will be required to attend office hours.</li>
+                  <li>You might be asked to complete oral interviews where you explain concepts or code, or do live coding. </li>
+                  <li>You might be asked to submit video recordings where you explain a concept, explain your code, or present a diagram. </li>
+                </ul>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingSix">
+              <h2 class="mb-0">
+                <button class="btn btn-light btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    Academic Honesty (<i>click to expand</i>)
+                </button>
+              </h2>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                  Just as you can do a google search for code online, it is trivial for us to do the same. We have caught numerous people cheating in the past in this way. If you feel pressured about an assignment, please come see me instead of cheating.
+                </p>
+                <p>
+                  You are not allowed to collaborate on the homework and lab assignments unless explicitly told to. Group assignments require collaboration amidst each group, but no collaboration between groups is permitted. Please refer to the academic integrity policy linked from the course web page. This policy will be strictly enforced. If you're having significant trouble with an assignment, please contact me. Please see: <a href="https://studentconduct.gwu.edu/academic-integrity">Academic Integrity Policy</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            <h4>Anonymous Feedback Form</h4>
+            <br>
+            <p>
+              We will add a link inside blackboard to an anonymous feedback form so you can let us know if there is anything getting in the way of your learning. You will find it in the blue left-hand side menu:
+            </p>
+            <br>
+            <img class="img-fluid mx-auto py-2" src="./figures/lectureNotes01/feedbackFormLink.png" width=60%>
+          </p>
+
+        </div>
+        <!-- END Acordion Extra-->
+
+      
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script>
+      $('#my-link').click(function(e) {
+          $('#collapseOne').collapse('show');       
+      });
+    </script>
+  </body>
+</html>

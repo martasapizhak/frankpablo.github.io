@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSC 250  Theory of Computation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      .img-max {
+        max-width: 500px;
+        width:50%;
+      }
+
+      #HIDDENDIV {
+        display: none;
+      }
+
+      #table td {
+          padding: 1em;
+          border: 1px solid black;
+      }
+
+
+      #table.show tr > *:nth-child(1) {
+          display: block;
+      }
+    </style>
+
+
+
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <!-- <img class="float-right" src="../../images/gw_primary_logo.png" alt="GWU" height="160"> -->
+      <img class="float-right" src="../../../images/SmithLogoStack-cmyk.png" alt="SmithLogo" height="120">
+      <h1 class="display-3 m-0">CSC 250</h1>
+      <p class="lead">Theory of Computation</p>
+      <p class="lead">Smith Computer Science </p>
+    </div>
+
+    <div class="container py-0"><!-- was 1-->
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info <span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">TBD 1</a>
+                <a class="dropdown-item" href="#">TBD 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project (if any)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Discord</a>
+                <a class="dropdown-item" href="#">Moodle</a>
+                <a class="dropdown-item" href="#">Repl.it</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes02.html">Next Module</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <br><br>
+
+
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 01: Welcome to CSC 250</h1>
+      <p>
+        <br>
+      </p>
+      <!-- <h2>Objectives</h2>
+
+      By the end of this module, you will be able to:
+      <ul>
+        <li> Identify the rules for the course.        
+        <li> Identify all the tools and  that will be used in the course.
+        <li> Explain the difference between Programming and Computer Science. 
+        <li> Demonstrate Familiarity with the Codio Interface.</li>  
+      </ul>
+ -->
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Before Starting: <br>
+        Who's who and why are we here?
+      </h2>
+      <br><br>
+
+      <h4>Pablo</h4>
+      <p>
+        Name: Pablo Frank Bolton ("Frank" and "Bolton" are last names); <br>
+        Pronouns: He, Him; <br>
+        you can call me "Pablo" <br><br>
+        <b>What do I do?</b>
+
+        <ul>
+          <li>Human-Computer-Interaction <br>
+            <img class="img-max" src="../figures/lecture01/PabloHCI.png" alt="robots are cool">
+            <br><br>            
+          </li>
+          <li>Biology-CS collaborations <br>
+            <img class="img-max" src="../figures/lecture01/PabloSD-Mosquitoes.png" alt="live bugs vs programming bugs">
+            <br><br>
+          </li>
+          <li>Teaching and STEM research <br>
+            <img class="img-max" src="../figures/lecture01/officeWall4655.png" alt="I like to draw stuff">
+          </li>
+        </ul>
+      </p>
+      <br><br>
+      
+      <h4>My Dog Yak</h4>
+      this is my dog, Yak:
+      <br>
+      <div class="row">
+          <div class="col-lg-5 col-md-5 col-xs-5 thumb">
+              <a class="thumbnail" href="#">
+                  <img class="img-responsive" src="../figures/lecture01/yak01.png" alt="Yak!" style="width:100%">
+              </a>
+          </div>
+          <div class="col-lg-5 col-md-5 col-xs-5 thumb">
+            
+              <a class="thumbnail" href="#">
+                  <img class="img-responsive" src="../figures/lecture01/reportCard.png" alt="Good-Bad Boy" style="width:90%">
+              </a>
+          </div>
+        </div>
+      (Informal Dog-Walk Hours can be used for petting Yak, chatting with me, or even to talk shop)
+      <br><br>
+      
+      <h4>Instructional Team</h4>
+      <p>
+        Name: Winnie Zong
+        <br>
+        OHs:  Sunday 1-3 pm and 7-9 pm; Monday 7-9 pm; All in Ford CS classroom (TBD)
+        <br>
+
+      </p>
+      <br><br>
+
+      <h4>
+        The Students
+      </h4>
+      <p>
+        Please fill out this small <a href="https://forms.gle/bZ62gVgoADrF37YV9">3-minute-biography</a> so I can get to know you a bit.
+      </p>
+      <br><br>
+
+      <h4>
+        The Class
+      </h4>
+
+      <br><br>
+      <p>
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span> :[2 minutes] : Can anyone tell me what Computer Science is?
+        <div class="container m-5">
+          <span style='color:#000000'>One possible answer</span>: 
+          <details>
+            <summary>(Wait until we have a couple definitions; then Click to expand and see mine.)<br><br></summary>
+            <p>
+              <i>Computer Science is the structured study of, and the design of solutions for, problems that are solvable with an algorithm.</i> 
+
+              
+              <div class="container mx-lg-5">
+                <span style='color:#888888'><b>And what is an algorithm?</b></span>
+                <br>
+                <span style='color:#888888'>One possible answer: 
+                  <details><summary>(Wait; then Click)</summary>
+                    <p>
+                      <i>A series of steps that allow you to solve a problem.</i><br>
+                      (there is a bit more than that, but for now, that's enough)
+                    </p>
+                  </details>
+                </span>
+              </div>
+
+
+              <br><br>
+
+              <i>another possible definition: "A mathematical set of tools for understanding (just about) any system"</i>
+              <br><br>
+
+              <ul>
+                <li>
+                  Computer Science is not simply a collection of data to be memorized. <br>
+                  CS is a way to approach the analysis of a problem and the design of a solution for it. <br>
+                </li>
+                <li>
+                  The fact that it has "computer" in the name is an indication of the <i>way</i> we think of and design solutions for these problems. <br>
+                  A computer requires <i>structure</i> and <i>organization</i> to be able to function and so, CS is the discipline that teaches one to think in a structured and organized manner of ways to analyze and solve problems.
+                  <br>
+                  However, we can do CS wisthout computers as long as we <i>think</i> the right way.  
+                  <br><br>                
+                  <blockquote class="blockquote">
+                    <p class="mb-0">
+                      <i>"Computer Science is no more about computers than astronomy is about telescopes"</i>
+                    </p>
+                    <footer class="blockquote-footer">Edsger Dijkstra 
+                      <cite title="Source Title">
+                        MIT
+                      </cite>
+                    </footer>
+                  </blockquote>
+                  <span class="mx-5" style='collor:#888888'>Dijkstra was a Dutch Computer Scientist that was good (The Serena Williams of CS).
+                  </span>
+                  <br><br>
+                </li>
+                <li>
+                  You will see many similarities with engineering, mathematics, and physics because 1) CS is the descendant those fields, and 2) it inherits the scientific method.
+                </li>
+                <li>
+                  One distinction betwee CS and Physics is that Physics attempts to formulate general laws from observed patterns while CS attempts to explore the imits of computatioon given a set of basic rules.
+                  <p class="mx-5">
+                      Sort of like seeing what can be buillt given a few types of Lego pieces.
+                  </p>
+                </li>
+              </ul>
+
+            </p>
+          </details>
+        </div>
+
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> :[10 minutes] : 
+        Let's analyze a system woth simple rules and see what sort of probllems can arise and how we could sollve them.
+        <br><br>
+
+        <b>Preliminary Scenario</b>: Casino Roulette
+        <br>
+        <img class="img-fluid" src="../figures/lecture01/roulette.png" alt="pick your poison" style="width:25.8%">
+        <br><br>
+
+        <p class="mx-5">
+          We assume 50-50 chance of black vs red (ignore green)
+        </p>
+        <br><br>
+
+        <b>Problem Scenario</b>: Phone Roulette
+        <br>
+        <img class="img-fluid" src="../figures/lecture01/phoneRoulette.png" alt="call it in" style="width:80%">
+        <br><br>
+        <p class="mx-5">
+          What should happen:
+          <ol>
+            <li>we call in a color (let's say "red")</li>
+            <li>the dealer spins the roulette and gets a color (let's say it comes out "red")</li>
+            <li>the dealer announces the color (if you win you get credit, if you lose you owe)</li>
+          </ol>
+
+          <span style='color:#06a015'><b>Activity 2.1</b></span> :[2 minutes] : <i>What could go wrong?</i>
+          
+        </p>
+        <br><br>
+
+        <span style='color:#06a015'><b>Activity 2.2</b></span> :[2 minutes] : Can you propose a solution?
+        <div class="container mx-lg-5">
+          <span style='color:#888888'>Tips: 
+            <details><summary>(Wait; then Click)</summary>
+              <p>
+                <br>
+                Option 1: use a trusted 3rd Party (boring and often wrong)
+                <br><br>
+                Option 2: we need to have both parties save 1) the initial guess, and 2) the actual outcome,
+                <br>
+                and then reveal both simultaneously.
+                <br>
+                <div class="mx-4">
+                  Assume that:
+                  <ul>
+                    <li><i>the parties involved have limited computational power (a realistic scenario)</i>, and</li>
+                    <li><i>some processes are easy to do but hard to undo!</i></li>
+                  </ul>
+                <br><br>
+                </div>                
+              </p>
+            </details>
+          </span>
+        </div>
+        <br><br>
+
+
+        <p><b>One possible answer below</b></p>
+        <div id="passw">
+          <div>
+              <!-- (THE PASSWORD IS factors) -->
+              Enter the password to proceed:
+          </div>
+          <div>
+            <input type="password" id="password" onkeydown="if (event.keyCode == 13) document.getElementById('button').click()" /> 
+            <!-- IMPORTANT! this part is so if you click enter, it works. -->
+          </div>
+                    
+          <div>
+            <br/>
+            <input id="button" type="button" value="Reveal" onclick="if (document.getElementById('password').value == 'factors') { 
+            document.getElementById('table').classList.toggle('show');   document.getElementById('passw').style.display='none'; } 
+            else {  alert('Invalid Password!'); password.setSelectionRange(0, password.value.length);   } " />
+          </div>
+            <!-- it will autoselect wrong input if wrong -->
+            <br /><br /><br />
+        </div>
+        <br><br>
+
+        <table id="table">
+            <tr> 
+              <td id="HIDDENDIV" >
+                <p>
+                  Some processes are easy to do but hard to reverse:
+                  <br>
+                  <img class="img-fluid" src="../figures/lecture01/hardToReverse.png" alt="hard to reverse" style="width:80%">
+                  <br><br>
+                  So we could use this idea to easily "hide" each parties info until it is time to reveal it.
+                  <br><br>
+                  For example: multiplying two numbers together is pretty easy:
+                  <br>
+                  \[ 2399 * 7703 = ?\]   
+                  <br><br>
+                  However, <i>factoring</i> a number can be quite hard:
+                  <br>
+                  \[25240577 = A * B\]
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td id="HIDDENDIV" >
+                So, How does this help with our phone roulette?
+                <br><br>
+                Imagine these steps:
+                <ol>
+                  <li>
+                    The Casino and you agree that you will give them a number that has a factor that signifies "red" or one that signifies "black". 
+                    <br>
+                    Let's say that if we use a factor that ends in "7", that means "red", if we don't, that means "black".
+                    <br>
+                    Example: \( 18479497 = 2399 * 7703\) means that you chose "black" (no factor ends in "7").
+                  </li>
+                  <li>
+                    You tell the dealer your number (18479497).  
+                  </li>
+                  <li>
+                    The dealer spins the roulette and says the result out loud. Let's say they got "black"
+                  </li>
+                  <li>
+                    You tell the dealler your factors (2399, and 7703) and they verify if you got it right or wrong by multiplying.
+                    <br>
+                  </li>
+                </ol>
+                <br><br>
+                <span style='color:#06a015'><b>Activity 2.3</b></span> :[2 minutes] : What cold go wrong?
+                <br>
+
+                <span style='color:#888888'>One possible answer: 
+                  <details><summary>(Wait; then Click)</summary>
+                    <p>
+                      What if you choose two ways of getting a number: one that has a "7" in the factor and one that doesn't.
+                      <br>
+                      Example: \( 5083 = 221*23 \) (no "7" = "black") but also \( 5083 = 299*17 \) (a "7" = "red")
+                      <br><br>
+                      The trick is, of course, that \( 5083 = 13*17*23 \)
+                    </p>
+
+                    <br><br>
+
+                    <p>
+                      <span style='color:#06a015'><b>Activity 2.4</b></span> :[2 minutes] : How can we solve this?!!
+                    </p>
+                    <br><br>
+                    <div  class="mx-5">
+                      <span style='color:#888888'>Side Note: Now imagine factoring this number: 
+                      <br>
+                      20,988,936,657,440,586,486,151,264,256,610,222,593,863,921
+                      <br>
+                      (which has only 44 digits... the largest known number of its kind has almost 25 million digits)
+                    </span>
+                    </div>                    
+                  </details>
+                </span>
+              </td>
+            </tr>
+        </table>
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h4>Rules for Computation</h4>
+      <p>
+        Now, let's say we define the set of "simple rules" to be the following:
+        <br><br>
+        Given the following set of operations:
+        <br>
+         <img class="img-fluid" src="../figures/lecture01/operations.png" alt="operations" style="width:40%">
+        <br><br>
+        <b>What kinds of problems can we solve?</b>
+
+       </p>
+
+
+      <p>
+        This class has three main objectives:
+        <ul>
+          <li>
+            <b>Learn the language of computation</b>: learning how to understand, analyze, and solve problems through the language of computation (not programming).
+          </li>
+          <li>
+            <b>Try to answer: what is doable with a computer?</b>: Explore the limits of computation.
+          </li>
+          <li>
+            <b>Try to answer: What is <i>efficiently</i> doable with a computer</b>: Explore computational complexity.
+          </li>
+        </ul>
+        <br><br>
+
+        The topics we'll explore include:
+        <ul>
+          <li>Logic and proofs</li>
+          <li>Regular languages and expressions</li>
+          <li>Context-free languages</li>
+          <li>Finite automata </li>
+          <li>Turing machines</li>
+          <li>Decidability</li>
+          <li>Enumerability</li>
+          <li>Mapping reducibility</li>
+          <li>Computational complexity</li>
+          <li>Advanced topics</li>
+          <li>Some fun examples from cryptography, ML, and more</li>
+        </ul>
+
+
+       
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Remaining checklist for today:
+      </h2>
+
+      <ol>
+        <li>Course Information</li>
+        <li>Problem Sets</li>
+        <li>Locate the course page on Moodle</li>
+        <li>Locate Discord info on Moodle and Sign up to Discord.</li>
+        <li>Locate Repl.it info on Moodle and Sign up to Repl.it</li>
+        <li>Locate Overleaf info on Moodle and Sign up to Overleaf</li>
+        <li>Meeting and Accommodations</li>
+      </ol>
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>
+      Course Information
+      </h2>
+
+      <p>
+        The class information is located in the <a href="../class-info.html"> Class Info</a> link of the navigation bar. We will go over it now. When we are done checking it out, make sure to continue here.
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>
+      Problem Sets
+      </h2>
+
+      <p>
+        <ul>
+          <li>8 ~weekly problem sets</li>
+          <li>Due on Thursdays by 5pm EST (starting next week)</li>
+          <li>Submit your work on Moodle as an organized, legible PDF</li>
+          <li>A <a href="../resources/assignment-template.tex" download>LaTeX template</a> is available for typesetting your assignments</li>
+          <li>Recommendation: try Overleaf! (Smith has a site license)</li>
+          <li>Collaboration: study groups are strongly recommended, but you should submit your writeup on your own
+            <br> &nbsp;&nbsp;(see the course website for full policy on Academic Integrity)</li>
+          <li>Important note: clarity of thought >> rigor</li>
+          <li>Late policy: -20% per day late, up to 2 days
+            <br> &nbsp;&nbsp;(after which the assignment is ineligible for credit)</li>
+        </ul>
+        
+      </p>
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Using Discord
+      </h2>
+
+      <p>
+        We will use Discord as our main communication hub. 
+        <br>
+        <ol>
+          <li>
+            Please sign up for Discord:
+            <img class="img-fluid" src="../figures/lecture01/getDiscord.png" alt="getDiscord">
+          </li>
+          <br><br>
+          <li>
+            Join the smith-f21-csc250-01 server.
+            <br>
+            OR use this invitation link: <a href="https://discord.gg/fGpbM9pn">https://discord.gg/fGpbM9pn</a>
+          </li>
+          <li>
+            You can read <a href="https://support.discord.com/hc/en-us/articles/360045138571?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm"> this tutorial</a> to get an idea of how to use it.
+          </li>
+        </ol>
+      </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Using Moodle 
+      </h2>
+
+      <p>
+        Access Moodle here: <a href="https://moodle.smith.edu/">https://moodle.smith.edu/</a>
+        <br>
+        We'll keep links to each lecture in Moodle. In addition, we'll have any PDFs, readings, and other resources.
+        <br>
+        I'll update the course Moodle with the appropriate links and information as we move forward in the course.
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>
+        Using Repl.it 
+      </h2>
+
+      <p>
+        Repl.it (AKA replit) is a <b>free</b>, collaborative, in-browser IDE. An IDE is an Integrated Development Environment, which is a fancy way of saying "a text editor that can also check and run your code". 
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture01/replIt.png" alt="">
+        <br><br>
+        <b>IF</b> we have programming assignments, replit is where we'll do them.
+        <br><br>
+        The important part is that we'll be able to exchange files and check your work through replit, making it easier to check your code for errors, grade your work, and distribute templates to get you started.
+      </p>
+
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Using Overleaf
+      </h2>
+
+      <p>
+        <a href="https://www.overleaf.com/">Overleaf</a> is an online LaTeX editor.
+        <br><br>
+        <i>What is LaTeX?</i> you ask. 
+        <br>
+        From <a href="https://www.latex-project.org/">https://www.latex-project.org/</a>: 
+        <br>
+        <blockquote class="blockquote">
+          <p class="mb-0">
+            <i>"LaTeX is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation. LaTeX is the de facto standard for the communication and publication of scientific documents."</i>
+          </p>
+          <footer class="blockquote-footer px-5">a lot of geeks like me (and you, soon enough)
+            <br>
+          </footer>
+        </blockquote>    
+        <br><br>
+        Overleaf lets you add a llittle bit of metadata info to a document to make it look better:
+        <br><br>
+        <p><img class="img-fluid" src="../figures/lecture01/latex.png" style="width:60%"><p>
+
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Meeting and Accommodations
+      </h2>
+
+      <p>
+        I would be very happy to meet you during office hours. <br>
+        This will help me get to know you and learn how best to communicate.
+        <br><br>
+        Office Hours are <b>not</b> for remedial or emergency meetings, its part of the <b>academic experience</b>!
+        <br>
+        In OHs, we can talk about the class work and organization, but also about aspirations, expectations, curiosities, and more.
+        <br>
+        I really like office hours, so please feel free to drop by.
+        <br><br>
+
+        You may take this opportunity to let me know if you have arranged any accommodations with ODS.
+      </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Acknowledgements
+      </h2>
+
+      <p>
+        This course has been designed with the help of Jordan Crouser.
+        <br>
+        (Thanks, Jordan)
+      </p>
+      
+
+      <p><br></p><hr><p><br></p>
+
+      <h4>Before next class (Monday 09/13)</h4>
+      <br><br>
+      <b>[Due for everyone]</b> register to Repl.It and Overleaf.
+      <br><br>
+      <b>[Optional]</b> Think about the following "puzzle":
+      <br>
+      If I have a dish of potatoes, and the following statements are true:
+      <ul>
+        <li>No potatoes of mine, that are new, have been boiled.</li>
+        <li>All my potatoes in this dish are fit to eat.</li>
+        <li>No unboiled potatoes of mine are fit to eat.</li>
+      </ul>
+      What can be concluded about the potatoes in the dish?
+
+<!-- 
+The first and third statements can be connected by a transitive argument. All of the new potatoes are unboiled, and unboiled potatoes aren't fit to eat, so no new potatoes are fit to eat.
+
+The second statement can be expressed as the equivalent contrapositive. All of the potatoes in the dish are fit to eat; if there is a potato that is not fit to eat, it isn't in the dish.
+
+Then, once again, a transitive argument is applied. New potatoes aren't fit to eat, and inedible potatoes aren't in the dish. Thus, there are no new potatoes in the dish. 
+-->
+  
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2 disabled" href="#">Previous Module</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes02.html">Next Module</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+   
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+    <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script>
+  </body>
+</html>

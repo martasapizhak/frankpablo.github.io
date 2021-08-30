@@ -1,0 +1,575 @@
+
+
+<h2>
+Conditionals and arrays
+</h2>
+
+
+
+<p> Consider this example:
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/positiveelementsum.png"><p>
+
+The program adds up the non-negative elements in the array.
+
+
+
+<b>1.19 Exercise</b>:
+In <font color="#000000"><tt>module1.pdf</tt></font>,
+trace through <font color="#000000"><tt>i</tt></font> and <font color="#000000"><tt>sum</tt></font> in the above example.
+</font>
+
+<br><br>
+
+<b>1.20 Exercise</b>:
+In <font color="#000000"><tt>SearchArray.java</tt></font>,
+write a program using the same array as above that does
+the following: it searches the array for a given 
+integer and prints out whether the search was successful.
+     <font size="+2">
+     <font color="#000000"><pre>
+    public static void main (String[] argv)
+    {
+        int[] A = {-5, 2, 3, -9, 12, 4, -30};
+
+  int searchItem = 4;
+
+        <font color="#dc143c">// Write your loop-and-conditional here:</font>
+
+    }        
+     </font></pre></font>
+
+
+For example, suppose we want to search a given array
+to see if it has the element <font color="#000000"><tt>4</tt></font>. Then, for the
+above array, the output should be "Yes, 4 exists in the array".
+If the search item is 
+<font color="#000000"><tt>5</tt></font>, it should print "heck, no. 5
+is not in the array".
+</font>
+
+
+
+
+<p> Minimum and maximum elements in an array:
+  <ul>
+  <li> This is often a useful thing: to find the range of some given data.
+
+  <P><li> As we'll see, it is also something that will help in sorting data.
+
+  <p><li> Here's a first attempt at finding the maximum:
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/arraymaximum.png"><p>
+  </ul>
+
+
+
+<b>1.21 Exercise</b>:
+In <font color="#000000"><tt>module1.pdf</tt></font>,
+trace the values of <font color="#000000"><tt>i</tt></font> 
+and <font color="#000000"><tt>max</tt></font> 
+through the above program. Can you think of an array 
+that would cause the program to fail to find the maximum?
+How would you fix the problem?
+<!-- If all were negative. Fix: start with max=A[0] -->
+</font>
+
+
+
+  <ul>
+  <li> Now, let's add the minimum:
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/arraymaxmin.png"><p>
+  </ul>
+
+
+
+<b>1.22 Exercise</b>:
+Again, find an array for which the above will not work
+and fix the problem.
+Write your fixed code in 
+<font color="#000000"><tt>MyMinMaxArray.java</tt></font>.
+</font>
+
+
+
+
+<b>1.23 Exercise</b>:
+Suppose we had used an <i>else-if</i> as below. 
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/arraymaxmin2.png"><p>
+In <font color="#000000"><tt>module1.pdf</tt></font>,
+trace through the program to see if this works. Then,
+change the value of the first element of the array to <font color="#000000"><tt>-50</tt></font>
+and trace again.
+Explain what went wrong and how to address the issue.
+</font>
+
+
+
+
+<b>1.24 Exercise</b>:
+Consider this version:
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/arraymaxmin3.png"><p>
+In <font color="#000000"><tt>module1.pdf</tt></font>,
+trace through the program to see if this works. 
+Try it with the first array value as
+<font color="#000000"><tt>-50</tt></font>.
+Would this work if we had initialized <font color="#000000"><tt>min</tt></font>
+and <font color="#000000"><tt>max</tt></font> to any element of the array,
+such as <font color="#000000"><tt>A[3]</tt></font>?
+<!-- yes -->
+</font>
+
+
+<p><br></p><hr><p><br></p>
+
+
+
+<h2>
+Working with more than one array
+</h2>
+
+
+
+<p> Let's write a simple program to copy one array (of numbers) 
+into another, ensuring that if a number is negative, we
+copy its positive part:
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/copypositive.png"><p>
+  <ul>
+  <li> Note: we created array <font color="#000000"><tt>B</tt></font> of the same length as <font color="#000000"><tt>A</tt></font>.
+
+  <p><Li> No additional condition was needed in the <i>else</i>-clause.
+  </ul>
+
+
+
+<p> Now, we'll do something a little harder: copy over only
+those elements that are positive:
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/copypositive2.png"><p>
+This type of code is very typical of "clean up" code when 
+processing data.
+
+
+
+<b>1.26 Exercise</b>:
+In <font color="#000000"><tt>module1.pdf</tt></font>,
+trace through the above program to see how it works. 
+Draw a picture showing the contents of array <font color="#000000"><tt>B</tt></font> at each step.
+Then, modify the program so that it prints only the
+elements copied over into <font color="#000000"><tt>B</tt></font>.
+<!-- change B.length to k -->
+</font>
+
+
+
+
+<b>1.27 Exercise</b>:
+Add code to the template below 
+(in <font color="#000000"><tt>CopyMultiples.java</tt></font>)
+so that you copy over
+into <font color="#000000"><tt>B</tt></font> only those numbers from <font color="#000000"><tt>A</tt></font> 
+that are multiples of 3 or 4. Then print out 
+these resulting numbers from array <font color="#000000"><tt>B</tt></font>.
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/copymultiples.png"><p>
+Thus, you should print out: 9, 12, 4, 3, 8, 30.
+</font>
+
+
+<b>1.28 Exercise</b>:
+Notice that we copy over fewer elements into
+<font color="#000000"><tt>B</tt></font> and thus,
+space is wasted in
+<font color="#000000"><tt>B</tt></font>. 
+Modify the above
+(in <font color="#000000"><tt>CopyMultiples2.java</tt></font>)
+so that you not only copy over
+into <font color="#000000"><tt>B</tt></font> only those numbers from <font color="#000000"><tt>A</tt></font> 
+that are multiples of 3 or 4, but that
+<font color="#000000"><tt>B</tt></font> is of the right size (has
+only the numbers copied over). To do this, you'll first have
+to count how many numbers will be copied over, then make 
+the array 
+<font color="#000000"><tt>B</tt></font>
+and then copy over elements.
+Lastly, print out 
+<font color="#000000"><tt>B</tt></font>.
+</font>
+
+
+The examples above are typical of the nuts-and-bolts of 
+working with arrays and data. Working through these
+examples can feel a bit tedious but constitutes essential
+practice with arrays.
+
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+Nested for-loops
+</h2>
+
+
+
+<p> Now we'll look at a few examples of working with
+arrays and conditionals in nested loops.
+
+
+
+<p> First, let's examine an array to see if it has
+duplicates:
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/duplicates.png"><p>
+
+
+
+<b>1.30 Exercise</b>:
+In <font color="#000000"><tt>module1.pdf</tt></font>,
+trace through the above program, drawing a picture
+of the array and tracking <font color="#000000"><tt>i</tt></font> and <font color="#000000"><tt>j</tt></font>.
+</font>
+
+
+
+
+Note:
+  <ul>
+  <li> First, notice the starting value for <font color="#000000"><tt>j</tt></font>:
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/duplicates2.png"><p>
+
+  <p><li> Next, notice that the two loop entry conditions are
+       different:
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/duplicates3.png"><p>
+
+  <p><li> This is a "standard" form of nested-loop that allows
+     all possible pairs of elements to be compared.
+  </ul>
+
+
+
+
+<p> Next, we'll write a program to simply count
+occurences of each integer in an array:
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/occurencecount.png"><p>
+
+
+
+<b>1.32 Exercise</b>:
+In <font color="#000000"><tt>module1.pdf</tt></font>,
+trace through the above program, drawing a picture
+of the <font color="#000000"><tt>occurenceCount</tt></font> array and
+  tracking its values. Do you see why we need
+<font color="#000000"><tt>max+1</tt></font> as the
+size for the
+<font color="#000000"><tt>occurenceCount</tt></font> array?
+</font>
+
+
+
+  <ul>
+  <li> Notice how we used an array value as an index:
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/occurencecount2.png"><p>
+
+  <p><li> The output above resulted in printing
+     the occurence count multiple times for some integers.
+
+  <p><li> Here's one way to address the problem:
+     <font size="+2">
+     <font color="#000000"><pre><font color="#888888">
+    public static void main (String[] argv)
+    {</font>
+        int[] A = {2, 9, 2, 6, 4, 3, 3, 2};
+        int max = 9;
+        int[] occurenceCount = new int [max+1];
+        for (int i=0; i&lt;A.length; i++) {
+            occurenceCount[A[i]] ++;
+        }
+        for (int k=0; k&lt;occurenceCount.length; k++) {
+            if (occurenceCount[k] &gt; 0) {
+                System.out.println (k + " occurs " + occurenceCount[k] + " times");
+            }
+        }<font color="#888888">
+    }</font>
+     </font></pre></font>
+
+  </ul>
+
+
+
+<b>1.33 Exercise</b>:
+Execute the above program 
+(in <font color="#000000"><tt>MyOccurenceCount.java</tt></font>)
+to see how it works.
+Then, (in <font color="#000000"><tt>module1.pdf</tt></font>)
+trace through the second for-loop above.
+</font>
+
+<p> Note:
+  <ul>
+  <li> We're only printing a count for those elements that occur at
+  least once.
+  <p><li> We've used a different for-loop variable in the second loop.
+  This is strictly not necessary. We could have had
+     <font size="+2">
+     <font color="#000000"><pre>
+        for (int i=0; i&lt;occurenceCount.length; i++) {
+            if (occurenceCount[i] &gt; 0) {
+                System.out.println (i + " occurs " + occurenceCount[i] + " times");
+            }
+        }
+     </font></pre></font>
+     But it's good style to use a different variable name to alert
+     the reader that the meaning of the variable is different.
+
+  <p><li> We've replaced the multiple print's with a single println 
+  that combines strings and numbers (into a larger string).
+
+  <p><li> In the above programs, we manually look at the array 
+     <font color="#000000"><tt>A</tt></font> and wrote
+     down the maximum value (<font color="#000000"><tt>9</tt></font>)
+     in the code ourselves
+     <font size="+2">
+     <font color="#000000"><pre>
+        int max = 9;
+     </font></pre></font>
+
+  <p><li> This is an example of what's called <em>hard coding</em>:
+     <ul>
+     <li> The term is used as the verb, to <em>hard code</em>.
+     <li> It refers to actual data in the code that's fixed ahead of time.
+     <li> It's generally NOT a good idea.
+     <li> Here, we're doing this for simplicity of explanation.
+     <li> In a real application, we would not know the contents of
+          of the array ahead of time.
+     </ul>
+
+  <p><li> It's easy to fix this by writing code to find the maximum.
+  </ul>
+
+
+
+<b>1.34 Exercise</b>:
+In <font color="#000000"><tt>MyOccurenceCount2.java</tt></font>,
+replace the hard-coded max with code that finds the maximum
+of the array 
+<font color="#000000"><tt>A</tt></font>.
+</font>
+
+
+Searching the elements of one array in another:
+  <ul>
+  <li> This is a very common operation in processing data:
+      <ul>
+      <li> We have existing data.
+      <li> New data comes in, and we want to see which of the new data
+      already exists.
+      </ul>
+
+  <p><li> In our example, suppose we have
+     <font size="+2">
+     <font color="#000000"><pre>
+  int[] recentData = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19};
+  int[] existingData = {2, 3, 5, 7, 11, 13, 17, 19};
+     </font></pre></font>
+
+  <p><li> As output, we want to print
+        <font color="#000000"><tt>3, 5, 11, 13, 17, 19</tt></font>.
+ 
+  <p><li> Thinking at a high (pseudocode) level, we want something like:
+     <font size="+2">
+     <font color="#000000"><pre>
+     for i=0 ... (the first array) {
+         <font color="#dc143c">// Look for this i-th element in the second array</font>
+         for j=0 ... (try each element of the second) {
+             if i-th of first == j-th of second {
+                 <font color="#dc143c">// Found!</font>
+             }
+         }
+     }
+     </font></pre></font>
+  </ul>
+
+
+
+<b>1.35 Exercise</b>:
+In <font color="#000000"><tt>TwoArraySearch.java</tt></font>,
+write code to use the above data and solve the problem.
+</font>
+
+
+
+
+      <p><br></p><hr><p><br></p>
+
+<h2>
+Rearranging an array
+</h2>
+
+
+
+<p> Rearranging elements in an array is the basis
+of sorting, one of the most common and powerful ways
+of organizing data.
+  <ul>
+  <li> We don't sort data just because it looks nice sorted.
+  <p><li> Sorted data greatly speeds up the execution of other kinds
+    of code.
+
+  <p><li> For example, it's much faster to search for something
+    in sorted data.
+  </ul>
+
+
+
+<p> We'll start with something simpler: <em>find the smallest
+value in an array and move it to the first location
+in the array.</em>
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/sortpicture.png"><p>
+
+
+
+
+<p> The program:
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/movemin.png"><p>
+
+
+
+<b>1.37 Exercise</b>:
+Write up and execute the above program
+in <font color="#000000"><tt>MoveMin.java</tt></font>.
+Then, trace through 
+the first for-loop above. What would happen we started
+with <i>i=0</i> in that for-loop?
+</font>
+
+
+
+
+<b>1.39 Exercise</b>:
+In <font color="#000000"><tt>MoveMin2.java</tt></font>.
+add code to the above program so that, after 
+the min element is moved to position <font color="#000000"><tt>0</tt></font>, the next
+smallest element (one of the <font color="#000000"><tt>1</tt></font>'s above) is
+moved into position <font color="#000000"><tt>1</tt></font>. 
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/sortpicture2.png"><p>
+Change the data
+in the array several times to see if your program works.
+</font>
+
+
+
+
+<p> We'll now generalize this idea to move the 
+<em>k-th</em> smallest element to the <em>k-th</em> position:
+     <font size="+2">
+     <font color="#000000"><pre>
+  int[] A = {13, 5, 2, 0, 1, 3, 21, 1, 8};
+  
+  for (int k=0; k&lt;A.length-1; k++) {
+      
+      <font color="#dc143c">// Default assumption: k-th element is k-th min.</font>
+      int min = A[k];
+      int minPosition = k;
+
+      <font color="#dc143c">// Now find the min amongst elements from
+            // positions k onwards.</font>
+      for (int i=k+1; i&lt;A.length; i++) {
+    if (A[i] < min) {
+        min = A[i];
+        minPosition = i;
+    }
+      }
+
+      <font color="#dc143c">// Swap min into position k.</font>
+      int temp = A[k];
+      A[k] = A[minPosition];
+      A[minPosition] = temp;
+  }
+
+  <font color="#dc143c">// Print.</font>
+  for (int i=0; i&lt;A.length; i++) {
+      System.out.println (A[i]);
+  }
+     </font></pre></font>
+
+
+<b>1.40 Exercise</b>:
+In <font color="#000000"><tt>module1.pdf</tt></font>,
+trace the values of these variables: <font color="#000000"><tt>k, i, min</tt></font>
+and <font color="#000000"><tt>minPosition</tt></font>.
+Then, execute the above program 
+(in <font color="#000000"><tt>MoveMin3.java</tt></font>)
+to see the result. 
+What is the result? What have we achieved?
+</font>
+
+
+
+
+<b>1.41 Exercise</b>:
+Is the variable <font color="#000000"><tt>min</tt></font> really needed? Re-write
+  the program 
+(in <font color="#000000"><tt>MoveMin4.java</tt></font>)
+to do without it (but using the other variables).
+</font>
+
+
+
+
+<b>1.43 Exercise</b>:
+Write a variation of the above program 
+(in <font color="#000000"><tt>MoveMax.java</tt></font>)
+so that the 
+maximum element is swapped into the first place
+(position 0), then the next largest is swapped 
+in the second place (position 1) ... etc.
+</font>
+
+
+
+
+<b>1.46 Exercise</b>:
+What does the following print out?
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/error3.png"><p>
+Fix the problem
+(in <font color="#000000"><tt>Ex1_46.java</tt></font>).
+<!-- 
+Move max outside.
+-->
+</font>
+
+
+
+<b>1.47 Exercise</b>:
+The following code intends to print out alternate
+array elements starting from the end, but only
+if the elements aren't negative.
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/error4.png"><p>
+However, there are two problems. Can you see 
+the problems just by reading? Fix the problems
+(in <font color="#000000"><tt>Ex1_47.java</tt></font>).
+
+<!-- 
+(1) Should start with A.length-1
+(2) Should test for i>=0;
+-->
+</font>
+
+
+
+
+<b>1.48 Exercise</b>:
+The following code intends to search an array
+for a given searchValue to print true or false,
+depending on whether it was found or not.
+        <p><img class="img-fluid mx-auto py-2" src="../figures/module10/error5.png"><p>
+Trace through the above program by hand 
+(in <font color="#000000"><tt>module1.pdf</tt></font>).
+to predict
+what it prints. Then, fix the problem
+(in <font color="#000000"><tt>Ex1_48.java</tt></font>).
+<!-- 
+No else needed.
+-->
+</font>
+
+<p><br></p><hr><p><br></p>
+
+
+      <p><br></p><hr><p><br></p>
+

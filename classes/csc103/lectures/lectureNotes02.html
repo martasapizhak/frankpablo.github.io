@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSC 103  How Computers Work</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      .img-max {
+        max-width: 500px;
+        width:50%;
+      }
+
+      #HIDDENDIV {
+        display: none;
+      }
+
+      #table td {
+          padding: 1em;
+          border: 1px solid black;
+      }
+
+
+      #table.show tr > *:nth-child(1) {
+          display: block;
+      }
+    </style>
+
+
+
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <!-- <img class="float-right" src="../../images/gw_primary_logo.png" alt="GWU" height="160"> -->
+      <img class="float-right" src="../../../images/SmithLogoStack-cmyk.png" alt="SmithLogo" height="120">
+      <h1 class="display-3 m-0">CSC 103</h1>
+      <p class="lead">How Computers Work</p>
+      <p class="lead">Smith Computer Science </p>
+    </div>
+
+    <div class="container py-0"><!-- was 1-->
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info <span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">TBD 1</a>
+                <a class="dropdown-item" href="#">TBD 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project (if any)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Discord</a>
+                <a class="dropdown-item" href="#">Moodle</a>
+                <a class="dropdown-item" href="#">Repl.it</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes02.html">Next Module</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <br><br>
+
+
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 02: 
+        <br>
+      Bits, Binary, and Number representation</h1>
+      <p>
+        <br>
+      </p>
+      <h2>Outline </h2>
+
+      This class we'll discuss:
+      <ul>
+        <li>Review: Evolution of computing</li>
+        <li>The minimum amount of knowledge</li>
+        <li>Information atoms</li>
+        <li>What can we do with bits?</li>
+        <li>Number Systems</li>
+        <li>Binary</li>
+        <li>Binary arithmetic</li>
+        <li>Binary logic</li>
+      </ul>
+
+
+
+      <p><br></p><hr><p><br></p>
+
+        <div class="mx-lg-5">
+          <img id="image" class="img-responsive" src="../figures/lecture02/bigPicture-bits.png" alt="" style="width:80%">
+          <br>
+          <span style='color:#888888'>For now, we're looking at the "what?" not the "how?"</span>
+        </div>  
+      <p><br></p><hr><p><br></p>
+
+      <h2>Evolution of computing system</h2>
+      <br><br>
+
+      <p>
+
+       <b>An example problem</b>: calculate the trajectory of a missile.
+       <br><br>
+        <ul>
+          <li>Paper, pencil & brain: several days to a few weeks</li>
+          <li>Gears & levers: several hours to a few days (including set-up)</li>
+          <li>Switches, relays, shafts, and clutches: a few hours (including set-up)</li>
+          <li>Voltages & logic circuits (ENIAC): 15 seconds (once set-up, which could take hours or days)</li>
+          <li>Voltages & logic circuits (MacBook Pro): several \(ns\) to a few \(\mu s\) (study your <a href="https://en.wikipedia.org/wiki/Metric_prefix">prefixes</a>)</li>
+        </ul>
+
+        So <b>why move from humans to machines?</b> ... <span style='color:#06a015'><b><big><i>Automation</i>!</big></b></span>
+        <br><br>
+
+        And <b>why move from gears to electricity?</b> ... <span style='color:#06a015'><b><big><i>SPEED</i>!</big></b></span> 
+        <br>
+        <span><small>(and size)</small></span>.
+        <br><br>
+
+        And <b>why move from analog to digital?</b> ... <span style='color:#06a015'><b><big><i>Precision</i>!</big></b></span> 
+        
+
+        <br><br>
+
+        Let's talk about how this electricity-based machine stores and uses data.
+        
+      </p>
+      <br><br>
+
+      
+      <p><br></p><hr><p><br></p>
+
+      <h2>The minimum amount of knowledge</h2>
+      <br><br>
+
+      <p>
+        Moving gears takes a lot of energy and is slow. 
+        <br>
+        Also, analog machines suffer from <b>non-ideal</b> effects (inaccuracy, loss, leaks, friction, etc).
+        <br><br>
+
+        What we want is a medium that moves fast and is energy efficient. 
+        <br>
+        <span class="color:#888888"><small>(and allows us to perform error correction!)</small></span>
+        <br><br>
+
+        <b>Electricity is that medium</b>.
+        <br>
+        However, we need to be able to satisfy some requirements!
+        <br><br>
+
+        <b>List of Requirements</b>:
+        <ul>
+          <li>Represent and Save information</li>
+          <li>Solve mathematical and logical expressions</li>          
+          <li>Accept input</li>
+          <li>Make decisions according to input or stored information</li>
+          <li>Produce output</li>
+        </ul>
+        <br>
+
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span> :[2 minutes] : how do we do these things with an Abacus?
+        <br><br>
+
+        Lets start with: <b>representing and saving information</b>
+        <br><br>
+
+        When thinking about representing and saving information, we'd like to answer the following questions:
+        <br>
+         <ol>
+          <li>What types of information should we be able to save?</li>
+          <li>How should we structure this information in order to save it efficiently?</li>
+          <li>What is the amount of information we can (want to) save?</li>
+          <li><b>What is the minimum amount possible?</b></li>
+        </ol> 
+
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> :[2 minutes] : Let's start with the fourth question:
+        <br>
+        <div class="container mx-lg-5">
+          
+          What is the minimum amount possible? Or in other words: What is the minimum you can know about a thing?
+          <br><br>
+            <span style='color:#000000'>One possible answer</span>: 
+              <div class="mx-lg-5">
+                <details>
+                  <summary>(Wait; then Click)<br><br></summary>
+                  <p>
+                    is it there? (AKA: "To be or not to be" ... -Shakespeare, the information theorist)
+                  </p>
+                </details>
+              </div>
+        </div>  
+
+      </p>
+     
+      <p><br></p><hr><p><br></p>
+
+      <h2>Information atoms: bits</h2>
+      <br><br>
+      <p>
+        A yes/no piece of data is the minimum you can know about a thing.  It simply answers the question: <br>
+        "is there or not something there?""
+        <br><br>
+
+        Anything that has two parts or two sides is called <b>binary</b>, so this piece of information is called a binary datum (a single piece of data), which could be <i>represented</i> with any two symbols:
+        <br>
+        <ul>
+          <li>No/Yes</li>
+          <li>False/True</li>
+          <li>OFF/ON</li>
+          <li>\( \bullet\) / \(\boldsymbol{-}\)</li>
+          <li>0/1</li>
+        </ul>
+        <br><br>
+
+        The term <b>bit</b> is derived from <b>binary digit</b>, a logical state (relation between a proposition and the truth) with one of two values.
+        <br><br>  
+
+        It is common to represent these with \( 0 \) and \( 1 \), but as you can see below, we can use another approach (OFF/ON) with the same results.
+        <br><br>
+
+        <h4>Multiple bits</h4>
+
+        We've seen that a bit can represent something being there or not.
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 3</big></b></span> :[2 minutes] : how do we represent many things being there or not?
+        <br>
+        <div class="container mx-lg-5">
+          What examples could you come up where this is useful?
+          <br>
+          <span style='color:#000000'>One possible answer</span>: 
+          <div class="mx-lg-5">
+            <details>
+              <summary>(Wait; then Click)<br><br></summary>
+              <p>
+                Think of the problem of describing which rooms are lit up in a house.
+                <br>
+                We can have sequences of bits! each representing the presence of a different thing or state:
+                <br>
+                <img id="image" class="img-responsive" src="../figures/lecture02/onOffBits.png" alt="" style="width:80%">
+                <br>
+                <span style='color:#888888'><b><small>(image by Shinyoung Cho)</small></b></span>
+              </p>
+            </details>
+          </div>
+        </div>
+        <br><br>
+
+        With this in mind, how do we save information using electricity?
+        <br><br><br>
+
+        <h4>Fast Water and Pipes: an analogy for an electric computer </h4>
+        <br>
+
+        To explain how we do this, we'll use an analogy with water and pipes, which contains: 
+        <ul>
+          <li>a water reservoir</li>
+          <li>valves</li>
+          <li>water circuits</li>
+        </ul>
+        <br>
+        <img id="image" class="img-responsive" src="../figures/lecture02/waterTransistor.png" alt="" style="width:60%">
+
+        <br><br>
+
+         
+        <span style='color:#06a015'><b><big>Activity 4</big></b></span> :[2 minutes] : how do we represent information (a bit) using water?
+        <br>
+        <div class="container mx-lg-5">
+          <span style='color:#000000'>One possible answer</span>: 
+          <div class="mx-lg-5">
+            <details>
+              <summary>(Wait; then Click)<br><br></summary>
+              <p>
+                if we look at a pipe or a container with input and output ports, we could ask:
+                <ul>
+                  <li>How much water is in there?: that points at an analog "quantity", which as we said before, suffers from some issues.</li>
+                  <li>But more importantly: <b>is there water in it?</b></li>
+                </ul> 
+                <br>
+                So, to get a <b>bit</b>, we ask: "is there water flow through this pipe?"<br>
+                &nbsp;&nbsp;&nbsp;&nbsp; We get a Yes/No answer.
+                <br>
+
+              </p>
+            </details>
+          </div>
+        </div> 
+
+        <br><br>
+        <div class="mx-lg-5">
+          By the way, you can actually build a <a href="https://www.youtube.com/watch?v=rAZavOcEnLg">water computer</a> in <a href="https://www.youtube.com/watch?v=m5WodTppevo">several ways</a>, however,  it is not very fast and it might not be consistent long term.
+        </div>
+        <br><br>
+
+
+        Now the question is, <b>what can we represent with that information representation?</b>
+        <br>
+        We'll come back to the water analogy, but first, let's think about information in the abstract.
+
+
+
+        <span style='color:#06a015'><b><big>Activity 5</big></b></span> :[2 minutes] : can we represent the following information using bits?
+        <br>
+        <div class="container mx-lg-5">
+          <ul>
+            <li>A yes/no piece of information (Also called a <b>Boolean</b> value)</li>
+            <li>numbers</li>
+            <li>letters</li>
+            <li>images</li>
+            <li>sound</li>
+            <li>video</li>
+          </ul>
+          <br><br> 
+          <span style='color:#000000'>answer</span>: 
+          <div class="mx-lg-5">
+            <details>
+              <summary>(Wait; then Click)<br><br></summary>
+              YES!
+              <br><br>
+              But how!?
+            </details>
+          </div>
+        </div> 
+
+      </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Number representation</h2>
+      <br><br>
+      <p>
+        There are many different ways of representing numbers:
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-5 thumb">
+            <a href="https://en.wikipedia.org/wiki/Roman_numeralsn">Roman Numerals</a>
+              <a class="thumbnail" href="#">
+                  <img class="img-fluid" src="../figures/lecture02/romanClock.png" alt="" style="width:100%">
+              </a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+            <a href="https://en.wikipedia.org/wiki/Maya_numerals">Mayan Numerals</a>
+              <a class="thumbnail" href="#">
+                  <img class="img-fluid" src="../figures/lecture02/mayanNumerals.png" alt="" style="width:100%">
+              </a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+            <a href="https://en.wikipedia.org/wiki/Positional_notation">Decimal Positional</a>
+              <a class="thumbnail" href="#">
+                  <img class="img-fluid" src="../figures/lecture02/decimals.png" alt="" style="width:100%">
+              </a>
+          </div>
+        </div>
+        <br><br>
+      
+
+        <span style='color:#06a015'><b><big>Activity 6</big></b></span> :[2 minutes] : why would we want to "represent" a number?
+        <br>
+        <div class="container mx-lg-5">
+          <span style='color:#000000'>One possible answer</span>: 
+          <div class="mx-lg-5">
+            <details>
+              <summary>(Wait; then Click)<br><br></summary>
+              <p>
+                Because carrying around the actual "things" you count is out of the question for most "things".
+                <br>
+                With representation you can say "I'm so hungry I could eat a million apples!" without actually having to doing it to transmit the idea.
+              </p>
+            </details>
+          </div>
+        </div> 
+        
+        From early representation, we've used different sounds (grunts \( \rightarrow \) words) to refer to numbers, and different symbols so that we can write them out.
+        <br><br>
+
+        <br><br>
+
+        <h3>Tally Marks</h3>
+
+
+        One of the easiest representations is using tally marks, like any of these:
+        <br>
+        <img id="image" class="img-responsive" src="../figures/lecture02/tally.png" alt="" style="width:60%">
+        <br><br>
+        Why could that be an issue?
+        <br><br>
+
+        <h3>Grouping Symbols</h3>
+
+        These employ several different symbols, each with a different value. 
+        <br>
+        Numbers are constructed by placing the "largest" value symbols possible until the full amount is represented.
+        <br><br>
+
+        More advanced approaches used the <b>position</b> of the symbol to vary the value slightly.
+        <br>
+        One exampe of these is the <a href="https://en.wikipedia.org/wiki/Roman_numerals">Roman numerals</a>:
+        <br>
+        <img id="image" class="img-responsive" src="../figures/lecture02/roman.png" alt="" style="width:40%">
+        <br><br>
+        Why could that be an issue?
+        <br><br>
+
+        <h3>Positional Number System</h3>
+        The genius of this approach is that you can <i>reuse</i> any number of symbols and give greater significance to their position when grouped together.
+        
+
+
+        <br><br>
+
+      <h4>Decimal</h4>
+
+      Note that <b>decimal</b> is a positional system with the symbols: 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9;
+      <br><br>
+
+      The position change indicates "ten times as many as before" ("or a tenth as before"). We call these "powers of 10".
+      <br><br>
+
+      The number is constructed by indicating "how many times we need each power of 10" (that's what base 10 means):
+      <br><br>
+      \[ 1729 = 1*10^3 + 7*10^2 + 2*10^1 + 9*10^0 = 1000 + 700 + 20 + 9 \]
+
+
+      <br><br> 
+      <h4>Binary</h4>
+
+
+      The <b>binary</b> system is a positional number system with two symbols: 0 and 1;
+      <br><br>
+      the number is constructed by indicating "how many times we need each power of 2" (that's why base 2) using only the valid symbols:
+
+      <!-- \[ 11011000001 = 1*2^{10} + 1*2^9 + 0*2^8 + 1*2^7 + 1*2^6 + 0*2^5 + 0*2^4 + 0*2^3 + 0*2^2 + 0*2^1 + 1*2^0 \]
+      \[             = 1024 + 512 + 0 + 128 + 64 + 0 + 0 + 0 + 0 + 0 + 1 = 1729\] -->
+      
+      \[
+        \begin{alignat}{2}
+          0b11011000001 &=& \: 1*2^{10} \: & + & \: 1*2^9 \: &+& \: 0*2^8 &+& \: 1*2^7 \: &+& \: 1*2^6 \: &+& \: 0*2^5 \: &+& \: 0*2^4 \: &+& \: 0*2^3 \: &+& \: 0*2^2 &+& \: 0*2^1 \: &+& \: 1*2^0 \: & &\qquad\\
+          \qquad        &=& \: 1024     \: & + & \: 512   \: &+& \: 0     &+& \:   128 \: &+& \: 64    \: &+& \:     0 \: &+& \:     0 \: &+& \:     0 \: &+& \: 0     &+& \: 0 \: &+& \: 1 \: &=& \: 1729
+        \end{alignat} 
+      \]
+
+      The first 8 natural numbers (starting at 0) are:
+      <br>
+      <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-0lax{text-align:left;vertical-align:top}
+        </style>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-0lax">decimal</th>
+            <th class="tg-0lax">binary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-0lax">0</td>
+            <td class="tg-0lax">000</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">001</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">2</td>
+            <td class="tg-0lax">010</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">3</td>
+            <td class="tg-0lax">011</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">4</td>
+            <td class="tg-0lax">100</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">5</td>
+            <td class="tg-0lax">101</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">6</td>
+            <td class="tg-0lax">110</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">7</td>
+            <td class="tg-0lax">111</td>
+          </tr>
+        </tbody>
+        </table>
+
+        <br><br>
+
+        <b>Notation</b>: To indicate that we're writing a binary number, we usually <i>prepend</i> "0b" to the number, so the binary number:
+        <br>
+        101010 should be written <b>0b101010</b> to distinguish it from "one hundred and one thousand and ten".
+        <br><br>
+        You might also see this as 101010b.
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 7</big></b></span> [3 minutes]: <br>
+        <div class="container mx-lg-5">
+            Translate your birthday to binary.
+            <br>
+            example: 02/29/2020 (Yak's birthday) would be 0b10/0b11101/0b11111100100
+            <br>
+            hint: try dividing by the maximum power of 2 you can fit. Then continue with the remainder.
+        </div>    
+
+
+
+        <br><br> 
+        <h4>Hexadecimal</h4>
+
+         The last useful positional system we'll use in this class is <b>hexadecimal</b>.
+            <br>
+            The <b>hexadecimal</b> (or <b>hex</b>) system is a positional number system with 16 symbols: 0-9 plus a, b, c, d, e, and f;
+          <br><br>
+          the number is constructed by indicating "how many times we need each power of 16" (that's why base 16) using only the valid symbols.
+
+          \[ 6C1 = 6*16^2 + C*16^1 + 1*16^0 = 6*16^2 + (12)*16^1 + 1*16^0 = 1536 + 192 + 1 = 1729\]
+
+          <br><br>
+
+          <b>Notation</b>: To indicate that we're writing a hex number, we usually <i>prepend</i> "0x" to the number, so the hex number:
+        <br>
+        1234 should be written <b>0x1234</b> to distinguish it from "one thousand, two hundred and thirty four".
+
+        <br><br>
+        <span style='color:#06a015'><b><big>Activity 8</big></b></span> [Group; 3 minutes]: <br>
+        <div class="container mx-lg-5">
+            Translate this number to hex: 3735928559
+            <br>
+            hint: try dividing by the maximum power of 16 you can fit. Then continue with the remainder.
+        </div>    
+      </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Binary Arithmetic</h2>
+      <br><br>
+      <p>
+        Any operation we can do with decimals, we can do with binary.
+        <br><br>
+        <h4>Addition</h4>
+        <br>
+        \[ 
+            \begin{aligned}
+              0b1011&\\
+              + 0b1001& \\
+              \hline
+              0b10100&
+            \end{aligned}
+        \]
+        <br>
+        Note that we can keep track of the <b>carry</b> in order to get the proper addition.
+
+        <br><br>
+        <span style='color:#06a015'><b><big>Activity 9</big></b></span> [Group: 1 minute (if we have time)]: <br>
+        <div class="container mx-lg-5">
+            <ul>
+              <li>Add 0b1011 + 0b1111</li>
+              <li>Add 0b1110 + 0b1011</li>
+            </ul>
+        </div>  
+        <br><br>
+
+        <h4>Subtraction</h4>
+        <br>
+        Subtraction is tricky because the way we represent negative numbers.
+        <br><br>
+        You can solve it in two ways:
+        <ul>
+          <li>
+            "<b>borrowing</b>" from the digit on the left (instead of "carrying"):
+            \[
+              \begin{aligned}
+                0b1 1 0 1 1 1 0&\\
+                - 0b1 0 1 1 1& \\
+                \hline
+                0b1 0 1 0 1 1 1&
+              \end{aligned} 
+            \]
+          </li>
+          <li>Using a "complement" approach: instead of subtracting, add the "additive complement". 
+            <br>The result is calculated like this: 
+            \[ A - B = A + (B \text{'s two's complement }) + 1 \]
+            In practice, this looks like this:
+            \[
+              \begin{align*}
+                0b0111&   \rightarrow &             0b0111&              & &\qquad\\
+                -0b0001&  \rightarrow &  + \mathit{0b1111}&              & &\qquad\\
+                \hline 
+                0b0110&    \qquad     &   0b\mathbf{1}0110&  \rightarrow & &\mathbf{0b0110}
+              \end{align*} 
+            \]
+
+<!-- 
+\[
+  \begin{array} { r|r} 0b0111 & 0b0111 \\ - 0b0001 & \mathbf{0b1111} \\ \hline 0b0110 & 0b\mathbf{1}0110 \\   \end{array}
+\] 
+--> 
+          </li>
+        </ul>
+
+
+      </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Logical Operators</h2>
+      <br><br>
+      <p>
+        Logical operations refer to operations on variables that can contain truth values: true and false, usually denoted 1 and 0, respectively. 
+        <br><br>
+        Think of these as operations on the "truth-value of a statement".
+        <br><br>
+
+        <h4>NOT</h4>
+        NOT is an operation that can be applied to a single bit; since the operation applies to a "single" operand, 
+        <br>
+        it is called a  <i>unary</i> operation.
+        <br><br>
+        When <b>NOT</b> is applied to a single bit (lets call it <b>p</b>), we can get the following table:
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">NOT p</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+          </tbody>
+        </table>      
+        <br><br>
+        <img id="image" class="img-responsive" src="../figures/lecture02/not.png" alt="" style="width:20%">
+        <br>
+        <span style='color:#888888'>Note that we're labeling on the outside for clarity, but the label refers to the interior of each circle</span>
+        <br><br>
+        Note that, if \(p\) denotes the operand, \(\text{NOT } p\) can be written as \(\sim p\), \(\neg p\), \(\bar{p}\) or even \(!p\).
+        <br><br>
+
+
+
+        <h4>OR</h4>
+        OR (AKA: the disjunction operator) is an operation that is applied to pairs of operands, 
+        <br>
+        it is called a  <i>binary</i> operation.
+        <br><br>
+        it is true if any of its operands is true</i>.
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">q</th>              
+              <th class="tg-0lax">p OR q</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+          </tbody>
+        </table>
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture02/or.png" alt="Disjunction" style="width:20%">
+        <br><br>
+        Note: other symbols you might see are: \( p\lor q \text{, } p+ q  \text{, } p\mid q \).
+        <br><br>
+        
+        <h4>AND</h4>
+        AND (AKA: the conjunction operator) is a <i>binary</i> operator; <i>it is true if and only if both of its operands are true</i>.
+        <br><br>
+        We can show the effect of this operator using a table:
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">q</th>
+              <th class="tg-0lax">p AND q</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+          </tbody>
+        </table>   
+        <br><br>
+
+        <img class="img-fluid" src="../figures/lecture02/and.png" alt="Conjunction" style="width:20%">
+        <br><br>
+        <span style='color:#888888'>Note that we're labeling on the outside for clarity, but the label refers to the interior of each circle</span>
+        <br><br>
+        Note: other symbols you might see are: \( p \wedge q \text{, } p\cdot q  \text{, } p\&q \).
+        <br><br>
+
+        <h3>Examples</h3>
+        <p>
+          <span style='color:#06a015'><b><big>Activity 10</big></b></span> [Group: 1 minute (if we have time)]: <br>
+          <div class="mx-lg-5">
+            What is the result of the following assertions (what do they depend on?): 
+            <br>
+            <ul>
+              <li>I will go play tennis if <span style='color:#fe6d21'>it is sunny</span> AND I <span style='color:#0000ff'>finish grading</span>;</li>
+              <li>I will go play tennis if it is mountain day OR I finish grading;</li>
+              <li>I will go play tennis if it is NOT raining;</li>
+            </ul>                  
+          </div>
+
+
+          <br><br>
+
+          It turns out that AND, OR, and NOT are necessary and sufficient to implement <b>any</b> boolean function.
+        </p>
+
+        <p><br></p><hr><p><br></p>
+
+      <h4>Before next class (Thursday 09/09)</h4>
+      <br><br>
+      <b>[Optional]</b> 
+      <br>
+      <ul>
+        <li>Review the class notes</li>
+        <li>Come to online OHs; bring questions, jokes, or simply come and listen.</li>
+      </ul>
+        
+
+
+
+  
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes01.html">Previous Module</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Next Module</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+   
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+<!--     <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script> -->
+  </body>
+</html>

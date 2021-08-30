@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSCI 1111 Introduction to Software Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 1111</h1>
+      <p class="lead">Introduction to Software Development</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <!-- NAVBAR-->
+    <div class="container py-0">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img class="img-fluid mx-auto py-2" src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures<span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>
+                <a class="dropdown-item" href="#">Codio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./lectureNotes17.html">Previous Lecture</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes19.html">Next Lecture</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <p>
+        <hr>
+      </p>
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 18: Classes and Object-Oriented Design</h1>
+      <p>
+        <br>
+      </p>
+
+      <h2>
+        Objectives
+      </h2>
+
+      <p>
+        By the end of this module, you will be able to:
+        <ul>
+          <li>Allocate, use, and pass objects as arguments.</li>
+          <li>Use null references appropriately.</li>
+          <li>Write classes and use objects.</li>
+          <li>Use constructors to initialize objects.</li>
+        </ul>
+      </p>
+      
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Before Starting
+      </h2>
+
+      <!--
+      <ul>
+        <li>Read Sections <span style="color: #ff0000; font-weight: bold">16.01 to 16.03</span> in the Codio Course</li>
+      </ul>
+    -->
+
+      <p>
+        If you do not have your Codio course ready, use any text editor or simple IDE. Some possibilities are:
+      </p>
+      <ul>
+        <li>Write using Sublime; Compile and run in the Terminal</li>
+        <li>Use IDEs like: IntelliJ, DrJava, or JGrasp</li>
+      </ul> 
+<!--
+      <p><br></p><hr><p><br></p>
+
+      <h2>Catching Up</h2>
+
+      <p>
+        Before we move forward, let's catch up (complete any remaining work from the previous module)
+        <br>
+        In this case, make sure we've got:
+        <ol>
+          <li>One-Dimensional Arrays... Declaring, Initializing, and Accessing!</li>
+        </ol>
+
+      </p>
+-->
+
+<!-- SIMHA START -->
+
+<p><br></p><hr><p><br></p>
+
+
+
+
+<h2>
+Objects and Memory Layout
+</h2>
+
+
+<p>Objects:
+<ul>
+<li>Enable data of multiple types to be grouped together into a
+    single variable.</li>
+<li>Methods are provided for operating on this data.</li>
+<li>These methods provide the API that programs should use to operate
+    on the data.</li>
+<li>Example: String.  Data is the array of characters, and the
+    length.  You know the methods for operating on/accessing the
+    string.</li>
+</ul></p>
+
+<p>Where does this leave <i>classes</i>?
+<ul>
+  <li>Classes are <b>blueprint</b> that is used to construct
+    each object (<b>house</b>).</li>
+  <li>Classes spell out what each object should look like: what data
+    it has, and what methods will operate on that data.</li>
+  <li>This only applies to non-static methods and variables.</li>
+</ul>
+</p>
+
+<p>Take the example of the Facebook user class:</p>
+
+<p><font size="+1" color="#000000"><pre>
+public class FBUser {
+    private long userId;
+    private String firstName, lastName;
+    private FBUser[] friends;
+    
+    public void setId(long id) {
+        userId = id;
+    }
+    public long getId() {
+        return userId;
+    }
+}
+</pre></font></p>
+
+<p>The class gives the blueprint for each object:
+<ul>
+  <li>Each object will have a separate userId, firstName, lastName, etc...</li>
+  <li>Each object has a couple of methods that are used to access its
+    variables</li>
+  <li>Unlike static variables and methods, a set of the data exists in
+    each object (each facebook user needs a different name!).</li>
+  <li>The class is used as a new <b>type</b> for all objects created
+    from that class.</li>
+  <li>The contents of the object can include primitive variables (like int or double), or reference types, like Strings and Arrays.</li>
+  <li>As you can see from the array: <font size="+1"><tt>friends</tt></font>, we can create Arrays of Objects! and these are simply a series of references (addresses) to where the objects are located in memory (like an address book).</li>
+</ul>
+</p>
+
+
+<b>Why do we need objects?</b>
+
+  <p>What function do objects provide compared to variables,
+  arrays, etc?  How do they relate to static variables stored in
+    classes?</p>
+</font>
+
+
+<span style='color:#06a015'><b><big>Activity 1 (1-minutes)</big></b></span>:  
+Create the application class <font color="black">FBUserTest</font>:
+
+<p><font size="+1" color="#000000"><pre>
+    public class FBUserTest {
+
+      public static void main(String[] args) {
+        long id = FBUser.getId();
+        System.out.println(id);
+
+      }
+    }
+</pre></font></p>
+
+<p>We're trying to invoke the getId method just like we've called
+  static methods in the past.  What do you think will happen when you
+  compile your code?  When you run it?  Try!</p>
+<!--
+-->
+
+<br><br>
+
+
+<p>Multiple objects exist, each with <i>possibly different</i> sets of
+  data.  Objects are allocated
+  with <font size="+2"><b><tt>new</tt></b> </font>.</p>
+
+<p><font size="+1" color="#000000"><pre>
+    public static void main(String[] args) {
+        FBUser user1 = new FBUser();
+        FBUser user2 = new FBUser();
+        
+        user1.setId(5);
+        System.out.println(user1.getId() + " " + user2.getId());
+    }
+</pre></font></p>
+
+
+<span style='color:#06a015'><b><big>Activity 2 (1-minutes)</big></b></span>:
+Modify the contents of <font color="black">FBUserTest</font> to answer the following questions:
+<b>What does the above print out?  Why?</b>: 
+<br><br><br>
+
+<h4>Accessing an object's member methods and variables</h4>
+
+<p>Methods in a class can operate on an object using the dot
+  notation.  If <font color="black">var</font> is a variable
+  referring to an object, </p>
+<p><font size="+1" color="#000000"><pre>
+      var.methodName();
+</pre></font></p>
+
+<p>invokes the <font color="black">methodName</font> method on
+  <font color="black">var</font>'s object.</p>
+
+<p>Read this as "we're invoking
+  the <font color="black">methodName</font> method <i>of</i>
+  the <font color="black">var</font> object"</p>
+
+<table> <tr> <td height=8> &nbsp; </td> </tr> </table>
+<p>When an object is allocated with <font color="black">new</font>, e.g.:</p>
+
+<p><font size="+1" color="#000000"><pre>
+    A var = new A();
+</pre></font></p>
+ 
+<p><ul>
+  <li><p>A reference to the new object's memory is returned.</p></li>
+  <li><p>The variable (<font color="black">var</font> here) is set to
+      this reference.</p></li>
+  <li><p>This should feel familiar -- its the same as with
+      arrays.</p></li>
+  <li><p>The type of the variable is the name of the class:
+<p><font size="+1" color="#000000"><pre>
+    <font color="red">A</font> var = new <font color="red">A</font>();
+</pre></font></p>
+  </p></li>
+  <li><p>The variable itself:
+<p><font size="+1" color="#000000"><pre>
+    A <font color="red">var</font> = new A();
+</pre></font></p>
+  </p></li>
+</ul></p>
+
+<table> <tr> <td height=8> &nbsp; </td> </tr> </table>
+
+<p>A slightly more complicated example:</p>
+<p><font size="+1" color="#000000"><pre>
+    FBUser var1 = new FBUser();
+    FBUser var2 = var1;
+    var2.setId(10);
+    System.out.println(var1.getId());
+</pre></font></p>
+
+<img class="img-fluid mx-auto py-2" src="../figures/lectureNotes18/refs.png">
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 3 [Group Work] (5-minutes)</big></b></span>: 
+Add the following methods to the FBUser class:
+<ul>
+  <li>getters and setters for userID, firstName, and lastName</li>
+  <li>a method called <b>addFriend</b> that takes an object of type FBUser as input and adds it to the array <b>friends</b> of the active object.</li>
+</ul>
+First, write a new class to use your FBUserTest class.</p>
+
+<p>Second, create four FBUser objeccts in<font color="black">FBUserTest</font>, initiallize them all, and populate their friend lists.</p>
+
+</font>
+
+<br><br>
+
+<p>Another example:</p>
+
+<p><font size="+1" color="#000000"><pre>
+public class ObjExample {
+    private int data;
+    public void modify(int v) {
+        data = v;
+    }
+    public int access() {
+        return data;
+    }
+    public void addData(ObjExample o) {
+        data += o.access();
+    }
+    public static void main(String[] args) {
+        ObjExample v1 = new ObjExample();
+        ObjExample v2 = v1;
+        v2.modify(10);
+        System.out.println(v1.access());
+
+        ObjExample v3 = new ObjExample();
+        v3.modify(3);
+        v3.addData(v2);
+        System.out.println(v3.access());
+
+        v3.addData(v3);  // what's happening here?
+        v1.addData(v2);  // ...and here?
+    }
+}
+</pre></font></p>
+
+
+<span style='color:#06a015'><b><big>Activity 4 (1-minutes)</big></b></span>:
+ What does the above print out?  Why?
+
+  <p>What are the last two lines doing?  Describe them</p>
+</font>
+
+<!-- SIMHA END -->
+
+      
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes17.html">Previous Lecture</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes19.html">Next Lecture</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+      <!--
+    <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script>
+ -->
+  </body>
+</html>

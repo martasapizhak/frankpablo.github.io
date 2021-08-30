@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSC 111 Introduction to Computer Science Through Programming</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+      .img-max {
+        max-width: 500px;
+        width:50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <!-- <img class="float-right" src="../../images/gw_primary_logo.png" alt="GWU" height="160"> -->
+      <img class="float-right" src="../../../images/SmithLogoStack-cmyk.png" alt="SmithLogo" height="120">
+      <h1 class="display-3 m-0">CSC 111</h1>
+      <p class="lead">Introduction to Computer Science Through Programming</p>
+      <p class="lead">Smith Computer Science </p>
+    </div>
+
+    <div class="container py-0"><!-- was 1-->
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info <span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">TBD 1</a>
+                <a class="dropdown-item" href="#">TBD 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project (if any)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Discord</a>
+                <a class="dropdown-item" href="#">Moodle</a>
+                <a class="dropdown-item" href="#">Repl.it</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes01.html">Previous Module</a>
+              </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Next Module</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <br><br>
+
+
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 02: How Computers Work</h1>
+      <p>
+        <br>
+      </p>
+      <!-- <h2>Objectives</h2>
+
+      By the end of this module, you will be able to:
+      <ul>
+        <li> Identify the rules for the course.        
+        <li> Identify all the tools and  that will be used in the course.
+        <li> Explain the difference between Programming and Computer Science. 
+        <li> Demonstrate Familiarity with the Codio Interface.</li>  
+      </ul>
+ -->
+      <p><br></p><hr><p><br></p>
+
+       <h3>The Abstraction Ladder and The Black Box</h3>
+<!-- 
+      <p>
+        If it sounds like a Sci-Fi novel, you are not wrong. This is concept allowed humanity to learn more and organize their thoughts.
+      </p> -->
+
+
+      <div class="containter mx-5">
+        <blockquote class="blockquote">
+          <p class="mb-0">
+            The essence of abstractions is preserving information that is relevant in a given context, and forgetting information that is irrelevant in that context.
+          </p>
+          <footer class="blockquote-footer">John V. Guttag 
+            <cite title="Source Title">
+              MIT
+            </cite>
+          </footer>
+        </blockquote>
+
+<!--         <blockquote class="blockquote">
+          <p class="mb-0">
+            Computer Science is the science of abstraction.
+          </p>
+          <footer class="blockquote-footer">
+            Gabe Parmer 
+            <cite title="Source Title">
+              GWU
+            </cite>
+          </footer>
+        </blockquote> -->
+      </div>
+
+      <p>
+       <b><big>Abstraction</big></b> is what allow us to have conversations without specifying absurd levels of detail. 
+       <br>
+       Think about how you order a Pizza: 
+      </p>
+
+      <div class="container m-5">
+
+        <p>
+          <b>Example 1</b>: Think about how you order a Pizza: 
+        </p>
+
+        <ol>
+          <li>Call the pizza place</li>
+          <li>Ask for a menu Item (pepperoni pizza)</li>
+          <li>Give address and pay information</li>
+          <li>Hang up</li>
+        </ol>
+
+      </div>
+
+      <p>
+        This is a very <b>high-level of abstraction</b> in which the context is clear to both parties and you both already know what every key word means. 
+        <br><br>
+
+        It is high-level because the <b>details are not needed, only the context</b>.
+        
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span> [1 minute]: If you were teaching an alien (that has never even heard of what a pizza is) to make a pepperoni pizza from scratch, What would you say?
+        <br>
+        You can assume the alien speaks English and all the ingredients are there and they are labeled and identifiable
+        <div class="container m-5">
+          <span style='color:#000000'>One possible answer</span>: 
+          <details>
+            <summary>(Wait; then Click)<br><br></summary>
+            <br>
+            <ol>
+              <li>Place 4 cups of bread flour, 1 teaspoon of sugar, 1 envelope of yeast, and 2 teaspoons of salt in the bowl of a stand mixer.</li>
+              <li>Mix, adding 1.5 cups of water and 2 tablespoons of olive oil and beat until the dough forms into a ball. </li>
+              <li>ETC (you get where this is going)</li>
+            </ol>
+            <br>
+
+              This is a very <b>low-level of abstraction</b> in which <b>the context is not used (much) and great detail is needed</b> to make progress.
+
+
+          </details>
+        </div>
+
+      </p>
+ 
+
+      <p><br></p><hr><p><br></p>
+<!-- Using a Computer... Maximum Abstraction:  -->
+      <h3>Ways to learn: The Black-Box approach</h3>
+
+      <p>
+        Using a module as a black box is like saying: 
+        <br><br>
+
+        <i>"I don't care how it works, I only need to know what I need to give it and what it gives me in return."</i> 
+      
+        <img class="img-max" src="../figures/lecture02/blackBoxModel.png" >
+        <br><br>
+         
+        <ul>
+          <li>
+            We will use the computer in this way;
+          </li>
+          <li>
+            We will also learn Python in this way: We will show working examples and explain what the structure does but we will not delve into the <b>how</b> it does it (that is at a future course). 
+          </li>
+        </ul>
+        <br><br>
+
+        Once the "High-Level" is understood, we can look inside the box to see more details.
+        <br><br>
+
+        This is called a "top-down" approach.
+      </p>
+
+      <br><br>
+
+      <h3>Ways to learn: The trees-to-forest approach</h3>
+
+      <p>
+        Another way we'll learn will be to look at lots of patterns and examples and then to "generalize" what we see to try to find a "rule" that encompasses the examples.
+        <br><br>
+
+        We can call this approach: "the bottom-up approach".
+      </p>
+
+      
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Is this a language course?
+      </h2>
+
+      <p>
+        We'll make a rough analogy with learning a foreign language: CS111 is the equivalent of a beginner language course.
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture02/beginnerLang.png">
+        <br><br>
+        <ul>
+          <li>
+            It might not be enough to write a great Spanish-language novel, but it is enough to be able to go on a trip to a country that speaks Spanish and do OK.
+          </li>
+          <li>
+            You might even be able to read a bit of French, Italian, Portuguese, ... any Romance-Language.
+          </li>
+        </ul>
+        <br><br>
+
+        <b>In terms of Programming languages</b>, this means that you'll be able to get practical things done and understand other programs written in Python; you will also be able to read and understand a whole lot of <i>similar</i> languages like C, C++, Java, etc.
+      </p>
+
+
+      However, there is a big difference between languages like English or Spanish and programming languages!
+      <b>why do you think that is?</b>
+      <br><br>
+
+      Now, a quick <b>high-level</b> look at the inside of the black box.
+
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h3>The Original Computers</h3>
+      <p>
+        The term <i>computer</i> refers to a mechanism or agent that aids in the completion of a computation (AKA a calculation). <br>
+        These are some examples of those agents:
+        <br><br>
+
+
+        <div class="row">
+          <div class="col-lg-5 col-md-5 col-xs-5 thumb">
+            Abacus
+              <a class="thumbnail" href="#">
+                  <img class="img-responsive" src="../figures/lecture02/Abacus.png" alt="" style="width:95%">
+              </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-xs-3 thumb">
+            <a href="https://en.wikipedia.org/wiki/Antikythera_mechanism#Operation">Antikythera Mechanism</a>
+              <a class="thumbnail" href="#">
+                  <img class="img-responsive" src="../figures/lecture02/Antikythera.png" alt="" style="width:110%">
+              </a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+            <a href="https://en.wikipedia.org/wiki/Computer_(occupation)">Original Computer</a>
+              <a class="thumbnail" href="#">
+                  <img class="img-responsive" src="../figures/lecture02/FemaleComputer.png" alt="" style="width:88%">
+              </a>
+          </div>
+        </div>
+      </p>
+      <br><br>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> [1 minute]: In the rightmost picture, where is the "original computer" located? 
+      </p>
+
+      <br><br>
+
+      <p>
+        The modern term <i>Computer</i> refers to a mechanism that "performs calculations" <i>automatically</i> and that can be <i>programmed</i>.
+        <br>
+        Let's look at these terms one by one:
+        <br>
+        <ul>
+          <li>
+            <b>Automatic</b>: refers to action independent of (human) intervention in order to perform its <a href="https://youtu.be/OpLU__bhu2w?t=612">calculations</a>.
+          </li>
+          <li>
+            <b>Programmable</b>: a system whose starting conditions and rules of execution can be predefined and assigned prior to execution.
+          </li>
+        </ul>
+<!-- 
+        A bit of history:
+
+        <ul>
+          <li>
+            The <i>Difference Engine</i>, built by Charles Babbage in 1819 was a programmable calculator. It was "automatic" in that it could perform the calculations without intervention as long as someone provided power (hand-cranked).
+          </li>
+          <li>
+            Babbage theorized a <i>more general</i> machine that could be <i>programmable</i> and could do many more things. This was called the <i>Analytical Engine</i> (which has not yet been built as described by Babbage).
+          </li>
+          <li>
+            Ada Lovelace, who worked with Babbage, published the first computer algorithm and is commonly referred to as the <i>first computer programmer</i>.
+          </li>
+          <li>
+            Analog mechanical computers (late 1800's) were built to solve equations to predict all sorts of things
+          </li>
+          <li>
+            Electromechanical calculators (early 1900's).
+          </li>
+          <li>
+            Z3 (1941) first electromechanical programmable, fully automatic digital computer.
+          </li>
+          <li>
+            Several electromechanical computers built during WW2 to crack codes. Colossus (1943) was the first electronic digital programmable computer.
+          </li>
+          <li>
+            After WW2, we see an explosion in computing speed, memory capacity, and programming complexity.
+            <br>
+            An important component is the "transistor" (more on this later) was invented in 1947. 
+            <br>
+            It allowed the construction of smaller, faster, and more efficient computers.
+          </li>
+          <li>
+            <b>Moore's law</b> postulated that the number of transistors that can be packed into a given unit of space will double about every two years. 
+            <br><br>
+            <img class="img-responsive" src="../figures/lecture02/MooreLaw.png" alt="" style="width:70%">
+          </li>
+
+        </ul>
+      </p>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> [1 minute]: Using these definitions and notes, we can ask the questions:
+        <br>
+        <ul>
+          <li>Is an abacus a computer?</li>
+          <li>Is a calculator a computer?</li>
+          <li>Are one or more human "computers" computers?</li>
+        </ul>
+      </p>
+ -->
+
+
+        <h4>A bit of <a href="https://www.computerhistory.org/timeline/computers/">history</a></h4>
+        <br>
+        <ul>
+          <li>
+            <b>Antikythera Mechanism</b>, built around 100 BC, was a mechanical astronomical clock.            
+            <br>
+            <img class="img-responsive" src="../figures/lecture02/AntikytheraReplica.png" alt="" style="width:25%">
+          </li>
+          <br>
+          <li>
+            <b>Cosmic Engine</b> was built by Su Song in 1092 and was a hydro-mechanical astronomical clock tower;
+            <br>
+            <img class="img-responsive" src="../figures/lecture02/SuSongCosmicEngine.png" alt="" style="width:25%">
+          </li>
+          <br>
+          <li>
+            The <b>Difference Engine</b>, built by Charles Babbage in 1819 was a programmable calculator. It was "automatic" in that it could perform the calculations without intervention as long as someone provided power (hand-cranked).
+            <br>
+            <img class="img-responsive" src="../figures/lecture02/differenceEngine.png" alt="" style="width:25%">
+          </li>
+          <br>
+          <li>
+            Babbage theorized a <i>more general</i> machine that could be <i>programmable</i> and could do many more things. This was called the <b>Analytical Engine</b> (which has not yet been built as described by Babbage).
+            <br>
+            <img class="img-responsive" src="../figures/lecture02/analyticalEngine.png" alt="" style="width:25%">
+          </li>
+          <br>
+          <li>
+            <b>Ada Lovelace</b>, who worked with Babbage, published the first computer algorithm and is commonly referred to as the <i>first computer programmer</i>.
+            <br>
+            <img class="img-responsive" src="../figures/lecture02/AdaLovelace.png" alt="" style="width:25%">
+          </li>
+          <br>
+          <li>
+            <b>Analog mechanical computers</b> (late 1800's) were built to solve equations to predict all sorts of things
+            <br>
+            <img class="img-responsive" src="../figures/lecture02/analogMechanical.png" alt="" style="width:25%">
+          </li>
+          <br>
+          <li>
+            <b>Electromechanical calculators</b> (early 1900's).
+            <br>
+            <img class="img-responsive" src="../figures/lecture02/electromechanicalCalculator.png" alt="" style="width:25%">            
+          </li>
+          <br>
+          <li>
+            <b>Z3</b> (1941) first electromechanical programmable, fully automatic digital computer.
+            <br>
+            <img class="img-responsive" src="../figures/lecture02/Z3.png" alt="" style="width:25%"> 
+          </li>
+          <br>
+          <li>
+            Several electromechanical computers built during WW2 to crack codes. <b>Colossus</b> (1943) was the first electronic digital programmable computer. "Programs" were defined by the states of its patch cables and switches.
+            <br>
+            <img class="img-responsive" src="../figures/lecture02/Colossus.png" alt="" style="width:25%"> 
+          </li>
+          <br>
+          <li>
+            After WW2, we see an explosion in computing speed, memory capacity, and programming complexity.
+            <br><br>
+            The electronic stored program (see <a href="https://en.wikipedia.org/wiki/Manchester_Baby">Manchester Baby</a>) became a "thing".
+            <br><br>
+            An important component is the "transistor" (more on this later) was invented in 1947. 
+            <br>
+            It allowed the construction of smaller, faster, and more efficient computers: <b>Moore's law</b> postulated that the number of transistors that can be packed into a given unit of space will double about every two years. 
+            <br><br>
+            Effect... look in your pocket or wrist.
+            <br>
+            <img class="img-responsive" src="../figures/lecture02/allTheseThings.png" alt="" style="width:50%">
+            <br>
+            (this is from the late 80's or early 90's!) 
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 3</big></b></span> [4 minutes]: Using these definitions and notes, we can ask the questions:
+        <br>
+        <div class="container m-5">
+          <ul>
+            <li>Is an abacus a computer?</li>
+            <li>Is a calculator a computer?</li>
+            <li>Are one or more human "computers" computers?</li>
+            <li>Can we build a computer using <a href="https://youtu.be/OpLU__bhu2w?t=1074">dominoes</a> (wait to click)?</li>
+            <li>Can we build a computer using <a href="https://youtu.be/IxXaizglscw?t=835">water</a> (wait to click)?</li>
+          </ul>
+        </div>  
+      </p>
+
+ 
+       <p><br></p><hr><p><br></p>
+
+      <h3>What are the parts of a Computer?</h3>
+      <br><br>
+      <img class="img-max" src="../figures/lecture02/computerParts.png">
+      <br><br>
+      <b>Parts:</b>
+      <ul>
+        <li>a modern computer has a processor (brain), also know as the <a href="https://en.wikipedia.org/wiki/Central_processing_unit">Central Processing Unit</a> (CPU);</li>
+        <li>a long term storage location (disk);</li>
+        <li>and a couple faster short term storage locations (memory and cache)</li>
+        <li>It also has "peripherals" for input (keyboard, mouse), and output (monitor, speakers) </li>
+      </ul>
+       <br><br>
+       
+       <b>Operation:</b>
+      <ul>
+        <li>The disk has sectors were data is remains stored even when powering down the computer.</li>
+        <li>The memory and the cache are volatile memory; they are faster but the data is lost when powered down.
+          <br>
+          The cache is faster but smaller than the main memory.</li>
+        <li>
+          The processor follows programs to cause all its parts to function according to some plan:
+          <ol>
+            <li>It can try to read information from its cache;</li>
+            <li>If it does not find the data there, it looks in main memory;</li>
+            <li>If it does not find it there, it reads data from disk into memory and searches memory again;</li>
+          </ol>          
+        </li>
+        <li>
+          The processor also reads data from peripherals (like the keyboard) and can write to them (like a monitor)
+        </li>
+      </ul>
+      <br><br>
+      <h4>CPU vs GPU</h4>
+      <p>
+        There are different types of processors; 
+        <br><br>
+
+        The <b>CPU</b> is versatile (can run many different operations) at a relatively fast rate.
+        <br><br>
+
+        <ul>
+          <li>A CPU can interpret instructions and send signals to other parts.</li>
+          <li>It can read (or write) data from (to) memory</li>
+          <li>It can store small quantities of information that it can access incredibly fast</li>
+          <li>It can solve arithmetic or logical problems using its <b>Arithmetic-Logic-Unit</b> (ALU)</li>
+        </ul>
+        
+        <br><br>
+        A <b>GPU</b> (a Graphics Processing Unit) is a massively simplified CPU that can run <i>many</i> simple operations at the same time (in parallel). This makes it very fast.
+        <br><br>
+        CPUs are good for running general tasks in a computer.
+        <br>
+        GPUs are good for running simple operations to solve similar problems like for graphics.
+      </p>
+
+      <br><br>
+
+      <p>
+        Let's look at the <b>logic</b> used by a modern computer to function; 
+        <br><br>
+
+        this time from a Low-level to High-level of abstraction. 
+        <br><br>
+      </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h3>From gears to 0's and 1's, and up to a High-Level Language</h3>
+
+
+      How do we compute something automatically?
+        <br>
+        We could use <b>Gears & levers</b> but as we discussed, that is problematic (slow and inaccurate).
+        <br><br>
+
+        It turns out that using a fast flowing current is a pretty good approach!
+        <ul>
+          <li>It is energy-efficient</li>
+          <li>It is easy to move around</li>
+          <li>It is versatile and hard to "damage"</li>
+        </ul>
+        <br><br>
+
+        <!-- water computer -->
+        <p>
+          A computer works like a <a href="https://youtu.be/IxXaizglscw?t=846">water-pipe system with a gazillion valves</a>. The water (electricity) courses through the system and activates sprinklers, flotation devices, etc, depending on how the valves are set.
+          <br><br>
+          <img class="img-max" src="../figures/lecture02/waterAdder.png" alt="" style="width:30%">
+        </p> 
+
+
+        <br><br>
+
+        However, <b>How do we "store information" using some sort of flowing current?</b>
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 4</big></b></span> [2 minute]: How do we store information in a "computer" that uses flowing current to function?
+
+        <div class="container m-5">
+          <span style='color:#000000'>One possible answer</span>: 
+          <details>
+            <summary>(Wait; then Click)<br><br></summary>
+            <p>
+              The minimum thing we can know about a thing is: <b>Is it there or not?</b>.
+              <br><br>
+              To represent this with a flowing current, we can say: 
+              <ul>
+                <li>If it is flowing in this section (pipe): then <b>YES</b> or <b>TRUE</b></li>
+                <li>If it is NOT flowing in this section (pipe): then <b>NO</b> or <b>FALSE</b></li>
+              </ul>
+              <br><br>
+              Anything that has two parts or two sides is called <b>binary</b>, so this piece of information is called a binary datum (a single piece of data), which could be <i>represented</i> with any two symbols:
+              <br>
+              <ul>
+                <li>No/Yes</li>
+                <li>False/True</li>
+                <li>OFF/ON</li>
+                <li>\( \bullet\) / \(\boldsymbol{-}\)</li>
+                <li>0/1</li>
+              </ul>
+              <br><br>
+
+              The term <b>bit</b> is derived from <b>binary digit</b>, a logical state (relation between a proposition and the truth) with one of two values.
+              <br><br>  
+
+              It is common to represent these with \( 0 \) and \( 1 \), but as you can see below, we can use another approach (OFF/ON) with the same results.
+              <br><br>
+            </p>
+
+          </details>
+        </div>
+
+<!--       <p>
+        In this example, the water represents electric current, and the valves represent the electrical switches (transistors) that determine if we have running current <b>(1)</b> or not <b>(0)</b>.
+      </p> -->
+      <br><br>
+
+
+      <!-- programmable computer! -->
+<!--       <h4>It must be Programmable!</h4>
+
+      <p>
+        A computer's true power comes from the fact that it can be <b>programmed</b>. 
+        <br>
+        Automatically calculating something is <a href="https://youtu.be/OpLU__bhu2w?t=265"><i>OK</i></a> but the programming is the cool bit (no pun intended).
+        <br><br>
+
+
+
+        <br>
+        The "valves" that allow the passage of electricity can be set at some desired starting position and change according to:
+        <ul>
+          <li>
+            rules we indicate (ways in which the valves change at each step)
+          </li>
+          <li>
+            intermediate results (during "calculation"). It should be possible for the valves to be automatically <b>reset</b>!
+            <br><br>
+            <img class="img-responsive" src="../figures/lecture02/waterTransistor.png" alt="" style="width:88%">
+          </li>
+        </ul>
+      </p> -->
+
+      <p>
+        <b>IF</b> we can assign a set of steps to be followed by our system, which will run automatically when executed, we've got a computer!
+        <br><br>
+
+        <!-- <div class="mx-lg-3">
+          <span style='color:#888888'>
+            In the water example, we would need the machine to "read" an initial valve setup and then change the valve positions according to our instructions. 
+            <br>
+            While this is <a href="https://en.wikipedia.org/wiki/Analog_computer#Limitations">possible</a> with water, we'll look at how it is done using electricity.
+        </span>
+        </div> -->
+        
+      </p>
+      <br><br>
+
+      <!-- <h4>The Transistor!</h4>
+
+      <p>
+        A transistor is an electronics component that lets electricity pass through from one of its input pins (collector) to one of its output pins (emitter) if there is an input on the third <i>signal</i> pin (base). 
+        <br><br>
+        <img class="img-max" src="../figures/lecture02/transistor.png">
+        <br><br>
+        The brilliance here is that <i>this allows an electric signal (that can be programmed) to control another electric signal</i>; making the electric component capable of self-guidance.
+      </p>
+      <br><br> -->
+
+      <h2>The Transistor</h2>
+      <p>
+        A transistor is an electronics component that lets electricity pass through from one of its input pins (collector) to one of its output pins (emitter) if there is an input on the third <i>signal</i> pin (base). 
+        <br><br>
+        <img class="img-max" src="../figures/lecture02/transistor.png" alt="magic" style="width:30%">
+        <br><br>
+        The brilliance here is that <i>this allows an electric signal (that can be programmed) to control another electric signal</i>; making the electric component capable of self-guidance.
+
+        To explain how we do this, we'll use an analogy with water and pipes, which contains: 
+        <ul>
+          <li>a water reservoir</li>
+          <li>valves</li>
+          <li>water circuits</li>
+        </ul>
+        <br>
+        <img id="image" class="img-responsive" src="../figures/lecture02/waterTransistor2.png" alt="" style="width:60%">
+        <br><br>
+
+        If you look at the water system, depending on what the "water circuit 2" does, 
+        <ul>
+          <li>the water could come out of the <span style='color:#ff0000'>red</span> path and close the vale;</li>
+          <li>or it could come through the <span style='color:#0000ff'>blue</span> path and open the vale.</li>
+        </ul>
+        <br><br>
+
+        The transistor works like that:
+        <ul>
+          <li>if there is no <b>signal</b> into the <i>base</i>, then current does not flow from <i>collector</i>  to <i>emitter</i>;</li>
+          <li>if there IS a <b>signal</b> into the <i>base</i>, then current flows from the <i>collector</i> into the <i>emitter</i> (and one can use that current to do other things);</li>
+        </ul>
+        <br><br>
+
+        These components can be arranged together together with other valve-like components to make more and more complex modules that can be integrated into a full computer.
+      </p>
+      <br><br>
+
+
+      <h4>A Program</h4>
+      <p>
+        A (modern computer) program, in its most basic form, is a list of control signals that tell the computer when to let electricity pass and where to.
+        <br><br>
+        The lowest form of these control signals therefore depend on two symbols:
+        <ul>
+          <li>0: no current</li>
+          <li>1: current</li>
+        </ul>
+
+        A list of control signals written in 0a and 1s is called <b>Machine Code</b>.
+
+        <br><br>
+
+        Since we can write numbers using only 0's and 1's, these can be called binary (from "two") digits (symbols representing numbers), or <b>bits</b>.
+        <br><br>
+        Since a group of bits is called a <b>Byte</b>, a program made of groups of bits is also known as <b>Bytecode</b>.
+      </p>
+      <br><br>
+
+    <p><br></p><hr><p><br></p>
+
+
+    <h2>Binary</h2>
+
+    <p>
+      There are many different ways of representing numbers:
+      <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-5 thumb">
+            <a href="https://en.wikipedia.org/wiki/Roman_numeralsn">Roman Numerals</a>
+              <a class="thumbnail" href="#">
+                  <img class="img-fluid" src="../figures/lecture02/romanClock.png" alt="" style="width:100%">
+              </a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+            <a href="https://en.wikipedia.org/wiki/Maya_numerals">Mayan Numerals</a>
+              <a class="thumbnail" href="#">
+                  <img class="img-fluid" src="../figures/lecture02/mayanNumerals.png" alt="" style="width:100%">
+              </a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+            <a href="https://en.wikipedia.org/wiki/Positional_notation">Decimal Positional</a>
+              <a class="thumbnail" href="#">
+                  <img class="img-fluid" src="../figures/lecture02/decimals.png" alt="" style="width:100%">
+              </a>
+          </div>
+        </div>
+      </p>
+      <br><br>     
+
+      <p>
+      Note that <b>decimal</b> is a positional system with the symbols: 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9;
+      <br><br>
+
+      the number is constructed by indicating "how many times we need each power of 10" (that's what base 10 means):
+      <br><br>
+      \[ 1729 = 1*10^3 + 7*10^2 + 2*10^1 + 9*10^0 = 1000 + 700 + 20 + 9 \]
+
+
+      <br><br> 
+
+      The <b>binary</b> system is a positional number system with two symbols: 0 and 1;
+      <br><br>
+      the number is constructed by indicating "how many times we need each power of 2" (that's why base 2) using only the valid symbols:
+
+      \[ 11011000001 = 1*2^{10} + 1*2^9 + 0*2^8 + 1*2^7 + 1*2^6 + 0*2^5 + 0*2^4 + 0*2^3 + 0*2^2 + 0*2^1 + 1*2^0 \]
+      \[             = 1024 + 512 + 0 + 128 + 64 + 0 + 0 + 0 + 0 + 0 + 1 = 1729\]
+      
+
+      The first 8 natural numbers (starting at 0) are:
+      <br>
+      <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-0lax{text-align:left;vertical-align:top}
+        </style>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-0lax">decimal</th>
+            <th class="tg-0lax">binary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-0lax">0</td>
+            <td class="tg-0lax">000</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">1</td>
+            <td class="tg-0lax">001</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">2</td>
+            <td class="tg-0lax">010</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">3</td>
+            <td class="tg-0lax">011</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">4</td>
+            <td class="tg-0lax">100</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">5</td>
+            <td class="tg-0lax">101</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">6</td>
+            <td class="tg-0lax">110</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">7</td>
+            <td class="tg-0lax">111</td>
+          </tr>
+        </tbody>
+        </table>
+
+        <br><br>
+
+        <b>Notation</b>: To indicate that we're writing a binary number, we usually <i>prepend</i> "0b" to the number, so the binary number:
+        <br>
+        101010 should be written <b>0b101010</b> to distinguish it from "one hundred and one thousand and ten".
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 5</big></b></span> [3 minutes]: <br>
+            Translate your birthday to binary.
+            <br>
+            example: 02/29/2020 (Yak's birthday) would be 0b10/0b11101/0b11111100100
+            <br>
+            hint: try dividing by the maximum power of 2 you can fit. Then continue with the remainder.
+
+
+        <br><br>
+
+         The last useful positional system we'll use in this class is <b>hexadecimal</b>.
+            <br>
+            The <b>hexadecimal</b> (or <b>hex</b>) system is a positional number system with 16 symbols: 0-9 plus a, b, c, d, e, and f;
+          <br><br>
+          the number is constructed by indicating "how many times we need each power of 16" (that's why base 16) using only the valid symbols.
+
+          \[ 6C1 = 6*16^2 + C*16^1 + 1*16^0 = 6*16^2 + (12)*16^1 + 1*16^0 = 1536 + 192 + 1 = 1729\]
+
+          <br><br>
+
+          <b>Notation</b>: To indicate that we're writing a hex number, we usually <i>prepend</i> "0x" to the number, so the hex number:
+        <br>
+        1234 should be written <b>0x1234</b> to distinguish it from "one thousand, two hundred and thirty four".
+
+        <br><br>
+        <span style='color:#06a015'><b><big>Activity 6</big></b></span> [Group; 3 minutes]: <br>
+            Translate this number to hex: 3735928559
+            <br>
+            hint: try dividing by the maximum power of 16 you can fit. Then continue with the remainder.
+    </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h4>In case we only get to here...Before next class (Friday)</h4>
+      <br><br>
+      <b>[Due for everyone]</b> Complete ZyBook Assignment 02 (chapters 1.4 - 1.5 and 1.11 - 1.13)
+      <br>
+      <span style='color:#aaaaaa'>Note: 1.4.1 is complex, but don't worry, you are only supposed to tinker with it, not understand the whole thing.</span>
+      <br><br>
+      <b>[Optional]</b> ZyBook chapter 1.10; Try to make the following shape using exercise 1.10.3:
+      <br><br>
+      <p><img class="img-fluid" src="../figures/lecture02/asciiDog.png"><p>
+      <br> 
+      <!-- <span style='color:#aaaaaa'>Tip: any time you want to use a "\" write, instead a "\\\\" (I'll explain later)</span> -->
+
+
+
+
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes01.html">Previous Module</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Next Module</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+   
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+    <!-- <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script> -->
+  </body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSCI 1111 Introduction to Software Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 1111</h1>
+      <p class="lead">Introduction to Software Development</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <!-- NAVBAR-->
+    <div class="container py-0">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img class="img-fluid mx-auto py-2" src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures<span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>
+                <a class="dropdown-item" href="#">Codio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./lectureNotes24.html">Previous Lecture</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes26.html">Next Module</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <p>
+        <hr>
+      </p>
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 25: Review and Study.</h1>
+      <p>
+        <br>
+      </p>
+
+      <h2>
+        Objectives
+      </h2>
+
+      <p>
+        During this module, we'll clarify the final project and revisit any concepts that you want to review.
+        The following are some popular "review" materials:
+        <ul>
+          <li>Compiling and running programs through the terminal.</li>
+          <li>Method construction.</li>
+          <li>Using primitives variables, casting, ASCII conversions</li>
+          <li>String operations</li>
+          <li>While and For Loops</li>
+          <li>Nested For loops</li>
+          <li>Conditionals</li>
+          <li>1-D Arrays</li>
+          <li>2-D Arrays</li>
+          <li>Scope and Encapsulation, Variable shadowing</li>
+          <li>Classes and Objects</li>
+          <li>Understand how to use Generics.</li>
+          <li>ArrayList, LinkedList, HashMap</li>
+        </ul>
+      </p>
+      
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Before Starting
+      </h2>
+
+      <!--
+      <ul>
+        <li>Read Sections <span style="color: #ff0000; font-weight: bold">16.01 to 16.03</span> in the Codio Course</li>
+      </ul>
+    -->
+
+      <p>
+        If you do not have your Codio course ready, use any text editor or simple IDE. Some possibilities are:
+      </p>
+      <ul>
+        <li>Write using Sublime; Compile and run in the Terminal</li>
+        <li>Use IDEs like: IntelliJ, DrJava, or JGrasp</li>
+      </ul> 
+<!--
+      <p><br></p><hr><p><br></p>
+
+      <h2>Catching Up</h2>
+
+      <p>
+        Before we move forward, let's catch up (complete any remaining work from the previous module)
+        <br>
+        In this case, make sure we've got:
+        <ol>
+          <li>One-Dimensional Arrays... Declaring, Initializing, and Accessing!</li>
+        </ol>
+
+      </p>
+-->
+
+<!-- SIMHA START -->
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+Video Presentation: Possible discussion points in the Final Project
+</h2>
+
+
+<p>
+  The following are possible presentation points for the Video on the Final project:
+  <ul>
+    <li>Why do we use multiple classes (ImageConverter, ImageArrayFilter, FinalProject)? How do they interact?</li>
+    <li>How do we construct template classes so that we can use objects? How do we pass information around when using objects?</li>
+    <li>What is the difference between static and non-static variables/methods? Give one example of a useful static variable and one static method that we could add to ImageArrayFilter.</li>
+    <li>How is an image represented using a 2D array?</li>
+    <li>What are the differences between the ImageArray and the WindowArray inside the class ImageArrayFilter?</li>
+    <li>Explain how you do input checking on each of the methods: scaleArray, blurWindow, and addRectangle.</li>
+    <li>Explain the high-level steps of the unsharp-masking process. Why does is "sharpen" an image?</li>
+    <li>How does the unsharp masking process change when you vary the scaling factor in the range (0,1]?</li>
+    <li>Explain the high-level process of "blurring".</li>
+    <li>How is the "blurring" process implemented in ImageArrayFilter? Explain the "sliding-window" process in detail.</li>
+    <li>Explain the method "getBlurredValue".</li>
+    <li>What happens if we give a 11x11 kernel instead of the 5x5 or 3x3 ones we used in the project?</li>
+    <li>Explain, in detail, the code in the sections: "Test unsharp masking" and "Unsharp masking (small) test" in the FinalProject class.</li>
+    <li>Even if you did not implement it, explain how does one place a rectangle around some section of an image (either completely black or completely white). What do you need to consider if you want to change the width of that rectangle?</li>
+  </ul>
+</p>
+
+
+<p><br></p><hr><p><br></p>
+<h2>
+Subject Review
+</h2>
+
+<p>
+  In this section, we can revisit any subject you might need to discuss that might help in the completion of the final project or to clarify the concepts seen throughout the course.
+
+  Here are some concepts that we can discuss:
+  <br><br>
+  <ul>
+    <li>Compiling and running programs through the terminal.</li>
+    <li>Method construction.</li>
+    <li>Using primitives variables, casting, ASCII conversions</li>
+    <li>String operations</li>
+    <li>While and For Loops</li>
+    <li>Nested For loops</li>
+    <li>Conditionals</li>
+    <li>1-D Arrays</li>
+    <li>2-D Arrays</li>
+    <li>Scope and Encapsulation, Variable shadowing</li>
+    <li>Classes and Objects</li>
+    <li>Understand how to use Generics.</li>
+    <li>ArrayList, LinkedList, HashMap</li>
+  </ul>
+</p>
+
+<!-- SIMHA END -->
+
+      
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes24.html">Previous Lecture</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes26.html">Next Module</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+      <!--
+    <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script>
+ -->
+  </body>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSCI 1111 Introduction to Software Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 1111</h1>
+      <p class="lead">Introduction to Software Development</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <!-- NAVBAR-->
+    <div class="container py-0">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img class="img-fluid mx-auto py-2" src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures<span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>
+                <a class="dropdown-item" href="#">Codio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./lectureNotes14.html">Previous Lecture</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes16.html">Next Lecture</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <p>
+        <hr>
+      </p>
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 15: More About 2-D Arrays</h1>
+      <p>
+        <br>
+      </p>
+
+      <h2>
+        Objectives
+      </h2>
+
+      <p>
+        By the end of this module, you will:
+        <ul>
+          <li> Distinguish between the array and Cartesian views of a 2D array.
+          <li> Identify the correct access method into a 2D array depending on the application.</li>
+          <li> Demonstrate the capacity to design an approach to solve common 2-D array manupulations.</li>
+        </ul>
+
+      </p>
+      
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Before Starting
+      </h2>
+
+      <ul>
+        <li>Read Section <span style="color: #ff0000; font-weight: bold">15.01</span> in the Codio Course</li>
+      </ul>
+
+      <p>
+        If you do not have your Codio course ready, use any text editor or simple IDE. Some possibilities are:
+      </p>
+      <ul>
+        <li>Write using Sublime; Compile and run in the Terminal</li>
+        <li>Use IDEs like: IntelliJ, DrJava, or JGrasp</li>
+      </ul> 
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Catching Up</h2>
+
+      <p>
+        Before we move forward, let's catch up (complete any remaining work from the previous module)
+        <br>
+        In this case, make sure we've got:
+        <ol>
+          <li>Two-Dimensional Arrays... Declaring, Initializing, and Accessing!</li>
+        </ol>
+
+      </p>
+
+
+<!-- SIMHA START -->
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+2D arrays: Array (table) vs. Cartesian (grid) view
+</h2>
+
+
+
+<p> There are two common ways of <em>interpreting</em> 
+and visualizing a 2D array:
+  <ol>
+  <li> As an array with the first row on top, followed by
+    the second row below it and so on.
+
+  <p><li> As a grid that's aligned with the <em>Cartesian</em>
+    x and y axes.
+  </ol>
+
+
+Let's expound with an example:
+  <ul>
+  <li> Consider this array of strings:
+     <font size="+2"><font color="#000000"><pre>
+  String[][] A = {
+      {"(0,0)", "(0,1)", "(0,2)", "(0,3)", "(0,4)"},
+      {"(1,0)", "(1,1)", "(1,2)", "(1,3)", "(1,4)"},
+      {"(2,0)", "(2,1)", "(2,2)", "(2,3)", "(2,4)"},
+      {"(3,0)", "(3,1)", "(3,2)", "(3,3)", "(3,4)"},
+  };
+     </font></pre></font>
+
+  <li> Here, we have deliberately put "coordinates" as strings in an array.
+
+  <p><li> Observe that, as we look at the array, we can see that row 2
+  is below row 1:
+     <font size="+2"><font color="#000000"><pre>
+  String[][] A = {
+      {"(0,0)", "(0,1)", "(0,2)", "(0,3)", "(0,4)"},
+      {"(1,0)", "(1,1)", "(1,2)", "(1,3)", "(1,4)"},
+      {"(<b>2</b>,0)", "(<b>2</b>,1)", "(<b>2</b>,2)", "(<b>2</b>,3)", "(<b>2</b>,4)"},
+      {"(3,0)", "(3,1)", "(3,2)", "(3,3)", "(3,4)"},
+  };
+     </font></pre></font>
+  and column 3 (fourth column) is exactly where we expect it to be:
+     <font size="+2"><font color="#000000"><pre>
+  String[][] A = {
+      {"(0,0)", "(0,1)", "(0,2)", "(0,<b>3</b>)", "(0,4)"},
+      {"(1,0)", "(1,1)", "(1,2)", "(1,<b>3</b>)", "(1,4)"},
+      {"(2,0)", "(2,1)", "(2,2)", "(2,<b>3</b>)", "(2,4)"},
+      {"(3,0)", "(3,1)", "(3,2)", "(3,<b>3</b>)", "(3,4)"},
+  };
+     </font></pre></font>
+
+  <p><li>
+   Note: in both cases, we've boldfaced only the part of the string
+   involved in the row or column number just to emphasize.
+   <p>
+   Of course, the whole string in each array element is the element.
+   For example, the elements in column 3 are:
+     <font size="+2"><font color="#000000"><pre>
+  String[][] A = {
+      {"(0,0)", "(0,1)", "(0,2)", <b>"(0,3)"</b>, "(0,4)"},
+      {"(1,0)", "(1,1)", "(1,2)", <b>"(1,3)"</b>, "(1,4)"},
+      {"(2,0)", "(2,1)", "(2,2)", <b>"(2,3)"</b>, "(2,4)"},
+      {"(3,0)", "(3,1)", "(3,2)", <b>"(3,3)"</b>, "(3,4)"},
+  };
+     </font></pre></font>
+
+  <p><li> Now, when we print, we get the same view:
+     <font size="+2"><font color="#000000"><pre>
+  <font color="#dc143c">// Normal array print:</font>
+  for (int i=0; i&lt;A.length; i++) {
+      for (int j=0; j&lt;A[i].length; j++) {
+          System.out.printf (" %6s", A[i][j]);
+      }
+      System.out.println ();
+  }
+     </font></pre></font>
+  
+  <li> Note: the format specifier of printf for strings is "s":
+     <font size="+2"><font color="#000000"><pre>
+    System.out.printf (" <b>%6s</b>", A[i][j]);
+     </font></pre></font>
+   (It was "d" for integers, "f" for double's).
+  </ul>
+
+
+<span style='color:#06a015'><b><big>Activity 1</big></b></span>: 
+Confirm this by writing up the above in
+   <font size="+2" color="#000000"><tt>MyArrayPrint.java</tt></font>.
+</font>
+
+<br><br>
+
+  <ul>
+  <li> Next, let's try this variation:
+     <font size="+2"><font color="#000000"><pre>
+  <font color="#dc143c">// Cartesian print:</font>
+  for (int y=A[0].length-1; y&gt;=0; y--) {
+      for (int x=0; x&lt;A.length; x++) {
+          System.out.printf (" %6s", A[x][y]);
+      }
+      System.out.println ();
+  }
+     </font></pre></font>
+
+  </ul>
+
+
+<span style='color:#06a015'><b><big>Activity 2</big></b></span>: 
+Try the Cartesian printing approach in 
+   <font size="+2" color="#000000"><tt>MyArrayPrint2.java</tt></font>.
+</font>
+
+
+  <ul>
+  <li> What you should see:
+     <font size="+2"><font color="#000000"><pre>
+  (0,4)  (1,4)  (2,4)  (3,4)
+  (0,3)  (1,3)  (2,3)  (3,3)
+  (0,2)  (1,2)  (2,2)  (3,2)
+  (0,1)  (1,1)  (2,1)  (3,1)
+  (0,0)  (1,0)  (2,0)  (3,0)
+     </font></pre></font>
+
+  <li> Pay attention to how the first coordinate is increasing in
+   the bottom row:
+     <font size="+2"><font color="#000000"><pre>
+  (0,4)  (1,4)  (2,4)  (3,4)
+  (0,3)  (1,3)  (2,3)  (3,3)
+  (0,2)  (1,2)  (2,2)  (3,2)
+  (0,1)  (1,1)  (2,1)  (3,1)
+  (<b>0</b>,0)  (<b>1</b>,0)  (<b>2</b>,0)  (<b>3</b>,0)
+     </font></pre></font>
+  Here, the x-coordinate is increasing from 0, 1, 2, ... while the
+  y-coordinate is 0.
+
+  <p><li> Note that this is only a way to <em>view</em>
+  the contents via printing. The actually array 
+  contents are unchanged.
+
+  <p><li> In this view, we can treat the first dimension as the x-coordinate
+   and the second as the y-coordinate, as Cartesian coordinates dictate.
+
+  <p><li> Thus, when x=2 and y=3, the array element 
+     <font color="#000000"><tt>A[2][3]</tt></font>
+   can be seen where we expect it in a Cartesian frame:
+     <font size="+2"><font color="#000000"><pre>
+    |
+    |  (0,4)  (1,4)  (2,4)  (3,4)
+y=3 |  (0,3)  (1,3)  <b>(2,3)</b>  (3,3)
+    |  (0,2)  (1,2)  (2,2)  (3,2)
+    |  (0,1)  (1,1)  (2,1)  (3,1)
+    |  (0,0)  (1,0)  (2,0)  (3,0)
+  __|________________________________________
+    |                 x=2
+     </font></pre></font>
+
+  <li> Why is this useful?
+     <ul>
+     <li> When we work with actual Cartesian coordinates, it's useful
+        to print in this fashion, and to track x,y in the familiar
+        Cartesian way.
+     </ul>
+ 
+  </ul>
+
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+  Designing Solutions that include 2-D Arrays
+</h2>
+
+<p>
+
+
+<table> <tr> <td height=8> &nbsp; </td> </tr> </table><p>
+<font size="+1" color="#000000"><pre>
+  public class GradingSpreadsheet {
+      public static void main(String[] argv) {
+          double[][] studentGrades = {{4, 3, 5, 2, 10},
+                                      {8, 9, 9.5, 8, 0},
+                                      {10, 10, 9, 9.5, 0}};
+          String[] studentNames    = {"Larry", "Curly", "Moe"};
+
+          // your code here!
+      }
+  }
+</pre></font>
+
+  A simple
+  spreadsheet app -- you have an array of student grades (each row
+  contains the grades for each homework), and the student names.  You
+  can see that Larry did something mischievous on the last
+  assignment.  Lets do some simple processing:
+</p>
+
+  <p>
+    <span style='color:#06a015'><b><big>Activity 3</big></b></span>:
+    Add code to print each student's name, and their average grade over all homeworks.
+    <br><br>
+    <span style='color:#06a015'><b><big>Activity 4</big></b></span>:
+    Add code to print the average grade for each homework.
+    <br><br>
+    <span style='color:#06a015'><b><big>Activity 5</big></b></span>:
+    Create an array <pre>double[] weights = {0.2, 0.1, 0.2, 0.3, 0.2};</pre> 
+    with the same length as the number of homeworks.
+    Compute a weighted grade, where the final grade for the
+    student is determined by these weights on the homeworks. The formula for each final grade should be: 
+    <div lang="latex">final = grade_0 * weight_0 + grade_1 * weight_1 + \dots + grade_{n-1} * weight__{n-1}</div>.
+    <br><br>
+    <!--
+    <p>
+  When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+  \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
+  \[final = { grade_0 * weight_0 + grade_1 * weight_1 + \dots + grade_{n-1} * weight__{n-1} }.\]
+</p>
+-->
+    <br><br>
+    <span style='color:#06a015'><b><big>Activity 6</big></b></span>:
+    Add code to print, for each of the homeworks, the name of the student
+  that got the highest grade. 
+    <br><br>
+    <span style='color:#06a015'><b><big>Activity 7</big></b></span>:
+    Add code to print the standard deviation of the grades for each student. Remember:
+    <div lang="latex">\sigma_{student} = \sqrt{ \frac{\Sigma(x_i - \mu)^2}{N}}</div>.
+
+    <span style='color:#06a015'><b><big>Activity 8</big></b></span>:
+    Add code to compute and print the grades "on a curve". How would you do this?  Be
+      creative; there are multiple ways
+
+<br><br>
+<b>It's all better with methods!</b>
+  If we have the time, let's re-implement these as separate methods that
+  each return the value, or list, as appropriate. Let''s use the file GradingSpreadsheetMethods.java for that purpose.
+
+  <p><br></p><hr><p><br></p>
+
+<h2>
+  A Cool Game-Like application of 2-D Grids
+</h2>
+
+<p>
+  Conways Game of Life is a simple cellular automaton, defined in <a href="https://mathworld.wolfram.com/CellularAutomaton.html#:~:text=A%20cellular%20automaton%20is%20a,many%20time%20steps%20as%20desired.">Mathworld</a> as:
+
+  "<i>A cellular automaton is a collection of "colored" cells on a grid of specified shape that evolves through a number of discrete time steps according to a set of rules based on the states of neighboring cells. The rules are then applied iteratively for as many time steps as desired</i>"
+  <br><br>
+  Look at a visual repesentation of the <a href="http://battleship.ru/virus/conway.html">rules</a>
+  <br><br>
+  Look at this video:
+  <a href="https://www.youtube.com/watch?v=C2vgICfQawE">Epic GOL</a>
+  <br><br>
+  Play with this <a href="https://bitstorm.org/gameoflife/">GOL simulator</a>
+  <br><br>
+  Check out XKCD's <a href="https://xkcd.com/2293/">post</a> in honor of John Conway
+</p>
+
+
+
+<!-- SIMHA END -->
+
+      
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes14.html">Previous Lecture</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes16.html">Next Lecture</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+      <!--
+    <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script>
+ -->
+  </body>
+</html>

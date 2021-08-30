@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSC 250  Theory of Computation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>    
+    <style>
+      .img-max {
+        max-width: 500px;
+        width:50%;
+      }
+
+      #HIDDENDIV {
+        display: none;
+      }
+
+      #HIDDENDIV.show  {
+        display: block;
+      }
+
+      @import url('https://fonts.googleapis.com/css?family=Inter|Dosis&display=swap');
+
+      /* Crucial */
+      .highlight {
+        background-color: #EEF43B;
+          padding-right: 0px;
+          padding-left: 0px;
+      }
+
+
+      /* Just for styling */
+      /*body {
+        font-family: 'Inter', sans-serif;
+      }*/
+
+      /*.container {
+        box-sizing: border-box;
+        margin: 0 auto;
+        max-width: 960px;
+        padding: 0 2%;
+      }*/
+
+      .search-container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto 20px auto;
+        max-width: 450px;
+        padding: 0 2%;
+      }
+
+      label {
+        color: #535353;
+        font-family: 'Dosis', sans-serif;
+        font-size: 14px;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+      }
+
+      input {
+        background: #fff;
+        border: 1px solid #535353;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        height: 38px;
+        line-height: 38px;
+        outline: none;
+        padding: 0 10px;
+        transition: all 0.5s;
+        width: 100%;
+      }
+
+      input:focus {
+        border: 1px solid #3a5bd3;
+        box-shadow: 0 0 4px 0 #7d90de;
+      }
+
+      blockquote {
+        background-color: #f1f1f1;
+        border-radius: 0 4px 4px 0;
+        color: #515151;
+        font-style: italic;
+        line-height: 1.7;
+        margin: 0;
+        padding: 20px 40px 20px 20px;
+        position: relative;
+      }
+
+      blockquote::before {
+        color: #ccc;
+        content: '”';
+        font-size: 80px;
+        position: absolute;
+        right: 30px;
+        top: -20px;
+      }
+
+      figcaption {
+        color: #aaa;
+        font-size: 14px;
+        font-style: italic;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        text-align: center;
+      }
+
+    </style>
+
+
+
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <!-- <img class="float-right" src="../../images/gw_primary_logo.png" alt="GWU" height="160"> -->
+      <img class="float-right" src="../../../images/SmithLogoStack-cmyk.png" alt="SmithLogo" height="120">
+      <h1 class="display-3 m-0">CSC 250</h1>
+      <p class="lead">Theory of Computation</p>
+      <p class="lead">Smith Computer Science </p>
+    </div>
+
+    <div class="container py-0"><!-- was 1-->
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info <span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">TBD 1</a>
+                <a class="dropdown-item" href="#">TBD 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project (if any)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Discord</a>
+                <a class="dropdown-item" href="#">Moodle</a>
+                <a class="dropdown-item" href="#">Repl.it</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes02.html">Previous Module</a>
+              </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes04.html">Next Module</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <br><br>
+
+
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 03: <br>
+      Regular Languages and Regular Expressions</h1>
+      <p>
+        <br>
+      </p>
+      <h2>Outline </h2>
+
+      This class we'll discuss:
+      <ul>
+        <li>LaTeX vs Word</li>
+        <li>Motivating smart matching</li>
+        <li>Regular Expressions</li>
+        <li>Regular Languages</li>
+      </ul>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Latex vs Word
+      </h2>
+      <p>
+        Typesetting is not required: legibly-written-and-then-Typed (Word/OpenOffice/etc) submissions are totally fine;
+        <br>
+        Just PDF them before you submit, please!
+        <br><br>
+        However, LaTeX (Latex henceforth) is a powerful tool that lets you tweak and customize ad nauseam, which might be desirable to some of you.
+        <br>
+        Also, it is the defacto standard for most academic publications.
+        <br><br>
+        If you choose Latex, you should start very simply; learn:
+        <br>
+        <ul>
+          <li>Titles and Sections</li>
+          <li>bold and Italics</li>
+          <li>List Environments</li>
+          <li>Math Environment and symbols</li>
+        </ul>
+        You can open <a href="../resources/latex_basics.tex" download>latex_basics.tex</a> in Overleaf and see the tex source as well as the resulting pdf.
+        <br><br>
+
+        I am happy to help with the formatting during office hours.
+      </p>
+      <br><br>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Motivation 
+      </h2>
+
+      <p>
+        Have you heard of <a href="https://www.youtube.com/watch?v=fCn8zs912OE">Zipf's distribution</a>?
+        <br><br>
+        How would we ask a computer to count the number of appearances of the word "the"?          
+        <br><br>
+        Let's start to think about how we would verify this with a sample text.
+        <br>
+        <span style='color:#888888'>(read the whole story later.. it's good!)</span>
+        <br><br> 
+
+        <div class="container">
+          <figure>
+            <blockquote id="box">
+              <span class="small">
+                [...]
+                <br>
+                The numerologist moved one gnarled hand over the other. "Before that, sir, there's a little—"
+                <br>
+                "A little matter of the fee?"
+                <br>
+                "I have already done the work, sir. I have earned the money."
+                <br>
+                Zebatinsky raised no objection. He was prepared to pay. If he had come this far, it would be silly to turn
+                <br>
+                back just because of the money.
+                <br>
+                He counted out five ten-dollar bills and shoved them across the counter. "Well?" 
+                <br>
+                The numerologist counted the bills again slowly, then pushed them into a cash drawer in his desk.
+                <br>
+                He said, "Your case was very interesting. I would advise you to change your name to Sebatinsky."
+                <br>
+                "Seba— How do you spell that?"
+                <br>
+                "S-e-b-a-t-i-n-s-k-y."
+                <br>
+                Zebatinsky stared indignantly. "You mean change the initial? Change the Z to an S? That's all?"
+                <br>
+                "It's enough. As long as the change is adequate, a small change is safer than a big one." 
+                <br>
+                [...]
+              </span>
+            </blockquote>
+            <figcaption>
+              ~ from <cite>"Spell My Name With An S", by Isaac Asimov</cite>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="search-container">
+          <label for="search">Search within quoted text</label>
+          <input
+            id="search"
+            placeholder="Type `/the/` for example"
+            type="search"
+            autocomplete="off"
+          />
+          <br><br>
+          Searched Text:
+          <span class="mx-5" id = "regex-text">
+            
+          </span>
+
+          Flags:
+          <span class="mx-5" id="regex-flags">
+            
+          </span>
+
+
+
+      </div>
+
+      </p>
+      
+      <script id="rendered-js" >
+        const $box = document.getElementById('box');
+        const $search = document.getElementById('search');
+
+        $search.addEventListener('input', event => {
+          const searchText = event.target.value;
+
+          //const regex = new RegExp(searchText, 'g');
+          // EXTRA lines
+            const parts = searchText.split("\/");  
+            //const str = '(?<!<)'+parts[1]+'|(?<!<b)'+ parts[1];
+            //let str = "(?&lt;!&lt;) " + parts[1] + "|(?&lt;!&ltb) " + parts[1];
+            document.getElementById('regex-text').innerHTML = parts[1];
+            console.log('The array has ', parts.length, ' elements: ', parts.join(' / '));
+            if (parts.length > 2)
+            {
+              document.getElementById('regex-flags').innerHTML = parts[2];
+            }
+            else{
+              document.getElementById('regex-flags').innerHTML = "";
+            }
+
+            //replace unless match is preceeded by "<" or "<b"
+            //onst regex = new RegExp(parts[1], parts[2]);     
+            const regex = new RegExp( parts[1]+"(?!r>|>)",parts[2]);
+          // End EXTRA lines
+
+          let text = $box.innerHTML;
+
+          if (searchText !== ""){
+            text = text.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+
+            const newText = text.replace(regex, '<mark class="highlight">$&</mark>');
+            $box.innerHTML = newText;
+
+          } else {
+            text = text.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+            $box.innerHTML = text;
+            document.getElementById('regex-text').innerHTML = "";
+            document.getElementById('regex-flags').innerHTML = "";
+          }
+
+        });
+        //# sourceURL=pen.js
+      </script>  
+
+      <p>          
+      <span style='color:#06a015'><b><big>Activity 1</big></b></span> [1 minute]: 
+      <br>
+      Go back to the search bar and search for the word "the"  like this: "/the/".
+      <br><br>
+      Did we find all the "the"s?
+      <br><br>
+      Now try this: "/the/g" (the flag "g" means "global").
+      <br><br>
+      Did we find (only) all the "the"s?
+      <br><br>
+      <div  class="mx-5">
+        <span style="color:#888888">Note that the search for "/the/g" is a regular expression.
+        <br> 
+        It states that the search is for the literal string of letters 't','h','e' (in strict order), and globaly (all appearances, not just the first).</span>   
+      </div>     
+      </p>
+      
+      <br><br>
+      <h4>Errors</h4>
+      <p>
+        You might have noticed more than one type of error.
+        <br><br>
+        <div class="container mx-lg-3">
+        Error type A:  
+          <details><summary>(Wait; then Click)</summary>
+            <p>
+              False Positive: It is counted as a "match" but it is not actually one of the instances we desired.
+              <img class="img-fluid" src="../figures/lecture03/falsePositives.png" alt="False Positive!" style="width:40%">
+            </p>
+          </details>
+        
+      </div>
+      <div class="container mx-lg-3">
+        Error type B:  
+          <details><summary>(Wait; then Click)</summary>
+            <p>
+              False Negative: It should be counted as a "match" but it is not found by our search.
+              <img class="img-fluid" src="../figures/lecture03/falseNegative.png" alt="False Negative!" style="width:40%">
+            </p>
+          </details>
+        
+      </div>
+      </p>
+
+      <p>          
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> [1 minute]: 
+        <br>
+        Let's eliminate the False Negatives first;
+        <br>
+        How should we modify our search in order to include "The" instances in our matches?
+        <br>
+        Tell me in english and I'll show you how to add it to our search.
+        <!-- Answer: /[Tt]he/g -->
+      </p>
+      
+
+      
+       <p>
+        <!-- Answer:  /\b[Tt]he\b/g -->
+        <span style='color:#06a015'><b><big>Activity 3</big></b></span> [1 minute]: 
+        <br>
+        Let's eliminate the False Positives;
+        <br>
+        How should we modify our search in order to exclude "them", "there", etc instances in our matches?
+        <br>
+        Tell me in english and I'll show you how to add it to our search.
+      </p>
+        
+      <br><br>
+
+      Now, we will work towards understanding what it is we are defining and how to do it.
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Regular Expressions 
+      </h2>      
+
+      <p>
+        An expression is a combination of objects and operators that can be "resolved" into a value.
+        <br><br>
+        In <b>Arithmetic</b>, the objects are numbers, and the operators are: \( + \text{, } - \text{, } *  \text{, } ÷ \text{, }\) etc.
+        <br>
+        A (correct) arithmetic expression looks like this: 
+        \[ (27 - 6)* 2\]        
+        <div class="mx-4">The value of a resolved arithmetic expression is a <i>number</i>, in this case \(42\).</div>
+        <br><br>
+
+        A <b>Reglar Expression</b> (or RegEx) is an algebraic way to describe a set of words.
+        <br><br>
+        In reglar expressions, we also have objects and symbols, which can be combined to form an expression that might look like this:
+        \[/\backslash b[Tt]he\backslash b/\]
+        <!-- \mathrm{L} -->        
+        <div class="mx-4">The value of a resolved regular expression is a <i>Language</i>, in this case: "the sequence that <i>starts</i> with a boundary, is followed with either 'T' or 't',  then by 'h' and 'e', and terminates in a boundary".</div>
+        <br><br>
+
+        Another way you'll see this written is as: \( \mathrm{L} (/\backslash b[Tt]he\backslash b/) \), <br>
+        which refers to the <i>Language</i> (set of words) described by the expression inside parenthesis (same as above).
+        <br><br>
+
+        We sometimes refer to the Language with some symbol like \(\mathrm{L}_A\), where language \(L\) has some property \(A\).
+      </p>
+      <br><br>
+
+      <h3>Defining a Regular Expression</h3>
+      <p>
+        We will follow a sequence of steps to understand how to build regular expressions.
+        <br>
+        First, we'll need some basic definitions
+      </p>
+
+
+      <h4>RegEx Definitions</h4>
+      <p>
+        <ul>
+          <li>
+            A <b>set</b> is a group of items under the same property. <br>
+            We'll use set operations like union (\(\cup\)), cross-product (\(\times\)), and complement ( of \(A\) is \( \bar{A} \));
+          </li>
+          <li>
+            \( \emptyset \) : the set with no members is called the <b>empty set</b>: \( \emptyset \) or \(\{ \} \) ;
+          </li>
+          <li>
+            \(\Sigma\): an <b>alphabet</b> \(\Sigma\) is a nonempty set of symbols (letters), for example:
+            <ul>
+              <li>\(\Sigma = \{a  \text{, } b  \text{, } c  \text{, } \dots\}\), or</li>
+              <li>\(\Sigma = \{0,1\}\)</li>
+            </ul>
+          </li>
+          <li>
+            \(w\): a <b>string</b> (or word) \(w\) is a sequence of symbols from an alphabet.
+          </li>
+          <li>
+            \(\epsilon\): a string with no letters is the <b>empty string</b> \(\epsilon\);
+          </li>
+          <li>
+            a <b>Language</b> is a <i>set</i> of words.
+          </li>
+        </ul>
+      </p>
+      <br><br>
+
+      <h4>Regular Operations</h4>
+      <p>
+        <ul>
+          <li>
+            The <b>Union</b> of two sets \(A\) and \(B\): \(A\cup B\) is the set that has both the members of \(A\) and from \(B\)
+            <br>
+            For example: If \(A: \{ white  \text{, }  blue\}\), and \(B: \{ duck  \text{, }  rabbit\}\), 
+            <br>
+            The union would be: \(A\cup B: \{ white  \text{, }  blue  \text{, }  duck  \text{, }  rabbit\}\)
+          </li>
+          <br>
+          <li>
+            The <b>Concatenation</b> of two sets \(A\) and \(B\): \(A\circ B\) or simply \(AB\) is the set that has a sequences of two symbols: a member of \(A\) before a member of \(B\): \(AB: \{ whiteduck   \text{, } whiterabbit  \text{, }  blueduck  \text{, }  bluerabbit \}\).
+            <br>
+            <div class="mx-3"> Note that in the expression \(AB\), we're saying "any element from \(A\) followed by any element from \(B\)", not "all of \(A\) followed by all of \(B\)"! </div>
+          </li>
+          <br>
+          <li>
+            The <b>Star</b> (or <b>Kleen Star</b>) operator \(A^*\) is a <i>unary</i> operator that returns the set of sequences that have zero or more symbols from a set \(A\):
+            <br>
+            \(A^*: \{ \emptyset \text{, } white  \text{, } blue  \text{, } whiteblue  \text{, } bluewhite \text{, } whitewhiteblue \text{, } whitebluewhite \text{, } \dots\}\)
+          </li>
+        </ul>
+      </p>
+      <br><br>
+
+      <h4>Definition of Regular Expressions (Recursively)</h4>
+      <p>
+        <b>Basic (axiomatic) definitions:</b>
+        <ul>
+          <li>Basis 1: \(\emptyset\) is a regular expression, and \( \mathrm{L} (\emptyset) = \emptyset\)</li>
+          <li>Basis 2: \(\epsilon\) is a regular expression, and \( \mathrm{L} (\epsilon) = \{\epsilon\} \)</li>
+          <li>Basis 3: \(a\) is a symbol, then \(a\) is a regular expression, and \( \mathrm{L} (a) = \{a\} \)</li>
+        </ul>
+        <br>
+        <b>Recursive extensions:</b>
+        <ul>
+          <li>Alternation: 
+            <br>
+            One expression <b>or</b> another,
+            <div class="mx-3">
+              If \(\mathrm{R}_1\) and \(\mathrm{R}_2\) are regular expressions, 
+              <br>
+              then \(\mathrm{R}_1 + \mathrm{R}_2\) is a regular expression,<br>
+            and \( \mathrm{L} (\mathrm{R}_1 + \mathrm{R}_2) = \mathrm{L} (\mathrm{R}_1) \cup  \mathrm{L} (\mathrm{R}_2)\)
+            </div>
+            </li>
+          <li>Concatenation:
+            <div class="mx-3">
+              If \(\mathrm{R}_1\) and \(\mathrm{R}_2\) are regular expressions, 
+              <br>
+              then \(\mathrm{R}_1 \mathrm{R}_2\) is a regular expression,<br>
+            and \( \mathrm{L} (\mathrm{R}_1 \mathrm{R}_2) = \mathrm{L} (\mathrm{R}_1)  \mathrm{L} (\mathrm{R}_2)\)
+            </div>
+          </li>
+          <li>Kleene star: 
+            <div class="mx-3">
+              If \(\mathrm{R}_1\) is a regular expression, 
+              <br>
+              then \(\mathrm{R}^*_1\) is a regular expression,<br>
+            and \( \mathrm{L} (\mathrm{R}_1^*) = \big( \mathrm{L} (\mathrm{R}_1) \big)^* \)
+            </div>
+          </li>
+        </ul>
+
+        <br><br>
+        <b>Precedence</b> rules are: do star first, then concatenation, then union.
+
+      </p>
+
+      <br><br>
+
+      Let's trt some exercises:
+      <br><br>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 4</big></b></span> [2 minutes]: 
+        <br>
+        What is the expression that gives us <b>all binary strings</b>?
+        <br>
+        Describe it in words or with any notation you find useful. We'll develop the rigorous notation later.
+        <br>
+        Hint: 1) what is the alphabet \(\Sigma\)? 2)Which operator might help us expand this into the correct language \(\mathrm{L}_b\)?
+        <!-- ∑={0,1}; Lb : ∑* -->
+      </p>
+        
+      <br><br>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 5</big></b></span> [2 minutes]: 
+        <br>
+        What is the expression that gives us <b>all binary strings that begin with a 1</b>?
+        <!-- ∑={0,1}; Lb : 1∑* -->
+      </p>
+
+      <br><br>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 6</big></b></span> [2 minutes]: 
+        <br>
+        What is the expression that gives us <b>all binary strings that begin with a 1, end with a 0, and have an even number of digits</b>?
+        <!-- ∑={0,1}; Lb : 1(∑∑)*0 -->
+      </p>
+
+      <br><br>
+
+      <h2>The RegEx Minigolf!</h2>
+
+      <br>
+      <img class="img-fluid" src="../figures/lecture03/RegExMinigolf.png" alt="golf" style="width:80%">        
+      <br><br>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 7</big></b></span> [5-10 minutes!!]: 
+        <br>
+        Make teams of 2 or 3 and complete the following challenges.
+        <br>
+        Let me know when your team is done.
+      </p>
+
+      <div class="mx-5">
+        <p>
+          <span style='color:#06a015'><b><big>Hole 1</big></b></span>: 
+          <br>
+          What is the expression that gives us:
+          <br>
+          <div class="mx-3">\(\{w \mid w \text{ contains a single 1}\}\)</div>
+          <!-- ∑={1}; Lb : L(1) or L{∑}-->
+        </p>
+        <br><br>
+
+        <p>
+          <span style='color:#06a015'><b><big>Hole 2</big></b></span>: 
+          <br>
+          What is the expression that gives us:
+          <br>
+          <div class="mx-3">\(\{w \mid w \text{ contains at least one 1}\}\)</div>
+          <!-- ∑={...,1}; Lb : L(∑*1∑*) -->
+        </p>
+        <br><br>
+
+        <p>
+          <span style='color:#06a015'><b><big>Hole 3</big></b></span>: 
+          <br>
+          What is the expression that gives us:
+          <br>
+          <div class="mx-3">\(\{w \mid w \text{ contains 001 as a substring}\}\)</div>
+          <!-- ∑={...,0,1}; Lb : L(∑*001∑*) -->
+        </p>
+        <br><br>
+
+        <p>
+          <span style='color:#06a015'><b><big>Hole 4</big></b></span>: 
+          <br>
+          What is the expression that gives us:
+          <br>
+          <div class="mx-3">\(\{w \mid w \text{ every 0 in w is followed by at least one 1}\}\)</div>
+          <!-- ∑={anything,0,1}; Lb : L( ((01)*1*)* )
+            or \b((?:01)*1*)*\b in regex-->
+        </p>
+        <br><br>
+
+        <p>
+          <span style='color:#06a015'><b><big>Hole 5</big></b></span>: 
+          <br>
+          What is the expression that gives us:
+          <br>
+          <div class="mx-3">\(\{w \mid w \text{ w is a string of even length}\}\)</div>
+          <!-- ∑={...}; Lb : L ( (∑∑)* ) -->
+        </p>
+        <br><br>
+
+        <p>
+          <span style='color:#06a015'><b><big>Hole 6</big></b></span>: 
+          <br>
+          What is the expression that gives us:
+          <br>
+          <div class="mx-3">\(\{w \mid w \text{ w is a string of odd length}\}\)</div>
+          <!-- ∑={...}; Lb : L ( ∑(∑∑)* ) -->
+        </p>
+        <br><br>
+
+        <p>
+          <span style='color:#06a015'><b><big>Hole 7</big></b></span>: 
+          <br>
+          What is the expression that gives us:
+          <br>
+          <div class="mx-3">\(\{w \mid w \text{ the length of w is a multiple of 3}\}\)</div>
+          <!-- ∑={...}; Lb : L ( (∑∑∑)* ) -->
+        </p>
+        <br><br>
+
+        <p>
+          <span style='color:#06a015'><b><big>Hole 8</big></b></span>: 
+          <br>
+          What is the expression that gives us:
+          <br>
+          <div class="mx-3">How do we search for this set exactly: \( \{ 01 \text{, } 10\} \)?</div>
+          <!-- ∑={...}; Lb : L ( (∑∑∑)* ) -->
+        </p>
+        <br><br>
+
+
+        <p>
+          <span style='color:#06a015'><b><big>Hole 9</big></b></span>: 
+          <br>
+          If \( \Sigma={0,1} \), how do we get the following expression?
+          <br>
+          <div class="mx-3"> \( \{w \mid w \text{ w starts and ends with the same symbol} \} \) </div>
+          <!-- ∑={0,1}; Lb : L ( 1∑*1 + 0∑*0 ) -->
+        </p>
+        <br><br>
+
+      </div>
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Regular Languages 
+      </h2>  
+
+      <p>
+        A <b>regular language</b> is one that can be generated using a regular expression.
+      </p>
+
+      <span style='color:#06a015'><b><big>Activity 8</big></b></span> [1 minute]: 
+      <br>
+      Answer the following questions:
+      <ul>
+        <li>Are all finite languages regular?</li>
+        <!-- Yes, because we could just union all the words together -->
+        <li>Are all regular languages finite?</li>
+        <!-- NO! (e.g. L(1*) ) -->
+      </ul>
+      
+
+
+      <br>
+      <details><summary>(Wait; then Click)</summary>
+            <p>
+              Regular Languages are more powerful!
+              <br>
+              <img class="img-fluid" src="../figures/lecture03/regLangs.png" alt="more descriptive power!" style="width:50%">
+            </p>
+          </details>
+              
+      <br><br>
+
+      
+      <h4>Properties</h4>
+      <p>
+        The following properties are true about regular languages:
+      </p>
+      <ul>
+        <li>Claim: Regular languages are closed under union</li>
+        <li>Claim: Regular languages are closed under concatenation</li>
+        <li>Claim: Regular languages are closed under intersection</li>
+        <li>Claim: Regular languages are closed under complement</li>
+        <li>Claim: Regular languages are closed under difference</li>
+        <li>Claim: Regular languages are closed under reversal</li>
+      </ul>
+
+      <p><br></p><hr><p><br></p>
+
+      <h4>Next Class: Finite Automata!!</h4>
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h4>Before next class (Monday 09/20)</h4>
+      <br>      
+      <b>[Due for everyone]</b>
+      <div class="mx-5">
+        Review today's class and keep working on the Problem Set 1!
+      </div> 
+      <br>
+      <b>[Optional]</b> How would you build a "flowchart" to solve this regex:
+
+      <div class="mx-5">
+        Given a \(\Sigma = \{0,1\}\), get the regex that gets the language 
+        \( \{w \mid w \text{ contains at least one 1} \}\)
+      </div>
+      <br><br>
+
+
+
+
+
+  
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes01.html">Previous Module</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Next Module</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+   
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+<!--     <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script> -->
+
+
+  </body>
+</html>

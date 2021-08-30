@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSC 103  How Computers Work</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      .img-max {
+        max-width: 500px;
+        width:50%;
+      }
+
+      #HIDDENDIV {
+        display: none;
+      }
+
+      #table td {
+          padding: 1em;
+          border: 1px solid black;
+      }
+
+
+      #table.show tr > *:nth-child(1) {
+          display: block;
+      }
+
+
+      /*For tree view*/
+
+      /* Remove default bullets */
+      ul, #myUL {
+        list-style-type: none;
+      }
+
+      /* Remove margins and padding from the parent ul */
+      #myUL {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Style the caret/arrow */
+      .caret {
+        cursor: pointer;
+        user-select: none; /* Prevent text selection */
+      }
+
+      /* Create the caret/arrow with a unicode, and style it */
+      .caret::before {
+        content: "\25B6";
+        color: black;
+        display: inline-block;
+        margin-right: 6px;
+      }
+
+      /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+      .caret-down::before {
+        transform: rotate(90deg);
+      }
+
+      /* Hide the nested list */
+      .nested {
+        display: none;
+      }
+
+      /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+      .active {
+        display: block;
+      }
+
+      /* Style the caret/arrow */
+      .caret2 {
+        cursor: pointer;
+        user-select: none; /* Prevent text selection */
+      }
+
+      /* Create the caret/arrow with a unicode, and style it */
+      .caret2::before {
+        content: "\25B6";
+        color: grey;
+        display: inline-block;
+        margin-right: 6px;
+      }
+
+    </style>
+
+
+
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <!-- <img class="float-right" src="../../images/gw_primary_logo.png" alt="GWU" height="160"> -->
+      <img class="float-right" src="../../../images/SmithLogoStack-cmyk.png" alt="SmithLogo" height="120">
+      <h1 class="display-3 m-0">CSC 103</h1>
+      <p class="lead">How Computers Work</p>
+      <p class="lead">Smith Computer Science </p>
+    </div>
+
+    <div class="container py-0"><!-- was 1-->
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info <span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">TBD 1</a>
+                <a class="dropdown-item" href="#">TBD 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project (if any)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Discord</a>
+                <a class="dropdown-item" href="#">Moodle</a>
+                <a class="dropdown-item" href="#">Repl.it</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes02.html">Next Module</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <br><br>
+
+
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 01: Welcome to CSC 103</h1>
+      <p>
+        <br>
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Before Starting: <br>
+        Who's who and why are we here?
+      </h2>
+      <br><br>
+
+      <h4>Pablo</h4>
+      <p>
+        Name: Pablo Frank Bolton ("Frank" and "Bolton" are last names); <br>
+        Pronouns: He, Him; <br>
+        you can call me "Pablo" <br><br>
+        <b>What do I do?</b>
+
+        <ul>
+          <li>Human-Computer-Interaction <br>
+            <img class="img-max" src="../figures/lecture01/PabloHCI.png" alt="robots are cool">
+            <br><br>            
+          </li>
+          <li>Biology-CS collaborations <br>
+            <img class="img-max" src="../figures/lecture01/PabloSD-Mosquitoes.png" alt="live bugs vs programming bugs">
+            <br><br>
+          </li>
+          <li>Teaching and STEM research <br>
+            <img class="img-max" src="../figures/lecture01/officeWall4655.png" alt="I like to draw stuff">
+          </li>
+        </ul>
+      </p>
+      <br><br>
+      
+      <h4>My Dog Yak</h4>
+      this is my dog, Yak:
+      <br>
+      <div class="row">
+          <div class="col-lg-5 col-md-5 col-xs-5 thumb">
+              <a class="thumbnail" href="#">
+                  <img class="img-responsive" src="../figures/lecture01/yak01.png" alt="Yak!" style="width:100%">
+              </a>
+          </div>
+          <div class="col-lg-5 col-md-5 col-xs-5 thumb">
+            
+              <a class="thumbnail" href="#">
+                  <img class="img-responsive" src="../figures/lecture01/reportCard.png" alt="Good-Bad Boy" style="width:90%">
+              </a>
+          </div>
+        </div>
+      (Informal Dog-Walk Hours can be used for petting Yak, chatting with me, or even to talk shop)
+      <br><br>
+      
+      <h4>Instructional Team</h4>
+      <p>
+        Names: TBD
+      </p>
+      <br><br>
+
+      <h4>
+        The Students
+      </h4>
+      <p>
+        Please fill out this small <a href="https://forms.gle/PAG1Np8xJgQFG1tx9">3-minute-biography</a> so I can get to know you a bit.
+      </p>
+      <br><br>
+
+      <h4>
+        The Class
+      </h4>      
+
+      <br><br>
+
+<!-- 
+1) knowing how a computer works is interesting and useful  
+  - it is interesting because it demystifies the magic box
+  - it is useful because it gives you depth of understanding
+  - it is useful because some concepts used there are applicable in other areas
+    - logic
+    - binary/number systems
+    - abstraction
+    - caching
+    - pipelining
+    - multiprogramming (fake parallelism)
+    - efficient storage
+    - etc
+ -->
+
+
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span> :[2 minutes] : Why are we here?
+
+        <div class="container m-5">
+          <ol>
+            <li>You just want to know how a computer works (what makes it tick);</li>
+            <li>You think it is a necessary evil to be able to do something else;</li>
+            <li>You don't really care but want to be able to talk to people in groups (1) and (2);</li>
+            <li>You have another reason</li>
+          </ol>
+          <!-- <span style='color:#000000'>One possible answer</span>: 
+          <details>
+            <summary>(Wait until we have a couple definitions; then Click to expand and see mine.)<br><br></summary>
+            <p>
+              
+
+            </p>
+          </details> -->
+        </div>
+
+
+        <b>Some motivation</b>:
+        <br>
+        Learning how a computer works has three main advantages:
+        <ol>
+          <li>It gives you insight into how many of the things you interact with function;</li>
+          <li>It reveals techniques that can be applied to other areas that need organization, efficiency, or robustness;</li>
+          <li>It will give you an eye for "system analysis" (useful for any system involving many moving parts);</li>
+          <li>It will give you the vocabulary and general knowledge to be able to "talk shop" with technically savvy people;</li>
+        </ol>
+
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <p>
+        This class has three main objectives:
+        <ul>
+          <li>
+            <b>Learn what is inside the black box</b>: what parts are there inside and what do they do.
+          </li>
+          <li>
+            <b>Learn how this box can do what it does</b>: how can data be manipulated to satisfy user requests.
+          </li>
+          <li>
+            <b>Connect you with modern technology</b>: demystify what is out there and how it works.
+          </li>
+
+        </ul>
+        <br><br>
+
+        The topics we'll explore include:
+        <ul>
+          <li>A brief history of computers</li>
+          <li>Computer architecture and components inside a computer</li>
+          <li>Binary numbers, and understanding how and why computers use them</li>
+          <li>Boolean algebra - Boolean functions, Boolean arithmetic and the ALU</li>
+          <li>Transistor and logic gates - the basic building blocks of computers</li>
+          <li>CPU, Assembly programming - communicating with the computer in its native language 7. Memory/storage</li>
+          <li>Some important issues about computers in our future</li>
+        </ul>
+
+      </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h3>The Original Computers</h3>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> :[2 minutes] : What is s computer? 
+        <br>
+        <div class="container m-5">
+          <span style='color:#000000'>One possible answer</span>: 
+          <br>
+          <details>
+            <summary>(Wait until we have a couple definitions; then Click to expand and see mine.)<br><br></summary>
+            <p>
+              The term <i>computer</i> refers to a mechanism or agent that aids in the completion of a computation (AKA a calculation). 
+            </p>
+          </details>
+        </div>
+
+        <span style='color:#06a015'><b><big>Activity 3</big></b></span> :[2 minutes] : So, what is computation?
+        <br>
+        <div class="container m-5">
+          <details>
+            <summary>(Wait, then click)<br><br></summary>
+            <p>
+              The term <i>computation</i> can be defined as:
+              <br>
+              “a sequence of well-defined operations that lead from an initial starting point to a desired final outcome".
+              <br><br>
+              Examples of "operations:"
+              <br><br>
+              <img class="img-responsive" src="../figures/lecture01/operations.png" alt="" style="width:25%">
+            </p>
+          </details>
+        </div>
+
+        <br><br>
+
+        Here are some examples of those agents that can complete the computation:
+        <br><br>
+        <div class="row">
+          <div class="col-lg-5 col-md-5 col-xs-5 thumb">
+            Abacus
+              <a class="thumbnail" href="#">
+                  <img class="img-responsive" src="../figures/lecture01/Abacus.png" alt="" style="width:95%">
+              </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-xs-3 thumb">
+            <a href="https://en.wikipedia.org/wiki/Antikythera_mechanism#Operation">Antikythera Mechanism</a>
+              <a class="thumbnail" href="#">
+                  <img class="img-responsive" src="../figures/lecture01/Antikythera.png" alt="" style="width:110%">
+              </a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+            <a href="https://en.wikipedia.org/wiki/Computer_(occupation)">Original Computer</a>
+              <a class="thumbnail" href="#">
+                  <img class="img-responsive" src="../figures/lecture01/FemaleComputer.png" alt="" style="width:88%">
+              </a>
+          </div>
+        </div>
+      </p>
+      <br><br>
+
+      <p>
+        The modern term <i>Computer</i> refers to a mechanism that does this <i>automatically</i> and that can be <i>programmed</i>.
+        <br>
+        Let's look at these terms one by one:
+        <br>
+        <ul>
+          <li>
+            <b>Automatic</b>: refers to action independent of (human) intervention in order to perform its <a href="https://youtu.be/OpLU__bhu2w?t=612">calculations</a>.
+          </li>
+          <li>
+            <b>Programmable</b>: a system whose starting conditions and rules of execution can be predefined and assigned prior to execution.
+          </li>
+        </ul>
+        <br><br>
+
+
+        <h4>A bit of <a href="https://www.computerhistory.org/timeline/computers/">history</a></h4>
+        <br>
+        <ul>
+          <li>
+            <b>Antikythera Mechanism</b>, built around 100 BC, was a mechanical astronomical clock.            
+            <br>
+            <img class="img-responsive" src="../figures/lecture01/AntikytheraReplica.png" alt="" style="width:25%">
+          </li>
+          <br>
+          <li>
+            <b>Cosmic Engine</b> was built by Su Song in 1092 and was a hydro-mechanical astronomical clock tower;
+            <br>
+            <img class="img-responsive" src="../figures/lecture01/SuSongCosmicEngine.png" alt="" style="width:25%">
+          </li>
+          <br>
+          <li>
+            The <b>Difference Engine</b>, built by Charles Babbage in 1819 was a programmable calculator. It was "automatic" in that it could perform the calculations without intervention as long as someone provided power (hand-cranked).
+            <br>
+            <img class="img-responsive" src="../figures/lecture01/differenceEngine.png" alt="" style="width:25%">
+          </li>
+          <br>
+          <li>
+            Babbage theorized a <i>more general</i> machine that could be <i>programmable</i> and could do many more things. This was called the <b>Analytical Engine</b> (which has not yet been built as described by Babbage).
+            <br>
+            <img class="img-responsive" src="../figures/lecture01/analyticalEngine.png" alt="" style="width:25%">
+          </li>
+          <br>
+          <li>
+            <b>Ada Lovelace</b>, who worked with Babbage, published the first computer algorithm and is commonly referred to as the <i>first computer programmer</i>.
+            <br>
+            <img class="img-responsive" src="../figures/lecture01/AdaLovelace.png" alt="" style="width:25%">
+          </li>
+          <br>
+          <li>
+            <b>Analog mechanical computers</b> (late 1800's) were built to solve equations to predict all sorts of things
+            <br>
+            <img class="img-responsive" src="../figures/lecture01/analogMechanical.png" alt="" style="width:25%">
+          </li>
+          <br>
+          <li>
+            <b>Electromechanical calculators</b> (early 1900's).
+            <br>
+            <img class="img-responsive" src="../figures/lecture01/electromechanicalCalculator.png" alt="" style="width:25%">            
+          </li>
+          <br>
+          <li>
+            <b>Z3</b> (1941) first electromechanical programmable, fully automatic digital computer.
+            <br>
+            <img class="img-responsive" src="../figures/lecture01/Z3.png" alt="" style="width:25%"> 
+          </li>
+          <br>
+          <li>
+            Several electromechanical computers built during WW2 to crack codes. <b>Colossus</b> (1943) was the first electronic digital programmable computer. "Programs" were defined by the states of its patch cables and switches.
+            <br>
+            <img class="img-responsive" src="../figures/lecture01/Colossus.png" alt="" style="width:25%"> 
+          </li>
+          <br>
+          <li>
+            After WW2, we see an explosion in computing speed, memory capacity, and programming complexity.
+            <br><br>
+            The electronic stored program (see <a href="https://en.wikipedia.org/wiki/Manchester_Baby">Manchester Baby</a>) became a "thing".
+            <br><br>
+            An important component is the "transistor" (more on this later) was invented in 1947. 
+            <br>
+            It allowed the construction of smaller, faster, and more efficient computers: <b>Moore's law</b> postulated that the number of transistors that can be packed into a given unit of space will double about every two years. 
+            <br><br>
+            Effect... look in your pocket or wrist.
+            <br>
+            <img class="img-responsive" src="../figures/lecture01/allTheseThings.png" alt="" style="width:50%">
+            <br>
+            (this is from the late 80's or early 90's!) 
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 4</big></b></span> [4 minutes]: Using these definitions and notes, we can ask the questions:
+        <br>
+        <div class="container m-5">
+          <ul>
+            <li>Is an abacus a computer?</li>
+            <li>Is a calculator a computer?</li>
+            <li>Are one or more human "computers" computers?</li>
+            <li>Can we build a computer using <a href="https://youtu.be/OpLU__bhu2w?t=1074">dominoes</a> (wait to click)?</li>
+            <li>Can we build a computer using <a href="https://youtu.be/IxXaizglscw?t=835">water</a> (wait to click)?</li>
+          </ul>
+        </div>  
+      </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>Evolution of symbols and processing system</h2>
+      <ul>
+        <li>Paper, pencil & brain</li>
+        <li>Gears & levers</li>
+        <li>Voltages & logic circuits</li>
+      </ul>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>The Big picture for the class</h2>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <!-- TEXT1 -->
+            <ul id="myUL">
+              <li>
+                <span class="caret"><button class="btn btn-default" id="humanITL" onclick="changeImage(this.id);">Human in the Loop</button></span>
+                <ul class="nested">
+                  <li><span class="caret2">Ideas</span></li>
+                  <li><span class="caret2">Needs</span></li>
+                  <li><span class="caret2">...</span></li>
+                </ul>
+              </li>
+              <li><span class="caret"><button class="btn btn-default" id="computer" onclick="changeImage(this.id);">Computer</button></span>
+                <ul class="nested">
+                  <li><span class="caret"><button class="btn btn-default" id="hardware" onclick="changeImage(this.id);">Hardware</button></span>
+                    <ul class="nested">
+                      <li><span class="caret2">Input/Output Devices</span></li>
+                      <li><span class="caret2">Memory</span></li>
+                      <li><span class="caret"><button class="btn btn-default" id="cpu" onclick="changeImage(this.id);">CPU</button></span>
+                        <ul class="nested">
+                          <li><span class="caret2">ALU: Arithmetic-Logic Unit</span></li>
+                          <li><span class="caret2">Control Unit</span></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="caret"><button class="btn btn-default" id="software" onclick="changeImage(this.id);">Software</button></span>
+                    <ul class="nested">
+                      <li><span class="caret2">System Software</span></li>
+                      <li><span class="caret2">Utilities</span></li>
+                      <li><span class="caret2">Applications</span></li>      
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="caret"><button class="btn btn-default" id="abstraction" onclick="changeImage(this.id);">Abstraction Ladder</button></span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="col-md-6">
+            <!-- TEXT2 -->
+            <img id="image" class="img-responsive" src="../figures/lecture01/AdaLovelace.png" alt="" style="width:60%">  
+          </div>
+
+        </div> <!-- End Row -->
+
+
+        <script>
+          var toggler = document.getElementsByClassName("caret");
+          var i;
+
+          for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function() {
+              this.parentElement.querySelector(".nested").classList.toggle("active");
+              this.classList.toggle("caret-down");
+            });
+          }
+        </script>
+
+        <script>
+          function changeImage(clicked_id)
+          {
+            var img = document.getElementById("image");
+            switch(clicked_id) {
+              case "humanITL":
+                img.src="../figures/lecture01/AdaLovelace.png";
+                break;
+              case "computer":
+                img.src="../figures/lecture01/computer.png";
+                img.style.width = '80%';
+                break;
+              case "hardware":
+                img.src="../figures/lecture01/hardware.png";
+                img.style.width = '100%';
+                break;    
+              case "cpu":
+                img.src="../figures/lecture01/cpu.png";
+                img.style.width = '100%';
+                break;  
+               case "software":
+                img.src="../figures/lecture01/software.png";
+                break;
+              case "abstraction":
+                img.src="../figures/lecture01/abstractionLadder.png";
+                img.style.width = '70%';
+                break;      
+              default:
+                // code block
+            }
+            return false;
+          }
+
+        </script>
+
+
+
+      </div>
+
+
+      <p><br></p><hr><p><br></p>
+
+
+
+
+      <h2>
+        Remaining checklist for today:
+      </h2>
+
+      <ol>
+        <li>Course Information</li>
+        <li>Locate the course page on Moodle</li>
+        <li>Locate Discord info on Moodle and Sign up to Discord</li>
+        <li>Locate TinkerCad info on Moodle and Sign up to TinkerCad</li>
+        <li>Meeting and Accommodations</li>
+      </ol>
+
+
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>
+      Course Information
+      </h2>
+
+      <p>
+        The class information is located in the <a href="../class-info.html"> Class Info</a> link of the navigation bar. We will go over it now. When we are done checking it out, make sure to continue here.
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Using Discord
+      </h2>
+
+      <p>
+        We will use Discord as our main communication hub. 
+        <br>
+        <ol>
+          <li>
+            Please sign up for Discord:
+            <img class="img-fluid" src="../figures/lecture01/getDiscord.png" alt="getDiscord">
+          </li>
+          <br><br>
+          <li>
+            Join the smith-f21-csc103-01 server.
+            <br>
+            OR use this invitation link: <a href="https://discord.gg/NBaRuGcB">https://discord.gg/fGpbM9pn</a>
+          </li>
+          <li>
+            You can read <a href="https://support.discord.com/hc/en-us/articles/360045138571?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm"> this tutorial</a> to get an idea of how to use it.
+          </li>
+        </ol>
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Using Moodle 
+      </h2>
+
+      <p>
+        Access Moodle here: <a href="https://moodle.smith.edu/">https://moodle.smith.edu/</a>
+        <br>
+        We'll keep links to each lecture in Moodle. In addition, we'll have any PDFs, readings, and other resources.
+        <br>
+        I'll update the course Moodle with the appropriate links and information as we move forward in the course.
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>
+        Meeting and Accommodations
+      </h2>
+
+      <p>
+        I would be very happy to meet you during office hours. <br>
+        This will help me get to know you and learn how best to communicate.
+        <br><br>
+        Office Hours are <b>not</b> for remedial or emergency meetings, its part of the <b>academic experience</b>!
+        <br>
+        In OHs, we can talk about the class work and organization, but also about aspirations, expectations, curiosities, and more.
+        <br>
+        I really like office hours, so please feel free to drop by.
+        <br><br>
+
+        You may take this opportunity to let me know if you have arranged any accommodations with ODS.
+      </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Acknowledgements
+      </h2>
+
+      <p>
+        This course has been designed with the help of Nick Howe and Shinyoung Cho.
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h4>Before next class (Tuesday 09/07)</h4>
+      <br><br>
+      <b>[Due for everyone]</b> 
+      <br>
+      register for Discord and TinkerCad.
+      <br><br>
+      Review the <a href="../class-info.html"> Class Info</a> by yourselves.
+
+  
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2 disabled" href="#">Previous Module</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes02.html">Next Module</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+   
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+   <!--  <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script> -->
+  </body>
+</html>

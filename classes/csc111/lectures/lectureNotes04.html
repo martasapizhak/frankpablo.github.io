@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSC 111 Introduction to Computer Science Through Programming</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+      .img-max {
+        max-width: 500px;
+        width:50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <!-- <img class="float-right" src="../../images/gw_primary_logo.png" alt="GWU" height="160"> -->
+      <img class="float-right" src="../../../images/SmithLogoStack-cmyk.png" alt="SmithLogo" height="120">
+      <h1 class="display-3 m-0">CSC 111</h1>
+      <p class="lead">Introduction to Computer Science Through Programming</p>
+      <p class="lead">Smith Computer Science </p>
+    </div>
+
+    <div class="container py-0"><!-- was 1-->
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info <span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">TBD 1</a>
+                <a class="dropdown-item" href="#">TBD 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project (if any)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Discord</a>
+                <a class="dropdown-item" href="#">Moodle</a>
+                <a class="dropdown-item" href="#">Repl.it</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Previous Module</a>
+              </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes05.html">Next Module</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <br><br>
+
+
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 04: Python Basics</h1>
+      <p>
+        <br>
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+       
+
+      <h2>Python Expressions</h2>
+
+      <p>
+        <b>Expressions</b> are combinations of variables and values that must be "resolved" and turned into a combined value before the statement is completely executed.
+        <br><br>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000DD; font-weight: bold">1</span> <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">6</span>
+x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">5</span>
+y <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">2</span>
+z <span style="color: #333333">=</span> x <span style="color: #333333">+</span> y
+w <span style="color: #333333">=</span> x <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">1</span> <span style="color: #333333">+</span> y <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">123</span> <span style="color: #333333">+</span> z
+<span style="color: #008800; font-weight: bold">print</span>(x)
+<span style="color: #008800; font-weight: bold">print</span>(y)
+<span style="color: #008800; font-weight: bold">print</span>(z)
+<span style="color: #008800; font-weight: bold">print</span>(w)
+</pre></div>
+<br><br>
+
+
+        Examples of expressions in Python are:
+        <ol>
+          <li><tt>12 + 6</tt>&nbsp;&nbsp;&nbsp;&nbsp; : this expression resolves to an <tt>18</tt> but is not saved in a variable; </li> 
+          <li><tt>x = 6</tt> &nbsp;&nbsp;&nbsp;&nbsp; : the right-hand-side of the "=" sign (value 6) is a 'trivial' expression, since it is already a value);</li>
+          <li><tt>y = 2</tt> &nbsp;&nbsp;&nbsp;&nbsp; : same as above;</li>
+          <li><tt>z = x + y</tt> &nbsp;&nbsp;&nbsp;&nbsp; : here, the expression that needs resolving is <tt>x + y</tt>; it will resolve to the value <tt>7</tt></li>
+          <li><tt>w = x + 1 + y + 123 + z</tt>&nbsp;&nbsp;&nbsp;&nbsp; : again, the expression is on the right-hand side of the "=" sign; this one combines numbers and variables.</li>
+        </ol>
+
+        <br><br>
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span> [1 minute]: <br>
+        try it out, step by step, <a href="https://pythontutor.com/visualize.html#code=12%20%2B%206%0Ax%20%3D%205%0Ay%20%3D%202%0Az%20%3D%20x%20%2B%20y%0Aw%20%3D%20x%20%2B%201%20%2B%20y%20%2B%20123%20%2B%20z%0Aprint%28x%29%0Aprint%28y%29%0Aprint%28z%29%0Aprint%28w%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false">here</a>.
+
+
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Basic Operations</h2>
+      <p>
+        An <b>operator</b> is a symbol that indicates a transformation on one or more entities called <b>operands</b>.
+        <br><br>
+        There are <b>unary</b> operators that apply to a single element, and <b>binary</b> operators that require two such entities to operate on.
+        <br><br>
+
+        The following are the basic arithmetic operations you might find in an expression:
+        <ol>
+          <li>Addition: <tt><b>y = x + 7</b></tt> &nbsp;&nbsp; it may contain constants (7) or variables.</li> 
+          <li>Subtraction: <tt><b>z = y - 2</b></tt>&nbsp;&nbsp; it may contain constants (2) or variables</li>
+          <li>Multiplication: <tt><b>m = x * 5</b></tt> &nbsp;&nbsp; it may contain constants (5) or variables</li>
+          <li>Division: <tt><b>n = m / 5</b></tt> &nbsp;&nbsp; it may contain constants (10) or variables</li>
+          <li>Integer Division: <tt><b>n = n // 2</b></tt> &nbsp;&nbsp; it may contain constants (2) or variables; same as floor(n/2)</li>
+          <li>Exponentiation(Power): <tt><b>p = n ** 2</b></tt> &nbsp;&nbsp; it may contain constants (2) or variables; same as \(n^2\)</li>
+          <li>Modular arithmetic (Modulo): <tt><b>q = 9 % 3</b></tt> &nbsp;&nbsp; it may contain constants (3) or variables
+            <br>
+          This is the same as: integer remainder of 9/3</li>
+        </ol>
+
+        A negative value simply has the  minus sign before the number : <tt><b>-</b>3</tt> (unary operator "-"").
+        <br>
+        Note that that is the same as \( -1 * 3\)!
+        <br><br>
+
+        When multiple operators and operands, the order of operation follows the PEMDAS rule:
+        <br>
+        complete in order of greatest importance first:
+        <ul>
+          <li><b>P</b>: stands for Parentheses; what is surrounded by praentheses is resolved first (inside out if many are present)</li>
+          <li><b>E</b>: stands for Exponents; apply exponents before the operations mentioned below;</li>
+          <li><b>MD</b>: stands for Multiplication and Division (if many, solve from left to right);</li>
+          <li><b>AS</b>: stands for Addition and Subtraction (if many, solve from left to right);</li>
+        </ul>
+        <br>
+
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> [1 minute]: <br>
+        What is the result for:
+        \[ 8-(4 - 3**2)*(4/2)\]
+
+        <!-- 
+        8-(4 - 3**2)*(4/2)
+        8 - (4 - 9) * (2)
+        8 - (-5) * 2 
+        8 - (-10)
+        8 + 10
+        18
+         -->
+
+      </p>
+      <br><br>
+
+      <h4>Strange Operator: Integer Division //</h4>
+      <p>
+        <span style="color:#888888">(In the following explanation, we use "=" as "equals")</span>
+        <br><br>
+        When we divide two numbers, we might have a perfect <i>fit</i> between the numerator and the denominator 
+        <br> 
+        For example: &nbsp;&nbsp; \(x = 8/4\)&nbsp;&nbsp; (which has a quotient of 2)
+        <br><br>
+        OR, we could have a <b>quotient</b> AND a <b>remainder</b>
+        <br>
+        For example: &nbsp;&nbsp;\(x = 9/4\)&nbsp;&nbsp; (which has a quotient of 2 AND a remainder of 1)
+        <!-- <br>
+        <span style="color:#888888">
+          The remainder should be a +ve number smaller than the denominator
+          <br>
+          Otherwise, we get odd results like \(9/4 = 1\) with a remainder of 5 
+        </span> -->
+
+        <br><br>
+        IF &nbsp;&nbsp;\(n / d = q \)&nbsp;&nbsp; with a remainder of&nbsp;&nbsp; \(r\)
+        <br><br>
+        we can reorder this as:&nbsp;&nbsp; \( d*q + r = n\)
+        <br><br>
+        Example: since &nbsp;&nbsp;\(17 / 5 = 3 \)&nbsp;&nbsp; with a remainder of 2, then
+        <br>
+        \(5*3 + 2 = 17 \)
+        <br><br>
+
+        What <b>integer division</b> does is ignore the remainder.
+        <br>
+        So, the operation:
+        \(17 // 5 = 3 \)
+
+        <br><br>
+
+        This is the same as \( \texttt{floor(17/5)} \)
+
+        <!-- <span style="color:#888888">(Now we use "=" as "assignment")</span>
+        <br> -->
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 3</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          try it out, step by step, <a href="https://pythontutor.com/visualize.html#code=print%2817//5%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false">here</a>.
+
+          <br><br>
+          <ul>
+            <li>Now subtitute the parameter of the print statement for: "17 // -5"; What happens? Why?</li>
+            <li>Now subtitute the parameter of the print statement for: "-17 // 5"; What happens? Why?</li>
+            <li>Now subtitute the parameter of the print statement for: "-17 // -5"; What happens? Why?</li>
+          </ul>
+          
+
+          
+        </div>
+
+      </p>
+
+      <br><br>
+
+      <h4>Strange Operator: Modulo %</h4>
+      <p>
+        We have the <b>same</b> approach as before:
+        <br>
+        Example: since &nbsp;&nbsp;\(17 / 5 = 3 \)&nbsp;&nbsp; with a remainder of 2, then
+        <br>
+        \(5*3 + 2 = 17 \)
+        <br><br>
+
+        What <b>modulo</b> does is ignore the quotient and "return" the remainder.
+        <br>
+        So, the operation:
+        \(17 % 5 = 2 \)
+        <br><br>
+
+        Note that Python chooses to return a remainder (modulo result) with the <b>same sign</b> as the <b>denominator</b>!
+        <br><br>  
+
+        <span style='color:#06a015'><b><big>Activity 4</big></b></span> [1 minute]: <br>
+        <div class="mx-lg-5">
+          try it out, step by step, <a href="https://pythontutor.com/visualize.html#code=print%2817%255%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false">here</a>.
+          <br><br>
+          <ul>
+            <li>Now subtitute the parameter of the print statement for: "17 % -5"; What happens? Why?</li>
+            <li>Now subtitute the parameter of the print statement for: "-17 % 5"; What happens? Why?</li>
+            <li>Now subtitute the parameter of the print statement for: "-17 % -5"; What happens? Why?</li>
+          </ul>
+          
+        </div>
+        
+        <br><br>
+
+        Modulo is useful for situations in which you are working in a "cyclic" system, like a calendar or a .
+        <br><br>
+        For example: if a submarine works in 3 shifts of 8 hours (shift_0, shift_1, and shift_2 ), and it will go on a mission for 330 hours, which shift will be working when they arrive?
+        <br><br>
+        You can do integer division and modulo arithmetic like this:
+        <br>
+        \( \texttt{num_days = 330 // 24 # this is 13 (total days) }\)
+        <br>
+        \( \texttt{remaining_hours = 320 % 24 # this is 18 (which means that the last shift will be working) }\)
+        <br>
+        This means that the last shift will be working, since only two full shifts may fit in 18 hours.
+      </p>
+
+      <br><br>  
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h3>Integers and Floats</h3>
+      <p>
+        For numeric assignments, you'll see to main types:
+        <br><br>
+        <ul>
+          <li>Integers (no decimal expansion) : like <tt><b>x = 5</b></tt></li>
+          <li>Floats (with decimals; AKA "floating point numbers") : like <tt><b>q = 3.141592</b></tt></li>
+        </ul>
+        
+      </p>
+      <br><br>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Input</h2>
+
+      <p>
+        A program may accept input from the keyboard, and print it or use it to make decisions.
+        <br><br>
+
+        In python, the way to tell the program to "read input from the keyboard at this point", is too
+        <br>
+        use the <tt><b>input()</b></tt> built-in function. 
+        <br><br>
+
+        At the point where that statement is executed, the program makes sure to "read characters from input until it detects a 'newline'".
+        <br><br>
+
+        If you want the program to display a <i>prompt</i> for the user that asks for input, you may add a little message inside the parentheses:
+        <br>
+        <tt><b>input("Please Write your name and then press 'return': ")</b></tt>
+
+        <br><br>
+
+        The usual way to use <tt><b>input</b></tt> is by assigning what the user inputs into a variable and using that variable later in the code.
+        <br><br>
+
+        Note that, the input function reads input <b>as text</b>!
+        <br><br>
+
+        If we want to have the input interpreted as a number, we need to use other built-in functions to get Python to do this.
+        <br><br>
+
+        <h3>The <tt>int</tt> function</h3>
+
+        The <tt>int (</tt> &lt; text that can be read as a number &gt; <tt>)</tt> function accepts a string literal or a variable with a string inside (more on this later) and atttempts to convert it into an integer.
+        <br><br>
+
+        The following is one way of using it:
+        <br><br>
+        <div class="mx-lg-5">
+          <span style='color:#06a015'><b><big>Activity 5</big></b></span> [1 minute]: <br>
+        Run the following <a href="https://pythontutor.com/visualize.html#code=num_text%20%3D%20input%28'Write%20a%20number%20in%20the%20range%20%281-9%29%3A%20'%29%0Anum%20%3D%20int%28num_text%29%3B%0Aprint%28num%20%2B%201%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%224%22%5D&textReferences=false">program</a>;
+        <br><br>
+        Now comment out the middle statement and run it again. What happens?
+        </div>
+
+        <br><br>
+
+      </p>
+
+
+
+  
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Previous Module</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes05.html">Next Module</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+   
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+    <!-- <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script> -->
+  </body>
+</html>

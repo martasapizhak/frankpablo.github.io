@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSCI 1111 Introduction to Software Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 1111</h1>
+      <p class="lead">Introduction to Software Development</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <!-- NAVBAR-->
+    <div class="container py-0">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures<span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>
+                <a class="dropdown-item" href="#">Codio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./lectureNotes01.html">Previous Lecture</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Next Lecture</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <p>
+        <hr>
+      </p>
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 02: Parts of a Program</h1>
+      <p>
+        <br>
+      </p>
+      <h2>Objectives</h2>
+
+      By the end of this module, for simple HelloWorld-like
+      programs, you will be able to:
+      <ul>
+        <li> Demonstrate knowledge of filename relationship to program
+        <li> Demonstrate identification of many key syntactic and stylistic elements.
+     
+          
+        <li> Demonstrate understanding of case-sensitivity.
+        <li> Differentiate between comments and statements.
+        <li> Explain how to identify a String within an instruction.
+        <li> Explain the purpose of escape sequences.
+
+        <li> Demonstrate familiarity with the structure and usage of methods.   
+        <li> Demonstrate how to read simple programs.
+        <li> Demonstrate identification and fixing of compilation errors. 
+
+      </ul>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Before Starting
+      </h2>
+
+      <ul>
+        <li>Read Sections <span style="color: #ff0000; font-weight: bold">2.01 to 2.07</span> in the Codio Course</li>
+      </ul>
+
+      <p>
+        If you do not have your Codio course ready, use any text editor or simple IDE. Some possibilities are:
+      </p>
+      <ul>
+        <li>Write using Sublime; Compile and run in the Terminal</li>
+        <li>Use IDEs like: IntelliJ, DrJava, or JGrasp</li>
+      </ul> 
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>
+        Files Vs Programs
+      </h2>
+
+      <p>
+        From Codio chapter 2.01, you should remember:
+        <br>
+        <b><big>Rule 1</big></b>: Verify that your <b>file has the same name as the class it contains</b>. 
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>
+      The HelloWorld program ... Again
+      </h2>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span>: Follow along and verify your work in Codio book chapter 2.02:
+      </p>  
+      <div class="container m-5">
+        <p>
+          <b>Step 1</b>: Type the following program <b>fragment</b> in the Editor window and compile it. 
+        </p>
+
+<div style="background: #f8f8f8; overflow:auto;width:auto;border:gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">class</span> <span style="color: #AA22FF">MyHello</span> <span style="color: #AA22FF">{</span>
+
+<span style="color: #AA22FF">}</span>
+</pre></div>
+
+        <br>
+
+        <p class="mx-5">
+          <b>Note 1</b>: Even though this does not compile, this is the proper way to start a class.
+          <br>
+          <b>Note 2</b>: We have some keywords here to tell Java details about the class (more on this later).
+          <br>
+          <b>Note 3</b>: We open the bracket and then immediately close it!! This creates the <b>class block</b>!
+        </p>
+
+        <br>
+
+        <h4>The Class: Highest Level of Abstraction!</h4>
+
+        <p>
+          In Java, the idea is to package all the features and behaviors that a program ca do. 
+          We do this so we can eventually use them without having to think of the details. This is <b>using the program as a black box</b>. 
+          <br>
+          <span style="color: #AA22FF;">Using our running example, the <b>Class</b> is like a pizzeria: The Programming Pizzeria</span>. 
+        </p>
+
+        <br>
+
+        <p>
+          <b>Step 2</b>: Now add the following section (inside the grayed-out code):
+        </p>
+
+<div style="background: #f8f8f8; overflow:auto;width:auto;border:gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #575757; font-weight: bold">public</span> <span style="color: #575757; font-weight: bold">class</span> <span style="color: #575757">MyHello</span> <span style="color: #575757">{</span>
+    <span style="color: #AA22FF; font-weight: bold">public static void main(String[] args) {</span> 
+        
+    <span style="color: #AA22FF">}</span>
+<span style="color: #575757">}</span>
+</pre></div>
+
+        <br>
+
+        <p class="mx-5">
+          <b>Note 1</b>: The class now compiles even though it actually does nothing.
+          <br>
+          <b>Note 2</b>: We open the bracket and then immediately close it!! This creates the <b>method block</b>!.
+        </p>
+
+        <br>
+
+        <h4>The Method:  Abstraction's Next Level Down</h4>
+
+        <p>
+          The idea is to package sequences of instructions that ultimately perform one behavior or task.
+          <br>
+          <span style="color: #AA22FF;">Using our running example, the <b>Method</b> is like a chef: The pizza maker</span>. 
+        </p>
+
+        <br>
+
+        <p>
+          <b>Step 3</b>: Now add the following section:
+        </p>
+
+<div style="background: #f8f8f8; overflow:auto;width:auto;border:gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #575757; font-weight: bold">public</span> <span style="color: #575757; font-weight: bold">class</span> <span style="color: #575757">MyHello</span> <span style="color: #575757">{</span>
+    <span style="color: #575757;">public static void main(String[] args) {</span> 
+      <span style="color: #AA22FF; font-weight: bold">System.out.println("Hello, Myself!");</span>   
+    <span style="color: #575757">}</span>
+<span style="color: #575757">}</span>
+</pre></div>
+
+        <br>
+
+        <h4>The Statement or Instruction: Abstraction's Next Level Down</h4>
+
+        <p>
+          The single instruction or statement is like a single action.
+          <br>
+          <span style="color: #AA22FF;">Using our running example, a <b>Statement</b> is like a chef adding cheese to the pizza</span>.
+        </p>
+        
+      </div> <!-- END EXERCISE BLOCK-->
+
+      <p>
+        From Codio chapter 2.02, you should remember:
+        <br>
+        <b><big>Rule 2</big></b>: If you want to run (execute) the class, Make sure that <b>the program contains a class block with a method called main inside</b>. We'll talk about this later (when we discuss the "Path of execution"). 
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>
+        Multiple Print Instructions
+      </h2>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span>: Follow along and verify your work in Codio book chapter 2.03:
+      </p>  
+
+      <p>
+        You can have as many instructions as you like inside the main method. Here, we have two print statements:
+      </p>
+      <div class="container m-5">
+        <div style="background: #f8f8f8; overflow:auto;width:auto;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">class</span> <span style="color: #0000FF">Hello2</span> <span style="color: #666666">{</span>
+
+    <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">static</span> <span style="color: #00BB00; font-weight: bold">void</span> <span style="color: #00A000">main</span><span style="color: #666666">(</span>String<span style="color: #666666">[]</span> args<span style="color: #666666">)</span> <span style="color: #666666">{</span>
+        <span style="color: #008800; font-style: italic">// generate some simple output</span>
+        System<span style="color: #666666">.</span><span style="color: #BB4444">out</span><span style="color: #666666">.</span><span style="color: #BB4444">println</span><span style="color: #666666">(</span><span style="color: #BB4444">&quot;Hello, World!&quot;</span><span style="color: #666666">);</span>
+        System<span style="color: #666666">.</span><span style="color: #BB4444">out</span><span style="color: #666666">.</span><span style="color: #BB4444">println</span><span style="color: #666666">(</span><span style="color: #BB4444">&quot;How are you?&quot;</span><span style="color: #666666">);</span>
+    <span style="color: #666666">}</span>
+<span style="color: #666666">}</span>
+      </pre>
+      </div>
+
+      </div><!--END OF multiple prints-->  
+
+      <p>
+        You can also use the other type of print statement: 
+      </p>
+      <div class="container m-5">
+        <div style="background: #f8f8f8; overflow:auto;width:auto;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">class</span> <span style="color: #0000FF">Goodbye</span> <span style="color: #666666">{</span>
+
+    <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">static</span> <span style="color: #00BB00; font-weight: bold">void</span> <span style="color: #00A000">main</span><span style="color: #666666">(</span>String<span style="color: #666666">[]</span> args<span style="color: #666666">)</span> <span style="color: #666666">{</span>
+        <span style="color: #008800; font-style: italic">// generate some simple output</span>
+        System<span style="color: #666666">.</span><span style="color: #BB4444">out</span><span style="color: #666666">.</span><span style="color: #BB4444">print</span><span style="color: #666666">(</span><span style="color: #BB4444">&quot;Goodbye, &quot;</span><span style="color: #666666">);</span>
+        System<span style="color: #666666">.</span><span style="color: #BB4444">out</span><span style="color: #666666">.</span><span style="color: #BB4444">println</span><span style="color: #666666">(</span><span style="color: #BB4444">&quot;cruel world&quot;</span><span style="color: #666666">);</span>
+    <span style="color: #666666">}</span>
+<span style="color: #666666">}</span>
+      </pre>
+      </div>
+
+      </div>
+
+      <p>
+        Note that in this one, we use 
+        <pre>
+          System.out.print ...
+        </pre>
+        Which has no <font face="monospace">ln</font> at the end, which causes the next print statement to simply continue where the previous one left off.
+      </p>
+
+      <!--END OF multiple prints and use of print--> 
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Additional Structural Elements
+      </h2>
+
+      <p>
+        <span style="color: #ff0000; font-weight: bold">Reserved Words</span>: 
+        <br>
+        We'll Highlight <span style="color: #ff0000;">in red</span> some words in HelloWorld which we call <b>reserved words</b>
+      </p>
+
+      <div class="container mx-5">
+        These words tell Java something about the properties of the <b>block</b>, <b>variable</b>, or <b>method</b> (more on this later).
+
+      <!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #ff0000; font-weight: bold">public</span> <span style="color: #ff0000; font-weight: bold">class</span> <span style="color: #575757">MyHello</span> <span style="color: #575757">{</span>
+
+    <span style="color: #ff0000; font-weight: bold">public</span> <span style="color: #ff0000; font-weight: bold">static</span> <span style="color: #ff0000; font-weight: bold">void</span> <span style="color: #575757">main</span><span style="color: #575757">(</span>String<span style="color: #575757">[]</span> args<span style="color: #575757">)</span> <span style="color: #575757">{</span>
+        <span style="color: #575757; font-style: italic">// generate some simple output</span>
+        <span style="color: #575757;">System.out.println("Hello, Myself!");</span> 
+    <span style="color: #575757">}</span>
+<span style="color: #575757">}</span></pre></div>
+
+        <p><li> Words like <span style="color: #ff0000; font-weight: bold">public</span> and <span style="color: #ff0000; font-weight: bold">class</span> are called <em>reserved words</em>
+            <br>
+            <span class="mx-5">They come defined in the Java language and can only be used in some ways.</span>
+
+        <p><li> The reserved word <span style="color: #ff0000; font-weight: bold">public</span> has to do with <em>visibility</em>, an advanced topic
+            <br>
+            <span class="mx-5">For simplicity, we'll leave everything <span style="color: #ff0000; font-weight: bold">public</span> for now.</span> 
+
+        <p><li> We generally have one class per file. There are reasons and ways to have more than one, but in this class we will not use more than one per file.
+
+        <p><li> <span style="color: #ff0000; font-weight: bold">static</span> has to do with <em>ownership of the method</em>, an advanced topic
+            <br>
+            <span class="mx-5">For simplicity, we'll leave all methods as <span style="color: #ff0000; font-weight: bold">static</span> for now.</span>
+
+        <p><li> Reserved Words are CASE SENSITIVE (<span style="color: #ff0000; font-weight: bold">public</span> is different than <span style="color: #ff0000; font-weight: bold">Public</span>)    
+      </div><!--END OF Reserved Words-->
+
+      <br>
+
+      <p>
+        <span style="color: #00cc00; font-weight: bold">Identifiers</span>: 
+        <br>
+        We'll Highlight <span style="color: #00cc00;">in green</span> some words in HelloWorld which we call <b>identifiers</b>
+      </p>
+
+      <div class="container mx-5">
+        <p>
+          These words are names that we pick to refer to named elements of the code, like <b>blocks</b>, <b>variables</b>, or <b>methods</b>. Some are named by us, some have been named by others and are now standard in Java.
+        </p>
+
+      <!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #575757; font-weight: bold">public</span> <span style="color: #575757; font-weight: bold">class</span> <span style="color: #00cc00">MyHello</span> <span style="color: #575757">{</span>
+
+    <span style="color: #575757; font-weight: bold">public</span> <span style="color: #575757; font-weight: bold">static</span> <span style="color: #575757; font-weight: bold">void</span> <span style="color: #575757">main</span><span style="color: #575757">(</span>String<span style="color: #575757">[]</span> args<span style="color: #575757">)</span> <span style="color: #575757">{</span>
+        <span style="color: #575757; font-style: italic">// generate some simple output</span>
+        <span style="color: #00cc00;">System</span>.<span style="color: #00cc00;">out</span>.<span style="color: #00cc00;">println</span><span style="color: #575757;">("Hello, Myself!");</span> 
+    <span style="color: #575757">}</span>
+<span style="color: #575757">}</span></pre></div>
+
+        <p><li> Words like <span style="color: #00cc00; font-weight: bold">MyHello</span> are words <em>we pick</em> for our convenience
+            <br>
+            <span class="mx-5">They are called <em>identifiers</em>.</span> 
+
+        <p><li>As we'll see, there are many <em>kinds of identifiers</em>. The main two are:
+          <ul>
+            <li>Those we choose for things WE created, like <span style="color: #00cc00;">MyHello</span>, and</li>
+            <li>Those someone else chose for code that is now standard use in Java, like:</li>
+            <span style="color: #00cc00;">System</span>.<span style="color: #00cc00;">out</span>.<span style="color: #00cc00;">println</span> (which we will explain later).
+            <li>Lastly, the <span style="color: #ff00ff; font-weight: bold"><b>dot</b></span> means, in Java: "Look Inside and Use". One analogy could be that when you want to use your Phone's calculatorApp to see what is the result for "355/113", you might do: 
+              <pre>
+                Backpack<span style="color: #ff00ff; font-weight: bold">.</span>Phone<span style="color: #ff00ff; font-weight: bold">.</span>calculatorApp<span style="color: #575757">(</span>355/113<span style="color: #575757">)</span></pre>
+          </ul>
+
+        <p><li> Identifiers <em>we pick</em> must:
+        <ul>
+          <li>start with a letter and </li>
+          <li>contain only letters, numbers and underscores.</li>
+        </ul> 
+
+        <p><li> Once defined, Identifiers are CASE SENSITIVE (<span style="color: #00cc00; font-weight: bold">MyHello</span> is different than <span style="color: #00cc00; font-weight: bold">myhello</span>)
+
+      </div><!--END OF Identifiers-->
+
+      <br>
+
+      <p>
+        <span style="color: #0000ff; font-weight: bold">Braces</span>: 
+        <br>
+        We'll Highlight <span style="color: #0000ff;">in blue</span> the different types of <b>braces</b> used in Java.
+      </p>
+
+      <div class="container mx-5">
+        The different types of brackets define the size and reach of <b>blocks</b> of code, parameters, arguments, or types (more on this later).
+
+      <!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #575757; font-weight: bold">public</span> <span style="color: #575757; font-weight: bold">class</span> <span style="color: #575757">FutureExample</span> <span style="color: #0000ff">{</span>
+
+    <span style="color: #575757; font-weight: bold">public</span> <span style="color: #575757; font-weight: bold">static</span> <span style="color: #575757; font-weight: bold">void</span> <span style="color: #575757">main</span><span style="color: #575757">(</span><span style="color: #575757;">String[] args</span><span style="color: #575757">)</span> <span style="color: #0000ff">{</span>
+        <span style="color: #575757;">ArrayList</span><span style="color: #0000ff;"><</span><span style="color: #575757;">Integer</span><span style="color: #0000ff;">></span> <span style="color: #575757;">mylist = new</span> <span style="color: #575757;">ArrayList</span><span style="color: #0000ff;"><</span><span style="color: #575757;">Integer</span><span style="color: #0000ff;">></span> <span style="color: #0000ff;">(</span><span style="color: #0000ff;">)</span><span style="color: #575757;">;</span>
+        <span style="color: #575757;">System.out.println</span><span style="color: #0000ff;">(</span><span style="color: #0000ff;">"</span><span style="color: #575757;">Hello, Past!</span><span style="color: #0000ff;">"</span><span style="color: #0000ff;">)</span><span style="color: #575757;">;</span>
+    <span style="color: #0000ff">}</span>
+<span style="color: #0000ff">}</span></pre></div>
+
+        <p><li> Curly Brackets like <span style="color: #0000ff; font-weight: bold">{ }</span> are <em>block delimiters</em>. They always come in pairs.
+            <br>
+            <span class="mx-5">They indicate the limits of that particular black box.</span> 
+
+        <p><li> Parentheses like <span style="color: #0000ff; font-weight: bold">( )</span> are <em>grouping symbols</em>. They always come in pairs.
+            <br>
+            <span class="mx-5">They can work as mathematical grouping (like you've used them before), or for indicating the set of arguments or parameters that a method takes (more on this later).</span>    
+
+        <p><li> A <b>pair of</b> Angle Brackets <span style="color: #0000ff; font-weight: bold">< ></span> are used to<em> specify a particular type</em> (or flavor) of something. 
+            <br>
+            <span class="mx-5">One analogy could be that when you order an ice cream, you would do so by requesting:</span> 
+              <pre>Cake<span style="color: #0000ff; font-weight: bold"><</span>Chocolate<span style="color: #0000ff; font-weight: bold">></span></pre>
+        
+        <p><li> Double Quotes <span style="color: #0000ff; font-weight: bold">" "</span> are used to specify the start and end of a <em>literal string</em> or phrase. They always come in pairs.
+            <br>
+            <span class="mx-5">They serve to tell Java <b>not</b> to interpret that section as an instruction but rather to use it as a literal phrase. It is like the use of quotes in prose:</span> 
+            <br>
+            <div class="mx-5">
+              <blockquote class="blockquote">
+              <p>
+                Martha said “Something I don't want to tell you”
+              </p>
+            </blockquote>
+            </div>
+            <p>
+              Without the quotation marks, that would be very confusing!
+            </p>
+      </div><!--END OF Brackets-->
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Code Formatting: White spaces and Indentation</h2>
+
+      <p>
+        As we saw in Codio section 2.05, some code formatting elements are optional but recommended.
+        <br>
+        The code shown below compiles but is very hard to read and understand.
+      </p>
+      
+
+      <div class="container m-5">
+        <div style="background: #f8f8f8; overflow:auto;width:auto;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #AA22FF; font-weight: bold">public</span> 
+  <span style="color: #AA22FF; font-weight: bold">class</span> <span style="color: #0000FF">Hello2</span> <span style="color: #666666">{</span><span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">static</span> <span style="color: #00BB00; font-weight: bold">void</span> <span style="color: #00A000">main</span><span style="color: #666666">(</span><span style="color: #666666">String</span> 
+    <span style="color: #666666">args []</span> <span style="color: #666666">)</span> <span style="color: #666666">{</span><span style="color: #008800; font-style: italic">// generate some simple output</span>
+        System<span style="color: #666666">.</span><span style="color: #BB4444">out</span><span style="color: #666666">.</span>
+    <span style="color: #BB4444">println</span><span style="color: #666666">(</span><span style="color: #BB4444">&quot;Hello, World!&quot;</span><span style="color: #666666">);</span>
+System<span style="color: #666666">.</span><span style="color: #BB4444">out</span><span style="color: #666666">.</span><span style="color: #BB4444">println</span><span style="color: #666666">(</span><span style="color: #BB4444">&quot;How are you?&quot;</span><span style="color: #666666">);</span>
+    <span style="color: #666666">}</span><span style="color: #666666">}</span>
+      </pre>
+      </div>
+
+      <p>
+        That is why, in this class, we will follow a strict set of programming 
+        <br>
+       Take a look at the following simplified <a href="../resources/codeStyle.html">CS1111CodeStyle</a>. For now, look only at the <b>Beginner</b>
+      </p>
+
+      <br>
+
+      <p>The result is code that is easy to read and write:</p>
+
+      <div style="overflow:auto;width:auto;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888; font-weight: bold">|-- indent Level 1</span>
+    <span style="color: #888888; font-weight: bold">|-- indent Level 2</span>
+        <span style="color: #888888; font-weight: bold">|-- indent Level 3</span>
+</pre>
+</div>
+
+        <div style="background: #f8f8f8; overflow:auto;width:auto;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">class</span> <span style="color: #0000FF">Hello2</span> <span style="color: #666666">{</span>
+
+    <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">static</span> <span style="color: #00BB00; font-weight: bold">void</span> <span style="color: #00A000">main</span><span style="color: #666666">(</span>String<span style="color: #666666">[]</span> args<span style="color: #666666">)</span> <span style="color: #666666">{</span>
+        <span style="color: #008800; font-style: italic">// generate some simple output</span>
+        System<span style="color: #666666">.</span><span style="color: #BB4444">out</span><span style="color: #666666">.</span><span style="color: #BB4444">println</span><span style="color: #666666">(</span><span style="color: #BB4444">&quot;Hello, World!&quot;</span><span style="color: #666666">);</span>
+        System<span style="color: #666666">.</span><span style="color: #BB4444">out</span><span style="color: #666666">.</span><span style="color: #BB4444">println</span><span style="color: #666666">(</span><span style="color: #BB4444">&quot;How are you?&quot;</span><span style="color: #666666">);</span>
+    <span style="color: #666666">}</span>
+<span style="color: #666666">}</span>
+      </pre>
+      </div>
+
+      </div>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Escape sequences</h2>
+
+      <p>
+        Some things inside a String denote literal text and others try to indicate formatting.
+      </p>
+      <ul>
+        <li>Since Strings are surrounded by double quotes like in: <span style="color: #BB4444">&quot;How are you?&quot;</span> , it would be hard to try to write double quotes as part of a text. like in</li> 
+        &nbsp;&nbsp;&nbsp;&nbsp; <span style="color: #BB4444">&quot; She said "How are you?", and smiled &quot;</span>
+        <li>In that example, the compiler doesn't know you mean for the two internal quotes to be taken literally</li>. 
+      </ul>
+      </p>
+      <p>
+        That's why, we use a special symbol: <span style="color: #BB4444">\</span> to tell the compiler that there starts an <i>escape sequence</i>, which is a sequence of characters that the compiler needs to interpret in a different way.
+        <br>
+        In Java, these are the most common escape sequences:
+        <ul>
+          <li><span style="color: #BB4444">\t</span>: insert a tab at this point</li>
+          <li><span style="color: #BB4444">\n</span>: insert a new line at this point</li>
+          <li><span style="color: #BB4444">\'</span>: insert a (literal) single quote at this point</li>
+          <li><span style="color: #BB4444">\"</span>: insert a (literal) double quotes at this point</li>
+          <li><span style="color: #BB4444">\\</span>: insert a (literal) backslash at this point   </li>
+        </ul>
+        <br>
+        Note that since a single backslash starts an escape sequence, we use two in a row to tell the compiler to interpret the sequence to place a single literal backslash in the String.
+      </p>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 3</big></b></span>: Complete Codio book chapter 2.06:
+      </p>
+
+      <div class="container m-5">
+        <p>
+          The objective is to correct the internal quotes in this message:
+        </p>
+        <div style="background: #f8f8f8; overflow:auto;width:auto;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">class</span> <span style="color: #0000FF">Escape</span> <span style="color: #666666">{</span>
+
+    <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">static</span> <span style="color: #00BB00; font-weight: bold">void</span> <span style="color: #00A000">main</span><span style="color: #666666">(</span>String<span style="color: #666666">[]</span> args<span style="color: #666666">)</span> <span style="color: #666666">{</span>
+        <span style="color: #008800; font-style: italic">// generate some simple output</span>
+        System<span style="color: #666666">.</span><span style="color: #BB4444">out</span><span style="color: #666666">.</span><span style="color: #BB4444">println</span><span style="color: #666666">(</span><span style="color: #BB4444">&quot;She said "Hello!" to me. &quot;</span><span style="color: #666666">);</span>
+    <span style="color: #666666">}</span>
+<span style="color: #666666">}</span>
+      </pre>
+      </div>
+
+      <p>
+        Then make it print:
+
+        <div style="background: #f8f8f8; overflow:auto;width:auto;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
+  <span style="color: #BB4444">She said</span>
+  <span style="color: #BB4444">"Hello!"</span>
+  <span style="color: #BB4444">to me.</span>
+      </pre>
+      </div>
+
+      </p>
+      </div>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Reading Programs</h2>
+
+      <p> We can't emphasize this enough: <em>reading</em>
+      programs is an all-important skill.</p>
+
+      <p> Start with the <font color="#000000"><tt>class</tt></font>:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes02/reading.png" width=60%><p>
+        <ul>
+          <li> (3) When you read the <font color="#000000"><tt>class</tt></font> name, pause,
+            and ask whether the file name matches.</li>
+
+          <li> When you see the opening brace (4), immediately 
+             look for and identify the closing brace (5).</li>
+
+          <li> In general, for every left bracket, your eye should
+            linger on the matching right one, sort-of absorbing
+            the space between.</li>
+        </ul>
+
+      </p>
+
+
+      <p> Next, go to <font color="#000000"><tt>main</tt></font>:
+           <p><img src="../figures/lectureNotes02/reading2.png"><p>
+        <ul>
+          <li> Check to see that it's properly formed (6 - 10).</li>
+          <li> Check the method braces (11-12) and get a sense for <em>how much</em> "stuff" there is between.</li>
+        </ul>
+
+      <p> Next, read the one statement inside:
+           <p><img src="../figures/lectureNotes02/reading3.png"><p>
+        <ul>
+          <li> Read <font color="#000000"><tt>System.out.println</tt></font> as one entity (13).</li>
+          <li> When you see the opening paren, let your eyes find the right one (14).</li>
+          <li> Same thing for the double-quote (15). </li>
+          <li> Don't forget the semicolon (16).</li>
+        </ul>
+
+      <p> As we proceed, we will point out good <em>reading habits</em>.
+
+      <p><br></p><hr><p><br></p>
+      
+      <h2>Reading Exercises</h2>  
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 4</big></b></span>: The following programs <b>might</b> have Syntax errors that will cause the compiler to complain. Try to identify them by eye:
+      </p>
+      <div class="container m-5">
+        <p>
+        <span style='color:#06a015'><b>Program 1</b></span>:
+        <br>
+        <img class="img-fluid mx-auto py-2" src="../figures/lectureNotes02/error1.png" width=60%>
+      </p>
+      <p>
+        <span style='color:#06a015'><b>Program 2</b></span>:
+        <br>
+        <img class="img-fluid mx-auto py-2" src="../figures/lectureNotes02/error2.png" width=60%>
+      </p>
+      <p>
+        <span style='color:#06a015'><b>Program 3</b></span>:
+        <br>
+        <img class="img-fluid mx-auto py-2" src="../figures/lectureNotes02/error3.png" width=60%>
+      </p>
+      <p>
+        <span style='color:#06a015'><b>Program 4</b></span>:
+        <br>
+        <img class="img-fluid mx-auto py-2" src="../figures/lectureNotes02/error4.png" width=60%>
+      </p>
+      <p>
+        <span style='color:#06a015'><b>Program 5</b></span>:
+        <br>
+        <img class="img-fluid mx-auto py-2" src="../figures/lectureNotes02/error5.png" width=60%>
+      </p>
+      </div>
+      
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes01.html">Previous Lecture</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Next Lecture</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+    <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script>
+  </body>
+</html>

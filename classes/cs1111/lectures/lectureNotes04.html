@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSCI 1111 Introduction to Software Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 1111</h1>
+      <p class="lead">Introduction to Software Development</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <!-- NAVBAR-->
+    <div class="container py-0">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures<span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>
+                <a class="dropdown-item" href="#">Codio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Previous Lecture</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes05.html">Next Lecture</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <p>
+        <hr>
+      </p>
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 04: Introduction to Variables with Integers</h1>
+      <p>
+        <br>
+      </p>
+      <h2>Objectives</h2>
+
+      By the end of this module, you will be able to:
+      <ul>
+         <li> Create variable declarations.
+         <li> Assign values to variables by simple assignment, and print them out.
+         <li> Distinguish between integers in strings versus actual integers.
+         <li> Demonstrate ability to perform operations on integers 
+              for a desired output.
+         <Li> Simplify expressions with constants to single value.
+         <li> Evaluate expressions with variables in them.
+         <li> Convert English descriptions of operations into expressions.
+         <li> Mentally trace execution with expressions and calculations.
+         <Li> Identify new syntactic elements related to the above.
+      </ul>
+
+      <p>
+        And, once we've worked with integers, we'll also do some "number crunching".
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Before Starting
+      </h2>
+
+      <ul>
+        <li>Read Sections <span style="color: #ff0000; font-weight: bold">4.01 to 4.06</span> in the Codio Course</li>
+      </ul>
+
+      <p>
+        If you do not have your Codio course ready, use any text editor or simple IDE. Some possibilities are:
+      </p>
+      <ul>
+        <li>Write using Sublime; Compile and run in the Terminal</li>
+        <li>Use IDEs like: IntelliJ, DrJava, or JGrasp</li>
+      </ul> 
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Catching Up</h2>
+
+      <p>
+        Before we move forward, let's catch up (complete any remaining work from the previous module)
+        <br>
+        In this case, make sure we've got:
+        <ol>
+          <li>Tracing</li>
+          <li>
+            Debugging:
+            <ol>
+              <li>Debug Prints</li>
+              <li>Debugger (In Codio)</li>
+              <li>Visualizer</li>
+            </ol>
+          </li>
+          <li>Clarify: What happens if we use the Run button for Compile & Run AND the Compile fails???</li>
+        </ol>
+
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+<!-- SIMHA START -->
+
+<h2>
+First, an analogy
+</h2>
+
+
+<p> Suppose we have boxes. Consider the following rules about "boxes":
+  <ul>
+  <Li> Each box can store only one item.
+     <p><img src="../figures/lectureNotes04/box.png"><p>
+
+  <p><li> The possible things that can be stored inside are
+     called <em>values</em>.
+
+  <p><Li> Thus, at any given moment, a box's value is
+     whatever's inside it.
+
+  <p><li> Each box is "typed"
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &rArr; 
+      What this means:
+     <ul>
+     <li> A box meant for shoes is allowed to store only shoes.
+     <li> A box meant for caps is allowed to store only caps.
+        <p><img src="../figures/lectureNotes04/box2.png"><p>
+     </ul>
+
+  <p><Li> Each box has a unique <em>name</em>:
+        <p><img src="../figures/lectureNotes04/box3.png"><p>
+
+  <p><li> There is a <em>cloning</em> process that works like
+     this:
+        <p><img src="../figures/lectureNotes04/box4.png"><p>
+     <ul>
+     <li> The value inside one box is cloned.
+     <li> The cloned value is placed inside another.
+     </ul>
+
+  <p><li> There is a strange shortcut notation to specify cloning:
+         <p><img src="../figures/lectureNotes04/box5.png"><p>
+     <ul>
+     <li> Here, the <font color="#000000"><tt>=</tt></font> (equals sign) 
+       does NOT mean "equals."
+     <li> It has been repurposed to mean
+          "clone", "copy," or, in programming-language
+          jargon, "assign".
+     </ul>
+
+  <p><li> How to say it: "x is assigned the value in y".
+
+  <p><li><b>Important:</b> Remember, a box can hold only one value at a time.
+  </ul>
+
+
+<span style='color:#06a015'><b><big>Activity 1</big></b></span>:
+Suppose <font color="#000000"><tt>z</tt></font> is a box that stores caps. What
+will the statement <font color="#000000"><tt>z = y</tt></font> result in? Draw a picture.
+<!-- Can't do it - breaks the rule about types -->
+
+
+<p><br></p><hr><p><br></p>
+
+
+
+<h2>
+Integer variables
+</h2>
+
+
+
+<p> Consider the following program:
+         <p><img src="../figures/lectureNotes04/int.png"><p>
+
+
+<span style='color:#06a015'><b><big>Activity 2</big></b></span>:
+Edit, compile and execute the above program.
+What gets printed out to the terminal?
+
+    
+
+
+<p> Now let's examine key parts of this program:
+  <ul>
+  <li> First, <font color="#000000"><tt>i</tt></font> is the <em>name</em> of a "box" (of sorts).
+  <p><li> The term used for "box" is <em>variable</em>.
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+     &rArr; <font color="#000000"><tt>i</tt></font> is a variable.
+  <p><li> Variables must be "typed"
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+     &rArr; <font color="#000000"><tt>i</tt></font> can only store integers.
+
+  <p><li> To create and name a variable, we use a <em>variable declaration</em>:
+         <p><img src="../figures/lectureNotes04/int2.png"><p>
+
+  <p><li> Here, <font color="#000000"><tt>int</tt></font> is a reserved word in Java.
+
+  <p><li> To put something in a variable, we use <em>assignment</em>
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+     &rArr; with the repurposed <font color="#000000"><tt>=</tt></font> (equals) sign.
+         <p><img src="../figures/lectureNotes04/int3.png"><p>
+
+  <p><li> When we print a variable, what gets printed is its <em>value</em>.     
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+     &rArr; Thus, the number <font color="#000000"><tt>5</tt></font> gets printed
+         <p><img src="../figures/lectureNotes04/int4.png"><p>
+  </ul>
+
+
+
+<p> Next, let's look at assignment between variables:
+  <ul>
+  <li> This is the analogue of cloning.
+  <p><Li> Consider this addition to the above program:
+         <p><img src="../figures/lectureNotes04/int5.png"><p>
+
+  <p><li> We say, in short, "<font color="#000000"><tt>i</tt></font> is assigned to <font color="#000000"><tt>j</tt></font>".
+  </ul>
+
+
+
+<span style='color:#06a015'><b><big>Activity 3</big></b></span>:
+What happens if you don't place a value in a variable?
+Find out by editing and compiling this program:
+         <p><img src="../figures/lectureNotes04/int6.png"><p>
+
+
+
+<span style='color:#06a015'><b><big>Activity 4</big></b></span>:
+Identify the output of this program just by reading
+(mental execution).
+         <p><img src="../figures/lectureNotes04/int7.png"><p>
+
+
+<span style='color:#06a015'><b><big>Activity 5</big></b></span>:
+Identify the output of this program just by reading:
+         <p><img src="../figures/lectureNotes04/int8.png"><p>
+Then, write up the program to confirm.
+
+
+
+
+<p> A rule: a variable must be declared before it is 
+used (assigned a value or have a value copied from it).
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 6</big></b></span>:
+What is the compiler error you get for this program?
+         <p><img src="../figures/lectureNotes04/int9.png"><p>
+
+
+<p><br></p><hr><p><br></p>
+
+
+<h2>
+Variations
+</h2>
+
+
+<p> The following variations are worth knowing:
+  <ul>
+  <li> Sometimes it's convenient to use comma-separated declarations:
+         <p><img src="../figures/lectureNotes04/var.png"><p>
+       Note: variables need not be declared in the order they are used in the program.
+
+  <p><li> Declaration and assignment can be combined:
+         <p><img src="../figures/lectureNotes04/var2.png"><p>
+
+  <p><li> Another example:
+         <p><img src="../figures/lectureNotes04/var3.png"><p>
+
+  <p><li> Remember: a variable can hold only one value at a time.
+  </ul>
+
+
+
+<p> Note about writing style:
+  <ul>
+  <li> A space on either side of the equals sign for assignment.
+  <p><li> The same when you combine declaration and assignment
+          for a single variable.
+  <p><Li> It's customary to remove the space for multiple declarations.
+  <p><li> Example:
+         <p><img src="../figures/lectureNotes04/var5.png"><p>
+
+  </ul>
+
+<span style='color:#06a015'><b><big>Activity 7</big></b></span>:
+Consider the following partially-complete program:
+         <p><img src="../figures/lectureNotes04/var4.png"><p>
+Write code where indicated to have the program first
+print 6, then 5. You may not change any of the
+existing code and you may not directly assign the numbers.
+Instead, find a way to swap: that is, whatever is in 
+<font color="#000000"><tt>i</tt></font>
+should go into 
+<font color="#000000"><tt>j</tt></font>
+and whatever is in
+<font color="#000000"><tt>j</tt></font>
+should go into 
+<font color="#000000"><tt>i</tt></font>.
+
+
+<p><br></p><hr><p><br></p>
+
+
+<h2>
+Integer operators
+</h2>
+
+<br>
+
+<h5>Unary Operators</h5>
+
+<p> First, let's consider some <em>unary</em> operators:
+  <ul>
+  <li> These are operators that apply to a single variable.
+
+  <p><li> For example:
+         <p><img src="../figures/lectureNotes04/op.png"><p>
+
+
+
+  <p><li> The unary operators here are the <font color="#000000"><tt>++</tt></font> (increment)
+     and <font color="#000000"><tt>--</tt></font> (decrement):
+         <p><img src="../figures/lectureNotes04/op2.png"><p>
+
+
+<span style='color:#06a015'><b><big>Activity 8</big></b></span>:
+Mentally trace what's in the "box" for 
+<font color="#000000"><tt>i</tt></font>. 
+Do you see why the second 
+<font color="#000000"><tt>println</tt></font>. 
+prints 
+<font color="#000000"><tt>4</tt></font>
+and not
+<font color="#000000"><tt>3</tt></font>?
+
+
+  <p><li> Note writing style: no space between variable and unary operator, but this is also acceptable:
+         <p><img src="../figures/lectureNotes04/op3.png"><p>
+  </ul>
+
+
+<span style='color:#06a015'><b><big>Activity 9</big></b></span>:
+Mentally execute the program below - what does it print?
+         <p><img src="../figures/lectureNotes04/op4.png"><p>
+<!-- 3 -->
+
+<p>
+  It is very important to know that a unary operator written like this: 
+<br>
+  <font color="#000000"><tt>num ++;</tt></font>
+<br>
+will increase the value of the variable <font color="#000000"><tt>num</tt></font> by 1 only AFTER it has been resolved and used in the expression it is in.
+<br>
+That means that a more complex operation, that involves the unary operators, might not result in what you expect.
+<br>
+<br>
+<b>Example</b>:
+<br>
+
+</p>
+
+
+<span style='color:#06a015'><b><big>Activity 10</big></b></span>:
+Mentally execute the program below - what does it print?
+
+
+<h5>Binary Operators</h5>
+
+<p> Next, let's examine the familiar <em>binary operators</em>
+    <font color="#000000"><tt>+, -, *, /</tt></font>
+  <ul>
+  <li> Addition: <font color="#000000"><tt>+</tt></font>
+  <p><li> Subtraction: <font color="#000000"><tt>-</tt></font>
+  <p><li> Multiplication: <font color="#000000"><tt>*</tt></font>
+  <p><li> Division: <font color="#000000"><tt>/</tt></font>
+
+  <p><li> Consider this example with addition:
+         <p><img src="../figures/lectureNotes04/binary.png"><p>
+
+  <p><li> What happens during execution:
+         <p><img src="../figures/lectureNotes04/binary2.png"><p>
+      <ul>
+      <li> The <em>values</em> in <font color="#000000"><tt>i</tt></font> and <font color="#000000"><tt>j</tt></font>
+           are added.
+      <li> The resulting <em>value</em> goes into
+           variable <font color="#000000"><tt>k</tt></font>.
+      </ul>
+
+  <p><Li> A long-ish way of saying this aloud:
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+      &rArr;
+       "<font color="#000000"><tt>k</tt></font> is assigned the sum of the values of 
+      <font color="#000000"><tt>i</tt></font> and <font color="#000000"><tt>j</tt></font>"
+
+  <p><li> A shorter way:
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+      &rArr;
+       "<font color="#000000"><tt>k</tt></font> is assigned <font color="#000000"><tt>i</tt></font> plus <font color="#000000"><tt>j</tt></font>"
+
+  <p><li> Here's an example with multiplication and division:      
+         <p><img src="../figures/lectureNotes04/binary3.png"><p>
+  </ul>
+
+
+<span style='color:#06a015'><b><big>Activity 11</big></b></span>:
+Type up this program. What does it print? Change 
+<font color="#000000"><tt>i</tt></font> to 21. 
+What is the value of 
+<font color="#000000"><tt>m</tt></font>?
+<!-- 0, 3 -->
+
+<p><br></p><hr><p><br></p>
+
+<h5>Integer division:</h5>
+
+  <ul>
+  <li> In math, we learned that 1/4 = 0.25 and 21/6 = 3.5.
+  <p><li> In Java, however, the compiler sees that that only
+  integers are being used, and will perform <em>integer division</em>.
+  <p><li> That is, the result is rounded <em>down</em> to the
+  nearest integer.
+  <p><li> Thus, 1/4=0 and 21/6=3.
+  <p><li> Later, when we work with real numbers, we will see 
+  that, to compute a real-valued expression, at least one
+  of the numbers needs to be real-valued.
+  <p><li> Example: 1.0/4.0=0.25 or 21.0/6=3.5.
+  <p><li> Integer division is useful when we want to do integer
+  arithmetic. 
+  </ul>
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+Expressions and operator-precedence
+</h2>
+
+
+
+<p> Consider the following program:
+         <p><img src="../figures/lectureNotes04/expr.png"><p>
+
+<span style='color:#06a015'><b><big>Activity 12</big></b></span>:
+Type up the above program in 
+  <font color="#000000"><tt>MyExpressionExample.java</tt></font>
+(renaming the class name to 
+  <font color="#000000"><tt>MyExpressionExample</tt></font>).
+What does it print?
+<!-- 0 -->
+
+
+
+
+<p> About expressions:
+  <ul>
+  <li> An expression combines constants (like <font color="#000000"><tt>1</tt></font>, above), and
+       variables using operators.
+
+  <p><li> Example: 
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+      <big><font color="#000000"><tt>i*j - (i+1)*(j-1)</tt></font></big>.
+
+  <p><li> The above expression is really equivalent to:
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+        <big><font color="#000000"><tt>(i*j) - ((i+1) * (j-1))</tt></font></big>.
+     <br>
+     Here, we added some clarifying parentheses.
+
+  <p><Li> Operator <em>precedence</em> allows us to reduce the
+      number of clarifying parentheses.
+
+  <p><li> Java precedence follows standard precedence in math:
+          <big><font color="#000000"><tt>/, *, +, -</tt></font></big>.
+
+  <p><li> You might remember the precedence via the acronyms
+    BODMAS or PEMDAS. (Look it up.)
+
+  <p><li> The above expression is NOT the same as:
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+      <big><font color="#000000"><tt>i*j - i+1*j-1</tt></font></big>.
+
+  </ul>
+
+
+
+
+<span style='color:#06a015'><b><big>Activity 13</big></b></span>:
+What does the expression <font color="#000000"><tt>i*j - i+1*j-1</tt></font>
+evaluate to when <font color="#000000"><tt>i=7</tt></font> and <font color="#000000"><tt>j=3</tt></font>?
+<!-- 16 -->
+
+
+<p><br></p><hr><p><br></p>
+
+
+<h2>
+More about expressions and assignment
+</h2>
+
+
+
+
+<p> Here are two more operators, one unary (negative sign)
+and one binary (remainder or mod operator), that are commonly used:
+         <p><img src="../figures/lectureNotes04/expr2.png"><p>
+
+
+
+
+<span style='color:#06a015'><b><big>Activity 14</big></b></span>:
+What does it print? 
+<!-- 2 -->
+
+
+
+
+
+One way to know whether one number cleanly divides another
+is to apply the 
+<font color="#000000"><tt>%</tt></font> (remainder)
+operator.
+
+<br><br>
+
+
+About the 
+<font color="#000000"><tt>%</tt></font> 
+operator:
+  <ul>
+  <li> Examples of its meaning: 
+    <ul>
+    <li> 10%3 is 1
+    <li> 3%4 is 3
+    </ul>
+  <p><li> In the above program we see that if j%i is 0 then i divides
+     j cleanly.
+  <p><li> The above program therefore identifies whether a 
+   number smaller than 10 divides it cleanly.
+  <p><li> There is at least one, and therefore 10 is not prime.
+  </ul>
+
+
+
+
+
+
+<span style='color:#06a015'><b><big>Activity 15</big></b></span>:
+Write code in
+<font color="#000000"><tt>MyExpressionExample3.java</tt></font>
+to take the loop in 5.19 above and print the 
+quotient instead of remainder.
+For example, the first three lines of the output should be:
+    <font color="#000000"><pre>
+10
+5 
+3
+    </pre></font>
+(Thus, for example, when i is 1, the quotient is 10).
+
+
+
+<p> Now we'll look at a strange (initially) but very useful type of 
+assignment:
+  <ul>
+  <li> Consider this program:
+         <p><img src="../figures/lectureNotes04/expr4.png"><p>
+
+  <p><li> Prior to evaluating the expression, <font color="#000000"><tt>i</tt></font> has value <font color="#000000"><tt>7</tt></font>.
+
+  <p><li> On the right side, the current value of <font color="#000000"><tt>i</tt></font> is used
+      to <em>evaluate</em> the expression.
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+      &rArr; Thus, the expression evaluates to <font color="#000000"><tt>(7 + 7/2) = 10</tt></font>.
+
+  <p><li> This evaluated value then goes into variable <font color="#000000"><tt>i</tt></font>.
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+      &rArr; After the assignment, <font color="#000000"><tt>i</tt></font> has the value <font color="#000000"><tt>10</tt></font>.
+  </ul>
+
+
+
+
+<p><br></p><hr><p><br></p>
+
+
+
+<h2>
+Choosing variable names
+</h2>
+
+
+
+<p> Thus far, for simplicity, we have used short one-letter names
+for variables.
+
+<p> It is common to use longer, more meaningful names.
+
+
+
+<p> About variable names:
+  <ul>
+  <li> They are a matter of taste.
+  <p><Li> For programs with obvious mathematical connotation,
+    it's probably best not to use long names.
+  <!--<p><li> Generally, loop-variable names tend to be short.-->
+  </ul>
+
+
+<p><br></p><hr><p><br></p>
+
+
+
+<h2>
+When things go wrong
+</h2>
+
+
+
+<p> As you might imagine, there are many ways to inadvertently
+create errors.
+
+<p> Let's start by identifying compilers errors by reading carefully.
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 16</big></b></span>:
+Identify the compiler error:
+            <p><img src="../figures/lectureNotes04/error1.png"><p>
+<!-- use before decl -->
+
+
+
+Identify the compiler error:
+            <p><img src="../figures/lectureNotes04/error2.png"><p>
+<!-- missing ; -->
+
+
+
+Identify the compiler error:
+            <p><img src="../figures/lectureNotes04/error3.png"><p>
+<!-- j used before decl -->
+
+
+Identify the compiler error:
+            <p><img src="../figures/lectureNotes04/error4.png"><p>
+<!-- missing right paren -->
+
+
+<p><br></p><hr><p><br></p>
+
+
+<h2>
+Meta
+</h2>
+
+
+Another in our series of occasional "meta" sections that will
+step back from the material to comment on how we can learn better.
+
+<p>This was a loooong module with lots of exercises and details.
+Let's review:
+  <ul>
+  <li> We introduced the all-important concept of a <em>variable</em>
+    along with the sense that there's a "place" in the computer
+    for each variable.
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &rArr; 
+     The "place" is really in the <em>memory</em> (also called RAM) of the computer.
+
+  <p><li> Along with variables is the notion of <em>assignment</em>,
+  which means "copying the value in one variable into another variable".
+
+  <p><li> Note: assignments are amongst the most common of statements
+    in everyday code.
+
+  <p><li> When a variable is of a numeric type like integers, we also
+    need to go over basic <em>operators</em> and show examples.
+
+  <p><li> Further complications arose when the operators have variations.
+
+  <p><li> Since we were on the topic of integers, we took this 
+    opportunity to learn how to do some number-crunching.
+
+  </ul>
+
+So, if you felt a bit overwhelmed, that's perfectly understandable.
+If you have to go back to some of the material to review or try
+some exercises again, that's fine. You're going to get better at this!
+
+
+<!-- SIMHA END -->
+
+      <p><br></p><hr><p><br></p>
+
+      
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Previous Lecture</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes05.html">Next Lecture</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+      <!--
+    <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script>
+ -->
+  </body>
+</html>

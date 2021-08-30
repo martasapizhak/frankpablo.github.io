@@ -1,0 +1,7 @@
+User-Agent: *
+Disallow: /cybercorps/app_sitestyles/
+Disallow: colonial_cables/images/dolling_signature.jpg
+Allow: /
+
+User-agent: Googlebot-Image
+Disallow: colonial_cables/images/dolling_signature.jpg

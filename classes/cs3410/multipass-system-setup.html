@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../images/pabloFaceIcon.png">
+    <title>CSCI 3410 Systems Programming</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+        <style type="text/css" media="screen">
+      
+      pre code {
+        background-color: #f5f8fa;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: block;
+      }
+    
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 3410</h1>
+      <p class="lead">Systems Programming</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <div class="container py-0"><!-- was 1-->
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img src="../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="./class-info.html">Class Info <span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./schedule.html">Schedule and Lectures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>                
+                <a class="dropdown-item" href="#">TinkerCad</a>
+                <a class="dropdown-item" href="#">CSAPP/3e</a>
+                <a class="dropdown-item" href="./system-setup.html">System-Setup</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-8">
+
+        <h1 id="setup-for-mac-and-linux-users">Setup for Mac and Linux Users</h1>
+        <p>The suggested toolkit for Mac and Linux users is Multipass, a command line tool provided by Canonical that simplifies installation of Ubuntu LTS images.</p>
+        <p>If you are running Ubuntu 18.04 LTS as your host environment and have stock compiler versions, you may run the xv6 environment natively. In this case, skip installation of Multipass, SSH key generation, everything in <em>Setup your Multipass VM</em>, and everything is <em>Connect VSCode to your Multipass VM</em>, resuming with the steps in <em>Setup xv6</em></p>
+        <h2 id="minimum-requirement">Minimum Requirement</h2>
+        <h3 id="mac">Mac</h3>
+        <ul>
+        <li>Mac OS Yosemite, version 10.10.3 or later installed on a 2010 or newer Mac.</li>
+        </ul>
+        <h3 id="linux">Linux</h3>
+        <ul>
+        <li>KVM and the ability to support snapd</li>
+        </ul>
+        <h2 id="installation-instructions">Installation Instructions</h2>
+        <h3 id="setup-dependencies-on-your-host-machine">Setup Dependencies on your Host Machine</h3>
+        <ol>
+        <li>Confirm that your package manager is setup</li>
+        <ul>
+        <li>For Mac, check that brew is installed by running <code>brew help</code> or <a href="https://brew.sh/">install it</a></li>
+        <li>For Linux, check that snap is install by by running <code>snap help</code> or <a href="https://snapcraft.io/docs/installing-snapd">install it</a></li>
+        </ul>
+        <li>Install Multipass</li>
+        <ul>
+        <!--
+          (Deprecated?)
+          <li>Mac:<pre><code class="lang-sh"><span class="hljs-keyword">brew </span>cask <span class="hljs-keyword">install </span><span class="hljs-keyword">multipass</span></code></pre>-->
+          <li>Mac:<pre><code class="lang-sh"><span class="hljs-keyword">brew </span><span class="hljs-keyword">install --cask</span><span class="hljs-keyword"> multipass</span></code></pre>
+          </li>
+          <li>Linux:<pre><code class="lang-sh">sudo snap <span class="hljs-keyword">install</span> multipass</code></pre>
+          </li>
+        </ul>
+        <li>Install VSCode</li>
+        <ul>
+          <li>Mac:<pre><code class="lang-sh"><span class="hljs-keyword">brew </span>install --cask visual-studio-<span class="hljs-meta">code</span></code></pre>
+          </li>
+          <li>Linux:<pre><code class="lang-sh">sudo snap <span class="hljs-keyword">install</span> code <span class="hljs-comment">--classic</span></code></pre>
+          </li>
+        </ul>
+        <li><p>Install the following extensions:</p><br>
+          <i>Note: you can follow the links or simply run the commands shown below the links (easier)</i></li>
+        <ul>
+          <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh">Remote - SSH</a></li>
+          <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools">C/C++</a></li>
+          <li><a href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack">Live Share Extension Pack</a></li>
+          <li><p><a href="https://marketplace.visualstudio.com/items?itemName=13xforever.language-x86-64-assembly">x86 and x86_64 Assembly</a></p>  
+        <p>  via the following shell commands</p>
+<pre><code class="lang-sh"><span class="hljs-selector-tag">code</span> --install-extension ms-vscode-remote<span class="hljs-selector-class">.remote-ssh</span>
+<span class="hljs-selector-tag">code</span> --install-extension ms-vscode<span class="hljs-selector-class">.cpptools</span>
+<span class="hljs-selector-tag">code</span> --install-extension MS-vsliveshare<span class="hljs-selector-class">.vsliveshare-pack</span>
+<span class="hljs-selector-tag">code</span> --install-extension <span class="hljs-number">13</span>xforever.language-x86-<span class="hljs-number">64</span>-assembly
+</code></pre>
+        <p>  Optionally, if you are coming from vim, emacs, or some other editor, and have a working muscle memory for those keybindings, <a href="https://marketplace.visualstudio.com/search?target=VSCode&amp;category=Keymaps&amp;sortBy=Relevance">consider installing a keymap extension</a>.</p>
+        </li>
+        </ul>
+        <li><p>Launch VSCode and confirm that the extensions have installed properly. You will potentially see installation messages on first start, including possibly a message prompting you to enter your user password to to install additional dependencies that the extensions require. Once this is complete, open the VSCode Extensions panel. You should see the extensions listed located under <code>LOCAL - INSTALLED</code>. If one of these extensions shows a <code>Reload Required</code> button, click it and wait for VSCode to reload.</p>
+        </li>
+        <li><p>Open Terminal and check if you have an SSH key on your system by seeing if <code>~/.ssh/id_rsa.pub</code> exists. If you do not have a key, you can generate one with <code>ssh-keygen -t rsa</code>. If you do not wish to set a password, just hit ENTER when asked for a passphrase. You should now have a public / private keyboard located at <code>~/.ssh/id_rsa.pub</code> and <code>~/.ssh/id_rsa</code> respectively. If you generated a key, close and reopen Terminal to start a new shell session. You need to do this for ssh to be able to detect the presence of this new key.</p>
+        </li>
+        </ol>
+
+        <h3 id="setup-your-multipass-vm">Setup your Multipass VM</h3>
+
+        <ol start="7">
+        <li><p>Generate a YAML configuration file containing your public key via the following:</p>
+<pre><code class="lang-sh">cd ~
+echo -n -e <span class="hljs-string">"ssh_authorized_keys:\n  - "</span> &gt; ~/primary-config<span class="hljs-selector-class">.yaml</span>
+cat ~/.ssh/id_rsa<span class="hljs-selector-class">.pub</span> &gt;&gt; ~/primary-config.yaml
+</code></pre>
+        </li>
+        <li><p>Create a Linux guest named <code>primary</code>. If you are on a system with more than 8GB of RAM, you may optionally want to increase the memory allocated to this VM from 1.5GB to 2GB by changing <code>-m 1500M</code> to <code>-m 2G</code> below.</p>
+<pre><code class="lang-bash">cd ~
+multipass launch -n primary -c <span class="hljs-number">4</span> -m <span class="hljs-number">1500</span>M --cloud-init primary-config.yaml <span class="hljs-number">18.04</span>
+</code></pre>
+        </li>
+        <li><p>You now have a Ubuntu 18 LTS VM named primary with a default user named ubuntu. Run <code>multipass list</code> to see that this is currently running and that it is the only VM listed.</p>
+        </li>
+        <li>Enter the guest by running <code>multipass shell</code></li>
+        <li>Confirm that your VM has multiple virtual processors by running <code>lscpu</code>. Among others things, you should see:
+<pre><code><span class="hljs-function"><span class="hljs-title">CPU</span><span class="hljs-params">(s)</span></span>:              <span class="hljs-number">4</span>
+On-line CPU(s) list: <span class="hljs-number">0</span>-<span class="hljs-number">3</span>
+<span class="hljs-function"><span class="hljs-title">Thread</span><span class="hljs-params">(s)</span></span> per core:  <span class="hljs-number">2</span>
+<span class="hljs-function"><span class="hljs-title">Core</span><span class="hljs-params">(s)</span></span> per socket:  <span class="hljs-number">2</span>
+<span class="hljs-function"><span class="hljs-title">Socket</span><span class="hljs-params">(s)</span></span>:           <span class="hljs-number">1</span>
+NUMA node(s):        <span class="hljs-number">1</span>
+</code></pre></li>
+        <li>Set a User password. By default, Multipass does not require passwords, but some scripts require them. Run <code>sudo passwd ubuntu</code> and enter a new password</li>
+        <li>By default, multipass lets you access the Ubuntu shell via the command <code>multipass shell</code>. However, tools that enable remote development need to be able to use SSH. The public key you provided via the <code>~primary-config.yaml</code> file should allow this. However, before we install VSCode, we should confirm that SSH works as expected, and to do this, we need to get the IP address of the VM. This IP address will change often as you start and stop your VM, so you will often need to figure out what this value is. With Multipass, there are two ways of doing this:
+        <ul>
+          <li>In the primary guest, you can run <code>ifconfig</code>. The address will follow <code>inet</code> and look something like this <code>192.xxx.xxx.xxx</code></li>
+          <li>In the host OS, you can run <code>multipass list</code>. The address is under the column IPv4.</li>
+        </ul>    
+        
+        <li><p>Note the address from above, and then from a host shell, execute <code>ssh ubuntu@&lt;ip_address&gt;</code>, replacing <ip_address> with the address of your Multipass VM named primary. You should see a message like the following:</p>
+        <p>Depending on your distro and your SSH security settings, your system might cache fingerprints of known hosts that you&#39;ve connected to in the past. This likely resembles a message like the following:</p>
+<pre><code>The authenticity <span class="hljs-keyword">of</span> host <span class="hljs-comment">'192.168.64.2 (192.168.64.2)' can't be established.</span>
+ECDSA <span class="hljs-keyword">key</span> fingerprint <span class="hljs-keyword">is</span> SHA256:EpXmNgNYL6wAICuQV+YaVjeTXwbGukzYh/U328lEmvI.
+Are you sure you want <span class="hljs-keyword">to</span> <span class="hljs-keyword">continue</span> connecting (yes/no/[fingerprint])?
+</code></pre
+        ><p>Enter <code>yes</code>, and you should successfully log into your guest. Enter <code>exit</code> to return to your host.</p>
+        <p><i>Note: Because your guest is dynamically allocated an IP, it is possible that it might be allocated an IP address that was previously used by a different host. If this occurs, you may see a security warning such as “WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!”. If this occurs, run <code>vim ~/.ssh/known_hosts</code> and clear out the offending entry. Once this is complete, you should be able to cleanly execute <code>ssh ubuntu@&lt;ip_address&gt;</code>.</i></p>
+        </li>
+        </ol>
+
+        <h3 id="connect-vscode-to-your-multipass-vm">Connect VSCode to your Multipass VM</h3>
+
+        <ol start="15">
+        <li>Open VSCode and click on the green button in the bottom left corner. This should open a menu listing several <code>Remote-SSH</code> options. Click <code>Remote-SSH: Connect to Host...</code>. Enter <code>ubuntu@&lt;ip_address&gt;</code>, replacing <ip_address> with the address of your Multipass VM as before. This will open a new VSCode window. Feel free to close the old window. After a brief installation of the VSCode backend onto your VM, the bottom left corner&#39;s green button should now read: <code>SSH: &lt;ip_address&gt;</code>.</li>
+        <li>Hit <code>ctrl+`</code> in VSCode (Equivalent to selecting "View->Terminal" in the top menu), and ensure that the terminal in VSCode opens to your Linux home directory. It should show <code>ubuntu@primary:~$</code></li>
+        <li>By default, the previous extensions you installed are running on the host operating system. However, some of these need to run on the remote backend running on your Linux guest. To address this, open the VSCode Extensions panel, and look under the heading <code>LOCAL - INSTALLED</code>. You will see several extensions that are grayed out and have a button <code>Install in SSH: &lt;ip_address&gt;</code>. Click this button for each extension.</li>
+        <li>You should now see these extensions under <code>SSH: &lt;ip_address&gt; - INSTALLED</code>. However, they likely have a button <code>Reload Required</code>. Once all extensions are installed under Ubuntu, click that button to reload the window. You will be prompted to install additional Linux dependencies, including prompting for your user password. When complete, you will be asked to reload VSCode yet again. Click “Reload Now.”</li>        
+        </ol>
+
+        <h3 id="connect-vscode-to-your-multipass-vm">Install the necessary lilbraries</h3>
+        <ol start="19">
+          <li>First, update the packages list:<br>
+            <pre><code>sudo apt update</code></pre></li>
+          <li>Run the following command to install the default ubuntu repositories: <br>
+            <pre><code>sudo apt install build-essential</code></pre></li>
+          <li>Run the following command to install the man pages: <br>
+            <pre><code>sudo apt-get install manpages-dev</code></pre></li>
+          <li>Run the following command to test gcc: <br>
+            <pre><code>gcc --version</code></pre></li>
+        </ol>
+
+
+<!--
+        <h3 id="setup-xv6">Setup xv6</h3>
+
+        <ol start="19">
+        <li><p>Open your primary VM in VSCode if it is not already open and hit ctrl+` to open the integrated shell in VSCode. It should show <code>ubuntu@primary:~$</code>. We&#39;re now ready to install xv6 and its dependencies.</p>
+<pre><code class="lang-sh">sudo apt-<span class="hljs-built_in">get</span> <span class="hljs-keyword">update</span> --yes
+sudo apt-<span class="hljs-built_in">get</span> install build-essential gdb glibc-doc qemu-<span class="hljs-built_in">system</span>-x86 --yes
+<span class="hljs-keyword">cd</span> ~
+<span class="hljs-built_in">mkdir</span> projects
+<span class="hljs-keyword">cd</span> projects
+git clone http<span class="hljs-variable">s:</span>//github.<span class="hljs-keyword">com</span>/gwu-<span class="hljs-keyword">cs</span>-os/gwu-xv6
+<span class="hljs-keyword">cd</span> gwu-xv6
+code -r .
+</code></pre>
+        </li>
+        <li><p>This will open the xv6 project in VSCode. Feel free to look at the source code. Reopen the terminal ctrl+` and build xv6.</p>
+<pre><code class="lang-sh"><span class="hljs-attribute">make qemu-nox</span></code></pre>
+        </li>
+        <li><p>Assuming everything completed properly, you should boot into xv6, an operating system modeled after version 6 of Bell Labs Research Unix.</p>
+        </li>
+        <li>In xv6, run <code>cat README</code></li>
+        <li>Exit xv6 by hitting ctrl+a (then releasing both keys) and then x.</li>
+        </ol>
+
+ -->    
+        <h2 id="appendix-deleting-and-rebuilding-the-vm">Appendix: Using Multipass</h2>
+        <p>You can start and stop a vm; you can get a shell in the vm, run specific commands and get info from your image. <br>
+          <ul>
+            <li>(From your host OS-shell) Starting: <br>
+              <pre><code>multipass start primary</code></pre> <br>
+            You should wait a few seconds until it is ready to use.</li>
+            <li>(From your host OS-shell) Stopping: <br>
+              <pre><code>multipass stop primary</code></pre> <br>
+            You should wait a few seconds until it has stopped.</li>
+            <li>(From your host OS-shell) Accessing the shell in the vm: <br>
+              <pre><code>multipass shell primary</code></pre> <br>
+            The last parameter is not needed if youo only have one image running.</li>
+            <li>(From your host OS-shell) Running a command in your vm without accessing its shell: <br>
+              <pre><code>multipass exec primary &lt;command&gt; </code></pre> <br></li>
+            <li>(From the guest OS-shell) Exiting: <br>
+              <pre><code>exit </code></pre> <br></li>  
+          </ul>
+          
+        </p>
+        <h2 id="appendix-deleting-and-rebuilding-the-vm">Appendix: Multipass issues</h2>
+        <p>Multipass may get stuck starting or stopping the image (primary). It happens sometimes when starting it or if it was not stopped properly. In those cases, shutting down and rebooting is your best shot (have you tried turning it off and on again?).</p>
+
+        <h2 id="appendix-deleting-and-rebuilding-the-vm">Appendix: Deleting and Rebuilding the VM</h2>
+        <p>Currently, multipass does not provide an easy mechanism to modify the number of virtual processors and memory allocated to your virtual machine. As a result, if you underprovision the amount of memory assigned to your VM, your best bet is to delete, purge, and rebuild your primary VM. These instructions are intended to take you through that process. Please note that this deletes all data on this VM!</p>
+        <ol>
+        <li>Log into you multipass VM and backup data that you are concerned with losing. Generally, this should only be assignments and labs, which should always be saved, committed and pushed to GitHub. If there is any data that you need to save, you can back this data up by copying the files/directories to your host filesystem. By default, multipass mounts your host machine&#39;s home folder at <code>~/Home</code>.</li>
+        <li>Run <code>multipass delete primary</code> to delete your VM. This is recoverable and equivalent to placing the VM in your &quot;Trash Can&quot; on the desktop.</li>
+        <li>Run <code>multipass purge</code> to purge the data and &quot;empty the Trash Can.&quot;</li>
+        <li>Run <code>multipass list</code> to confirm that your instances are purged</li>
+        <li>At this point, you should repeat the original setup instructions from the <code>Setup your Multipass VM</code> section onwards. <em>Be sure to actually make the changes to the launch command that you care about!</em> For the VSCode steps, you will not need to reinstall VSCode itself, but you will need to reinstall the remote VSCode backend and plugins on your Linux VM.</li>
+        </ol>
+        <h2 id="appendix-troubleshooting">Appendix: Troubleshooting</h2>
+        <p><em>Note: If you hit a snag, first try restarting your machine before proceeding.</em></p>
+        <p>The following script can be used to generate useful information to help the instructional staff debug issues:</p>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/sh
+</span>
+<span class="hljs-function"><span class="hljs-title">main</span></span>() {
+  <span class="hljs-built_in">echo</span> <span class="hljs-string">"Mac Hardware:"</span>
+  system_profiler SPHardwareDataType
+
+  <span class="hljs-built_in">echo</span> <span class="hljs-string">"Multipass Info:"</span>
+  multipass info --all
+
+  <span class="hljs-built_in">echo</span> <span class="hljs-string">"Primary lscpu:"</span>
+  multipass <span class="hljs-built_in">exec</span> primary -- lscpu
+
+  <span class="hljs-built_in">echo</span> <span class="hljs-string">"Primary lsmem:"</span>
+  multipass <span class="hljs-built_in">exec</span> primary -- lsmem
+}
+
+main <span class="hljs-string">"<span class="hljs-variable">$@</span>"</span>
+</code></pre>
+
+<!--
+        <h2 id="appendix-using-a-permanent-alias-for-ease-of-access">Appendix: Using A Permanent Alias For Ease of Access</h2>
+        <p><em>Note: This is purely to make running xv6 easier from the terminal and is in no way needed for xv6 to work.</em></p>
+        <p>The following steps can be used to create a permanent alias that fires off all the commands needed to run xv6 easily.</p>
+        <p><strong>1. Figure out your commands!</strong></p>
+        <p>To start, we want to get together all the commands we need to run xv6.
+        These include navigating to where we cloned the provided repo, opening the xv6 project in VSCode, and then finally building xv6.
+        The commands needed to do so are:</p>
+<pre><code>cd ~/projects/gwu-xv6
+<span class="hljs-built_in">code</span> -r .
+<span class="hljs-built_in">make</span> qemu-nox
+</code></pre>
+        <p><em>Note: The location you cloned the provided repo is subject to change, so make sure you have said location in the first command above.</em></p>
+        <p><strong>2. Create your alias!</strong></p>
+        <p>Once you have these commands ready (try running them manually to verify they are correct), it is time to make our alias command!
+        A generic alias command is seen below:</p>
+<pre><code><span class="hljs-keyword">alias</span> <span class="hljs-title">proj</span>=<span class="hljs-string">"cd /home/tree/projects/java"</span></code></pre>
+        <p>Above we can see that the alias &quot;proj&quot; will fire off the command &quot;cd /home/tree/projects/java&quot; when &quot;proj&quot; is run as a command in the terminal.
+        Using this command as our template, we can craft our own alias using the previously gathered commands, separating individual commands with &quot;; &quot;:</p>
+<pre><code><span class="hljs-built_in">alias</span> xv6=<span class="hljs-string">'cd ~/projects/gwu-xv6; code -r .; make qemu-nox'</span></code></pre>
+        <p><strong>3. Find where to put your alias!</strong></p>
+        <p>Now, we could stop right here and just simply run this alias command in our terminal.
+        The only issue is that this alias will exist until you kill the terminal session, then it will be gone.
+        To make our alias permanent, we need to put it in the ~/.bash_aliases file.
+        This file is loaded by &quot;~/.bashrc&quot;, and we can&#39;t just simply open it, we have to source it.
+        To source and edit it, we can simply use our favorite text editor, VIM!</p>
+<pre><code><span class="hljs-attribute">vim</span> ~/.bashrc</code></pre>
+        <p>Once we have done this, we will be able to edit the file.
+        Search for the following lines in the file and make sure they are not commented.</p>
+<pre><code><span class="hljs-keyword">if</span> [ <span class="hljs-_">-f</span> ~/.bash_aliases ]; <span class="hljs-keyword">then</span>
+    . ~/.bash_aliases
+<span class="hljs-keyword">fi</span>
+</code></pre>
+        <p><strong>4. Insert your alias!</strong></p>
+        <p>Once uncommented, if they weren&#39;t already, we want to insert our newly made alias command below the above lines as so:</p>
+<pre><code><span class="hljs-keyword">if</span> [ <span class="hljs-_">-f</span> ~/.bash_aliases ]; <span class="hljs-keyword">then</span>
+    . ~/.bash_aliases
+<span class="hljs-keyword">fi</span>
+
+<span class="hljs-built_in">alias</span> xv6=<span class="hljs-string">'cd ~/projects/gwu-xv6; code -r .; make qemu-nox'</span>
+</code></pre>
+        <p>Once done, :wq your way out of there! </p>
+        <p><strong>5. Test your alias!</strong></p>
+        <p>Enjoy your new permanent alias by running your alias as a command!</p>
+<pre><code>xv6</code></pre><p><strong>Enjoy!</strong></p>
+-->
+        
+
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script>
+      $('#my-link').click(function(e) {
+          $('#collapseOne').collapse('show');       
+      });
+    </script>
+  </body>
+</html>

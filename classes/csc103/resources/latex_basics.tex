@@ -1,0 +1,82 @@
+\documentclass[]{article}
+
+\title{Example of Basics In LaTeX}
+\author{Pablo Frank Bolton}
+\date{August 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{This is a Top Section}
+
+This is normal text with \textbf{bold} and \textit{italics}, both of which have shortcuts.
+
+Note that a single newline in the .tex file is ignored. 
+To have a new line in the pdf you need at least two newlines in the .tex file. This will cause the next line to be indented (new paragraph)
+
+
+This is an actual new line. I'll add a gap between this line and the next.
+
+\medskip
+
+This is a new paragraph with a gap before it.
+
+
+\subsection{This is a subsection}
+
+The following is a numbered list:
+\begin{enumerate}
+    \item you could format the numbering differently, but that is for later
+    \item this is another item
+\end{enumerate}
+
+Now let's see an itemized list with bullet points:
+
+\begin{itemize}
+    \item no numbers here, just bullets
+    \item these bullets can be formatted too
+\end{itemize}
+
+
+\section{Math environment and symbols}
+
+There are two types of math environments:
+
+\subsection{Inline}
+The inline environment, lets you write things like: \( \Lambda_{i} = x^{2\pi-\omega} + y^{j}_{i} - \frac{1}{\delta_i + 1} \)
+
+Another way to do it is like this: $ y = mx + b$
+
+you can also write it like this:
+\begin{math}
+    E = MC^2
+\end{math}
+
+You can add text inside an equation by using the \texttt{``\textbackslash textrm\{ \}''} 
+environment like so:
+\begin{math}
+        \mu = \textrm{average height} 
+\end{math}
+
+\subsection{Display}
+
+You can do "Display" math with:
+\[ \Lambda_{i} = x^{2\pi-\omega} + y^{j}_{i} - \frac{1}{\delta_i + 1} \]
+
+or this:
+
+\begin{equation}
+    E = MC^2
+\end{equation}
+
+or this:
+
+\begin{displaymath}
+    h^2 = a^2 + b^2
+\end{displaymath}
+
+We'll explain how to do fancier formatting at a later date.
+
+
+\end{document}

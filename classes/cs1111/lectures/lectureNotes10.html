@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSCI 1111 Introduction to Software Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 1111</h1>
+      <p class="lead">Introduction to Software Development</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <!-- NAVBAR-->
+    <div class="container py-0">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img class="img-fluid mx-auto py-2" src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures<span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>
+                <a class="dropdown-item" href="#">Codio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./lectureNotes9.html">Previous Lecture</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes11.html">Next Lecture</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <p>
+        <hr>
+      </p>
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 10: Advanced Methods and Introduction to Conditionals</h1>
+      <p>
+        <br>
+      </p>
+
+      <h2>
+        Objectives
+      </h2>
+
+      <p>
+        By the end of this module, for simple programs with real
+        numbers, you will be able to:
+        <ul>
+          <li> Evaluate Boolean expressions.
+          <li> Construct Boolean expressions from
+              English descriptions.
+          <li> Mentally execute code with if, 
+              if-else, and if-multi-else statements.
+          <li> Write and debug code with conditionals.
+          <li> Identify new syntactic elements related to the above.
+        </ul>
+
+      </p>
+      
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Before Starting
+      </h2>
+
+      <ul>
+        <li>Read Sections <span style="color: #ff0000; font-weight: bold">10.01 to 10.03</span> in the Codio Course</li>
+      </ul>
+
+      <p>
+        If you do not have your Codio course ready, use any text editor or simple IDE. Some possibilities are:
+      </p>
+      <ul>
+        <li>Write using Sublime; Compile and run in the Terminal</li>
+        <li>Use IDEs like: IntelliJ, DrJava, or JGrasp</li>
+      </ul> 
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Catching Up</h2>
+
+      <p>
+        Before we move forward, let's catch up (complete any remaining work from the previous module)
+        <br>
+        In this case, make sure we've got:
+        <ol>
+          <li>String API: Searching the API and implementing combinations of loops and API calls to achieve complex string manipulation.</li>
+        </ol>
+
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Writing and using Methods that use Input and/or return Output</h2>
+
+      <p>
+        In the previous module, we practiced <b>using</b> methods that resolve (or return) something and that might need input parameters to run.
+        <br>
+        In this segment we'll practice writing and invoking such methods.
+        <br><br>
+        First, two definitions:
+        <ul>
+          <li>Parameters are those specified in the Method <b>Declaration</b> as being required as input for the method to function</li>.
+          <li>Arguments are the actual explicit values or variables whose values we want to pass to the method by putting the inside the parenthesis when doing the method <b>Invocation</b>.</li>
+        </ul>
+
+        Look at this program:
+      </p>  
+
+<div  class="container m-5">
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></td><td><pre style="margin: 0; line-height: 125%"><font color="#000000"><pre><font color="#000000">
+
+  <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">class</span> <span style="color: #0000FF">IOMethods1</span>
+  <span style="color: #666666">{</span>
+    <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">static</span> <span style="color: #00BB00; font-weight: bold">void</span> <span style="color: #00A000">main</span><span style="color: #666666">(</span>String args<span style="color: #666666">[])</span>     
+    <span style="color: #666666">{</span>
+      int num1 = 5;
+      int num2 = 13;
+      <font color="#bb7755">// Invoke the myOperation method and save result in the num3 variable</font>
+      int num3 = myOperation(num1, num2);  <font color="#bb7755">// myOperation(num1, num2) resolves into the resulting value</font>
+      System.out.println ("myOperation on " + num1 + " and " + num2 +  " is: " + num3);
+    <span style="color: #666666">}</span>
+
+    <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">static</span> <span style="color: #00BB00; font-weight: bold">int</span> <span style="color: #00A000">myOperation</span><span style="color: #666666">(</span>int localNum1, int localNum2)</span>  
+    <span style="color: #666666">{</span>
+      int localNum3 = (localNum1 * localNum2) - (localNum1 - localNum2);
+      <font color="#bb7755">// this causes the method invocation to resolve into localNum3</font>
+      return localNum3;
+    <span style="color: #666666">}</span>
+  <span style="color: #666666">}</span>  
+  </pre></td></tr></table></div>
+
+</div>        
+
+      <p>
+        Note the following:
+        <ul>
+          <li>Since the method does not know how it will be invoked, it has default names for the input parameters. For example, it could be called like this:
+            <ul>
+              <li><font color="#000000"><big><tt>int z = myOperation (8,2);</tt></big></font></li><br>And it has to place the arguments <b>8</b> and <b>2</b> somewhere!
+            </ul></li>
+          <li>The parameters that the method <b>myOperation</b> takes are two ints that will be locally called <b>localNum1</b> and <b>localNum2</b> (but that you could rename to whatever you want as long as you use them properly inside the method).</li>
+          <li>When we invoke the method, the argument values are <b>copied</b> from the invocation arguments to the method's input parameters. <br>That is, from <b>num1</b> to <b>localNum1</b>, and from <b>num2</b> to <b>localNum2</b>.</li>
+          <li>The local method variables are only "alive" during the execution of the method. <b>Once the method returns, those variables are no longer in existence</b>.</li>
+        </ul>
+
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span>:
+        In
+               <font color="#000000"><tt>IOMethods1.java</tt></font>
+        write the above program and see what gets printed.
+        </font>
+        <br>
+        Now, let us run it inside the <a href="https://cscircles.cemc.uwaterloo.ca/java_visualize">Java Visualizer</a> to understand the way these parameters are passed around.
+     
+        <br><br>
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span>:
+        In
+               <font color="#000000"><tt>IOMethods1.java</tt></font>
+        inside the method <b>myOperation</b>, modify the values of localNum1 and localNum2 before returning localNum3 by using these two lines:
+      </p>
+
+      <br>
+      <p class="mx-5"><font color="#000000"><big><tt>localNum1+=99;</tt></big></font>
+      <br>
+      <font color="#000000"><big><tt>localNum2+=99;</tt></big></font>
+      </p>
+      <br>
+
+      <p>
+        then, <b>inside the main</b>, add the following statement:
+      </p>
+
+      <br>
+      <p class="mx-5"><font color="#000000"><big><tt>System.out.println ("num1 after modifying localNum1 is: " + num1 );</tt></big></font>
+      <br>
+      <font color="#000000"><big><tt>System.out.println ("num2 after modifying localNum2 is: " + num2 );</tt></big></font></p>
+      <br>
+      <p>
+        <b>What do you print? why?</b> 
+      </p>
+      
+      <p>
+        <br><br>
+        Now Look at this program:
+      </p>
+        
+
+<div  class="container m-5">
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre></td><td><pre style="margin: 0; line-height: 125%"><font color="#000000"><pre><font color="#000000">
+
+  <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">class</span> <span style="color: #0000FF">IOMethods2</span>
+  <span style="color: #666666">{</span>
+    <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">static</span> <span style="color: #00BB00; font-weight: bold">void</span> <span style="color: #00A000">main</span><span style="color: #666666">(</span>String args<span style="color: #666666">[])</span>     
+    <span style="color: #666666">{</span>
+      String base = "Pizza should not have pineapple";
+      String part = "pine";
+
+      <font color="#bb7755">// Invoke the extract method and save result in out variable</font>
+      String out = extract(base, part);  <font color="#bb7755">// extract(base, part) resolves into the resulting string</font>
+      System.out.println ("The new String is: " + out);
+    <span style="color: #666666">}</span>
+
+    <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">static</span> <span style="color: #00BB00; font-weight: bold">String</span> <span style="color: #00A000">extract</span><span style="color: #666666">(</span>String localBase, String localPart)</span>  
+    <span style="color: #666666">{</span>
+      <font color="#bb7755">// The return variable</font>
+      String localOut = "";
+
+      <font color="#bb7755">// Get the index of localPart inside localBase</font>
+      int idx = localBase.indexOf ( localPart );
+      <font color="#bb7755">// Get the size of localPart</font>
+      int partSize = localPart.length();
+
+      <font color="#bb7755">// copy localBase up to the start of localPart</font>
+      localOut = localBase.substring (0,idx);
+      <font color="#bb7755">// copy localBase after localPart until the end of localBase</font>
+      localOut = localOut + localBase.substring (idx+partSize);
+
+      return localOut;
+    <span style="color: #666666">}</span>
+  <span style="color: #666666">}</span>  
+  </pre></td></tr></table></div>
+
+</div>        
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 3</big></b></span>:
+      In
+             <font color="#000000"><tt>IOMethods2.java</tt></font>
+      write the above program and see what gets printed.
+      </font>
+      <br>
+      Now, let us run it inside the <a href="https://cscircles.cemc.uwaterloo.ca/java_visualize">Java Visualizer</a> to understand the way these parameters are passed around.
+   
+      <br><br>
+
+      <p>
+        Note the following:
+        <ul>
+          <li>Since the method does not know how it will be invoked, it has default names for the input parameters. For example, it could be called like this:
+            <ul>
+              <li><font color="#000000"><big><tt>String out = extract ("catastrophe","cat");</tt></big></font></li>
+            </ul></li>
+          <li>The parameters that the method <b>extract</b> takes are two Strings that will be locally called <b>localBase</b> and <b>localPart</b>.</li>
+          <li>When we invoke the method, the values inside the calling arguments are copied into the input parameters.</li>
+          <li><b>However</b>, since <b>base</b> and <b>part</b> are Strings, which are <b>Reference types</b> the contents of those variables are references to where the object is located!! so we actually end up copying the references, NOT the values. <br>
+            This is called <b>"passing By reference"</b></li> 
+          <li>One last thing is: as we mentioned, once created, Strings cannot be modified. They are called <b>Immutable</b> objects. So, if we modify the String inside the called method, the local variable will point to a newly created String. Let's see that example below:</li>  
+        </ul>
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 4</big></b></span>:
+        In
+               <font color="#000000"><tt>IOMethods2.java</tt></font>
+        inside the method <b>extract</b>, modify the values of localBase and localPart before returning localOut by using these two lines:
+        <br>
+      </p>
+       
+      <p class="mx-5"><font color="#000000"><big><tt>localBase = "New Base";</tt></big></font>
+      <br>
+      <font color="#000000"><big><tt>localPart = "New Part";</tt></big></font>
+      </p>
+      <br>
+      <p>
+        then, <b>inside the main</b>, add the following statement:
+      </p>
+      <br>
+      <p class="mx-5"><font color="#000000"><big><tt>System.out.println ("base after modifying localBase is: " + base );</tt></big></font>
+      <br>
+      <font color="#000000"><big><tt>System.out.println ("part after modifying localPart is: " + part );</tt></big></font></p>
+      <br>
+      <p>
+        <b>What do you print? why?</b> 
+      </p>
+
+      <p>
+        <br><br>
+        <span style='color:#06a015'><b><big>Activity 5</big></b></span>:
+        In <font color="#000000"><tt>IOMethods3.java</tt></font>
+        Write a method that takes no parameters but returns a value. Then invoke that method from main and print the return value.
+        <br><br>
+        <span style='color:#06a015'><b><big>Activity 6</big></b></span>:
+        In <font color="#000000"><tt>IOMethods4.java</tt></font>
+        Write a method that takes one String parameter (called <tt>text</tt>), one integer parameter (called <tt>idx</tt>), and one char parameter (called <tt>ch</tt>). <br>
+        The method should construct a new String which is a version of the String <tt>text</tt> with the character at index <tt>idx</tt> replaced with the character <tt>ch</tt>. Then invoke that method from main and print the return value.
+      </p>
+      
+
+<p><br></p><hr><p><br></p>
+
+<!-- SIMHA START -->
+
+
+<h2>
+Conditionals!! ... A simple example
+</h2>
+
+
+
+Consider this program:
+     <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/ifexample.png"><p>
+
+
+
+<span style='color:#06a015'><b><big>Activity 7</big></b></span>:
+In <font color="#000000"><tt>MyIfExample.java</tt></font>,
+add an additional println right below the "Hey, ..." println.
+Compile and execute the program. Then, change
+the value of <font color="#000000"><tt>y</tt></font> to <font color="#000000"><tt>6</tt></font> and compile/execute.
+What is the output?
+</font>
+
+<br>
+
+<p> About the <i>if</i>-statement:
+  <ul>
+  <li> The <i>if</i>-statement above consists of several parts:
+        <ul>
+        <li> The reserved word <font color="#000000"><tt>if</tt></font>:
+              <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/ifexample2.png"><p>
+        <li> The <em>condition</em> <font color="#000000"><tt>(x&gt;y)</tt></font>
+              <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/ifexample3.png"><p>
+        <Li> The block of code associated with the <i>if</i>:
+              <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/ifexample4.png"><p>
+        </ul>
+
+  <p><li> Execution:
+     <ul>
+     <li> The condition <font color="#000000"><tt>(x&gt;y)</tt></font> is evaluated.
+              <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/ifexample5.png"><p>
+     <li> If it turns out to be true <em>at the moment the 
+          condition executes</em>,
+          the statements inside the if-block are executed.
+              <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/ifexample6.png"><p>
+     <li> Then, execution continues after the block:
+              <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/ifexample7.png"><p>
+     </ul>
+
+  <p><li> If such a condition is not true, execution <em>jumps</em> to just
+          after the if-block.
+              <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/ifexample8.png"><p>
+  </ul>
+
+
+
+<span style='color:#06a015'><b><big>Activity 8</big></b></span>:
+Consider this (part of a) program. 
+Try to mentally execute and identify the output 
+before confirming in 
+   <font color="#000000"><tt>MyIfExample2.java</tt></font>,
+     <font size="+2">
+     <font color="#000000"><pre>
+        int s = 0;
+        for (int i=1; i<=5; i++) {
+            s = s + i;
+        }
+        if (s < 15) {
+            System.out.println ("Less than 15");    
+        }
+        System.out.println ("End");
+     </pre></font>
+
+</font>
+
+
+<p><br></p><hr><p><br></p>
+
+
+<h2>
+If-else
+</h2>
+
+
+
+Consider this program:
+     <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/ifelseexample.png"><p>
+
+  <ul>
+  <li> If the if-condition <font color="#000000"><tt>(x&gt;y)</tt></font> evaluates to true,
+       the <i>if</i>-block executes:
+          <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/ifelseexample2.png"><p>
+
+  <p><Li> Otherwise, the <i>else</i> block executes:
+          <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/ifelseexample3.png"><p>
+  </ul>
+
+
+
+
+We can combine an <i>else</i> clause with an added <i>if</i>-clause:
+     <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/ifelseifexample.png"><p>
+
+  <ul>
+  <li> If the <i>if</i> condition is true, only the <i>if</i>-block 
+       executes:
+        <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/ifelseifexample2.png"><p>
+
+  <p><li> If not, the <i>else-if</i> condition is evaluated:
+        <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/ifelseifexample3.png"><p>
+
+  <p><li> If that's true, the appropriate block is executed:
+        <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/ifelseifexample4.png"><p>
+
+  <p><li> If the second if-condition is false, the last else-clause
+       executes:
+        <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/ifelseifexample5.png"><p>
+  </ul>
+
+
+<span style='color:#06a015'><b><big>Activity 9</big></b></span>:
+Type up the above example in 
+<font color="#000000"><tt>IfElseExample.java</tt></font>,
+and change the values of x one at a time so that you see
+each block execute. That is, try one value of x to make
+the if-block execute, then another value of x to make the 
+else-if block execute etc.
+</font>
+
+<p><br></p><hr><p><br></p>
+
+
+<h3>Comparison operators</h3>:
+  <ul>
+  <li> These are Java's comparison operators:
+     <font size="+2">
+     <font color="#000000"><pre>
+       (x &lt; y)                <font color="#dc143c">// Strictly less than.</font>
+       (x &lt;= y)               <font color="#dc143c">// Less than or equal to.</font>
+       (x &gt; y)                <font color="#dc143c">// Strictly greater than.</font>
+       (x &gt;= y)               <font color="#dc143c">// Greater than or equal to.</font>
+       (x == y)               <font color="#dc143c">// Equal to.</font>
+       (x != y)               <font color="#dc143c">// Not equal to.</font>
+     </pre></font>
+     </font>
+
+  <p><li> Thus, in the above example, we could have written:
+        <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/ifelseifexample6.png"><p>
+  </ul>
+
+
+
+<span style='color:#06a015'><b><big>Activity 10</big></b></span>:
+Are there any circumstances under which the last block executes?
+</font>
+
+
+
+
+  <ul>
+  <li> Here, <em>logic</em> dictates that only some blocks can
+       possibly execute.
+
+  <p><li> Thus, sometimes it is not necessary to write some blocks
+     of code if they'll never execute.
+  </ul>
+
+
+
+<span style='color:#06a015'><b><big>Activity 11</big></b></span>:
+Suppose we want to identify whether <font color="#000000"><tt>x</tt></font> has
+the largest value among <font color="#000000"><tt>x, y</tt></font> and <font color="#000000"><tt>z</tt></font>.
+Why doesn't the following program work?
+        <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes10/largest.png"><p>
+Can you alter the program 
+(in <font color="#000000"><tt>MyThreeVariableExample.java</tt></font>)
+to make it work?
+</font>
+
+
+<p><br></p><hr><p><br></p>
+
+
+
+<!-- SIMHA END -->
+
+      
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes9.html">Previous Lecture</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes11.html">Next Lecture</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+      <!--
+    <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script>
+ -->
+  </body>
+</html>

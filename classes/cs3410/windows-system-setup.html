@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../images/pabloFaceIcon.png">
+    <title>CSCI 3410 Systems Programming</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+    <style type="text/css" media="screen">
+      
+      pre code {
+        background-color: #f5f8fa;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: block;
+      }
+    
+    </style>
+
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 3410</h1>
+      <p class="lead">Systems Programming</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <div class="container py-0"><!-- was 1-->
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img src="../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="./class-info.html">Class Info <span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./schedule.html">Schedule and Lectures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>                
+                <a class="dropdown-item" href="#">TinkerCad</a>
+                <a class="dropdown-item" href="#">CSAPP/3e</a>
+                <a class="dropdown-item" href="./system-setup.html">System-Setup</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-8">
+        <h1 id="setup-for-windows-10-users">Setup for Windows 10 Users</h1>
+        <p>The suggested toolkit for Windows 10 users is Windows Subsystem for Linux versions 2 (WSL 2).</p>
+        <p>This environment runs a headless Ubuntu virtual machine in a lightweight virtual machine, with various interop features with the host Windows 10 environment.</p>
+        <h2 id="minimum-requirement">Minimum Requirement</h2>
+        <ul>
+        <li>Windows 10, version 2004, Build 19041 or higher. Check this by typing <code>Windows Logo Key</code> + R, typing <code>winver</code> in the Run window, and selecting OK.</li>
+        </ul>
+        <h2 id="installation-instructions">Installation Instructions</h2>
+        <ol>
+        <li>Install the new Windows Terminal. This generally does a better job with Linux shells, and it makes it easier to toggle between PowerShell, DOS, and (once installed) your Ubuntu 18 guest. <a href="https://www.microsoft.com/store/productId/9N0DX20HK701">https://www.microsoft.com/store/productId/9N0DX20HK701</a></li>
+        <li><p>Install the WSL 2 environment. <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">https://docs.microsoft.com/en-us/windows/wsl/install-win10</a>. When you get to the <em>Install your Linux distribution of choice</em> step, select Ubuntu 18.04 LTS</p>
+        <p> Note: If you see <code>Error: 0x1bc</code> or a message similar to <code>WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel</code> when you run <code>wsl --set-default-version 2</code>, download and install the kernel update from <a href="https://docs.microsoft.com/nl-nl/windows/wsl/wsl2-kernel">https://docs.microsoft.com/nl-nl/windows/wsl/wsl2-kernel</a></p>
+        </li>
+        <li><p>Verify that your Linux guest is using version 2 by running <code>wsl --list --verbose</code> in a PowerShell session</p>
+        </li>
+        <li>Install VSCode and complete this tutorial <a href="https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode">https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode</a> up to <em>Extensions inside of VS Code Remote</em></li>
+        <li>Close VSCode and open a Linux shell in Windows Terminal. Type <code>code .</code> in your home directory and ensure that you are able to launch VSCode with an open Linux directory.</li>
+        <li>Hit <code>ctrl+`</code> in VSCode (Equivalent to selecting "View->Terminal" in the top menu), and ensure that the terminal in VSCode opens to your Linux home directory.</li>
+        <li><p>Install the following extensions: <br>
+          <i>Note: you can follow the links or simply run the commands shown below the links (easier)</i></p>
+        </li>
+        <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">Remote - WSL</a></li>
+        <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools">C/C++</a></li>
+        <li><a href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack">Live Share Extension Pack</a></li>
+        <li><a href="https://marketplace.visualstudio.com/items?itemName=13xforever.language-x86-64-assembly">x86 and x86_64 Assembly</a>
+        <p>  To save time, you can install via the following commands in PowerShell</p>
+<pre>
+<code class="lang-sh"><span class="hljs-selector-tag">code</span> --install-extension ms-vscode-remote<span class="hljs-selector-class">.remote-wsl</span>
+<span class="hljs-selector-tag">code</span> --install-extension ms-vscode<span class="hljs-selector-class">.cpptools</span>
+<span class="hljs-selector-tag">code</span> --install-extension MS-vsliveshare<span class="hljs-selector-class">.vsliveshare-pack</span>
+<span class="hljs-selector-tag">code</span> --install-extension <span class="hljs-number">13</span>xforever.language-x86-<span class="hljs-number">64</span>-assembly
+</code></pre>
+        <p>  Optionally, if you are coming from vim, emacs, or some other editor, and have a working muscle memory for those keybindings, <a href="https://marketplace.visualstudio.com/search?target=VSCode&amp;category=Keymaps&amp;sortBy=Relevance">consider installing a keymap extension</a>.</p>
+        </li>
+        <li><p>By default, these extensions were installed on your host (Windows) operating system. However, some of these need to run on your Linux guest. To address this, open the VSCode Extensions panel (Ctrl+Shift+X), and look under the heading <code>LOCAL - INSTALLED</code>. You will see several extensions that are grayed out and have a button <code>Install in WSL:Ubuntu:18.04</code>. Click this for each.</p>
+        </li>
+        <li>You should now see these extensions under <code>WSL:UBUNTU-18.04 - INSTALLED</code>. However, they likely have a button <code>Reload Required</code>. Once all extensions are installed under Ubuntu, click that button. You may be prompted to enter your Linux password to install additional backend Linux dependencies</li>
+        <li><p>Hit <code>ctrl+`</code> to open the integrated shell in VSCode. Visually check that this is your guest (username ubuntu) and not your host environment. 
+
+<!--
+        We&#39;re now ready to install xv6 and its dependencies.</p>
+<pre>
+<code class="lang-sh">sudo apt-<span class="hljs-built_in">get</span> <span class="hljs-keyword">update</span> --yes
+sudo apt-<span class="hljs-built_in">get</span> install build-essential gdb glibc-doc qemu-<span class="hljs-built_in">system</span>-x86 --yes
+<span class="hljs-keyword">cd</span> ~
+<span class="hljs-built_in">mkdir</span> projects
+<span class="hljs-keyword">cd</span> projects
+git clone http<span class="hljs-variable">s:</span>//github.<span class="hljs-keyword">com</span>/gwu-<span class="hljs-keyword">cs</span>-os/gwu-xv6
+<span class="hljs-keyword">cd</span> gwu-xv6
+<span class="hljs-keyword">make</span> qemu-nox
+</code></pre>
+        </li>
+        <li><p>Assuming everything completed properly, you should boot into xv6, an operating system modeled after version 6 of Bell Labs Research Unix.</p>
+        </li>
+        <li>In xv6, run <code>cat README</code></li>
+        <li>Exit xv6 by hitting ctrl+a (then releasing both keys) and then x.</li>
+        </ol>
+
+-->        
+        <h2 id="appendix-troubleshooting">Appendix: Troubleshooting</h2>
+        <p><em>Note: If you hit a snag, first try restarting your machine before proceeding.</em></p>
+        <p>All of the commands in this section assume a PowerShell session started as Administrator.</p>
+        <h3 id="_are-you-running-a-new-enough-version-of-windows-_"><em>Are you running a new enough version of Windows?</em></h3>
+        <pre>
+          <code class="lang-powershell"><span class="hljs-attribute">Get-ComputerInfo OsVersion</span>
+        </code></pre>
+        <p>You should see build 19041 or higher</p>
+<pre>
+<code class="lang-powershell"><span class="hljs-section">OsVersion
+---------</span>
+10.0.19041
+</code></pre>
+        <h3 id="_have-you-enabled-the-virtualization-extensions-of-your-cpu-_"><em>Have you enabled the Virtualization Extensions of your CPU?</em></h3>
+<pre><code class="lang-powershell">(GWMI W<span class="hljs-keyword">in</span>32_Processor).VirtualizationFirmwareEnabled</code></pre>
+        <p>You should see</p>
+<pre>
+  <code><span class="hljs-literal">True</span>
+</code></pre><p>If this is false, you need to enter your system BIOS to turn this on.</p>
+        <h3 id="_have-you-enabled-the-virtual-machine-platform-feature-in-windows-10-_"><em>Have you enabled the Virtual Machine Platform feature in Windows 10?</em></h3>
+<pre>
+  <code class="lang-powershell">dism.exe <span class="hljs-regexp">/online /</span>Get-FeatureInfo /<span class="hljs-string">featurename:</span>VirtualMachinePlatform
+</code></pre>
+        <p>Among other things, you should see:</p>
+<pre>
+  <code class="lang-powershell">State : <span class="hljs-type">Enabled</span>
+</code></pre>
+<p>If this is not enabled, run the following and then restart:</p>
+<pre>
+  <code class="lang-powershell">dism.exe <span class="hljs-regexp">/online /</span>enable-feature <span class="hljs-regexp">/featurename:VirtualMachinePlatform /</span>all <span class="hljs-regexp">/norestart</span>
+</code></pre>
+<h3 id="_have-you-enabled-the-wsl-subsystem-_"><em>Have you enabled the WSL Subsystem?</em></h3>
+<pre>
+  <code class="lang-powershell">dism.exe <span class="hljs-regexp">/online /</span>Get-FeatureInfo /<span class="hljs-string">featurename:</span>Microsoft-Windows-Subsystem-Linux
+</code></pre>
+<p>Among other things, you should see:</p>
+<pre>
+  <code class="lang-powershell">State : <span class="hljs-type">Enabled</span>
+</code></pre>
+<p>If this is not enabled, run the following and then restart:</p>
+<pre>
+  <code class="lang-powershell">dism.exe <span class="hljs-regexp">/online /</span>enable-feature <span class="hljs-regexp">/featurename:Microsoft-Windows-Subsystem-Linux /</span>all <span class="hljs-regexp">/norestart</span>
+</code></pre>
+<h3 id="_are-you-able-to-query-a-wsl-guest-_"><em>Are you able to query a WSL guest?</em></h3>
+<p>Assuming WSL is setup, you should be able to list a guest and see that it is version 2. The presence of an asterisk indicates the default distribution</p>
+<pre>
+  <code class="lang-powershell"><span class="hljs-comment">wsl</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">list</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">verbose</span>
+</code></pre>
+<pre>
+  <code>NAME                   STATE           VERSION
+* Ubuntu<span class="hljs-number">-18.04</span>           Running         <span class="hljs-number">2</span>
+</code></pre><h3 id="_are-you-able-to-enter-wsl-_"><em>Are you able to enter WSL?</em></h3>
+<pre>
+  <code class="lang-powershell"><span class="hljs-attribute">wsl</span>
+</code></pre>
+<p>This should allow you to enter your default WSL distribution.</p>
+<p>If this fails, try the following:</p>
+<ol>
+<li><p>Disable WSL</p>
+<pre>
+  <code class="lang-powershell"> dism.exe <span class="hljs-regexp">/online /</span>disable-feature <span class="hljs-regexp">/featurename:Microsoft-Windows-Subsystem-Linux /</span>all <span class="hljs-regexp">/norestart</span>
+</code></pre>
+</li>
+<li><p>Restart your system</p>
+</li>
+<li><p>Enable WSL</p>
+<pre>
+  <code class="lang-powershell"> dism.exe <span class="hljs-regexp">/online /</span>enable-feature <span class="hljs-regexp">/featurename:Microsoft-Windows-Subsystem-Linux /</span>all <span class="hljs-regexp">/norestart</span>
+</code></pre>
+</li>
+<li><p>Restart the system</p>
+</li>
+<li><p>Try <code>wsl</code> again</p>
+</li>
+</ol>
+<h3 id="_are-you-unable-to-run-apt-due-to-clock-drift-_"><em>Are you unable to run apt due to clock drift?</em></h3>
+<p>A student reported that <code>sudo apt update</code> failed with the following:</p>
+<pre>
+  <code>Hi<span class="hljs-variable">t:1</span> http<span class="hljs-variable">s:</span>//packages.microsoft.<span class="hljs-keyword">com</span>/repos/azure-cli bionic InRelease 
+Hi<span class="hljs-variable">t:2</span> http://archive.ubuntu.<span class="hljs-keyword">com</span>/ubuntu bionic InRelease 
+Ge<span class="hljs-variable">t:3</span> http://security.ubuntu.<span class="hljs-keyword">com</span>/ubuntu bionic-security InRelease [<span class="hljs-number">88.7</span> kB] 
+Hi<span class="hljs-variable">t:5</span> http://archive.ubuntu.<span class="hljs-keyword">com</span>/ubuntu bionic-backports InRelease 
+Ge<span class="hljs-variable">t:4</span> http://archive.ubuntu.<span class="hljs-keyword">com</span>/ubuntu bionic-updates InRelease [<span class="hljs-number">88.7</span> kB] 
+Reading package lists... Done 
+E: Release <span class="hljs-keyword">file</span> <span class="hljs-keyword">for</span> http://security.ubuntu.<span class="hljs-keyword">com</span>/ubuntu/dists/bionic-security/InRelease <span class="hljs-keyword">is</span> not valid yet (invalid <span class="hljs-keyword">for</span> another <span class="hljs-number">31</span><span class="hljs-built_in">min</span> <span class="hljs-number">12</span>s). Updates <span class="hljs-keyword">for</span> this repository will not <span class="hljs-keyword">be</span> applied. 
+E: Release <span class="hljs-keyword">file</span> <span class="hljs-keyword">for</span> http://archive.ubuntu.<span class="hljs-keyword">com</span>/ubuntu/dists/bionic-updates/InRelease <span class="hljs-keyword">is</span> not valid yet (invalid <span class="hljs-keyword">for</span> another <span class="hljs-number">11</span>h <span class="hljs-number">0</span><span class="hljs-built_in">min</span> <span class="hljs-number">22</span>s). Updates <span class="hljs-keyword">for</span> this repository will not <span class="hljs-keyword">be</span> applied.
+</code></pre><p>Run the following script to detect and correct clock drift.</p>
+<pre>
+  <code class="lang-bash"><span class="hljs-meta">#!/bin/bash</span>
+<span class="hljs-comment"># Based on the following error conditions</span>
+<span class="hljs-comment"># 1: https://github.com/microsoft/WSL/issues/4114</span>
+<span class="hljs-comment"># 2: https://askubuntu.com/questions/1096930/sudo-apt-update-error-release-file-is-not-yet-valid/1168885#1168885</span>
+
+<span class="hljs-function"><span class="hljs-title">main</span></span>() {
+  <span class="hljs-built_in">local</span> -i unix_hours
+  <span class="hljs-built_in">local</span> -i unix_minutes
+  <span class="hljs-built_in">local</span> -i unix_seconds
+  <span class="hljs-built_in">local</span> -i win_hours
+  <span class="hljs-built_in">local</span> -i win_minutes
+  <span class="hljs-built_in">local</span> -i win_seconds
+  <span class="hljs-built_in">local</span> -i total_drift_secs
+
+  win_seconds=$(powershell.exe /C Get-Date -Format ss | sed <span class="hljs-string">'s/^0*//'</span> | tr <span class="hljs-_">-d</span> <span class="hljs-string">'\r'</span>)
+  unix_seconds=$(date <span class="hljs-string">'+%S'</span> | sed <span class="hljs-string">'s/^0*//'</span>)
+  win_minutes=$(powershell.exe /C Get-Date -Format mm | sed <span class="hljs-string">'s/^0*//'</span> | tr <span class="hljs-_">-d</span> <span class="hljs-string">'\r'</span>)
+  unix_minutes=$(date <span class="hljs-string">'+%M'</span> | sed <span class="hljs-string">'s/^0*//'</span>)
+  win_hours=$(powershell.exe /C Get-Date -Format HH | sed <span class="hljs-string">'s/^0*//'</span> | tr <span class="hljs-_">-d</span> <span class="hljs-string">'\r'</span>)
+  unix_hours=$(date <span class="hljs-string">'+%H'</span> | sed <span class="hljs-string">'s/^0*//'</span>)
+
+  <span class="hljs-built_in">printf</span> <span class="hljs-string">"Unix: %d:%d:%d\n"</span> <span class="hljs-string">"<span class="hljs-variable">$unix_hours</span>"</span> <span class="hljs-string">"<span class="hljs-variable">$unix_minutes</span>"</span> <span class="hljs-string">"<span class="hljs-variable">$unix_seconds</span>"</span>
+  <span class="hljs-built_in">printf</span> <span class="hljs-string">"Windows: %d:%d:%d\n"</span> <span class="hljs-string">"<span class="hljs-variable">$win_hours</span>"</span> <span class="hljs-string">"<span class="hljs-variable">$win_minutes</span>"</span> <span class="hljs-string">"<span class="hljs-variable">$win_seconds</span>"</span>
+
+  total_drift_secs=$(((win_hours - unix_hours) * 60 * 60 + (win_minutes - unix_minutes) * 60 + (win_seconds - unix_seconds)))
+  <span class="hljs-keyword">if</span> ((total_drift_secs &lt; 0)); <span class="hljs-keyword">then</span>
+    ((total_drift_secs *= -1))
+  <span class="hljs-keyword">fi</span>
+
+  <span class="hljs-built_in">printf</span> <span class="hljs-string">"Drift: %ds\n"</span> <span class="hljs-string">"<span class="hljs-variable">$total_drift_secs</span>"</span>
+  <span class="hljs-keyword">if</span> ((total_drift_secs &gt; 60)); <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">"Correcting Drift"</span>
+    sudo hwclock --hctosys
+  <span class="hljs-keyword">fi</span>
+}
+
+main <span class="hljs-string">"<span class="hljs-variable">$@</span>"</span>
+</code></pre>
+
+        
+
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script>
+      $('#my-link').click(function(e) {
+          $('#collapseOne').collapse('show');       
+      });
+    </script>
+  </body>
+</html>

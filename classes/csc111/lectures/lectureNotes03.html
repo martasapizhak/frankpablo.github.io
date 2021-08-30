@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSC 111 Introduction to Computer Science Through Programming</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+      .img-max {
+        max-width: 500px;
+        width:50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <!-- <img class="float-right" src="../../images/gw_primary_logo.png" alt="GWU" height="160"> -->
+      <img class="float-right" src="../../../images/SmithLogoStack-cmyk.png" alt="SmithLogo" height="120">
+      <h1 class="display-3 m-0">CSC 111</h1>
+      <p class="lead">Introduction to Computer Science Through Programming</p>
+      <p class="lead">Smith Computer Science </p>
+    </div>
+
+    <div class="container py-0"><!-- was 1-->
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info <span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">TBD 1</a>
+                <a class="dropdown-item" href="#">TBD 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project (if any)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Discord</a>
+                <a class="dropdown-item" href="#">Moodle</a>
+                <a class="dropdown-item" href="#">Repl.it</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes02.html">Previous Module</a>
+              </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes04.html">Next Module</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <br><br>
+
+
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 03: Intro to Python</h1>
+      <p>
+        <br>
+      </p>
+
+    <p><br></p><hr><p><br></p>              
+
+      <h2>From Bytecode to Python</h2>
+      <br><br>
+      <p>
+        <li>
+          A <b>Low-Level</b> language like Bytecode, (AKA Machine-code) is composed of the set of instructions that can be directly executed by the computer's central processing unit (CPU). It is "Machine-speak" and it is very distant from English.
+        </li>
+        <br>
+
+        <li>
+          A way of letting humans read and write programs that then get executed is to write them using an unambiguous language that is closer to English and then converting these to Bytecode or Machine-Code that the computer can execute. 
+          <br><br>
+
+          This <b>intermediate-level language</b> (one of which is <b>Assembly Language</b>) is still unambiguous but is also more human-readable.
+        </li>
+        <br>
+
+        <li>
+          Finally, one can repeat the process of abstraction and create an even more readable language that can itself be translated into assembly language.
+          <br><br> 
+
+          These programming languages that are closer to English and that allow you to use abstract terms and instructions are called <b>High-Level Languages</b>. Some of these are (C, C++, java, Python, etc).
+        </li>
+
+        <br><br>
+        And now, let's look at high-level programming.
+      </p>
+
+
+      
+
+
+    <p><br></p><hr><p><br></p>
+
+
+      <h2>Why do we need a "Programming Language"?</h2>
+
+
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span> [1 minute]:
+        <br>
+        First Question: Why not just use English?
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> [1 minute]: 
+        <br>
+        Explain how any of these might be unclear:
+        <div class="mx-lg-5">
+          <ul>
+            <li>"Call me a taxi, please."</li>
+            <li>"I saw someone on the hill with a telescope."</li>
+            <li>"Look at the dog with one eye."</li>
+          </ul>
+          <br><br>
+
+
+          A computer can't know what you "really" meant! so
+          <ul>
+            <li>it will do what you said, not what you meant</li>
+          </ul>          
+        </div>
+        
+
+      <b>Solution</b>: Use an unambiguous form of the language, even if it is a little less expressive.
+      <p><br></p>
+      In this case, we will be using the <b>high-level programming language</b> called <b>Python</b>.
+      <br><br>
+
+    
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>User Programs Vs Operating System</h2>
+
+      <p>
+        There are two main types of programs: <b>applications</b>, and the programs related to the <b>operating system</b>.
+        <ul>
+          <li>applications are made by users and they ttake advanttage of the resources that the computer offers.
+            <br> These resources can be used when the user makes valid requests to the operating system.
+            <br>
+            A <b>browser</b> is a complex application that can read, visualize and send data through a network.
+          </li>
+          <li>
+            The Operating system is the set of programs that control the resources in the computer, inclluding the software that interacts with the hardware, as well as that which controls the use of memory and peripherals.
+          </li>
+        </ul>
+        <br><br>
+        <b><Big>In this class, we will focus on simple applications</Big></b>
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>Line-by-Line Vs Full-Program Execution</h2>
+
+      <p>
+        To execute a high-level language in a machine, we need to get the human-readable statements into machine-readable form and then execute it.
+        <br><br>
+        There are two main ways to do this:
+        <ul>
+          <li><b>compiling</b>: translates the whole file into an executable; the file is run once it is <i>completely</i> (and successfully) converted;</li>
+          <br>
+          <li><b>interpreting</b>: translate a statement and execute it; move on to the next one.</li>
+        </ul>
+        Python is an interpreted language.
+
+        <br><br>
+
+        <img class="img-fluid" src="../figures/lecture03/compileVsInterpret.png"  style="width:70%">
+        <br>
+        (From Jordan Crouser's course)
+
+        <br><br>
+
+        One thing we can do with an interpreted language is to run it line by line.
+        <br><br>
+
+        An <b>interactive python interpreter</b> can be used, where the user enters and executes python statements line by line. The interactive interpreter then waits for the user to enter the next statement.
+        <br><br>
+
+        However, most of the work we'll do in this class will involve using the interpreter on <i>whole programs</i> without it expecting interaction from the user (except to enter inputs).
+
+      </p>
+      <br><br>
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>Statements</h2>
+      <p>
+        Python is written in a series of <b>statements</b>, each of which demand some action from the computer.
+        <br><br>
+        Each statement is a block of code (very commonly a single line of code). Statements can be expressions, assignments, comments, or control structures.
+        <ul>
+          <li><b>expressions</b> are calculations that can be <i>resolved</i> to obtain a value</li>
+          <li><b>assignments</b> are actions where we place a value <i>inside</i> a variable</li>
+          <li><b>comments</b> are notes left by the programmer to clarify the program; they are skipped by the interpreter and are "not" executed</li>
+          <li><span style="color:#888888"><b>control structures</b> are blocks that let you do powerful things; we'll see these later</span> </li>
+        </ul>
+      </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>Our first program: Hello World</h2>
+
+      <p>
+        We will use an online visualizer to show how the code works. This is interpreting the code <i>and</i> showing how it works with simple visualizations.
+
+        <br><br>
+
+        go to this <a href="http://www.pythontutor.com/visualize.html#code=print%28'Hello%20World!'%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false">link</a>
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 3</big></b></span> [1 minute]: <br>
+        <ol>
+          <li>
+            Press "Visualize Execution":
+            <br>
+            <img class="img-fluid" src="../figures/lecture03/visuailzeExecution.png"  style="width:50%">
+          </li>
+          <br><br>
+          <li>
+            Locate the Output area (on the right) and press "Next" to see what gets "printed"
+            <br>
+            <img class="img-fluid" src="../figures/lecture03/pressNext.png"  style="width:70%">
+          </li>
+          <br><br>
+        </ol>
+
+
+        <h3>Our second program: Ascii art</h3>
+
+        <span style='color:#06a015'><b><big>Activity 4</big></b></span> [1 minute]: <br>
+        <ol>
+          <li>
+            Locate the link to "Edit this code" and press it:
+            <br>
+            <img class="img-fluid" src="../figures/lecture03/pressEdit.png"  style="width:70%">
+          </li>
+          <br><br>
+          <li>
+            Make the appropriate changes to cause the following image to print:
+            <br>
+            <img class="img-fluid" src="../figures/lecture03/asciiFace.png"  style="width:20%">
+
+          </li>
+        </ol>  
+      </p>
+      <br>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Functions</h2>
+      <p>
+        You will notice that we used  the construction: 
+        <br>
+        <tt><b>print (</b></tt> &lt;something&gt; <tt><b>)</b></tt> 
+        <br>
+        to get the program to display output in the console. Above, we're asking Python to display a <b>string literal</b>;
+        <br>
+        A string literal is text to be displayed literally (not executed). It's the stuff between quotes (or double quotes);
+        <br><br>
+
+        A <b>function</b> is a procedure / routine that takes in some input and does something with it (just like in math)
+        <br><br>
+
+        Some get converted to a value; some cause something to be displayed in the console; some get information from the keyboard; some do stranger and cooler things.
+        <br><br>
+
+        We will be using some functions that are called <b>built-in</b> because they come with Python.
+        <br><br>
+
+        Later, we'll make our own!
+
+        <br><br>
+
+        In general, functions have a special name (<i>print</i> in this case), and parentheses after the name.
+        <br>
+        IF the function needs input to "do its thing", it should be placed between the parentheses:
+        <br><br>
+        \[
+          \texttt{print ( "this is the input that print uses" )}
+        \]
+        It can also print the <b>content</b> of variables : 
+        \[\texttt{print ( x )} \]
+        <br>
+        Or the <b>result</b> of an expression: 
+        \[ \texttt{ print ( (x + 17)/2 )} \]
+        
+
+      </p>
+
+
+
+      <p><br></p><hr><p><br></p>
+<!-- 
+      <h2>ZyLab training: Basics</h2>
+
+      <p>
+        Please open Moodle and go to your ZyBook for the course.
+        <br><br>
+        Search for and select <span style="color:#00aa00">1.31 zyLab training: Basics</span>. 
+        <br>
+        We'll complete it together.
+      </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>ZyLab LAB: Formatted output: Hello World!</h2>
+
+      <p>
+        Please open Moodle and go to your ZyBook for the course.
+        <br><br>
+        Search for and select <span style="color:#00aa00">1.33 LAB: Formatted output: Hello World!</span>. 
+        <br>
+        We'll complete it together.
+      </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+ -->      
+
+
+      <h2>Variables and Assignments</h2>
+      <br><br>
+
+      <p>
+        <b>Variables</b> are like boxes that can store different objects. 
+        <br><br>  
+        In Python, the "things" you store inside variables are called <b>values</b>.
+        <br><br>
+
+        This is similar to the concept of variables used in algebra:
+        \[ x = 5x - 24\]
+        <br><br>
+
+        However, in Python, instead of "solving for x", we actually want to be able to store values in a known location (and under a known name). 
+        <br><br>
+
+        So, in Python, we read the statement:
+        \[ x = 5\]
+        as "we assign the <b>value</b> 5 into the variable called 'x'"
+        <br>
+        (we sometimes <i>say</i> "x is equal to 5" but in Python, we mean "x is assigned the value 5").
+        <br><br>
+
+        This means that we need to be able to <b>assign</b> a value to a variable. In python, we do this in the following way:
+        <br><br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+<pre style="margin: 0; line-height: 125%">
+x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">5</span>
+y <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">2</span>
+z <span style="color: #333333">=</span> x <span style="color: #333333">+</span> y
+<span style="color: #008800; font-weight: bold">print</span>(z)
+</pre></div>
+
+        <br><br>
+
+        Here, we have three different assignments:
+        <ul>
+          <li><tt>x = 5</tt> &nbsp;&nbsp; should be read as "place a 5 inside the variable x" (not as "x and 5 are the same")</li>
+          <li><tt>y = 2</tt> &nbsp;&nbsp; should be read as "place a 2 inside the variable y" </li>
+          <li><tt>z = x + y</tt> &nbsp;&nbsp; has a variable on the left, and it assigns it the result of the <b>expression</b> <tt>x + y</tt>
+            <br>
+          &nbsp;&nbsp;&nbsp;&nbsp; this should be read as "place the result of the contents of x + the contents of y inside the variable z"</li>
+        </ul>
+
+        <br><br>
+
+        Check the way this is executed, line-by-line, <a href="https://pythontutor.com/visualize.html#code=x%20%3D%205%0Ay%20%3D%202%0Az%20%3D%20x%20%2B%20y%0Aprint%28z%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> in this link</a>.
+
+        <br><br>
+        
+        Variables can be assigned numbers, text, and other things; we'll talk about that later.
+
+        <br><br>
+
+        Also, note that assignment can overwrite an existing value!
+        <br>
+        For example:
+
+        <span style='color:#06a015'><b><big>Activity 5</big></b></span> [1 minute]: <br>
+        What would this print?
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">5</span>
+x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">3</span>
+<span style="color: #008800; font-weight: bold">print</span>(x)
+</pre></div>
+
+        <br><br>
+
+        A useful shortcut is to use <b>simultaneous assignments</b>:
+        <br>
+        Instead of doing this:
+        <br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">5</span>
+y <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">5</span>
+z <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">5</span>
+w <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">11</span>
+num <span style="color: #333333">=</span> w <span style="color: #333333">+</span> x <span style="color: #333333">+</span> y <span style="color: #333333">+</span> z
+<span style="color: #008800; font-weight: bold">print</span>(num)
+</pre></div>
+
+        <br><br>
+
+        One can do this:
+        <br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">x, y, z <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">5</span>
+w <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">11</span>
+num <span style="color: #333333">=</span> w <span style="color: #333333">+</span> x <span style="color: #333333">+</span> y <span style="color: #333333">+</span> z
+<span style="color: #008800; font-weight: bold">print</span>(num)
+</pre></div>
+
+        <br><br>
+  
+      </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>Quick Lookahead: Identifiers</h2>
+
+      <p>
+        <b>Identifiers</b> refer to the names used to create a variable.
+        <br><br>
+
+        Valid identifiers are those that follow three rules:
+        <ol>
+          <li>it must contain letters(a-z, A-Z), digits (0–9), or underscores (_)</li>
+          <li>it must start with a letter or an underscore</li>
+          <li>It cannot contain spaces</li>
+        </ol>
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 6</big></b></span> [1 minute]: <br>
+        Which are valid? (or what is wrong with them?)
+        <ol>
+          <li>2good2BTru</li>
+          <li>IsThIsOK?</li>
+          <li>HowAbout-thisOne</li>
+          <li>th1sHa5ToBe_0K</li>
+          <li>_don'tBeSoSure</li>
+          <li>_IamSure</li>
+          <li>finally</li>
+        </ol>  
+
+      </p>
+
+      <br><br>
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>Quick Lookahead: Reserved Words (keywords)</h2>
+
+      <p>
+        Some words are <i>reserved</i> in Python. That means they can't be used as Identifiers.
+        <br><br>
+        These are reserved because they are either the names of built-in functions, or keywords in the construction of a special block of code that helps you do more powerful programs (code constructs).
+        <br><br>
+
+        We'll look at these later, but the following are the reserved words in Python:
+        <br>
+        <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax"><span style="font-weight:normal;color:#000;">FALSE</span></th>
+    <th class="tg-0lax"><span style="font-weight:normal;color:#000;">await</span></th>
+    <th class="tg-0lax"><span style="font-weight:normal;color:#000;">else</span></th>
+    <th class="tg-0lax"><span style="font-weight:normal;color:#000;">import</span></th>
+    <th class="tg-0lax"><span style="font-weight:normal;color:#000;">pass</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">None</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">break</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">except</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">in</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">raise</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">TRUE</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">class</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">finally</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">is</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">return</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">and</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">continue</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">for</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">lambda</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">try</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">as</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">def</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">from</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">nonlocal</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">while</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">assert</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">del</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">global</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">not</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">with</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">async</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">elif</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">if</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">or</span></td>
+    <td class="tg-0lax"><span style="font-weight:normal;color:#000;">yield</span></td>
+  </tr>
+</tbody>
+</table>
+      </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>A note on Naming Conventions</h2>
+
+      <p>
+        A <b>convention</b> is not a strict rule, it is a "way of doing things" that a majority is comfortable with.
+        <br><br>
+
+        In python, there are some coding conventions that we should know:
+        <ol>
+          <li> the name of the variable should tell you something about what the variable contains
+            <br>
+            Example: \( \texttt{height} \) is better than \( \texttt{ht} \)
+          </li>
+          <li>
+            If you want to use multiple words, separate them with an underscore, 
+            <br> 
+            Example: \( \texttt{first_name} \)
+          </li>
+          <li>
+            if the value isn’t going to change (i.e. the variable is a constant), use ALL CAPS
+            <br>
+            Example: \( \texttt{PI = 3.141592} \)
+          </li>
+        </ol>
+        
+
+      </p>
+      <br><br>
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>Comments</h2>
+
+      <p>
+        <b>Comments</b> are parts of a program that  are human readable and that the computer skips when interpreting.
+        <br><br>
+        They are placed there to add context or clarify the functionality of a program.
+        <br><br>
+
+        Adding clear and informative comments is <b>crucial</b> to good programming.
+        <br><br>
+
+        These are ways of commenting:
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># This is a comment</span>
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;This will run.&quot;</span>)  <span style="color: #888888"># This won&#39;t run</span>
+
+<span style="color: #888888"># print(&quot;This print is &#39;commented out&#39;.&quot;) # this is a commented comment</span>
+
+<span style="color: #888888"># If you want multiline comments</span>
+<span style="color: #888888">#   you have to add the hash mark</span>
+<span style="color: #888888">#   in each line</span>
+
+<span style="color: #DD4422">&#39;&#39;&#39;</span>
+<span style="color: #DD4422">Or you can use</span>
+<span style="color: #DD4422">tripple quotes</span>
+<span style="color: #DD4422">&#39;&#39;&#39;</span>
+
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;This is the second statement to run.&quot;</span>)
+</pre></div>
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 7</big></b></span> [1 minute]: <br>
+        Try out <a href="https://pythontutor.com/visualize.html#code=%23%20This%20is%20a%20comment%0Aprint%28%22This%20will%20run.%22%29%20%20%23%20This%20won't%20run%0A%0A%23%20print%28%22This%20print%20is%20'commented%20out'.%22%29%20%23%20this%20is%20a%20commented%20comment%0A%0A%23%20If%20you%20want%20multiline%20comments%0A%23%20%20%20you%20have%20to%20add%20the%20hash%20mark%0A%23%20%20%20in%20each%20line%0A%0A'''%0AOr%20you%20can%20use%0Atripple%20quotes%0A'''%0A%0Aprint%28%22This%20is%20the%20second%20statement%20to%20run.%22%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false">this link</a>
+
+        <br><br>
+
+        <h4>When to comment</h4>
+        Common practice is to:
+        <ul>
+          <li>add a block of comments called a <b>header</b> at the top, indicating important info like
+            <ul>
+              <li>Program Name</li>
+              <li>Author name</li>
+              <li>Date</li>
+              <li>Short description</li>
+            </ul>
+          </li>
+          <li>add short single lines to clarify the function of an obscure block of code</li>
+        </ul>
+
+        The following is a basic example:
+        <br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">#        Name: Example Header</span>
+<span style="color: #888888">#     Authors: Pablo Frank &amp; Yak DaRippa</span>
+<span style="color: #888888">#      Course: CSC111</span>
+<span style="color: #888888">#        Date: 2021/09/10</span>
+<span style="color: #888888"># Description: My First Project Program.</span>
+
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;The amount Yak helped was: &quot;</span>)
+
+<span style="color: #888888"># We&#39;ll see modulo and int-div next class</span>
+<span style="color: #008800; font-weight: bold">print</span>((<span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">**</span><span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333333">//</span><span style="color: #0000DD; font-weight: bold">6</span>)<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">5</span>)
+</pre></div>
+        
+        
+
+      </p>
+      <br><br>
+
+
+
+<!--       <p><br></p><hr><p><br></p>
+
+
+      <h2>ZyLab LAB: Input: Welcome message</h2>
+
+      <p>
+        Please open Moodle and go to your ZyBook for the course.
+        <br><br>
+        Search for and select <span style="color:#00aa00">1.35 LAB: Input: Welcome message</span>. 
+        <br>
+        We'll complete it together.
+      </p>       -->
+
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h4>Before next class (Monday)</h4>
+      <b>[Due for everyone]</b> Complete ZyBook chapters 1.6, 1.14-1.19
+      <br>
+<!--      
+      <br><br>
+      <b>[Optional]</b> 
+      <br><br> -->
+
+
+
+
+
+      
+
+  
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes02.html">Previous Module</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes04.html">Next Module</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+   
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+    <!-- <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script> -->
+  </body>
+</html>

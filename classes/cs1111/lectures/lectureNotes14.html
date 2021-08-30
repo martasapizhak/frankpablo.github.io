@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSCI 1111 Introduction to Software Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 1111</h1>
+      <p class="lead">Introduction to Software Development</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <!-- NAVBAR-->
+    <div class="container py-0">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img class="img-fluid mx-auto py-2" src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures<span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>
+                <a class="dropdown-item" href="#">Codio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./lectureNotes13.html">Previous Lecture</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes15.html">Next Lecture</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <p>
+        <hr>
+      </p>
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 14: Intro to 2-D Arrays</h1>
+      <p>
+        <br>
+      </p>
+
+      <h2>
+        Objectives
+      </h2>
+
+      <p>
+        By the end of this module, you will:
+        <ul>
+          <li> Demonstrate the decclaration and initialization of two-dimensional arrays.</li>
+          <li> Construct nested loops to traverse, access, and manipulate two-dimensionl arrays.</li>
+          <li> Explain the abstract representation of a 2-D array and the role each part plays (references, addresses, cells, indices, and values).</li>
+          <li> Recognize the way multi-dimensional arrays extend to more than 2 dimensions.</li>
+          <li> Read code examples with multidimensional arrays, learning about both declaration and access, and the types of bugs that might arise.
+        </ul>
+
+      </p>
+      
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Before Starting
+      </h2>
+
+      <ul>
+        <li>Read Sections <span style="color: #ff0000; font-weight: bold">14.01 to 14.03</span> in the Codio Course</li>
+      </ul>
+
+      <p>
+        If you do not have your Codio course ready, use any text editor or simple IDE. Some possibilities are:
+      </p>
+      <ul>
+        <li>Write using Sublime; Compile and run in the Terminal</li>
+        <li>Use IDEs like: IntelliJ, DrJava, or JGrasp</li>
+      </ul> 
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Catching Up</h2>
+
+      <p>
+        Before we move forward, let's catch up (complete any remaining work from the previous module)
+        <br>
+        In this case, make sure we've got:
+        <ol>
+          <li>One-Dimensional Arrays... Declaring, Initializing, and Accessing!</li>
+        </ol>
+
+      </p>
+
+
+<!-- SIMHA START -->
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+Objectives
+</h2>
+
+
+By the end of this module, you will:
+ <ul>
+ <li> Read code examples with multidimensional arrays, learning
+      about both declaration and access.
+ <li> See examples of using multidimensional arrays.
+ <li> Understand when lists might be preferable to arrays.
+ <li> Read code examples that use lists.
+ <li> Learn a little about objects and what they mean.
+ <li> Understand what the term <em>byte</em> means and how
+    to work with bytes in Java.
+ <li> Learn how to download and use an external (third party) Java software
+  library.
+ </ul>
+
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+Two dimensional (2D) arrays
+</h2>
+
+
+<br><br>
+
+Let's start with a an example of a 1D array of Strings, each of which has characters at a different index. 
+This is NOT a proper 2D array, but it can be worked as such.
+
+<p>
+Let's use <em>word squares</em> as an example:
+  <ul>
+  <li> We wish to determine whether a group of strings
+     <font size="+2"><font color="#000000"><pre>
+  String[] words = {"bard", "area", "rear", "dart"};
+  System.out.println ( isWordSquare(words) );
+     </font></pre></font>
+     is a word square, as in 
+     <font size="+2"><font color="#000000"><pre>
+     b a r d
+     a r e a
+     r e a r
+     d a r t
+     </font></pre></font>
+   where each row is the same as its corresponding column.
+
+  </ul>
+
+<span style='color:#06a015'><b><big>Activity 1</big></b></span>: 
+In
+   <font size="+2" color="#000000"><tt>MyWordSquare.java</tt></font>
+use 
+   <font color="#000000"><tt>charAt()</tt></font>
+to solve this problem. That is, write a method called
+   <font color="#000000"><tt>isWordSquare(String[] words)</tt></font>
+that returns true or false, depending on whether the words
+form a valid word square. Then, in 
+   <font color="#000000"><tt>main()</tt></font>
+write the above two lines of code to test.
+</font>
+
+<br><br><br><br>
+
+<h4>Now With an actual 2D Array of Chars</h4>
+
+  <ul>
+  <li> Let's now look at how two-dimensional (2D) arrays can be 
+    used for this problem:
+<br><br>
+     <font size="+1"><font color="#000000"><pre>
+    public static void main (String[] argv)
+    {
+      char[][] letters = {
+          {'b', 'a', 'r', 'd'},
+          {'a', 'r', 'e', 'a'},
+          {'r', 'e', 'a', 'r'},
+          {'d', 'a', 'r', 't'}
+        };
+
+      System.out.println ( isWordSquare(letters) );
+    }
+
+    static boolean isWordSquare (char[][] letters)
+    {
+      for (int i=1; i&lt;letters.length; i++) {
+          for (int j=0; j&lt;letters.length; j++) {
+            if (letters[i][j] != letters[j][i]) {
+              return false;
+            }
+          }
+      }
+
+      return true;
+    }
+     </font></pre></font>
+
+  <p><li> Notice how a 2D area is <em>declared</em>:
+     <font size="+2"><font color="#000000"><pre>
+  <b>char[][]</b> letters = ...
+     </font></pre></font>
+
+  <p><li> An integer 2D array would be declared similarly:
+     <font size="+2"><font color="#000000"><pre>
+  <b>int[][]</b> someNumbers = ...
+     </font></pre></font>
+
+  <p><li> Next, recall how 1D arrays were initialized with values:
+     <font size="+2"><font color="#000000"><pre>
+  <b>char[]</b> someLetters = {'b', 'a', 'r', 'd'};
+     </font></pre></font>
+
+  <p><li> A 2D <b>static</b> initialization is similar except that it's now a
+   collection of 1D arrays (separated by commas):
+     <font size="+2"><font color="#000000"><pre>
+  char[][] letters = <b>{
+      {'b', 'a', 'r', 'd'},
+      {'a', 'r', 'e', 'a'},
+      {'r', 'e', 'a', 'r'},
+      {'d', 'a', 'r', 't'}
+    }</b>;
+     </font></pre></font>
+  <p><li>The newlines are not needed. We just organized it so it is easy to read. It could also be declared like this, and the result would be the same (scroll to see complete):
+    <font><font color="#000000"><pre>
+char[][] letters=<b>{{'b','a','r','d'},{'a','r','e','a'},{'r','e','a','r'},{'d','a','r','t'}}</b>;
+     </font></pre></font>
+
+  <p><li> Lastly, 2D arrays are <em>addressed</em> by two integers,
+  one for the "row" and one for the "column".
+
+  <p><li> Thus
+     <font size="+2"><font color="#000000"><pre>
+  letters<b>[1][2]</b>
+     </font></pre></font>
+refers to the element in row 1 (2nd row) and column 2 (3rd column):
+     <font size="+2"><font color="#000000"><pre>
+  char[][] letters = {
+      {'b', 'a', 'r', 'd'},
+      {'a', 'r', <b>'e'</b>, 'a'},
+      {'r', 'e', 'a', 'r'},
+      {'d', 'a', 'r', 't'}
+    };
+     </font></pre></font>
+
+  <p><li> Another way to think about it:
+    <ul>
+    <li> The first number refers to a whole array.
+    <li> Thus
+     <font size="+2"><font color="#000000"><pre>
+  letters<b>[1]</b>
+     </font></pre></font>
+     refers to the 1D array in position 1 of the array of rows:
+     <font size="+2"><font color="#000000"><pre>
+  char[][] letters = {
+      {'b', 'a', 'r', 'd'},
+      <b>{'a', 'r', 'e', 'a'}</b>,
+      {'r', 'e', 'a', 'r'},
+      {'d', 'a', 'r', 't'}
+    };
+     </font></pre></font>
+    <li> Which means that 
+     <font size="+2"><font color="#000000"><pre>
+  letters[1]<b>[2]</b>
+     </font></pre></font>
+      refers to the element ('e') in position 2 of that 1D array.
+    </ul>
+
+    <p><li> For <b>dynamic</b> declaration and initializations, we can do something similar than with 1-D arrays. 
+      <ul>
+        <p><li>First, we declare the variable that will hold the reference:
+        <font size="+2"><font color="#000000"><pre>
+    char[][] letters;
+       </font></pre></font>
+
+        <p><li>Then, we initialize the spacec that will hold the values:
+        <font size="+2"><font color="#000000"><pre>
+    letters = <b>new</b> char[4][4];
+        </font></pre></font>
+
+        <p><li> Lastly, we'd need to access each cell adn assign the values we want:
+        <font size="+2"><font color="#000000"><pre>
+    letters[0][0] = 'b';
+    letters[0][1] = 'a';
+    // ...
+       </font></pre></font>
+
+        <p><li> As with 1-D arrays, we can do the declaration and initialzation in a single statement:
+        <font size="+2"><font color="#000000"><pre>
+    char[][] letters = <b>new</b> char[4][4];
+       </font></pre></font>
+
+      </ul>
+  </ul>
+
+
+
+Let's print out the word square:
+     <font size="+2"><font color="#000000"><pre>
+  for (int i=0; i&lt;letters.length; i++) {
+      for (int j=0; j&lt;letters.length; j++) {
+          <font color="#dc143c">// Use print so that the row appears on one line:</font>
+          System.out.print (letters[i][j]); 
+      }
+      <font color="#dc143c">// Go to next line for next row:</font>
+      System.out.println ();
+  }
+     </font></pre></font>
+
+<p> We could choose to print the elements of the main diagonal: top-left(TL) to bottom-right(BR) as in:
+     <font size="+2"><font color="#000000"><pre>
+  for (int i=0; i&lt;letters.length; i++) {
+      System.out.print (letters[i][i]);
+  }
+  System.out.println ();
+     </font></pre></font>
+
+
+<span style='color:#06a015'><b><big>Activity 2</big></b></span>: 
+In
+   <font size="+2" color="#000000"><tt>MyWordSquare2.java</tt></font>
+print the whole square, and both diagonals (TL-to-BR and BL-to-TR).
+</font>
+
+<br><br>
+
+Dealing with rectangles:
+  <ul>
+  <li> In the above example, the size of a row was exactly 
+    equal to the size of a column.
+
+  <p><li> Thus, in 
+     <font size="+2"><font color="#000000"><pre>
+  for (int i=1; i&lt;<b>letters.length</b>; i++) {
+      for (int j=0; j&lt;<b>letters.length</b>; j++) {
+          <font color="#dc143c">// ... printing/whatever ...</font>
+      }
+  }
+     </font></pre></font>
+   we have the same upper limit for both rows and colums.
+
+  <p><li> But what happens when they are different?
+
+  <p><li> For this case, we need to modify the inner loop's limit:
+     <font size="+2"><font color="#000000"><pre>
+  char[][] letters = {
+      {'f','r','a','c','t','u','r','e'},
+      {'o','u','t','l','i','n','e','d'},
+      {'b','l','o','o','m','i','n','g'},
+      {'s','e','p','t','e','t','t','e'}
+    };
+
+  for (int i=1; i&lt;letters.length; i++) {
+      for (int j=0; j&lt;<b>letters[i].length</b>; j++) {
+          <font color="#dc143c">// ... </font>
+      }
+  }
+     </font></pre></font>
+
+  <li> Recall that the first index refers to the whole row so that
+     <font size="+2"><font color="#000000"><pre>
+      letters[i]
+     </font></pre></font>
+  is the whole row and therefore has a length:
+     <font size="+2"><font color="#000000"><pre>
+      letters[i].length
+     </font></pre></font>
+
+  <li> We could define non-rectangular arrays if we chose to:
+     <font size="+2"><font color="#000000"><pre>
+  int[][] A = {
+      {1},
+      {2,2},
+      {3,3,3},
+      {4,4,4,4}
+    };
+
+  for (int i=0; i&lt;A.length; i++) {
+      for (int j=0; j&lt;A[i].length; j++) {
+          System.out.print (A[i][j]);
+      }
+      System.out.println ();
+  }
+     </font></pre></font>
+
+  </ul>
+
+
+<span style='color:#06a015'><b><big>Activity 3</big></b></span>: 
+In
+   <font size="+2" color="#000000"><tt>PoorPrintExample.java</tt></font>
+print this array:
+     <font size="+2"><font color="#000000"><pre>
+  int[][] A = {
+      {1, 2, -3, 4},
+      {1, 22, 333, 4444},
+      {4, -5, 66, 777}
+    };
+     </font></pre></font>
+</font>
+
+
+In the above example, you saw the the result was an unappealing
+jagged print.
+
+<p> We will instead use printf to neatly print a 2D array:
+     <font size="+2"><font color="#000000"><pre>
+  for (int i=0; i&lt;A.length; i++) {
+      for (int j=0; j&lt;A[i].length; j++) {
+          System.out.printf (" %5d", A[i][j]);
+      }
+      System.out.println ();
+  }
+     </font></pre></font>
+  <ul>
+  <li> Here, the format specification string
+     <font size="+2"><font color="#000000"><pre>
+    System.out.printf (<b>" %5d"</b>, A[i][j]);
+     </font></pre></font>
+    specifies 5 digits for an integer after a space.
+
+  <p><li> The letter code "d" refers to an integer. 
+
+  <p><li> Recall: the letter code "f" refers to a double.
+
+  <p><li> For example, if the array were a 
+   <font color="#000000"><tt>double</tt></font>
+   array, we could use
+     <font size="+2"><font color="#000000"><pre>
+    System.out.printf (<b>" %8.3f"</b>, A[i][j]);
+     </font></pre></font>
+   to specify a total of 8 digits with 3 after the decimal point.
+  </ul>
+
+<br>
+
+<span style='color:#06a015'><b><big>Activity 4</big></b></span>: 
+In
+   <font size="+2" color="#000000"><tt>NicePrintExample.java</tt></font>
+print this array neatly:
+     <font size="+2"><font color="#000000"><pre>
+  double[][] A = {
+      {1.1, 2.222, -3.3, 4.4444},
+      {1.0, 2.2, 33.3, 444.4},
+      {0.4, -5.0, 0.66, 0.0777}
+  };
+     </font></pre></font>
+</font>
+
+
+<!-- SIMHA END -->
+
+      
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes13.html">Previous Lecture</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes15.html">Next Lecture</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+      <!--
+    <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script>
+ -->
+  </body>
+</html>

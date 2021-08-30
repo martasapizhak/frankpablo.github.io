@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSCI 1111 Introduction to Software Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 1111</h1>
+      <p class="lead">Introduction to Software Development</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <!-- NAVBAR-->
+    <div class="container py-0">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures<span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>
+                <a class="dropdown-item" href="#">Codio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./lectureNotes06.html">Previous Lecture</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes08.html">Next Lecture</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <p>
+        <hr>
+      </p>
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 07: More Loops</h1>
+      <p>
+        <br>
+      </p>
+      <h2>
+        Objectives
+      </h2>
+      By the end of this module, for simple HelloWorld-like
+      programs, you will be able to:
+      <ul>
+        <li> Use some nested for-loops with independent variables.
+        <li> Use some nested for-loops with dependent conditions.
+        <li> Identify and correct syntax errors related to above objectives.
+        <li> Distinguish between syntax errors and debugging.
+      </ul>
+
+      
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Before Starting
+      </h2>
+
+      <ul>
+        <li>Read Sections <span style="color: #ff0000; font-weight: bold">7.01 to 7.03</span> in the Codio Course</li>
+      </ul>
+
+      <p>
+        If you do not have your Codio course ready, use any text editor or simple IDE. Some possibilities are:
+      </p>
+      <ul>
+        <li>Write using Sublime; Compile and run in the Terminal</li>
+        <li>Use IDEs like: IntelliJ, DrJava, or JGrasp</li>
+      </ul> 
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Catching Up</h2>
+
+      <p>
+        Before we move forward, let's catch up (complete any remaining work from the previous module)
+        <br>
+        In this case, make sure we've got:
+        <ol>
+          <li>Simple For loops. initialization, stopping conditions, and iteration step.</li>
+        </ol>
+
+      </p>
+
+
+
+<!-- SIMHA START -->
+<!--
+      <p><br></p><hr><p><br></p>
+
+<h2>Loops: the for-loop</h2>
+<br><br>
+
+An example 
+
+
+
+<p> Consider the following program:
+  <p><img src="../figures/lectureNotes06/animal.png"><p>
+
+
+<p> What we would like is a way to <em>organize</em> repetition.
+
+<p> We will do this using a version of the <em>for-loop</em>:
+  <p><img src="../figures/lectureNotes06/animal2.png"><p>
+
+
+
+<span style='color:#06a015'><b><big>Activity 1</big></b></span>::
+Print out your own animal sound in the above fashion
+using a for-loop for some repetitive letter in the sound.
+Write your code in 
+<font color="#000000"><tt>MyPetSound3.java</tt></font>.
+
+
+
+<p> Let's zoom in on the for-loop and dissect it:
+  <ul>
+  <li> First, there is the Java reserved word <font color="#000000"><tt>for</tt></font>:
+     <p><img src="../figures/lectureNotes06/forloop.png"><p>
+
+  <p><Li> Note: for emphasis, we have depicted only the loop, in isolation from
+    the rest of the program.
+
+  <P><li> Then, there is the set of conditions:
+     <p><img src="../figures/lectureNotes06/forloop2.png"><p>
+    More about this below.
+
+  <p><li> Next, the <em>body</em> of the loop:
+     <p><img src="../figures/lectureNotes06/forloop3.png"><p>
+
+  <p><Li> The body includes the opening and closing braces,
+    and whatever lies between the two.
+
+  <p><li> Now, let's drill down further and examine the loop <em>conditions</em>.
+
+  <p><li> The first part is the initialization:
+     <p><img src="../figures/lectureNotes06/forloop4.png"><p>
+    <ul>
+    <li> Think of <font color="#000000"><tt>i</tt></font> as something that "counts".
+    <li> Later, we'll see that <font color="#000000"><tt>i</tt></font> is a variable and what
+      we've done is declared and initalized the variable.
+    <li> Notice how the initialization part ends with a semicolon.
+    </ul>
+
+  <p><li> The second part is the <em>re-entry condition</em>
+     <p><img src="../figures/lectureNotes06/forloop5.png"><p>
+     <ul>
+     <li> Read this as "as long as the condition holds, we'll keep
+          executing the body of the loop".
+     <li> Here, the condition is the <font color="#000000"><tt>i</tt></font> must be 
+          less than <font color="#000000"><tt>6</tt></font>.
+     <li> Note: this part also ends with a semicolon.
+     </ul>
+
+  <p><li> The third part is the <em>change</em> or <em>increment</em> part:
+       <p><img src="../figures/lectureNotes06/forloop6.png"><p>
+     <ul>
+     <li> This part usually changes the counting variable.
+     <li> In this case, the counter variable <font color="#000000"><tt>i</tt></font> is increment by one.
+     <Li> Notice the use of the "increment-by-one" operator <font color="#000000"><tt>++</tt></font>.
+     </ul>
+
+  <p><li> To summarize, when you see
+       <p><img src="../figures/lectureNotes06/forloop7.png"><p>
+     you can read this as: 
+     "for i starting at 0, ending at 5, and incrementing by 1 do ... (whatever)"
+  </ul>
+
+<p><br></p><hr><p><br></p>
+
+
+<h2>
+Printing the loop variable
+</h2>
+<br><br>
+
+<p> Consider this example:
+       <p><img src="../figures/lectureNotes06/forprint.png"><p>
+
+
+<span style='color:#06a015'><b><big>Activity 2</big></b></span>:
+Type, compile and execute the above program. 
+
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 3</big></b></span>:
+In 
+<font color="#000000"><tt>MyForLoopPrint.java</tt></font>,
+change the loop conditions so that the numbers 1 through 10
+are printed. Also add a print statement after the
+for-loop, that prints anything.
+
+
+
+<p> Observe:
+  <ul>
+  <li> We are able to print out the for-loop variable <font color="#000000"><tt>i</tt></font>.
+  <p><li> We see that the loop is executed five times.
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &rArr; 
+     Each time the variable <font color="#000000"><tt>i</tt></font> has increased its value.
+  </ul>
+
+
+<p> Mental execution:
+  <ul>
+  <li> When execution first reaches the for-loop, the initialization
+     condition is executed:
+       <p><img src="../figures/lectureNotes06/forprint2.png"><p>
+     <ul>
+     <li> Say to yourself "<font color="#000000"><tt>i</tt></font> is set to <font color="#000000"><tt>0</tt></font>".
+     </ul>
+
+  <p><Li> Important: the initialization condition is not executed
+     again, unless we somehow return to the statement preceding
+     the for-loop.
+     <br>(We'll see later how this can happen.)
+
+  <p><li> Next, we test the re-entry condition:
+       <p><img src="../figures/lectureNotes06/forprint3.png"><p>
+     <ul>
+     <li> Here, you say to yourself "Is <font color="#000000"><tt>i</tt></font> less than <font color="#000000"><tt>6</tt></font>?"
+     <li> The answer is "yes", so we enter the loop-body and execute
+        what's inside.
+     </ul>
+
+  <p><li> Execute (just once) what's inside the loop body:
+       <p><img src="../figures/lectureNotes06/forprint4.png"><p>
+     <ul>
+     <li> In this case the value of <font color="#000000"><tt>i</tt></font>, which is now <font color="#000000"><tt>0</tt></font>,
+          gets printed out.
+     </ul>
+
+  <p><Li> <b><em>After</em></b> the loop-body has executed, we apply 
+      the <em>increment</em>
+       <p><img src="../figures/lectureNotes06/forprint5.png"><p>
+     <ul>
+     <li> Say to yourself "Now <font color="#000000"><tt>i</tt></font> has the value <font color="#000000"><tt>1</tt></font>".
+     </ul>
+
+  <p><li> Next, we test the loop-entry condition:
+       <p><img src="../figures/lectureNotes06/forprint6.png"><p>
+     <ul>
+     <li> Here, you say to yourself "Is <font color="#000000"><tt>i</tt></font> less than <font color="#000000"><tt>6</tt></font>?"
+     <li> It clearly is, so we enter the loop again.
+     </ul>
+
+  <p><li> Once again, we execute the loop body:
+       <p><img src="../figures/lectureNotes06/forprint7.png"><p>
+     <ul>
+     <li> Because <font color="#000000"><tt>i</tt></font> has the value <font color="#000000"><tt>1</tt></font>, this is
+          what gets printed.
+     </ul>
+
+  <p><Li> Once again, we apply the increment:
+       <p><img src="../figures/lectureNotes06/forprint8.png"><p>
+     <ul>
+     <li> Say to yourself "Now <font color="#000000"><tt>i</tt></font> has the value <font color="#000000"><tt>2</tt></font>".
+     </ul>
+
+  <p><li> Next, apply the entry condition ... and so on.
+
+
+  <p><li> Finally, after the 5-th time through, <font color="#000000"><tt>i</tt></font> will
+     get the value <font color="#000000"><tt>6</tt></font>.
+       <p><img src="../figures/lectureNotes06/forprint9.png"><p>
+     <ul>
+     <li> The re-entry condition now fails, and we exit the for-loop.
+     </ul>
+
+  <p><li> What "exit" means:
+       <p><img src="../figures/lectureNotes06/forprint10.png"><p>
+     <ul>
+     <li> Execution continues to just after the for-loop.
+     <li> In this program, we didn't have anything else, but
+       we could have had:
+         <p><img src="../figures/lectureNotes06/forprint11.png"><p>
+     <li> In this case, you would print "MOO!" to the screen.      
+     </ul>
+
+  <p><li> Another way to understand how it works:
+         <p><img src="../figures/lectureNotes06/forprint12.png"><p>
+
+
+  <p><li> The for-loop is one of several such strange and
+      fascinating creatures (structures) we'll encounter in 
+      programming.
+  </ul>
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+Variations
+</h2>
+<br><br>
+
+
+<p> To explore for-loops further, we'll look at some
+variations of the basic for-loop:
+  <ul>
+  <li> First, we could have named our for-loop variable 
+       anything we like:
+       <font size="+1">
+       <font color="#000000"><pre>
+    for (int count=0; count&lt;6; count++) {
+      printBigO ();
+  }
+       </pre></font>
+       </font>
+     <ul>
+     <li> It's customary to use short variable names like
+           <font color="#000000"><tt>i</tt></font> and <font color="#000000"><tt>j</tt></font>.
+     </ul>
+
+  <p><li> To go through a loop five times, any range of numbers
+     will do:
+       <font size="+1">
+       <font color="#000000"><pre>
+    for (int i=10; i&lt;16; i++) {
+      printBigO ();
+  }
+       </pre></font>
+       </font>
+     <ul>
+     <li> Of course, this doesn't work for <em>printing</em>, unless
+          we want to print values from 10 to 15.
+     </ul>
+
+  <p><li> Here's an example of using the <font color="#000000"><tt>&lt;=</tt></font> operator:
+       <font size="+1">
+       <font color="#000000"><pre>
+    for (int i=1; i<b>&lt;=</b>5; i++) {
+      printBigO ();
+  }
+       </pre></font>
+       </font>
+      <ul>
+      <li> Treat <font color="#000000"><tt>&lt;=</tt></font> as one symbol ("less than or equal to").
+      <li> We do this because the keyboard doesn't have a symbol for
+             <font color="#000000"><tt>&le;</tt></font>.
+      </ul>
+
+  <p><li> Here are different ways of incrementing by 1:
+       <font size="+1">
+       <font color="#000000"><pre>
+    for (int i=0; i&lt;6 <b>i=i+1</b>) {
+      printBigO ();
+  }
+
+    for (int i=0; i&lt;6; <b>i+=1</b>) {    <font color="#dc143c">// Using the += operator.</font>
+      printBigO ();
+  }
+       </pre></font>
+       </font>
+
+<span style='color:#06a015'><b><big>Activity 4</big></b></span>:
+Write a program to print out the odd numbers from 1 to 25.
+Use a single for-loop with the appropriate increment
+and write your code in 
+<font color="#000000"><tt>Odd25.java</tt></font>.
+
+
+
+  <p><li> One can count <em>down</em> just as easily:
+       <font size="+1">
+       <font color="#000000"><pre>
+    for (int i=5; i&gt;0; i--) {
+      System.out.println (i);
+  }
+       </pre></font>
+       </font>
+     <ul
+     <li> Notice the decrement-by-one operator <font color="#000000"><tt>--</tt></font>.
+     <li> Observe the entry-condition is "as long as i&gt;0".
+     </ul>
+
+  </ul>
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 5</big></b></span>:
+Write a program to print out the odd numbers from 25 down
+to 1. Write your code in 
+<font color="#000000"><tt>Odd25Down.java</tt></font>.
+
+-->
+<p><br></p><hr><p><br></p>
+
+<h2>
+Nested for-loops
+</h2>
+<br><br>
+
+
+<p> We'll start by writing a program to print a little
+number triangle like this:
+<font color="#000000"><tt><font color="#000000"><pre>
+  1
+  22
+  333
+  4444
+</pre></font></tt></font>
+
+
+<p> Notice: there's repetition across a row of numbers:
+   a potential use of for-loops!
+
+<p> Here's the program, using for-loops:
+       <p><img src="../figures/lectureNotes06/triangle.png"><p>
+<p> Observe:
+  <ul>
+  <li> We've used <font color="#000000"><tt>System.out.print</tt></font> to avoid printing
+     each number on a single line.
+  <p><li> <font color="#000000"><tt>System.out.println()</tt></font> merely goes to the next line.
+     <br>(Or, ends the current line being printed.)
+  </ul>
+
+
+
+<span style='color:#06a015'><b><big>Activity 1</big></b></span>:
+Add a row for <font color="#000000"><tt>5</tt></font> (with five of
+them), writing your code in 
+<!--<font color="#000000"><tt>MyForLoopPrint2.java</tt></font>-->
+<font color="#000000"><tt>MyForLoopPrint.java</tt></font>
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 2</big></b></span>:
+Just for the 
+heck of it, could one use a for-loop to achieve
+the printing of <font color="#000000"><tt>1</tt></font>? That is, answer the
+question: can a for-loop be set up so that you go
+into it exactly once?
+Write your code in 
+<!--<font color="#000000"><tt>MyForLoopPrint3.java</tt></font>-->
+<font color="#000000"><tt>MyForLoopPrint.java</tt></font>
+
+<br><br>
+
+<h4>Identify repetition and try a Nested For Loop</h4>
+
+
+<p> Next, observe that the upper-limits of the for-loops are
+themselves increasing:
+       <p><img src="../figures/lectureNotes06/triangle2.png"><p>
+
+<p> Another way to say this:
+  <font size="+1">
+  <font color="#000000"><tt><font color="#000000"><pre>
+    When the value is 2, print a row of 2's
+    When the value is 3, print a row of 3's
+    When the value is 4, print a row of 4's
+  </pre></font></tt></font>
+  </font>
+
+<p> Thus, we could try to do is:
+  <font size="+1">
+  <font color="#000000"><tt><font color="#000000"><pre>
+    for (int j=2; j&lt;=4; j++) {
+        <font color="#dc143c">// Print a row of j's (j of them)</font>
+    }
+  </pre></font></tt></font>
+  </font>
+
+<p> But we already know how to print a row of j's:
+  <font size="+2">
+  <font color="#000000"><tt><font color="#000000"><pre>
+    for (int j=2; j&lt;=4; j++) {
+        <font color="#dc143c">// Print a row of j's (j of them)</font>
+        for (int i=0; i&lt;j; i++) {
+            System.out.print (j)
+        }
+    }
+  </pre></font></tt></font>
+  </font>
+
+<p> The complete program:
+       <p><img src="../figures/lectureNotes06/triangle3.png"><p>
+
+
+
+
+<span style='color:#06a015'><b><big>Activity 3</big></b></span>:
+Change the program to print a fifth row 
+with five <font color="#000000"><tt>5</tt></font>'s. Also include the
+row of <font color="#000000"><tt>1</tt></font>'s inside the loop: that is,
+fix the for-loop conditions so that you don't
+need the stand-alone <font color="#000000"><tt>println</tt></font> to print <font color="#000000"><tt>1</tt></font>.
+Write your code in 
+<!--<font color="#000000"><tt>MyForLoopPrint4.java</tt></font>-->
+<font color="#000000"><tt>ForLoopPrint2.java</tt></font>
+
+
+
+<p> Let's review what we learned above:
+  <ul>
+  <li> The outer loop variable's value is used in the inner loop:
+       <p><img src="../figures/lectureNotes06/triangle3a.png"><p>
+  
+  <p><li> Consider a single iteration of the outer-loop 
+     (e.g., when <font color="#000000"><tt>j</tt></font> is <font color="#000000"><tt>3</tt></font>).
+       <p><img src="../figures/lectureNotes06/triangle4.png"><p>
+     <ul>
+     <li> For this value of <font color="#000000"><tt>j</tt></font>, the inner loop executes
+          <font color="#000000"><tt>j</tt></font> times.
+     <li> Thus, when <font color="#000000"><tt>j</tt></font> is <font color="#000000"><tt>3</tt></font>, the inner loop
+          has <font color="#000000"><tt>3</tt></font> iterations.
+     </ul>
+
+  <p><Li> This is an example of a <em>nested for-loop</em> in 
+     which the inner loop's execution <em>depends</em> on the
+     value of the outer-loop variable.
+  </ul>
+
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+Tracing through a program in detail
+</h2>
+<br><br>
+
+
+We'll now look at an example of how to execute a program
+"by hand". That is, how to <em>trace</em> a program's execution
+by painstakingly following its execution step-by-step.
+
+<p> At first this will appear tedious, but it
+is <em><b>critical</b></em> to firm understanding of how programs
+execute, and eventually to your own writing of programs.
+
+<p> We'll first do a longer, more narrative version here, and then
+show you how to submit a much shorter version for your exercises.
+
+<p> For our example, let's look at the program we last saw:
+  <font size="+2">
+  <font color="#000000"><tt><font color="#000000"><pre>
+public class ForLoopPrint2 {
+
+    public static void main (String[] argv)
+    {
+        System.out.println (1);
+        for (int j=2; j<=4; j++) {
+            for (int i=0; i&lt;j; i++) {
+                System.out.print (j);
+            }
+            System.out.println();
+        }
+    }
+
+}
+  </pre></font></tt></font>
+  </font>
+
+
+Here's the longer version, just for the sake of understanding.
+To make best use of this:
+  <ul>
+  <li> Open this same page in another browser, and have the program
+  side-by-side, as you read what's below.
+  <li> Read out <em>aloud</em> what you see below.
+  </ul>
+
+
+<p> Ready? Let's trace through:
+  <ul>
+        <p><img class="img-fluid mx-auto py-2" width=100% src="../figures/lectureNotes06/trace1.png"><p>
+  <li> Right at the start, the first line is 
+      <font color="#000000"><tt>System.out.println(1);</tt></font>
+  This prints out 1, and moves to the next line.
+  <p><li> Initially j=2 at the start of the outer for-loop.
+        <p><img class="img-fluid mx-auto py-2" width=100%  src="../figures/lectureNotes06/trace2.png"><p>
+  <p><li> Since the condition j&lt;=4 is immediately tested at entry into
+  the loop, we see that j&lt;=4 is satisfied when j=2.
+  <p><li> This gets us into the outer loop.
+      <ul>
+      <li> Now we encounter the inner for-loop, where i is set to
+      0
+        <font color="#000000"><tt> (int i=0)</tt></font>.
+        <p><img class="img-fluid mx-auto py-2" width=100%  src="../figures/lectureNotes06/trace3.png"><p>
+      <li> Is i&lt;j now? At the moment i is 0, j is 2. So, since 0&lt;2,
+      we enter the inner loop.
+      <li> Inside the inner loop, we execute 
+        <font color="#000000"><tt>System.out.print(j)</tt></font>.
+
+      which, because j is now 2, will print 2.
+      <li> This is NOT println so the output will not go to the next
+      line yet.
+      <li> We're at the end of the inner loop, so now i increments to 1:
+        <p><img class="img-fluid mx-auto py-2" width=100%  src="../figures/lectureNotes06/trace4.png"><p>
+      <li> Coming back to the top of the inner for-loop, we check
+      whether the current value of i (which is now 1) satisfies the
+      condition i&lt;j. Note that j is still 2 so, yes, it's satisfied.
+        <ul>
+        <li> <b><em>Remember:</em></b> the initial setting of the loop 
+        <font color="#000000"><tt> (int i=0)</tt></font>
+        is never executed again after entering the loop (It could, and
+        in this program, will be executed again if we return to the loop
+         once we've left it). 
+        </ul>
+      <li> So now inside the inner-loop, we print 2 again (print, not
+      println).
+        <p><img class="img-fluid mx-auto py-2" width=100%  src="../figures/lectureNotes06/trace5.png"><p>
+      <li> Then, at the end of the inner for-loop, i increments to 2.
+      <li> We're back to the entrance of the inner-loop. The condition
+      2&lt;2 fails.
+      <li> We exit the inner loop and proceed to whatever code follows
+      the loop.
+      </ul>
+   <p><li> Now we're at 
+        <font color="#000000"><tt>System.out.println()</tt></font>.
+        <p><img class="img-fluid mx-auto py-2" width=100%  src="../figures/lectureNotes06/trace5a.png"><p>
+
+     This simply causes the output to go to the next line without printing any actual thing.
+        <p><img class="img-fluid mx-auto py-2" width=100%  src="../figures/lectureNotes06/trace6.png"><p>
+   <p><li> Then, it's on to the end of the outer for-loop, where j 
+      is incremented to 3.
+   <p><li> <b><em>Remember:</em></b> the third part of the loop statement (the
+      increment or decrement, in some cases) is done at the END of the
+      loop, even though it's written in one line. That's just the
+      strangeness of writing code.
+   <p><li> Now we're back to checking the condition j<=4 at the top of
+   the outer for-loop. j is 3 now.
+   <p><li> Since j&lt;=4 (that is, 3&lt;=4), we enter the loop again.
+   <p><li> Now, we see the inner loop again (AFTER exiting it
+      earlier).
+        <ul>
+        <li> So, now 
+        <font color="#000000"><tt>int i=0</tt></font>
+        is executed, initializing this for-loop's variable to i=0.
+          <p><img class="img-fluid mx-auto py-2" width=100%  src="../figures/lectureNotes06/trace8.png"><p>
+        <li> Then, we enter and print 3 (since j is 3 at this
+        moment). 
+        <li> i increments to 1, we enter and print 3.
+  <li> i increments to 2, we enter and print 3.
+        <li> i increments to 3, which fails i&lt;j because 3&lt;3 fails, and
+        we exit the inner loop.
+        <li> So, three 3's get printed.
+        </ul>
+   <p><li>Then, it's on to 
+        <font color="#000000"><tt>System.out.println()</tt></font>.
+   <p><li> Thus, the output so far is:
+  <font size="+2" color="#000000"><pre>
+  1
+  22
+  333
+  </pre></font>
+
+   <p><li> Now j increments to 4 and because j<=4 is satisfied by j=4,
+   we enter the outer-loop again.
+   <p><li> Now, we see the inner loop again (AFTER exiting it the
+   second time earlier).
+      <ul>
+      <li> Now int i=0 is executed, setting i=0.
+      <li> Then, we enter and print 4 (since j is 4 at this moment). 
+      <li> i increments to 1, we print 4.
+      <li> i increments to 2, we print 4.
+      <li> i increments to 3, we print 4.
+      <li> i increments to 4, which fails i&lt;j  (since j is currently
+      4), and we exit.
+      </ul>
+   <p><li> Next,
+        <font color="#000000"><tt>println()</tt></font>
+   occurs, which gets to the next line.
+   <p><li> Now j increments to 5, which fails the j<=4 condition in
+      the outer-loop.
+   <p><li> We exit the outer-loop and proceed. This gets us to the end
+      of the curly bracket that's the end of 
+        <font color="#000000"><tt>public static void main (String[] argv)</tt></font>.
+
+
+          <p><img class="img-fluid mx-auto py-2" width=100%  src="../figures/lectureNotes06/trace9.png"><p>
+   <p><li> And this ends the program's execution.
+   <p><li> The output is:
+  <font size="+2" color="#000000"><pre>
+  1
+  22
+  333
+  4444
+  </pre></font>
+   </ul>
+
+
+
+Yes, that was long. But doing this a few times will help
+you understand how to read programs. Later, you will become
+good at this and will, with a quick glance at the inner-loop, 
+say "Oh, this prints 2 twice in the first iteration of the outer."
+
+<br><br>
+<!--
+<b>Important:</b> when you need to submit a program's traced-out
+execution, use a shorter version. For example,
+<b><a href="TracingExample.pdf">see this PDF for the above program</a></b>.
+-->
+
+<h4>The Simple Table</h4>
+<p>
+  We will use a simple table to keep track of values as they are changed throughout the program. An example is shown for the previous tracing exercise:
+  <br>
+  <img class="img-fluid mx-auto py-2" width=60%  src="../figures/lectureNotes06/simpleTable.png">
+  <br>
+  <b>Note</b> that the <span style='color:#ff0000'><b><big>2</big></b></span> is only "alive" between the last increment and the time the test fails <font color="#000000"><tt>(i&lt;j)</tt></font>. It is there just to highlight the end. In reality as soon as we leave the inner loop, <font color="#000000"><tt>i</tt></font> is no longer "alive" and so, the printing of the newline <font color="#000000"><tt>\n</tt></font> happens when i does not exist anymore.
+</p>
+
+<br><br>
+<span style='color:#06a015'><b><big>Activity 4</big></b></span>:
+Consider this program:
+       <p><img src="../figures/lectureNotes06/triangle6.png"><p>
+First, trace through the values of i and j by hand 
+and try to figure out what gets printed. Do this painstakingly
+for each possible value of i and j. 
+<br>
+Use the shorter "table" format we just explained.
+Then, edit, compile and
+execute the above program to see if you were right.
+
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 5</big></b></span>:
+Write a program to print out consecutive integers in a diagonal,
+as in
+  <font color="#000000"><tt>
+  <font color="#000000"><pre>
+  1
+   2
+    3
+     4
+      5
+  </pre></font>
+  </tt></font>
+Use a nested for-loop as in earlier examples to print the
+requisite number of spaces before printing a digit.
+Write your code in 
+<!--<font color="#000000"><tt>MyForLoopPrint5.java</tt></font>-->
+<font color="#000000"><tt>DiagonalForLoopPrint.java</tt></font>
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 6</big></b></span>:
+Write a program to print out 
+  <font color="#000000"><tt>
+  <font color="#000000"><pre>
+I'm feeling cold: b rrrrrr rrrrr rrrr rrr rr r
+  </pre></font>
+  </tt></font>
+Use a regular <font color="#000000"><tt>print</tt></font>
+to print everything up to the <font color="#000000"><tt>b</tt></font>.
+Then, use a nested for-loop the <font color="#000000"><tt>r</tt></font>'s.
+Don't forget the space between each grouping of 
+<font color="#000000"><tt>r</tt></font>'s.
+Write your code in 
+<!--<font color="#000000"><tt>MyForLoopPrint6.java</tt></font>-->
+<font color="#000000"><tt>ColdForLoopPrint.java</tt></font>
+
+<p><br></p><hr><p><br></p>
+
+
+<h2>
+Reading and writing
+</h2>
+<br><br>
+
+
+<p> Let's consider how to read a single for-loop, such as:
+       <p><img src="../figures/lectureNotes06/reading.png"><p>
+  <ul>
+  <li> First, "see" the entire for-block as a whole, without
+     looking at the details:
+       <p><img src="../figures/lectureNotes06/reading2.png"><p>
+    Note: like the <font color="#000000"><tt>class</tt></font> but unlike methods, the opening
+    brace is on the same line as the <font color="#000000"><tt>for</tt></font>.
+
+  <p><li> Then, figure out how the for-loop variable is going
+    to change:
+       <p><img src="../figures/lectureNotes06/reading3.png"><p>
+    Say to yourself
+      <ul>
+      <li> "The variable is <font color="#000000"><tt>i</tt></font> and it starts at <font color="#000000"><tt>0</tt></font>."
+      <li> "The increment is <font color="#000000"><tt>1</tt></font>."
+      <li> "The last iteration is when <font color="#000000"><tt>i</tt></font> is <font color="#000000"><tt>5</tt></font>."
+      </ul>
+
+  <p><li> Next, look for where the loop-variable is being used:
+       <p><img src="../figures/lectureNotes06/reading4.png"><p>
+
+  <p><li> Now perform the mental execution, iteration by iteration.
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &rArr; It helps to write down successive values of loop variables.
+  </ul>
+
+
+<br><br>
+<p> Writing:
+       <p><img src="../figures/lectureNotes06/writing.png"><p>
+  <ul>
+  <li> Make sure that you stick to the conventional style.
+
+  <p><li> Again, when writing, always type matching brackets together.
+  </ul>
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 7</big></b></span>:
+Consider the following program:
+       <p><img src="../figures/lectureNotes06/readingexercise.png"><p>
+What does it print? Try to figure this out by
+mental execution first. Then, type it up, compile and
+execute to confirm, writing your code in
+<font color="#000000"><tt>MyForExercise.java</tt></font>.
+
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+When things go wrong
+</h2>
+<br><br>
+
+
+<p> As code gets more complex, it gets easier to make mistakes,
+and harder to find them.
+
+<p>
+In each of the programs below, try to determine
+the error without compiling the program. Then,
+write up the program, compile and see what the
+compiler says. After that, fix the error.
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 8</big></b></span>:
+Find the errors!
+<br><br>
+
+<p>Program 1: <!-- missing int decl -->
+       <p><img src="../figures/lectureNotes06/forerror.png"><p>
+Write your (corrected) code in 
+<!--<font color="#000000"><tt>MyForLoopExercise1.java</tt></font>-->
+
+
+<br><br>
+
+<p>Program 2: <!-- missing semicolon inside for -->
+       <p><img src="../figures/lectureNotes06/forerror2.png"><p>
+Write your corrected code in 
+<!--<font color="#000000"><tt>MyForLoopExercise2.java</tt></font>-->
+
+
+<br><br>
+
+<p>Program 3: <!-- left brace forgotten -->
+       <p><img src="../figures/lectureNotes06/forerror3.png"><p>
+Write your corrected code in 
+<!--<font color="#000000"><tt>MyForLoopExercise3.java</tt></font>-->
+
+
+
+<br><br>
+
+<p>Program 4: <!-- missing right paren -->
+       <p><img src="../figures/lectureNotes06/forerror4.png"><p>
+Write your corrected code in 
+<!--<font color="#000000"><tt>MyForLoopExercise4.java</tt></font>-->
+
+
+
+<br><br>
+
+<p>Program 5: <!-- Public capitalized -->
+       <p><img src="../figures/lectureNotes06/forerror5.png"><p>
+Write your corrected code in 
+<!--<font color="#000000"><tt>MyForLoopExercise5.java</tt></font>-->
+
+
+
+<br><br>
+
+<p>Program 6: <!-- grtr than 6 -->
+       <p><img src="../figures/lectureNotes06/forerror6.png"><p>
+Write your corrected code in 
+<!--<font color="#000000"><tt>MyForLoopExercise6.java</tt></font>-->
+
+
+
+
+<p> The last one is technically not a syntax error
+but a <em>logical</em> error:
+  <ul>
+  <li> Logical errors compile fine, but cause a problem
+    during execution.
+  <p><Li> The process of identifying and fixing logical
+     errors is called <em>debugging</em>.
+  <p><li> A <em>bug</em> is a logical error.
+  </ul>
+
+<br><br>
+
+<!-->
+<span style='color:#06a015'><b><big>Activity 9</big></b></span>:
+
+The following program is supposed to print the triangle
+of numbers:
+<font color="#000000"><pre>
+1
+22
+333
+4444
+</pre></font>
+But there are two bugs. First,
+try to find the problems solely by reading and
+mental execution.
+<!--Then, type it in the file
+<font color="#000000"><tt>ForLoopPrintBugs.java</tt></font>.
+and see what the output
+really is. Report what you see.
+       <p><img src="../figures/lectureNotes06/forerror7.png"><p>
+       -->
+
+  </!-->
+
+
+<br><br>
+<span style='color:#06a015'><b><big>Activity 9</big></b></span>:
+The following piece of code intends to print
+    <font size="+2">
+    <font color="#000000"><pre>
+55555
+4444
+333
+22
+1
+    </pre></font> </font>
+However, there are two bugs. Can you see them just by reading?
+Find and fix them, writing your code in
+<font color="#000000"><tt>ForLoopPrintDown.java</tt></font>.
+The program:
+    <font size="+2">
+    <font color="#000000"><pre>
+public class ForLoopPrintDown {
+
+  public static void main (String[] argv)
+  {
+    for (int i=5; i>=1; i--) {
+      for (int j=1; j&lt;i; j++); {
+        System.out.print (i);
+      }
+      System.out.println ();
+    }
+
+  }
+
+}
+    </pre></font> </font>
+<!--
+<p><br></p><hr><p><br></p>
+
+
+<h2>
+The While loop
+</h2>
+<br><br>
+
+<p>
+  The <b>while loop</b> is another way of writing loops, which is actually taught befoe the <b>for loop</b> in some courses. 
+
+  Here, I want to teach it 
+</p>
+-->
+
+
+<p><br></p><hr><p><br></p>
+
+
+<h2>
+Meta
+</h2>
+<br><br>
+
+
+We will occasionally step back from the details to comment
+on how best to learn.
+
+<p>
+This module was a bit different, a little more challenging than 
+modules 1-3.
+
+<p> 
+What to keep in mind:
+  <ul>
+  <li> It is only natural to feel like you are in an alien
+    landscape.
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &rArr; 
+     You would feel no different doing the first few modules 
+     while learning a foreign language with an entirely different script.
+
+  <p><li> It takes a while to absorb some of the details, and that's
+  just fine.
+
+  <p><li> Notice that exercises 4.15 and 4.16 were significantly
+    more challenging than others:
+    <ul>
+    <li> In prior exercises, you merely typed in something and tried
+    it out, or make a small change.
+    <li> With 4.15 and 4.16 you had to do it all from scratch.
+    <li> Both involved <em>problem-solving</em>
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &rArr; 
+     Taking a problem described in words and finding a solution.
+    </ul>
+
+  <p><li> Problem-solving is a higher-level skill than programming.
+     <ul>
+     <li> It takes time to acquire this skill.
+     <li> There is no magic formula or words to simply make "problem
+     solving" work for you.
+     <li> The only way is to develop this skill is to struggle with
+       problems, and with lots of them.
+     </ul>
+
+  <p><li> Finally, think about this:
+    <ul>
+    <li> Anyone can acquire both programming and problem-solving
+    skills with sufficient dedication. So why not you?
+    <li> If you get past these hurdles with determination, you will
+      leave behind all those who gave up earlier.
+    </ul>
+  </ul>
+<!-- SIMHA END -->
+
+      
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes06.html">Previous Lecture</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes08.html">Next Lecture</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+      <!--
+    <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script>
+ -->
+  </body>
+</html>

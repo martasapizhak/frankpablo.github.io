@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSC 250  Theory of Computation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      .img-max {
+        max-width: 500px;
+        width:50%;
+      }
+
+      #HIDDENDIV {
+        display: none;
+      }
+
+      #HIDDENDIV.show  {
+        display: block;
+      }
+    </style>
+
+
+
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <!-- <img class="float-right" src="../../images/gw_primary_logo.png" alt="GWU" height="160"> -->
+      <img class="float-right" src="../../../images/SmithLogoStack-cmyk.png" alt="SmithLogo" height="120">
+      <h1 class="display-3 m-0">CSC 250</h1>
+      <p class="lead">Theory of Computation</p>
+      <p class="lead">Smith Computer Science </p>
+    </div>
+
+    <div class="container py-0"><!-- was 1-->
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info <span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">TBD 1</a>
+                <a class="dropdown-item" href="#">TBD 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project (if any)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Discord</a>
+                <a class="dropdown-item" href="#">Moodle</a>
+                <a class="dropdown-item" href="#">Repl.it</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes01.html">Previous Module</a>
+              </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Next Module</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <br><br>
+
+
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 02: Binary!!!</h1>
+      <p>
+        <br>
+      </p>
+
+<span style='color:#ff0000'><b><big>There are 10 types of people in the world: those who understand binary, and those who don’t</big></b></span>
+      
+      <h2>Outline </h2>
+
+      This class we'll discuss:
+      <ul>
+        <li>Crash course in logic</li>
+        <li>What makes a good proof?</li>
+        <li>Three kinds of proofs:</li>
+        <ul>
+          <li>Direct</li>
+          <li>Contradiction</li>
+          <li>Contrapositive</li>
+        </ul>
+      </ul>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Logic and Logical Thinking
+      </h2>
+      <br><br>
+      <span style='color:#06a015'><b><big>Activity 1</big></b></span> [2 minutes]: What is Logic and logical thinking?
+
+
+      <div class="container mx-lg-5">
+        <span style='color:#888888'>One possible answer: 
+          <details><summary>(Wait; then Click)</summary>
+            <p>
+              <i>The process of obtaining a conclusion from a set of propositions taken to be true.</i><br>
+            </p>
+          </details>
+        </span>
+      </div>
+      <br><br>
+
+      <h4>Two Examples</h4>
+
+      <ol>
+        <li>
+          Easy one: 
+          <ul>
+            <li>Dogs are better than Cats (Proposition or Premise A)</li>
+            <li>Cats are better than Parrots (Proposition or Premise B)</li> 
+            <li>Therefore: Dogs are better than Parrots (Proposition or Conclusion C)</li>
+          </ul>
+          <br>
+          <span style='color:#888888'>
+            Note that since we've determined that "All Dogs are better than Parrots"
+            <br> 
+            we can now use this as another proposition.
+          </span>
+        </li>
+        <br><br>
+
+        <li>
+          A Difficult one:
+          <ul>
+            <li>If Yak barks, I can't work</li>
+            <li>If I can't work, students are assigned no homework</li>
+            <li>If students have no homework, students are happy</li>
+            <li>Students are happy</li>
+            <li>Therefore: \( ??? \)</li>
+          </ul>
+        </li>
+      </ol>
+
+      we'll analyze these and more examples using some structure.
+      <br><br>
+
+      <span style='color:#06a015'><b><big>Activity 2</big></b></span> [2 minutes]: if we just use English to analyze the material, <b>what could go wrong?</b>
+
+      <div class="container mx-lg-5">
+        <span style='color:#888888'>One possible answer: 
+          <details><summary>(Wait; then Click)</summary>
+            <p>
+              <i>Ambiguity!.</i>
+              <br><br>
+              Example:
+              <br><br>
+              If a waiter asks: "Would you like a burger or a hotdog?"
+              <br>
+              You could answer: "Yes". 
+              <br><br>
+              Where is the <i>linguistic issue</i> in this exchange?
+              <br><br>
+
+              Other issues: language artifacts, like <a href="https://en.wikipedia.org/wiki/Auto-antonym">contronyms</a> (<i>dust</i>, <i>clip</i>, <i>fast</i>), or<br>
+              <a href="https://en.wikipedia.org/wiki/Homonym">homonyms</a> ( "Buffalo buffalo buffalo Buffalo buffalo").
+
+            </p>
+          </details>
+        </span>
+      </div>
+      <br><br>
+
+      We need to use some structure to keep track of and operate with propositions that are unambiguous.  
+      <br><br>
+
+      For this, we'll use some <i>agreed-upon</i> terminology.
+
+      <br><br>
+
+      As an <i>alternative mode of visualizing</i> the concepts, whenever possible, 
+      <br>
+      we'll make use of <b>Venn Diagrams</b>.
+
+      
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>Terminology</h2>
+
+      <ul>
+        <li>A <Big><b>proposition</b></Big> is a statement that has a truth value (either true or false).
+        <br><br>
+        Example: <br>
+        <ul>
+          <li>The Proposition: "All prime numbers are odd", has a truth value of <b>false</b></li> 
+        </ul>
+        </li>
+        <br><br>
+        <li>A proposition has internal structure:
+          <br>
+          It states that all or some members of a set have a property that makes them members of another set.
+          <br><br>
+          Example: <br>
+          <ul>
+            <li>"grass is green"</li> 
+          </ul>
+          <br><br>
+
+          The <Big><b>subject</b></Big> ("grass") refers to the part of the proposition that is to be the focus of the statement.</li>
+          <br>
+          The <Big><b>predicate</b></Big>("is green") indicates a property of the set of elements pointed to by the subject.
+          <br><br>
+        </li>
+        <br><br>
+        <li>
+          <Big><b>Quantifiers</b></Big> enable us to build propositions with degree:
+          <br><br>
+          Example: <br>
+          <ul>
+            <li>"<span style='color:#00cc00'>All</span> grass is green"</li> 
+            <br><br>
+            <li>"<span style='color:#cc0000'>No</span> grass is green"</li> 
+            <br><br>
+            <li>"<span style='color:#ffaa44'>Some</span> grass is green"</li> 
+          </ul>
+        </li>
+      </ul>
+      
+      <br><br>
+
+
+      <h3>Propositional Logic</h3>
+
+      <p>
+        The process by which we can <i>combine</i> propositions, in a <b>logical computation</b>, to obtain valid conclusions 
+        <br>
+        OR
+        <br>
+        with which we can detect errors in the logical computation and refute a conclusion.
+      </p>
+      <br><br>
+
+      <span style='color:#06a015'><b><big>Activity 3</big></b></span> [2 minutes]: how do we combine propositions?
+
+      <br><br>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Logical Operators</h2>
+
+      <p>
+        In this section we'll discuss <b>logical operators</b>, which are rules that indicate the resulting effect on a proposition or a set of propositions when operated upon.
+      </p>
+
+      <br><br>
+
+      <h3>Negation</h3>
+      <p>
+        The negation operator, symbol: \( \neg \), AKA <b>NOT</b>, is a <i>unary</i> operator and it refers to the opposite truth value of a proposition.
+        <br><br>
+        We can show the effect of this operator using a table:
+        <style type="text/css">
+          .tg  {border-collapse:collapse;border-spacing:0;}
+          .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg .tg-0lax{text-align:left;vertical-align:top}
+          .floatedTable {
+            float:left;
+          }
+          .inlineTable {
+              display: inline-block;
+          }
+        </style>
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">¬p</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">False</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">True</td>
+            </tr>
+          </tbody>
+        </table>
+        &nbsp;&nbsp; another view: &nbsp;&nbsp;
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">¬p</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+          </tbody>
+        </table>
+        <br><br>
+
+        <img class="img-fluid" src="../figures/lecture02/not.png" alt="Negation" style="width:20%">
+        <br><br>
+
+        Example: I am not Swedish.
+        <br>
+        Note: other symbols you might see are: \( \neg p \text{, } \sim{p}  \text{, } \bar p \text{, } !p \).
+      </p>
+
+      
+
+
+      <br><br>
+
+      <h3>Conjunction</h3>
+      <p>
+        The conjunction operator, symbol: \( \wedge \), AKA <b>AND</b>, is a <i>binary</i> operator; <i>it is true if and only if both of its operands are true</i>.
+        <br><br>
+        We can show the effect of this operator using a table:
+        <style type="text/css">
+          .tg  {border-collapse:collapse;border-spacing:0;}
+          .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg .tg-0lax{text-align:left;vertical-align:top}
+          .floatedTable {
+            float:left;
+          }
+          .inlineTable {
+              display: inline-block;
+          }
+        </style>
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">q</th>
+              <th class="tg-0lax">p&and;q</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">False</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">False</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">False</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">True</td>
+            </tr>
+          </tbody>
+        </table>
+        &nbsp;&nbsp; another view: &nbsp;&nbsp;
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">q</th>
+              <th class="tg-0lax">p&and;q</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+          </tbody>
+        </table>        
+      <br><br>
+
+        <img class="img-fluid" src="../figures/lecture02/and.png" alt="Conjunction" style="width:20%">
+        <br>
+        <span style='color:#888888'>Note that we're labeling on the outside for clarity, but the label refers to the interior of each circle</span>
+        <br><br>
+
+        Example: I am walking and chewing gum.
+        <br>
+        Note: other symbols you might see are: \( p \wedge q \text{, } p\cdot q  \text{, } p\&q \).
+      </p>
+
+      <br><br>
+
+
+      <h3>Disjunction</h3>
+      <p>
+        The disjunction operator, symbol: \( \lor \), AKA <b>OR</b> is a <i>binary</i> operator; <i>it is true if any of its operands is true</i>.
+        <br><br>
+        We can show the effect of this operator using a table:
+        <style type="text/css">
+          .tg  {border-collapse:collapse;border-spacing:0;}
+          .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg .tg-0lax{text-align:left;vertical-align:top}
+          .floatedTable {
+            float:left;
+          }
+          .inlineTable {
+              display: inline-block;
+          }
+        </style>
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">q</th>
+              <th class="tg-0lax">p&or;q</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">False</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">True</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">True</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">True</td>
+            </tr>
+          </tbody>
+        </table>
+        &nbsp;&nbsp; another view: &nbsp;&nbsp;
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">q</th>              
+              <th class="tg-0lax">p&or;q</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+          </tbody>
+        </table>
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture02/or.png" alt="Disjunction" style="width:20%">
+        <br><br>
+
+        Example: I want a burger or a hotdog.
+        <br>
+        Note: other symbols you might see are: \( p\lor q \text{, } p+ q  \text{, } p\mid q \).
+      </p>
+
+      <br><br>
+
+      <h3>Exclusive Disjunction</h3>
+      <p>
+        The exclusive disjunction operator, symbol: \( \nleftrightarrow \), AKA <b>XOR</b> is a <i>binary</i> operator; <i>it is true if its operands are different</i>.
+        <br><br>
+        We can show the effect of this operator using a table:
+        <style type="text/css">
+          .tg  {border-collapse:collapse;border-spacing:0;}
+          .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg .tg-0lax{text-align:left;vertical-align:top}
+          .floatedTable {
+            float:left;
+          }
+          .inlineTable {
+              display: inline-block;
+          }
+        </style>
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">q</th>
+              <th class="tg-0lax">p\( \nleftrightarrow \)q</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">False</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">True</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">True</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">False</td>
+            </tr>
+          </tbody>
+        </table>
+        &nbsp;&nbsp; another view: &nbsp;&nbsp;
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">q</th>
+              <th class="tg-0lax">p\( \nleftrightarrow \)q</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+          </tbody>
+        </table>
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture02/xor.png" alt="Exclusive Disjunction" style="width:20%">
+        <br><br>
+
+        Example: No equivalent in the english language... or is there? (** suspenseful music **)
+        <br>
+        Note: other symbols you might see are: \( p\oplus q \text{, } p\veebar q  \text{, } p\not\equiv q \).
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Compound Propositions</h2>
+
+      <p>
+        We can combine these building blocks to make arbitrarily complicated propositions:
+        <br><br>
+        \[ (p \wedge ¬q) \lor (\neg p \wedge q) \]
+        <br><br>
+        <span style='color:#06a015'><b><big>Activity 4</big></b></span> [2 minutes]: What is this saying?
+        <br><br>
+      </p>
+
+      <h3>More operators: Implication</h3>
+
+      <p>
+        <b>Implication</b>, symbol \(\rightarrow\), AKA <b>IMPLIES</b>, is a binary operator that states that:
+        <br>
+        <i>IF p is true, then q <b>must also true</b></i>
+        <br><br>
+        We can show the effect of this operator using a table:
+        <br><br>
+        <style type="text/css">
+          .tg  {border-collapse:collapse;border-spacing:0;}
+          .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg .tg-0lax{text-align:left;vertical-align:top}
+          .floatedTable {
+            float:left;
+          }
+          .inlineTable {
+              display: inline-block;
+          }
+        </style>
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">q</th>
+              <th class="tg-0lax">p\( \rightarrow \)q</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax"><span style='color:#ccaa55'>True</span></td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax"><span style='color:#ccaa55'>True</span></td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax"><span style='color:#cc5555'>False</span></td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax"><span style='color:#55cc55'>True</span></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <br><br>
+        Rows 1 and 2, where the <b>antecedent</b> p is False, are called <i>vacuous truths</i>.
+        <br>
+        Example:
+
+        For the implication "For any integer \(x\), if \(x > 5 \rightarrow  x > 3 \)", <br>
+        some of its implications are <i>vacuously true</i>, like when \(x\) is 2, which implies the vacuous truth that
+        <br>
+        if \(2 > 5 \rightarrow  2 > 3 \)
+        <br><br>
+
+        Another example would be:
+        <br>
+        "<b>All the vampires in the world are resistant to moonlight</b>"
+        <br><br>
+        Is (vacuously) True because there are no vampires in the world (I hope).
+        <br>
+        <img class="img-fluid" src="../figures/lecture02/scienceVsVamp.png" alt="Science!" style="width:40%">
+        <br><br>
+        <span style='color:#06a015'><b><big>Activity 5</big></b></span> [2 minutes]: Can you draw the Venn Diagram for this one?
+        <br><br>
+
+        <div class="container mx-lg-5">
+          <span style='color:#888888'>One possible answer: 
+            <details><summary>(Wait; then Click)</summary>
+              <p>
+                <img class="img-fluid" src="../figures/lecture02/implication.png" alt="Implication" style="width:20%">
+              </p>
+            </details>
+          </span>
+        </div>
+      </p>
+
+
+      <h3>More operators: If and only if</h3>
+
+      <p>
+        <b>If and only if</b>, symbol \(\Leftrightarrow\), AKA <b>IFF</b>, is a binary operator that states that:
+        <br>
+        <i>IF p is true, then q <b>must also true</b>, and IF q is true, then p <b>must also true</b>!</i>
+
+        <br><br>
+        We can show the effect of this operator using a table:
+        <br><br>
+        <style type="text/css">
+          .tg  {border-collapse:collapse;border-spacing:0;}
+          .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg .tg-0lax{text-align:left;vertical-align:top}
+          .floatedTable {
+            float:left;
+          }
+          .inlineTable {
+              display: inline-block;
+          }
+        </style>
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">q</th>
+              <th class="tg-0lax">p\( \rightarrow \)q</th>
+              <th class="tg-0lax">p\( \leftarrow \)q</th>
+              <th class="tg-0lax">p\( \Leftrightarrow \)q</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">True</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">False</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">False</td>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">False</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">True</td>
+              <td class="tg-0lax">True</td></td>
+              <td class="tg-0lax">True</td></td>
+              <td class="tg-0lax">True</td>
+            </tr>
+          </tbody>
+        </table>
+        <br><br>
+        <span style='color:#06a015'><b><big>Activity 6</big></b></span> [2 minutes]: Can you draw the Venn Diagram for this one?
+        <br><br>
+        <div class="mx-4">
+          <span style='color:#888888'>If you look at the p, q, and p\( \Leftrightarrow \)q columns, you might see something that looks familiar</span>
+        </div>
+        <br><br>
+
+        <div class="container mx-lg-5">
+          <span style='color:#888888'>One possible answer: 
+            <details><summary>(Wait; then Click)</summary>
+              <p>
+                <img class="img-fluid" src="../figures/lecture02/iff.png" alt="if and only if" style="width:20%">
+              </p>
+            </details>
+          </span>
+        </div>
+      </p>
+
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Inference</h2>
+
+      <p>
+        Inference is the process of obtaining logical consequences from premises.
+        <br><br>
+
+        Let's use an example:
+
+        <div class="mx-4">
+          <img class="img-fluid" src="../figures/lecture02/honk.png" alt="if and only if" style="width:50%">
+        </div>
+        <br><br>
+        <span style='color:#06a015'><b><big>Activity 7</big></b></span> [2 minutes]: What can you infer if you do not hear a honk?
+        <br><br>
+        <span style='color:#888888'> You can we have a driver behind us; 
+          <br>the driver saw the sign;
+          <br>they have a working horn
+          <br>people in this town take bumper stickers seriously
+        </span>
+      </p>
+
+
+      <br><br>
+
+      <h3>Symbolic manipulation</h3>
+
+      <p>
+        For some problems, holding the information in our head and making sense of it is quite hard.
+        <br>
+        Luckily, we have been building a <i>symbolic language</i> that can take the place of "thoughts that make sense so far" so that 
+        <br>
+        we can continue doing our logical computation.
+      </p>
+
+      <br><br>
+
+      <h4>Precedence</h4>
+      <p>
+        We have accumulated some symbols:
+        <ul>
+          <li>parentheses</li>
+          <li>\(\neg\)</li>
+          <li> \( \wedge \)</li>
+          <li>\(\lor\)</li>
+          <li>\(\oplus\)</li>
+          <li>\(\rightarrow\)</li>
+          <li>\(\Leftrightarrow\)</li>
+        </ul>
+        when several of the same operator are in a row (i.e. \(a ∧ b ∧ c\)), evaluate from left to right
+      </p>
+      <br><br>
+
+      <h4>Curious Constructions: Tautology</h4>
+      <p>
+      <br>
+      
+      <span style='color:#06a015'><b><big>Activity 8</big></b></span> [4 minutes]: What can you tell about the following proposition?
+      <br><br>
+      \[ (p \lor q) \wedge (\neg q) \rightarrow p \]
+
+     <!--  p     |     q     |     p ∨ q     |     ¬q      |     (p ∨ q) ∧ (¬q)    |       (p ∨ q) ∧ (¬q) →p -->
+
+
+        <p><b>Answer below</b></p>
+        <div id="passw">
+          <div>
+              <!-- (THE PASSWORD IS true) -->
+              Enter the password to proceed:
+          </div>
+          <div>
+            <input type="password" id="password" onkeydown="if (event.keyCode == 13) document.getElementById('button').click()" /> 
+            <!-- IMPORTANT! this part is so if you click enter, it works. -->
+          </div>
+                    
+          <div>
+            <br/>
+            <input id="button" type="button" value="Reveal" onclick="if (document.getElementById('password').value == 'true') { 
+            document.getElementById('HIDDENDIV').classList.toggle('show');   document.getElementById('passw').style.display='none'; } 
+            else {  alert('Invalid Password!'); password.setSelectionRange(0, password.value.length);   } " />
+          </div>
+            <!-- it will autoselect wrong input if wrong -->
+            <br /><br /><br />
+        </div>
+        <br><br>
+
+        <div id="HIDDENDIV">
+          <style type="text/css">
+            .tg  {border-collapse:collapse;border-spacing:0;}
+            .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+              overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+              font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg .tg-0lax{text-align:left;vertical-align:top}
+          </style>
+          <table class="tg">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">q</th>
+              <th class="tg-0lax">p ∨ q</th>
+              <th class="tg-0lax">¬q</th>
+              <th class="tg-0lax">(p ∨ q) ∧ (¬q)</th>
+              <th class="tg-0lax">(p ∨ q) ∧ (¬q) →p</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tg-0lax">0</td>
+              <td class="tg-0lax">0</td>
+              <td class="tg-0lax">0</td>
+              <td class="tg-0lax">1</td>
+              <td class="tg-0lax">0</td>
+              <td class="tg-0lax">1</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">0</td>
+              <td class="tg-0lax">1</td>
+              <td class="tg-0lax">1</td>
+              <td class="tg-0lax">0</td>
+              <td class="tg-0lax">0</td>
+              <td class="tg-0lax">1</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">1</td>
+              <td class="tg-0lax">0</td>
+              <td class="tg-0lax">1</td>
+              <td class="tg-0lax">1</td>
+              <td class="tg-0lax">1</td>
+              <td class="tg-0lax">1</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">1</td>
+              <td class="tg-0lax">1</td>
+              <td class="tg-0lax">1</td>
+              <td class="tg-0lax">0</td>
+              <td class="tg-0lax">1</td>
+              <td class="tg-0lax">1</td>
+            </tr>
+          </tbody>
+          </table>  
+        </div>
+      </p>
+      <br><br>
+
+       <h4>Curious Constructions: Contradiction</h4>
+      <p>
+      <br>
+      
+      <span style='color:#06a015'><b><big>Activity 9</big></b></span> [1 minute]: What can you tell about the following proposition?
+      <br><br>
+      \[ q \lor \neg q \]
+
+
+      <p><br></p><hr><p><br></p>
+
+
+      <h2>A Convincing Argument</h2>
+      <p>
+        In spoken English we talk of "making a point".
+        <br><br>
+        We usually "grant" said point when the person has made a convincing argument or revealed an unforeseen truth. 
+        <br><br>
+        As we mentioned before, using English leaves you exposed to ambiguity, contradictions, or language artifacts.
+        <br><br>
+        We can create a convincing argument using propositional logic by chaining together a series of boolean statements until we get to the desired conclusion.
+      </p>
+      <br><br>
+
+
+      <h4>A Logic puzzle</h4>
+      <p>
+        Aleks, Benita, Chas, and Dora are quadruplets, and they’ve all been invited to a birthday party. 
+      Unfortunately the quadruplets don’t get along very well: 
+      <ul>
+        <li>If Aleks goes to the party, then Benita will not go. </li>
+        <li>If Chas goes to the party, then Aleks will not go. </li>
+        <li>If Dora goes to the party, then Chas will not go. </li>
+      </ul>
+      <span style='color:#06a015'><b><big>Activity 10</big></b></span> [4 minutes, if we have time]: What is the largest possible number that will go to the party?
+      </p>
+<!-- 
+      (a implies !b) and (c implies !a) and (d implies !c)
+
+      a b c d ((a → ¬b) ∧ ((c → ¬a) ∧ (d → ¬c)))
+      F F F F                 T
+      F F F T                 T
+      F F T F                 T
+      F F T T                 F
+      F T F F                 T
+      F T F T                 T
+      F T T F                 T
+      F T T T                 F
+      T F F F                 T
+      T F F T                 T
+      T F T F                 F
+      T F T T                 F
+      T T F F                 F
+      T T F T                 F
+      T T T F                 F
+      T T T T                 F
+-->
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Proofs</h2>
+
+      <p>
+        We will see a <i>very high-level intro</i> to three types of proofs: 
+          <br>
+          <ul>
+            <li>direct proofs (deduction)</li>
+            <li>proof by contradiction</li>
+            <li>proof by contrapositive</li>
+          </ul>
+      </p>
+      <br><br>
+
+      <h4>Direct proof <a href="https://en.wikipedia.org/wiki/Deductive_reasoning"></a>deduction</h4>
+      <p>
+        To quote Wikipedia: "Deductive reasoning goes in the same direction as that of the conditionals, and links premises with conclusions. If all premises are true, the terms are clear, and the rules of deductive logic are followed, then the conclusion reached is necessarily true."
+        <br><br>
+        Example: 
+        <br>
+        <ul>
+          <li>Yak is the best dog</li>
+          <li>half of all dogs are better than all cats</li> 
+          <li>Therefore: \(Yak is better than all cats\)</li>
+        </ul>
+      </p>
+      <br><br>
+
+      <h4>Proof by <a href="https://en.wikipedia.org/wiki/Proof_by_contradiction"></a>Contradiction</h4>
+      <p>
+        Start by assuming (taking as a true proposition) the opposite of what you wish to prove.
+        <br>
+        Follow the normal rules of propositional logic and if:
+        <ul>
+          <li>You arrive at a valid conclusion: you were wrong</li>
+          <li>You arrive at a contradiction: then the opposite of your initial assumption is true (what you wanted to prove)</li>
+        </ul>
+        <br><br>
+        Example: 
+        <br>
+        Let's say we want to prove that:  "there is no smallest rational number greater than 0"
+        <br>
+        Using proof by contradiction, we say:
+        <ul>
+          <li>"there is a smallest rational number r greater than 0"</li>
+          <li>however, we can make a new number s = r/2 that is >0 since r > 0</li> 
+          <li>Since s < r, and s is a rational number, then r was <b>not</b> the smallest</li>
+          <li>Therefore: "there is no smallest rational number r greater than 0"</li>
+        </ul>
+      </p>
+<!-- 
+      Example B
+      The set of all possible binary strings is infinite
+      Assume the negation: the set of binary strings is finite.
+      Because binary strings can be ordered, there must be a “longest one”. Call this x.
+      Append a 0 to the end of x, and call it x’.
+      x’ is longer than x by one bit, which means it wasn’t the longest one.
+      Contradiction.
+      There isn’t a longest binary string, which means the set of binary strings is infinite.
+ -->
+      <br><br>
+
+      <h4>Proof by <a href="https://en.wikipedia.org/wiki/Proof_by_contrapositive"></a>Contrapositive</h4>
+      <p>
+        If we take an implication proposition as true, there is another proposition we can extract from it by performing some manipulations:
+        <br><br>
+        To obtain the contrapositive of a proposition, we:
+        <ul>
+          <li>negate both terms</li>
+          <li>reverse the direction of inference</li>
+        </ul>
+        So if we have have the proposition \( p \rightarrow q \), then, the steps are:
+        <ul>
+          <li>negate both terms: \( \neg p \rightarrow \neg q \) &nbsp;&nbsp; ---><span style='color:#ff0000'><b>this is not correct...yet!</b></span></li>
+          <li>reverse the direction of inference: \( \neg q \rightarrow \neg p \) &nbsp;&nbsp; ---><span style='color:#00cc00'><b>this is the new proposition!</b></span></li>
+        </ul>
+        <br><br>
+        So, both \( p \rightarrow q \) and \( \neg q \rightarrow \neg p \) are true.
+        <br><br>
+
+        <b>Example</b>: 
+        <br>
+        Let's say we accept that: "For any integer k, if 3k + 1 is even, then k is odd."
+        <br><br>
+        We could represent this symbolically:
+        <ul>
+          <li>\(p\) is "3k + 1 is even"</li>
+          <li>\(q\) is "k is odd"</li>
+          <li>Then the phrase is: \(\forall k \in \mathbb{Z}, \text{ } p \rightarrow q \)</li>
+          <li>Then the contrapositive of the phrase is: \(\forall k \in \mathbb{Z}, \text{ }  \neg q \rightarrow \neg p \)</li>
+          <li>Which translates to: "For any integer k, if k is not odd, then 3k + 1 is not even"</li>
+          <li>OR more clearly: "For any integer k, if k is even, 3k + 1 is odd."</li>
+        </ul>
+        An example of a full proof by contrapositive would  be:
+        <br><br>
+        <i>Proof</i>: We will prove the contrapositive of this claim, i.e. that
+        for any integer k, if k is even, 3k + 1 is odd.
+        So, suppose that k is an integer and k is even. Then, k = 2m for
+        some integer m. Then 3k + 1 = 3(2m) + 1 = 2(3m) + 1. Since m
+        is an integer, so is 3m. So 3k + 1 must be odd, which is what we
+        needed to show.
+        <br><br>
+        <span style='color:#888888'>Example from the University of Illinois Urbana-Champaign, CS173</span>
+      </p>
+      <br>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 11</big></b></span> [4 minutes, if we have time]: 
+        <br>
+        Prove the following statement: "Theorem: For any \(n \in \mathbb{Z}\), if \(n^2\) is even, then \(n\) is even."
+      </p>
+<!-- 
+Proof: By contrapositive; we prove that if n is odd, then n^2 is odd. 
+
+Since n is odd, there is some integer k such that n = 2k + 1. Squaring both sides of this equality and simplifying gives the following: 
+n^2 = (2k + 1)^2 
+n^2 = 4k^2 + 4k + 1 
+n^2 = 2(2k^2 + 2k) + 1. 
+ -->
+
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Logical Errors</h2>
+
+      <p>
+        <span style='color:#06a015'><b><big>Activity 12</big></b></span> [4 minutes, if we have time]: 
+        <br>
+        What is wrong with this statement:
+        <div class="mx-5">
+          If the weather is stormy, we can’t go swimming. 
+          <br>
+          If we can’t go swimming, we won’t go to the beach. 
+          <br>
+          We aren’t at the beach. 
+          <br>
+          Therefore, the weather must be stormy.
+        </div>
+      </p>
+<!--       
+p: the weather is stormy
+q: we are swimming
+r: we are at the beach
+
+P1:  p → ¬q
+P2: ¬q → ¬r
+P3: ¬r → p
+
+we can use transitivity to construct P1-2: p → ¬q → ¬r and say: p → ¬r 
+but the converse ¬r → p is NOT necessarily true.
+ -->
+
+      <br><br>
+
+      <h4>Converse</h4>
+
+      <p>
+        The <b>converse</b> of an implication is is the result of inverting the direction of the implication, so if:
+        <br>
+         \( p \rightarrow q \)
+         <br><br>
+         The converse would be:
+         <br>
+         \( q \rightarrow p \)
+         <br><br>
+         The error would be in believing that just because an implication is true, its converse is too.
+         <br><br>
+         <b>Example</b>:
+         <br>
+         "Petting dogs makes me happy. 
+         <br>
+         "I am happy, therefore I am petting a dog"
+         <br>
+         <span style='color:#888888'>OR (Jordan's example!) "Being happy makes me pet dogs."</span>
+      </p>
+      <br><br>
+
+      <h4>Inverse</h4>
+
+      <p>
+        The <b>inverse</b> of an implication is is the result of inverting (negating) its propositions while maintaining the direction of the implication, so if:
+        <br>
+         \( p \rightarrow q \)
+         <br><br>
+         The inverse would be:
+         <br>
+         \( \neg p \rightarrow \neg q \)
+         <br><br>
+         The error would be in believing that just because an implication is true, its inverse is too.
+         <br><br>
+         <b>Example</b>:
+         <br>
+         "Petting dogs makes me happy. 
+         <br>
+         "I am not petting a dog, therefore I must not be happy"
+      </p>
+
+    
+      <p><br></p><hr><p><br></p>
+
+      <h4>Before next class (Wednesday 09/15)</h4>
+      <br>      
+      <b>[Due for everyone]</b>: Go over any exercises we did not do in class (participation opportunity next class!)
+      <br>
+      <b>[Optional]</b> Think about the following "puzzle":
+      <div class="mx-5">
+        A prosecutor in Logic Court (which is totally a thing) says to the defendant: 
+        <br>
+        "If you committed the crime, then you must have had an accomplice" (this is known). 
+        <br>
+        The defendant hotly denies that the <i>implication</i> is true.
+        <br><br>
+        Therefore, the jury (being apt logicians) convicts the defendant.
+        <br><br>
+        Explain what happened in this story.
+      </div>
+      <br><br>
+
+      <h4>Before next Week's Wednesday 09/22 at 5pm EST</h4>
+      <b>[Due for everyone]</b> <span style='color:#0000ff'><b><big>Problem Set 1</big></b></span> (Moodle)
+      <br><br>
+      <ul>
+        <li>You are encouraged to work together on problem sets</li>
+        <li>Each person submits their own write-up</li>
+        <li>2 pieces of information required for all submissions:</li>
+        <ol>
+          <li>
+            The names of all collaborating students be listed at the top of the submission. If you worked alone, please state: 
+            <br>
+            “I did not collaborate with anyone on this assignment.”
+          </li>
+          <li>
+            A “References” section, with in-line citations to any resources you used. 
+            <br>
+            If you did not use any resources, please state:
+            <br>            
+            “I did not use any external resources in completing this assignment.”
+          </li>
+        </ol>             
+      </ul>
+
+  
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes01.html">Previous Module</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Next Module</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+   
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+<!--     <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script> -->
+  </body>
+</html>

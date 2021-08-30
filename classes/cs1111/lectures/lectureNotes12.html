@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSCI 1111 Introduction to Software Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 1111</h1>
+      <p class="lead">Introduction to Software Development</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <!-- NAVBAR-->
+    <div class="container py-0">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img class="img-fluid mx-auto py-2" src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures<span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>
+                <a class="dropdown-item" href="#">Codio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./lectureNotes11.html">Previous Lecture</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes13.html">Next Lecture</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <p>
+        <hr>
+      </p>
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 12: Intro to Arrays</h1>
+      <p>
+        <br>
+      </p>
+
+      <h2>
+        Objectives
+      </h2>
+
+      <p>
+        By the end of this module, for simple programs with real numbers, you will be able to:
+        <ul>
+          <li> Demonstrate ability to declare unidimensional 
+            arrays and populate them, with integer and doubles.
+          <li> Demonstrate knowledge of array limits, length.
+          <li> Demonstrate simple operations like printing and copying.
+          <li> Demonstrate mental execution and debugging of 
+              array-based programs.
+          <li> Identify new syntactic elements related to the above.
+        </ul>
+
+      </p>
+      
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Before Starting
+      </h2>
+
+      <ul>
+        <li>Read Sections <span style="color: #ff0000; font-weight: bold">12.01 to 12.03</span> in the Codio Course</li>
+      </ul>
+
+      <p>
+        If you do not have your Codio course ready, use any text editor or simple IDE. Some possibilities are:
+      </p>
+      <ul>
+        <li>Write using Sublime; Compile and run in the Terminal</li>
+        <li>Use IDEs like: IntelliJ, DrJava, or JGrasp</li>
+      </ul> 
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Catching Up</h2>
+
+      <p>
+        Before we move forward, let's catch up (complete any remaining work from the previous module)
+        <br>
+        In this case, make sure we've got:
+        <ol>
+          <li>Combining Conditionals (last module) and use of for loops!</li>
+        </ol>
+
+      </p>
+
+
+<p><br></p><hr><p><br></p>
+<!-- SIMHA START -->
+
+
+<h2>
+A group-of-items variable
+</h2>
+
+<p> First, recall our "box" analogy for a variable:
+  <ul>
+  <li> Suppose we declare and assign a value to an <font color="#000000"><tt>int</tt></font> 
+       variable <font color="#000000"><tt>i</tt></font>
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/intexample.png"><p>
+
+  <p><li> The variable is like a "box" that can hold one
+     single integer value at a time.
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/intpicture.png"><p>
+  </ul>
+
+
+
+<p> An array:
+  <ul>
+  <li> The analogy for an <em>array</em>: a "box" that
+       stores a group of related items arranged linearly:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/arraypicture.png"><p>
+
+  <p><Li> The code that created the above:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/arrayexample.png"><p>
+
+  <p><li> Note: the following (which we could do with plain integers) is not allowed in Java:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/arrayexample2.png"><p>
+
+  <p><li> Here is another way of accomplishing the assignment:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/arrayexample3.png"><p>
+    Note: Java uses square brackets for arrays, in three ways.
+     <ol>
+     <li> A <em>declaration</em> can declare an array <em>variable</em>
+             with empty square brackets (nothing in between).
+    <font size="+2">
+    <font color="#000000"><pre>
+    <font color="#888888">int</font><b>[]</b> <font color="#888888"> A = new int [5]</font>
+    </pre></font> </font>
+
+     <li> A number in between the brackets can indicate the size of
+        the array, as in "5" above.
+    <font size="+2">
+    <font color="#000000"><pre>
+    <font color="#888888">int[] A = new int </font><b>[5]</b>
+    </pre></font> </font>
+
+     <li> A number in between can access a particular 
+             element of the array, as in each assignment above.
+    <font size="+2">
+    <font color="#000000"><pre>
+    <font color="#888888">A</font><b>[0]</b> <font color="#888888">= 25;</font>
+    </pre></font> </font>
+     </ol>
+
+  <p><li> Perhaps the most common way of declaring and using arrays looks like this:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/arrayexample4.png"><p>
+
+  <p><li> Next, let's print the elements of the array:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/arrayexample5.png"><p>
+  </ul>
+
+
+
+
+<span style='color:#06a015'><b><big>Activity 1</big></b></span>:
+Modify the above program (<font color="#000000"><tt>MyArrayExample1.java</tt></font>)
+to include a sixth element so that the elements
+in order are: <font color="#000000"><tt>36, 25, 16, 9, 4, 1</tt></font>. Print
+the elements and the array length.
+</font>
+
+
+
+
+<p> Let's look at a few details carefully:
+  <ul>
+  <li> First, the declaration:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/details.png"><p>
+
+       <ul>
+       <li> It starts with the <em>type</em> of value in 
+            each location of the array. Here: <font color="#000000"><tt>int</tt></font>.
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/details2.png"><p>
+       <li> Then the square brackets together.
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/details3.png"><p>
+       <li> Finally, the array variable name. Here it's <font color="#000000"><tt>A</tt></font>.
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &rArr; This is a name we chose.
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/details4.png"><p>
+       </ul>
+
+  <p><li> Next, unlike <font color="#000000"><tt>int</tt></font>'s or <font color="#000000"><tt>double</tt></font>'s,
+          we need to explicitly create space for arrays:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/details5.png"><p>
+      <ul>
+      <li> Uses the reserved word <font color="#000000"><tt>new</tt></font>:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/details6.png"><p>
+      <li> Recall: reserved words are words in the language that can't
+           be used as variable names, method names and the like.
+      <p><li> This is followed by the <em>type</em> (here, <font color="#000000"><tt>int</tt></font>):
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/details7.png"><p>
+      <li> Which is followed by the desired size in square brackets:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/details8.png"><p>
+      <li> Note: the value of the <font color="#000000"><tt>int</tt></font> in <font color="#000000"><tt>n</tt></font> is
+           used for the array size.
+      </ul>
+
+  <p><li> So, when do we use 
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/details9.png"><p>
+     versus
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/details10.png"><p>
+     <ul>
+     <li> Use the latter for small arrays when all the array
+          contents are known ahead of time.
+     <p><li> Use the former in all other cases.
+     </ul>
+
+  <p><Li> The value used to access one of the array locations
+     is called an <em>array index</em>:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/arraypicture2.png"><p>
+    <ul>
+    <li> The first location always has index <font color="#000000"><tt>0</tt></font>.
+    <li> If the size is <font color="#000000"><tt>n</tt></font>, the last index is <font color="#000000"><tt>n-1</tt></font>.
+    <li> An array index is always a non-negative integer between 0
+         and the size of the array minus 1.
+    </ul>
+
+  <p><li> Every array variable has an associated
+     <em>length</em>:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/arraylength.png"><p>
+      <ul>
+      <li> This length is an integer.
+      <li> Note: the length is NOT the last index.
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &rArr; It is one more than the last index.
+      <li> The length will be useful later.
+      </ul>
+
+  <p><li> In the example above, we (laboriously) wrote a println
+    for each array element.
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &rArr; We'd never do this in practice: instead, we'd use a
+    for-loop (see next section).
+  </ul>
+
+
+
+<P> How to read aloud:
+  <ul>
+  <li> When you see
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/reading.png"><p>
+      say to yourself 
+      <ul>
+      <li> Oh, <font color="#000000"><tt>A</tt></font> is an <font color="#000000"><tt>int</tt></font> array.
+      <li> Its space of <font color="#000000"><tt>n</tt></font> elements has been created
+           with the <font color="#000000"><tt>new</tt></font> operator.
+      <li> The values inside
+      of <font color="#000000"><tt>A</tt></font> aren't yet initialized.
+      <li> <font color="#000000"><tt>B</tt></font> is another array
+          fully initialized to 5 values.
+      <li> In the for-loop where i runs from 0 to n, "A's of i" is assigned
+           1 over "B's of i".
+      </ul>
+      
+  <p><li> When you see
+    <font size="+2">
+    <font color="#000000"><pre>
+    A[0] = 25;
+    </pre></font> </font>
+     say to yourself any of the following:
+    <ul>
+    <li> "A zero is assigned 25"
+    <li> "A of zero is assigned 25"
+    <li> "A's of zero is assigned 25" or
+    <li> "A<sub>0</sub> (sub zero) is assigned 25".
+    </ul>
+ 
+  </ul>
+
+
+
+
+<p> Let's now deliberately make a mistake to see what
+happens: we'll use an index that's "out of bounds"
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/arrayexample6.png"><p>
+
+
+
+<span style='color:#06a015'><b><big>Activity 2</big></b></span>:
+Try printing A[6] in <font color="#000000"><tt>MyArrayExample1.java</tt></font>.
+</font>
+
+
+
+
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+Arrays and for-loops
+</h2>
+
+
+
+<p> Arrays go hand-in-hand with for-loops. 
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/forloop.png"><p>
+  <ul>
+  <li> Note that the loop variable is used as the array index:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/forloopvar.png"><p>
+
+  <p><li> Here, the loop variable <font color="#000000"><tt>i</tt></font> takes values
+     <font color="#000000"><tt>0, 1, 2, 3, 4</tt></font> in successive iterations.
+          
+
+  <p><li> For example, in the third iteration
+     <ul>
+     <li> <font color="#000000"><tt>i</tt></font> is <font color="#000000"><tt>2</tt></font>.
+     <li> Therefore, <font color="#000000"><tt>A[2]</tt></font> is given to 
+        <font color="#000000"><tt>System.out.println</tt></font>.
+     <li> The value of <font color="#000000"><tt>A[2]</tt></font> is <font color="#000000"><tt>9</tt></font> (third element).
+     <li> The value printed is therefore <font color="#000000"><tt>9</tt></font>.
+     </ul>
+
+  </ul>
+
+
+
+<p> We can use for-loops for filling in the elements of
+an array, e.g.,
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/forloop2.png"><p>
+  <p><li> Here, we are cleverly using the for-loop variable <font color="#000000"><tt>i</tt></font>
+     for <em>two different purposes</em>:
+     <ul>
+     <li> One is to serially traverse the array (the second for-loop).
+     <lI> The other purpose is to use its value in an arithmetic expression,
+        whose value is eventually stored in the array (first for-loop).
+     </ul>
+
+
+
+<span style='color:#06a015'><b><big>Activity 3</big></b></span>:
+Trace through the first for loop iteration by iteration,
+and draw the entire contents of the array at each step.
+You can use paper and pencil or the Java Visualizer!
+</font>
+
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 4</big></b></span>:
+In a file called <font color="#000000"><tt>MyArrayWithForLoop.java</tt></font>,
+modify the above program 
+to include a sixth element, <font color="#000000"><tt>36</tt></font>.
+</font>
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 5</big></b></span>:
+In a file called <font color="#000000"><tt>MyArrayWithForLoop2.java</tt></font>,
+change the order of elements so that the order is:
+<font color="#000000"><tt>36, 25, 16, 9, 4, 1</tt></font>. That is, the first element
+in the array (<font color="#000000"><tt>A[0]</tt></font>) is <font color="#000000"><tt>36</tt></font>, the second is
+<font color="#000000"><tt>25</tt></font> ... etc. Print the elements.
+</font>
+
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 6</big></b></span>:
+In <font color="#000000"><tt>MyArrayWithForLoop3.java</tt></font>,
+change the printing for-loop 
+from <font color="#000000"><tt>MyArrayWithForLoop.java</tt></font>,
+to print the elements in
+reverse order (starting with <font color="#000000"><tt>A[5]</tt></font>).
+</font>
+
+
+
+<p><br></p><hr><p><br></p>
+<h2>
+Arrays of double's
+</h2>
+
+
+
+Consider the following example:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/doubleexample.png"><p>
+  <ul>
+  <li> Here, we have declared an array variable <font color="#000000"><tt>A</tt></font>
+     for an array of <font color="#000000"><tt>double</tt></font> values:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/doubledetails.png"><p>
+
+  <p><li> And created space for it (5 slots):
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/doubledetails2.png"><p>
+
+  <p><li> Then, we assigned values in a for-loop:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/doubledetails3.png"><p>
+
+  <p><li> And used those values in printing:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/doubledetails4.png"><p>
+  </ul>
+
+
+<span style='color:#06a015'><b><big>Activity 7</big></b></span>:
+In <font color="#000000"><tt>MyDoubleExample.java</tt></font>,
+modify the above code to compute the sum (of the
+first <i>n</i> terms) of the series
+<i>s = 1 + 1/2<sup>2</sup> + 1/3<sup>2</sup> + ... + 1/n<sup>2</sup></i>.
+Then, compute the value <i>6s</i> (6 times <i>s</i>) and find its square root
+using <font color="#000000"><tt>Math.sqrt()</tt></font> (remember?)
+Try this for different and possibly values
+of <i>n</i>, finally submitting your program with <i>n</i> set to 100.
+What do you think the square root of <i>6s</i>
+turns out to be for large <i>n</i>? 
+</font>
+
+
+
+<p><br></p><hr><p><br></p>
+
+
+<h2>
+Default values
+</h2>
+
+
+
+<p> Consider this program:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/defaultexample.png"><p>
+
+
+<span style='color:#06a015'><b><big>Activity 8</big></b></span>:
+What does the above program print? 
+Write it up in 
+<font color="#000000"><tt>DefaultExample.java</tt></font>,
+What do you conclude
+about the default values placed inside an array?
+Is it the same for integer arrays?
+</font>
+
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+Assignment and copying with arrays
+</h2>
+
+
+
+<p> Consider the following program:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/copyexample.png"><p>
+
+  <ul>
+  <li> Here, we have created a second array <font color="#000000"><tt>B</tt></font>:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/copydetails.png"><p>
+
+  <p><Li> Each element is copied one by one:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/copydetails2.png"><p>
+  </ul>
+
+
+
+<span style='color:#06a015'><b><big>Activity 9</big></b></span>:
+Trace through both for-loops
+showing, step-by-step in pictures, how elements get
+copied from one array to the other.
+</font>
+
+<br><br>
+
+
+<h4>Now for something strange</h4>
+<p> Look at this code:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/copyexample2.png"><p>
+
+
+
+<span style='color:#06a015'><b><big>Activity 10</big></b></span>:
+What does the program print? Write it up in 
+<font color="#000000"><tt>CopyExample2.java</tt></font>
+and see.
+Then, draw the box pictures for both arrays and see if that 
+explains the result.
+</font>
+
+
+
+
+
+<p> About array copying and assignment:
+  <ul>
+  <li> Yes, it's a little strange.
+  <p><Li> When array variables are used in direct assignment, as in
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/copydetails3.png"><p>
+     <ul>
+     <li> The variable <font color="#000000"><tt>B</tt></font> gets associated with the
+          same array space as <font color="#000000"><tt>A</tt></font>'s.
+     <LI> We say that "<font color="#000000"><tt>A</tt></font> and <font color="#000000"><tt>B</tt></font> 
+          point to the same array space".
+     </ul>
+
+  <p><Li> This is why <font color="#000000"><tt>B[0]</tt></font> and <font color="#000000"><tt>A[0]</tt></font> are 
+     the same "box".
+
+  <p><Li> This is true for the other slots.
+
+  <p><Li> For example, <font color="#000000"><tt>B[1]</tt></font> and <font color="#000000"><tt>A[1]</tt></font> are 
+     the same "box" too.
+  </ul>
+
+
+
+<span style='color:#06a015'><b><big>Activity 11</big></b></span>:
+Does it work the other way around? 
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/copydetails4.png"><p>
+What gets printed out?
+</font>
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 12</big></b></span>:
+Consider this program:
+    <font size="+1">
+    <font color="#000000"><pre><font color="#888888">
+public class CopyExample3 {
+
+  public static void main (String[] argv)
+  {</font>
+    int n = 5;
+
+    double[] A = new double [n];
+    for (int i=0; i&lt;n; i++) {
+      A[i] = 1.0 / ((i+1)*(i+1));
+    }
+
+    <font color="#dc143c">// What is the value of A[0] here?</font>
+    System.out.println (A[0]);
+
+    <font color="#dc143c">// Something strange:</font>
+    System.out.println (A);
+
+    double[] B = new double [n];
+
+    A = B;
+    <font color="#dc143c">// What is it here?</font>
+    System.out.println (A[0]);
+
+    <font color="#dc143c">// Weirdness once again:</font>
+    System.out.println (A);
+    System.out.println (B);
+  <font color="#888888">}
+
+}</font>
+    </pre></font> </font>
+<!--
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/copyexample3.png"><p>
+-->
+
+<span style='color:#06a015'><b><big>Activity 13</big></b></span>:
+Write this up in <font color="#000000"><tt>CopyExample3.java</tt></font>.
+What gets printed out? Explain the different values of
+<font color="#000000"><tt>A[0]</tt></font>.
+</font>
+
+
+<p><br></p><hr><p><br></p>
+
+
+<h2>
+Explaining the strangeness of arrays: a peek under the hood
+</h2>
+
+
+<p>
+Let's focus on three aspects of arrays that seem to beg
+explanation:
+  <ol>
+  <li> Why do array indices start from 0? 
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &rArr; 
+          That is, why start with <font color="#000000"><tt>A[0]</tt></font>
+          and not
+          <font color="#000000"><tt>A[1]</tt></font>?
+
+  <p><li> How come when one array variable is assigned to another,
+  both seem to affect the same contents?
+    <font size="+2">
+    <font color="#000000"><pre>
+  <font color="#dc143c">// An array A:</font>
+  int[] A = {25, 36, 49, 64};
+  <font color="#dc143c">// An array B:</font>
+  int[] B;
+  <font color="#dc143c">// What appears to be a copy:</font>
+  B = A;
+  <font color="#dc143c">// Prints 25 as expected:</font>
+  System.out.println (B[0]);
+
+  B[3] = 16;
+  System.out.println (A[3]); <font color="#dc143c">// Prints 16 (unexpectedly) </font>
+  <font color="#dc143c">// implying that A[3] has been changed to 16</font>
+
+    </pre></font> </font>
+ 
+  Why exactly, when we set the first entry of 
+          <font color="#000000"><tt>B</tt></font>
+  to 
+          <font color="#000000"><tt>0</tt></font>
+  did the first entry of 
+          <font color="#000000"><tt>A</tt></font>
+  also get set to 
+          <font color="#000000"><tt>0</tt></font>?
+
+  <p><li> What are those strange things printed out when we have
+    <font size="+2">
+    <font color="#000000"><pre>
+  <font color="#dc143c">// Something strange:</font>
+  System.out.println (A);
+    </pre></font> </font>
+
+  </ol>
+
+
+
+To understand why, we're going dig a little deeper:
+  <ul>
+  <li> Remember the "boxes" idea?
+     <ul>
+     <li> Variables like 
+    <font size="+2">
+    <font color="#000000"><pre>
+    int i = 5;
+    </pre></font> </font>
+    have a box in memory. Here, the value 
+          <font color="#000000"><tt>5</tt></font>
+    gets into the box.
+     </ul>
+
+  <p><li> We'll now understand these "boxes" in a little more detail.
+
+  <p><li> Think of a computer's memory as a long list of boxes,
+    where each box has a <em>number</em>:
+    <ul>
+    <li> A box's number is like the number of a apartment mailbox.
+    <li> The numbering starts from 0 and goes up to the size of
+     the memory (which can be quite large).
+    </ul>
+
+  <p><li> Every variable lives somewhere in memory.
+
+
+  <p><li> Let's use this example to further explain:
+    <font size="+2">
+    <font color="#000000"><pre>
+    <font color="#dc143c">// A simple 4-element array of integers:</font>
+    int[] A = {25, 36, 49, 64};
+
+    <font color="#dc143c">// Declare B, assign it A</font>
+    int[] B = A;
+
+    <font color="#dc143c">// Use a for-loop to print B</font>
+    for (int i=0; i&lt;4; i++) {
+        System.out.println (B[i]);
+    }
+
+    <font color="#dc143c">// Modify the 4-th element of B:</font>
+    B[3] = 81;
+
+    <font color="#dc143c">// Print the 4-th element of A:</font>
+    System.out.println (A[3]);          <font color="#dc143c">// Prints 81</font>
+    </pre></font> </font>
+
+
+  <p><li> First, let's examine this conceptual picture of memory:
+     <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/memorypic.png"><p>
+
+  <p><li> Examine the box for 
+          <font color="#000000"><tt>i</tt></font>:
+     <ul>
+     <li> It so happens that this particular time
+         (the Java system determines this) that 
+          the box for 
+          <font color="#000000"><tt>i</tt></font>:
+          is at location 8673.
+     <li> This location can change with every new execution of the
+     program but stays fixed during an execution.
+     <li> When the for-loop executes, this is where the values 
+          <font color="#000000"><tt>0,1,2,3</tt></font>
+          will live, as the iterations proceed.
+     </ul>
+
+  <p><li> Now, the box for 
+          <font color="#000000"><tt>A</tt></font>
+      is a little different:
+      <ul>
+      <li> Inside the box is an <em>address</em> of another box: 1032.
+      <li> If we look at box #1032, we see that that is where the
+       first element of the array
+          <font color="#000000"><tt>25</tt></font>
+       happens to reside.
+      <li> This is no coincidence. It is by design.
+      </ul>
+
+  <p><li> Next, notice that all the array elements of 
+          <font color="#000000"><tt>A</tt></font>
+    are <em>contiguous</em>, one after another.
+    This too is by design.
+
+  <p><li> To access array elements, what really happens under the
+    hood is this:
+    <ul>
+    <li> The first element,
+          <font color="#000000"><tt>A[0]</tt></font>,
+          is at 1032 + 0.
+    <li> The second element,
+          <font color="#000000"><tt>A[1]</tt></font>,
+          is at 1032 + 1.
+    <li> The third element,
+          <font color="#000000"><tt>A[2]</tt></font>,
+          is at 1032 + 2.
+    <li> And so on.
+    <li> We don't do this in our program, but underneath, that
+     is what Java is doing when the program runs.
+    </ul>
+
+  <p><li> In fact, in a for-loop, the i-th element,
+          <font color="#000000"><tt>A[i]</tt></font>,
+      would be found at 1032 + i.
+
+  <p><li> So, the computer "goes" to location 1032 + i
+    to fetch its contents as 
+          <font color="#000000"><tt>A[i]</tt></font>.
+  </ul>
+
+
+Next, let's consider what happens when 
+    <font size="+2">
+    <font color="#000000"><pre>
+        int[] A = {25, 36, 49, 64};
+        int[] B;
+        B = A;
+        System.out.println (B[0]);
+    </pre></font> </font>
+gets executed.
+  <ul>
+  <li> The state of memory is now:
+      <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/memorypic2.png"><p>
+  <p><li> Here, we say "B points to the same place A is pointing to".
+
+  <p><li> That place is the start of the actual array contents (1032
+   in this case).
+
+  <p><li> Thus, when we execute the println
+    <font size="+2">
+    <font color="#000000"><pre><font color="#888888">
+        int[] A = {25, 36, 49, 64};
+        int[] B;
+        B = A;</font>
+        System.out.println (B[0]);
+    </pre></font> </font>
+          <font color="#000000"><tt>B</tt></font>
+   has the value 1032 and so 
+          <font color="#000000"><tt>B[0]</tt></font>
+   refers to the first element, which means 25 gets printed out.
+  </ul>
+
+
+Next, consider what happens next:
+    <font size="+2">
+    <font color="#000000"><pre><font color="#888888">
+        int[] A = {25, 36, 49, 64};
+        int[] B;
+        B = A;
+        System.out.println (B[0]);</font>
+        B[3] = 16;
+        System.out.println (A[3]);
+    </pre></font> </font>
+  <ul>
+  <li> The assignment
+          <font color="#000000"><tt>B[3] = 16</tt></font>
+       changes the 4-element of the array "pointed to" by
+          <font color="#000000"><tt>B</tt></font>.
+
+  <p><li> So, the picture of memory now becomes:
+     <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/memorypic3.png"><p>
+
+  <p><li> Thus, the value in 
+          <font color="#000000"><tt>A[3]</tt></font>
+    is now 16.
+  </ul>
+
+
+
+Lastly, what was that strange output we saw when we executed
+    <font size="+2">
+    <font color="#000000"><pre>
+  <font color="#dc143c">// Something strange:</font>
+  System.out.println (A);
+    </pre></font> </font>
+  <ul>
+  <li> What we see is the <em>address</em> in 
+          <font color="#000000"><tt>A</tt></font>
+     being printed out.
+  <p><li> If the address were actually 1032 (as in our picture)
+     that is what would get printed out.
+
+  <p><li> However, Java's address list is quite large and most
+    addresses have many digits (not four as in 1032).
+
+  <p><li> In fact, it's so large that the decimal system proves
+    inconvenient, which is why <em>hexadecimal</em> numbers (base 16)
+    are used. These have the letters a,b,c,d,e,f in them.
+
+  <p><li> We don't need to understand how "hexadecimal". Just think
+    of those as addresses, like a mailbox address.
+  </ul>
+
+<p><br></p><hr><p><br></p>
+
+<!--
+
+<h2>
+More examples
+</h2>
+
+
+
+<p> Example 1: let's write a program to "rotate" an array:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/rotatepicture.png"><p>
+  <ul>
+  <li> Thus, we want to shift each element into the next position rightwards.
+  <p><li> The last element gets into the first position.
+
+  <p><Li> First, we'll use the help of an additional array to 
+     make this happen:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/rotateexample.png"><p>
+     <ul>
+     <li> We first copied elements <font color="#000000"><tt>A[0],...,A[n-2]</tt></font> into
+          locations ("boxes") <font color="#000000"><tt>B[1], ..., B[n-1]</tt></font>.
+     <li> Then, we copied <font color="#000000"><tt>A[n-1]</tt></font> into <font color="#000000"><tt>B[0]</tt></font>.
+     <Li> The array <font color="#000000"><tt>B</tt></font> is in the desired form.
+     <li> Lastly, we copied all of <font color="#000000"><tt>B</tt></font> into <font color="#000000"><tt>A</tt></font> 
+          so that <font color="#000000"><tt>A</tt></font> has the desired rotation.
+     </ul>
+
+<br><br>
+<span style='color:#06a015'><b><big>Activity 13</big></b></span>:
+Trace each array in each step, showing the contents.
+</font>
+
+
+  <p><li> It is possible to do without an additional array:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/rotateexample2.png"><p>
+  </ul>
+
+
+
+<span style='color:#06a015'><b><big>Activity 14</big></b></span>:
+Trace through the above example (<font color="#000000"><tt>RotateExample2.java</tt></font>)
+by hand to see how it works. Then, also trace through
+the version below and explain why it does not work:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/rotateexample3.png"><p>
+</font>
+
+
+
+
+<p> Next, in the second example, we'll write code to reverse an array:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/reversepicture.png"><p>
+<p> Here's a version that uses an additional
+    array:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/reverseexample.png"><p>
+
+
+<span style='color:#06a015'><b><big>Activity 15</big></b></span>:
+Trace through the program above.
+</font>
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 16</big></b></span>:
+Write code in 
+<font color="#000000"><tt>MyReverseExample.java</tt></font>
+to achieve reversal
+in the same array <font color="#000000"><tt>A</tt></font>,
+without using an extra array like
+<font color="#000000"><tt>B</tt></font>.
+</font>
+
+
+
+<p> Example 3: adding two arrays
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/additionexample.png"><p>
+  <ul>
+  <li> Here, we have added two arrays element-by-element.
+  <p><Li> The resulting values are put into a third array 
+      (<font color="#000000"><tt>C</tt></font>).
+  </ul>
+
+
+<span style='color:#06a015'><b><big>Activity 17</big></b></span>:
+Trace through the program above.
+</font>
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 18</big></b></span>:
+Write a different version
+(in <font color="#000000"><tt>AdditionExample2.java</tt></font>) that
+takes an array <font color="#000000"><tt>A</tt></font> and computes
+the following sum of two arrays, element by element, as in the
+above example. 
+However, in this case, you are to compute the sum (element-by-element)
+of the array <font color="#000000"><tt>A</tt></font> and its reversal, 
+putting the
+result into array <font color="#000000"><tt>B</tt></font>. 
+Do this without using a third array.
+</font>
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 19</big></b></span>:
+Trace through the program below by hand.
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/tracingexercise.png"><p>
+What does it print?
+</font>
+
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 20</big></b></span>:
+Trace through the program below by hand.
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/tracingexercise2.png"><p>
+What does it print?
+</font>
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 21</big></b></span>:
+Trace through the program below by hand.
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/tracingexercise3.png"><p>
+What does it print? 
+<br>
+Look up the definition of 
+<em>factorial</em> somewhere and relate that to 
+the computation above.
+</font>
+
+
+
+
+
+Note: in the exercise above, we learned a few new 
+things about using arrays:
+  <ul>
+  <li> Sometimes, we create one additional slot so that
+     we can use the index <font color="#000000"><tt>A[n]</tt></font> when convenient.
+  <p><li> A for-loop can have other variables that change
+    with the loop besides the loop variable.
+  </ul>
+
+
+
+
+
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+Reading and writing
+</h2>
+
+
+
+
+
+<p> Let's look at an example and how to read the code:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/reading.png"><p>
+  <ul>
+  <li> First, look for the array declaration and identify the 
+       <em>type</em> (e.g, <font color="#000000"><tt>int</tt></font> or <font color="#000000"><tt>double</tt></font> etc):
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/reading2.png"><p>
+      <ul>
+      <li> Say to yourself, "<font color="#000000"><tt>A</tt></font> is an array that holds 
+      <font color="#000000"><tt>double</tt></font>'s".
+      <li> "<font color="#000000"><tt>B</tt></font> is an array that holds 
+      <font color="#000000"><tt>int</tt></font>'s".
+      </ul>
+
+  <p><li> Then, look to see how much space is created:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/reading3.png"><p>
+      <ul>
+      <li> Say to yourself, "<font color="#000000"><tt>A</tt></font>'s size is 5, created
+           using the <font color="#000000"><tt>new</tt></font> operator".
+      <Li> "<font color="#000000"><tt>A</tt></font>'s elements are all initially <font color="#000000"><tt>0</tt></font>".
+      <Li> "<font color="#000000"><tt>B</tt></font>'s size is 5, directly initialized to
+           particular values".
+      </ul>
+
+  <p><Li> Now, check that, when variables are used to access
+     array components (slots), the bounds are right:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/reading4.png"><p>
+  </ul>
+
+
+
+
+<p> Writing:
+  <ul>
+  <Li> Writing the declaration:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/writing.png"><p>
+      <ul>
+      <li> No spaces between either the <em>type</em> (<font color="#000000"><tt>double</tt></font>),
+           nor between the brackets.
+      <li> A single space between the right bracket the array variable
+           name.
+      </ul>
+
+  <p><li> Creating space:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/writing2.png"><p>
+      <ul>
+      <li> A space on either side of the assignment operator, <font color="#000000"><tt>=</tt></font>.
+      <Li> A space on either side of the <font color="#000000"><tt>new</tt></font> reserved word.
+      <li> The space after the <font color="#000000"><tt>double</tt></font> is optional. (Here, we have 
+           a space.)
+      <li> No spaces for the size and brackets.
+      </ul>
+
+  <p><Li> Prefer the use of the <font color="#000000"><tt>new</tt></font> operator except
+      for small-ish arrays whose initial contents are known and fixed.
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/writing3.png"><p>
+
+  <p><li> No spaces when using the values in an array:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/writing4.png"><p>
+
+  </ul>
+
+
+
+<p> Using the array's built-in length. Consider this variation:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/lengthexample.png"><p>
+  <ul>
+  <li> We could either <font color="#000000"><tt>n</tt></font> or the array's length <font color="#000000"><tt>A.length</tt></font>.
+  <p><Li> So, which one should we use?
+     <ul>
+     <li> Generally, when the limit is a mathematically meaningful
+        variable like <font color="#000000"><tt>n</tt></font> above, you can use <font color="#000000"><tt>n</tt></font>.
+     <li> Otherwise, use the array's length.
+     </ul>
+
+  <p><li> Sometimes, using an array's length variable can make
+     a program needlessly verbose. 
+     <ul>
+     <li> For example, here's the array-reversal example using 
+          the length variable:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/lengthexample2.png"><p>
+     </ul>
+  </ul>
+
+
+
+
+<p> Variable names:
+  <ul>
+  <li> Here is the first length example, re-written with 
+       different variable names:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/verbose.png"><p>
+  <p><li> For a program this short, it is probably a bit verbose.
+  <p><li> Notice: we used different names for the loop variables
+       in the two for-loops.
+  </ul>
+
+
+
+
+
+-->
+
+<!-- SIMHA END -->
+
+      
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes11.html">Previous Lecture</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes13.html">Next Lecture</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+      <!--
+    <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script>
+ -->
+  </body>
+</html>

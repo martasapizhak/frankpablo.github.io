@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSCI 1111 Introduction to Software Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 1111</h1>
+      <p class="lead">Introduction to Software Development</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <!-- NAVBAR-->
+    <div class="container py-0">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img class="img-fluid mx-auto py-2" src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures<span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>
+                <a class="dropdown-item" href="#">Codio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./lectureNotes18.html">Previous Lecture</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes20.html">Next Lecture</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <p>
+        <hr>
+      </p>
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 19: Classes and Object-Oriented Design</h1>
+      <p>
+        <br>
+      </p>
+
+      <h2>
+        Objectives
+      </h2>
+
+      <p>
+        By the end of this module, you will be able to:
+        <ul>
+          <li>Allocate, use, and pass objects as arguments.</li>
+          <li>Use null references appropriately.</li>
+          <li>Write classes and use objects.</li>
+          <li>Use constructors to initialize objects.</li>
+        </ul>
+      </p>
+      
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Before Starting
+      </h2>
+
+      <!--
+      <ul>
+        <li>Read Sections <span style="color: #ff0000; font-weight: bold">16.01 to 16.03</span> in the Codio Course</li>
+      </ul>
+    -->
+
+      <p>
+        If you do not have your Codio course ready, use any text editor or simple IDE. Some possibilities are:
+      </p>
+      <ul>
+        <li>Write using Sublime; Compile and run in the Terminal</li>
+        <li>Use IDEs like: IntelliJ, DrJava, or JGrasp</li>
+      </ul> 
+<!--
+      <p><br></p><hr><p><br></p>
+
+      <h2>Catching Up</h2>
+
+      <p>
+        Before we move forward, let's catch up (complete any remaining work from the previous module)
+        <br>
+        In this case, make sure we've got:
+        <ol>
+          <li>One-Dimensional Arrays... Declaring, Initializing, and Accessing!</li>
+        </ol>
+
+      </p>
+-->
+
+<!-- SIMHA START -->
+
+<p><br></p><hr><p><br></p>
+
+
+<h3>A Visualization of the FBUser example:</h3>
+
+<a href="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+FBUser+%7B%0A++private+long+userId%3B%0A++private+String+firstName,+lastName%3B%0A++private+FBUser%5B%5D+friends%3B%0A%0A++public+void+setId(long+id)+%7B%0A++++userId+%3D+id%3B%0A++%7D%0A++public+long+getId()+%7B%0A++++return+userId%3B%0A++%7D%0A++%0A++public+void+setFirst(String+first)+%7B%0A++++firstName+%3D+first%3B%0A++%7D%0A++public+String+getFirst()+%7B%0A++++return+firstName%3B%0A++%7D%0A++%0A++public+void+setLast(String+last)+%7B%0A++++lastName+%3D+last%3B%0A++%7D%0A++public+String+getLast()+%7B%0A++++return+lastName%3B%0A++%7D%0A++%0A++public+void+addFriend(FBUser+other)%7B%0A++++friends+%3D+new+FBUser%5B5%5D%3B%0A++++friends%5B0%5D+%3D+other%3B%0A++++System.out.println+(%22I+%22+%2B+firstName+%2B+%22+%22+%2B+lastName+%0A++++++++++++++++++++++++%2B+%22+am+now+friends+with+%22+%2B+friends%5B0%5D.getFirst())%3B%0A++%7D%0A+++%0A++public+static+void+main+(String%5B%5D+argv)%0A++%7B%0A++++FBUser+user1+%3D+new+FBUser()%3B%0A++++FBUser+user2+%3D+new+FBUser()%3B%0A++++FBUser+user3+%3D+new+FBUser()%3B%0A++++%0A++++user1.setId(1)%3B%0A++++user1.setFirst(%22Pablo%22)%3B%0A++++user1.setLast(%22Frank%22)%3B%0A++++%0A++++user2.setId(2)%3B%0A++++user2.setFirst(%22Yak%22)%3B%0A++++user2.setLast(%22Da+Ripper%22)%3B%0A++++%0A++++user3.setId(2)%3B%0A++++user3.setFirst(%22CuiCui%22)%3B%0A++++user3.setLast(%22Pine%22)%3B%0A++++%0A++++user1.addFriend(user2)%3B%0A++++user2.addFriend(user1)%3B%0A++++user2.addFriend(user3)%3B%0A++++user3.addFriend(user2)%3B%0A++++user1.addFriend(user3)%3B%0A++++user3.addFriend(user1)%3B%0A+++%0A++%7D+%0A%7D&mode=display&curInstr=0"  target="_blank">FBUser Visuailzation</a>
+
+<p><br></p><hr><p><br></p>
+
+
+<h3>Object-Oriented Programming (OOP): Goodbye Static!</h3>
+
+<p>We can now better understand the <font color="black">static</font>
+  keyword.</p>
+<ul>
+  <li><p><font color="black">static</font> data is global, and is
+      shared between all objects of a class. It's like a team name, shared by all players.</p></li>
+  <li><p><font color="black">static</font> methods are not associated
+      with any specific object, thus none of the non-static (object) data can
+      be directly accessed within one.  These methods can access and
+      modify comparably <font color="black">static</font> data in the
+      class.</p></li>
+  <li><p>Non-<font color="black">static</font> (object) data has a separate
+      copy for each object.</p></li>
+  <li><p>Non-<font color="black">static</font> (object) methods can access the
+      global non-<font color="black">static</font> (object) data in the
+      class.  They access and modify versions of that data specific
+      to the <i>current</i> object.</p></li>
+</ul>
+<br><br>
+
+<h4>An Example with static and non-static variables and methods:</h4>
+
+<p><font size="+1" color="#000000"><pre>
+public class StaticExample {
+  private static int staticVar;
+  private int objectVar;
+
+  public static void staticSetVar(int val) {
+    staticVar = val;    
+  }
+  public static int staticGetVar() {
+    return staticVar; 
+  }
+  
+  public void objSetVar(int val) {
+    objectVar = val;
+  }
+  public int objGetVar() {
+    return objectVar; 
+  }
+}
+</pre></font></p>
+
+<p><font size="+1" color="#000000"><pre>
+public class TestStaticExample {
+  public static void main(String[] args) {
+    StaticExample.staticSetVar();
+    System.out.println ( StaticExample.staticGetVar() );
+
+    StaticExample ob1 = new StaticExample();
+    ob1.objSetVar();
+    System.out.println ( ob1.objGetVar() );
+  }
+}
+</pre></font></p>
+
+<b>Visualizing this:</b>
+
+<img class="img-fluid mx-auto py-2" src="../figures/lectureNotes18/StaticExampleSketch.png">
+<br><br>
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 1 [Group Work] (2-minutes)</big></b></span>: 
+Compile and Run the following example.  What errors do you get?  Fix them where possible.
+</font>
+
+
+<p><font size="+1" color="#000000"><pre>
+public class StaticExample2 {
+    private static int staticVar;
+    private int objectVar;
+
+    public void objSetVars() {
+        objectVar = 10;
+        staticSetVars();
+    }
+    public int[] objGetVars() {
+        return new int[]{staticvar, objectVar}; 
+    }
+    public static void staticSetVars() {
+        staticVar = 10;    
+        objSetVars();
+    }
+    public static int[] staticGetVars() {
+        return new int[]{staticvar, objectVar}; 
+    }
+    public static void main(String[] args) {
+        staticSetVars();
+        objSetVars();
+
+        StaticExample v = new StaticExample();
+        v.staticSetVars();
+        v.objSetVars();
+    }
+}
+</pre></font></p>
+
+
+<p><br></p><hr><p><br></p>
+
+
+<h2>
+Null Objects
+</h2>
+
+
+<p><font color="black">null</font> is a valid value for a variable of
+  any non-primitive type.  This includes:</p>
+<ul>
+  <li><p>objects</p></li>
+  <li><p>arrays</p></li>
+  <li><p>Strings</p></li>
+</ul>
+<p><font color="black">null</font> is simply a reference to <b>nothing</b></p>
+<br><br>
+
+<!--
+<span style='color:#06a015'><b><big>Activity 2 [Group Work] (2-minutes)</big></b></span>: 
+Why does <font color="black">null</font> exist?
+-->
+</font>
+
+
+<p><ul>
+    <li><p><font color="black">null</font> is often used to denote "there is
+  no valid object".</p></li>
+    <li><p>It is sometimes returned when an object is expected to denote
+  an error.</p></li>
+    <li><p>Example: What if you try and lookup a facebook user that
+  doesn't exist -- FBUser findUser(String first, String
+  last)?</p></li>
+</ul></p>
+
+<p><font size="+1" color="#000000"><pre>
+public class NullTest {
+    private int n;
+    public int getN() {
+        return n;
+    }
+    public static void main(String[] args) {
+        NullTest nt = null;
+        System.out.println(nt.getN());
+    }
+}
+</pre></font></p>
+
+
+<span style='color:#06a015'><b><big>Activity 2 (2-minutes)</big></b></span>: 
+Execute this program.  What happens when this program is executed?  Why?
+<!--
+-->
+</font>
+<br><br>
+
+
+<span style='color:#06a015'><b><big>Activity 3 (2-minutes)</big></b></span>: 
+What is the default value for variables of a class's type?  Write a small program <b>TestDefault.java</b> to
+  print out the default value of the variable:
+
+  <p><font color="black">FBUser u;</font></p>
+<!--
+-->
+</font>
+
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+Constructors
+</h2>
+
+
+<p>If a class gives the blueprint to create
+  objects, <i>constructors</i> lay the initial foundation for each
+  object.</p>
+
+<p>Constructors are methods that are invoked when a new object is
+  created that are used to initialize the data of the new object.</p>
+
+<p><font color="black">FBUser u = new FBUser();</font></p>
+
+<p></font color="black">new FBUser();</font> invokes the constructor
+      on the newly created object.</p>
+
+<p>The constructor can be <i>overloaded</i> just like any other
+  method:</p>
+
+<p><font color="black">FBUser u = new FBUser("chester", "thecat");</font></p>
+
+<p>What does a constructor look like?  An example:</p>
+
+<p><font size="+1" color="#000000"><pre>
+public class FBUser {
+    private long userId;
+    private String firstName, lastName;
+    private FBUser[] friends;
+
+    public FBUser() {
+        // initialize object's data here
+    }
+    public FBUser(String first, String last) {
+        firstName = first;
+        lastName = last;
+    }
+    public void setId(long id) {
+        userId = id;
+    }
+    public long getId() {
+        return userId;
+    }
+}
+</pre></font></p>
+
+
+<span style='color:#06a015'><b><big>Activity 4 [Group work] (3-minutes)</big></b></span>: 
+Add a print statement to the constructor to see when it is invoked.  
+
+  <p>Initialize the data in the constructor (Id, firstName, lastName). Then add ccode to <b>FBUserTest.java</b> that uses the getters in order to verify it was initialized correctly.</p>
+</font>
+
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+Classy Scope
+</h2>
+
+
+<p>Where is the problem in the following code?</p>
+
+<p><font size="+1" color="#000000"><pre>
+public class FBUser {
+    private long userId;
+    private String firstName, lastName;
+    private FBUser[] friends;
+
+    public FBUser(String firstName, String lastName) {
+        // uh oh...
+    }
+    public void setId(long id) {
+        userId = id;
+    }
+    public long getId() {
+        return userId;
+    }
+}
+</pre></font></p>
+
+Scope works the same with an object's variable as it did for global
+variables:
+
+<ul>
+  <li>A local variable shadows an object's global variable.</li>
+  <li>You can avoid these conflicts by choosing your variable names to
+    be different from global variables.</li>
+  <li>But what if you want to use the same name?</li>
+</ul>
+
+
+<p><font size="+1" color="#000000"><pre>
+public class FBUser {
+    private long userId;
+    private String firstName, lastName;
+    private FBUser[] friends;
+
+    public FBUser(String firstName, String lastName) {
+        <span style='color:#0000cc'>this</span>.firstName = firstName;
+        <span style='color:#0000cc'>this</span>.lastName = lastName;
+    }
+    public void setId(long id) {
+        userId = id;
+    }
+    public long getId() {
+        return userId;
+    }
+}
+</pre></font></p>
+
+<p>
+<ul>
+  <li><span style='color:#0000cc'>this</span> is a new keyword that denotes
+    "the current object".</li>
+  <li>Thus, <span style='color:#0000cc'>this</span>.firstName references the
+  object's <font color="black">firstName</font> variable, not the
+  method argument, or a local variable.</li>
+  <li>The <i>type</i> of <font color="black">this</font> is the type
+  of the object: <font color="black">FBUser</font>, in this case.
+</ul>
+</p>
+
+
+<p><font color="black">this</font> is, generically, a variable that
+  references the "current" object.</p>
+
+<p>If a method takes a <font color="black">FBUser</font> argument, or
+  a variable holds a <font color="black">FBUser</font>,
+  <span style='color:#0000cc'>this</span> can be used.
+
+<p><font size="+1" color="#000000"><pre>
+public class FBUser {
+    private long userId;
+    private String firstName, lastName;
+    private FBUser[] friends;
+
+    public FBUser() {
+        friends    = new FBUser[10];
+        friends[0] = this;
+    }
+}
+</pre></font></p>
+
+<b>Note the usefulness of the cocnstructor to initialize reference types inside the object! This gets done only once at the creation of the object.</b>
+
+<!--  -->
+<!--  -->
+<!-- <h2> -->
+<!-- Accessors/Mutators or Getters/Setters -->
+<!-- </h2> -->
+<!-- </font> -->
+<!--  -->
+
+<!-- Encapsulation means that we want to control all operations that are -->
+<!-- done on our data, and provide an API to  -->
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 5 [Group work] (3-minutes)</big></b></span>: 
+Add a method to your FBUser class:
+
+  <p><font color="black">void addFriend(FBUser friend)</font></p>
+
+  <p>However, add a check that will prevent a FBUser from adding
+    itself to its own friend list.  In the main, this undesirable
+    action might be done with: </p>
+
+  <p><font color="black"><pre>
+  FBUser user = new FBUser();
+  user.addFriend(user);</pre></font></p>
+</font>
+
+
+<span style='color:#06a015'><b><big>Activity 6 [Group work] (3-minutes)</big></b></span>: 
+Add a method to your FBUser class:
+
+  <p><font color="black">void addAsFriend(FBUser otherUser)</font></p>
+
+  <p>This method adds the current FBUser as a friend in
+  the <font color="black">otherUser</font>.</p>
+</font>
+
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+Zombies.  Objectified Zombies.  Yeeeees.
+</h2>
+
+
+<p>Zombies...</p>
+<ul>
+  <li><p>Eat brains of humans.</p></li>
+  <li><p>Turn bit humans into zombies.</p></li>
+  <li><p>Can be killed by humans.</p></li>
+</ul>
+
+<p>Humans...</p>
+<ul>
+  <li><p>Shoot zombies in the brain (so much with the brains!).</p></li>
+  <li><p>Fight other humans, and might kill them. (Why so mean?)</p></li>
+  <li><p>Are turned into zombies when bit.</p></li>
+  <li><p>Have names.</p></li>
+</ul>
+
+
+<span style='color:#06a015'><b><big>Activity 7 (Asynchronous)</big></b></span>: 
+
+<ol>
+  <li>Make a Person class, and a ZombiesMain class.  The latter has
+      the main that will use the Person class.</li>
+  <li>Each Person object is either a human or a zombie.</li>
+  <li>If a Person object is a human, it has a name.</li>
+  <li>Humans can shoot Person objects.</li>
+  <li>Zombies can bite humans, which turns them into a
+  zombie.</li>
+  <li>Person objects created with constructors with no arguments
+      are zombies.</li>
+</ol>
+
+Your job is to define a set of methods and data for the Person class
+that will tell a story when each of the humans and zombies take
+actions.  All of your data in the Person class must be private.  Be
+creative!!!  A possible story line follows:
+
+<p><font size="+1" color="#000000"><pre>
+Person joe  = new Person("Joe");
+Person bob  = new Person("Bob");
+Person jane = new Person("Jane");
+Person z    = new Person();
+
+System.out.println(Person.numHumans() + " humans vs. " + Person.numZombies() + " zombies.");
+z.bite(bob); // poor bob
+bob.bite(z); // confused zombie
+Person derpbie = bob;
+derpbie.bite(derpbie); // this is getting ridiculous
+System.out.println(Person.numHumans() + " humans vs. " + Person.numZombies() + " zombies.");
+
+jane.shoot(z);    // humans FTW!
+jane.shoot(joe);  // wait...what?
+jane.shoot(jane); // oh...oh no.
+System.out.println(Person.numHumans() + " humans vs. " + Person.numZombies() + " zombies.");
+
+while (true) {
+    derpbie.bite(derpbie); // bored zombie is bored
+}
+</pre></font></p>
+
+An example execution of this program would be:
+
+<font size="+1" color="#000000"><pre>
+Joe, ready for action!
+Bob, ready for action!
+Jane, ready for action!
+...mmmm, brains.  Oh noes, a zombie!
+3 humans vs. 1 zombies.
+Bob is gnawed on by a zombie.
+The zombie formerly known as Bob bites a zombie, like an idiot.
+The zombie formerly known as Bob is hungry...and remembers he has an arm.  Nomnomnomnom.
+...etc...
+</pre></font>
+
+</font>
+
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+OO Design
+</h2>
+
+
+<p>Why does Object-Oriented Programming (OOP) exist?</p>
+
+<ul>
+  <li><p>Why is it useful?  Why use OOP instead of making all code and
+      data static?</p></li>
+  <li><p>Come up with two examples where it has utility.</p></li>
+</ul>
+
+
+<span style='color:#06a015'><b><big>Activity 8 (Asynchronous)</big></b></span>: 
+Imagine you wanted to write a card game platform to support playing many different card
+  games.
+
+  <p>Design a set of classes and objects to describe cards for the
+  card game "War".  Write "prototype" classes that include the
+  classes, data in the classes, and methods, but do not provide an
+  implementation of the methods.
+    <ul>
+      <li>What methods would you use?</li>
+      <li>What data would each object contain?</li>
+      <li>How would the objects be related? Which objects contain
+  which other objects?</li>
+      <li>How are objects initialized, and related to other
+  objects?</li>
+    </ul>
+  </p>
+</font>
+
+
+A fundamental goal of object oriented design is <i>reuse</i>.
+<ul>
+  <li><p>Code written for one situation should be, within reason,
+      reusable in other situations</p></li>
+  <li><p>Writing fairly generic classes enables this.</p></li>
+  <li><p>It is important to <i>design</i> your classes before writing
+      your code.  I've been doing this for you in homeworks.</p>
+</ul>
+
+
+<span style='color:#06a015'><b><big>Activity 9 (Asynchronous)</big></b></span>: <p>
+  Take your design from the previous Exercise.  </p>
+
+  <ul>
+    <li>How easy is it to modify it to implement the five-card-stud
+      variant of poker?</li>
+    <li>How about blackjack?</li>
+  </ul>
+
+  <p>Redesign your objects so that many of them can be reused between
+  games</p>
+
+  <p>Other factors to consider:
+    <ul>
+      <li>We want to implement an online card game site where many
+  people can be playing games at the same time.  Do we need to
+  more classes and relationships between objects to support
+  <i>multiple concurrent games</i>?</li>
+      <li>Take care in designing how cards move from various
+      locations (deck, board, hand).</li>
+      <li>Also take care in designing how decisions on who wins in the
+  various games are made.</li>
+    </ul>
+  </p>
+</font>
+
+<!-- SIMHA END -->
+
+      
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes18.html">Previous Lecture</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes20.html">Next Lecture</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+      <!--
+    <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script>
+ -->
+  </body>
+</html>

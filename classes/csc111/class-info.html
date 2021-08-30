@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../images/pabloFaceIcon.png">
+    <title>CSC 111  Introduction to Computer Science Through Programming</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <!-- <img class="float-right" src="../../images/gw_primary_logo.png" alt="GWU" height="160"> -->
+      <img class="float-right" src="../../images/SmithLogoStack-cmyk.png" alt="SmithLogo" height="120">
+      <h1 class="display-3 m-0">CSC 111</h1>
+      <p class="lead">Introduction to Computer Science Through Programming</p>
+      <p class="lead">Smith Computer Science </p>
+    </div>
+
+    <div class="container py-0"><!-- was 1-->
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img src="../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="./class-info.html">Class Info <span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./schedule.html">Schedule and Lectures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">TBD 1</a>
+                <a class="dropdown-item" href="#">TBD 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project (if any)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Discord</a>
+                <a class="dropdown-item" href="#">Moodle</a>
+                <a class="dropdown-item" href="#">Repl.it</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-8">
+        <h1>Class Information</h1>
+
+         <p><br></p>
+<!--
+        <h3>Latest Announcements</h3>
+        <p>Important notes from Moodle will also be placed here</p>
+
+         <div class="card bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-header">Placeholder</div>
+          <div class="card-body">
+            <h5 class="card-title">Welcome to CSC111</h5>
+            <p class="card-text">
+              <br>
+              Remind Pablo to talk about Office Hours!
+              <br>
+            </p>
+          </div>
+        </div>  
+
+        <p></p><hr><p></p>
+-->
+        <h3>Information</h3>
+        <p>These sections contain information about how the class is run</p>
+
+        <!-- Acordion Extra -->
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-light btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Class and Office Hours Schedule(<i>click to expand</i>)
+                </button>
+              </h2>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                  <b>Professor</b>: Pablo Frank Bolton (pfrank at smith)
+                  <br>
+                  <strong>Research interests</strong>: <i>Human-Robot Interaction, Robotic Perception, STEM education
+                  </i>
+                  <br>
+                  <b>Class Schedule</b>: 
+                  <ul>
+                    <li>Monday, Wednesday, Friday (Sec 03) 9:25 – 10:40 Ford 342</li>
+                  </ul>                  
+                  <br>
+                  <strong>Contact for Class stuff</strong>: Use <i>Discord</i> first (see Course Materials), otherwise, go to office hours if possible. If you must, you can also email me.
+                  <br><br>
+
+                  <a id="office_hours"><strong>Office Hours</strong></a>: 
+                  <ul>
+                    <li>
+                      Mondays (Ford 316, 5 - 6 pm): "Thematic" office hours as a group (we'll discuss concepts or examples for general cases).
+                    </li>
+                    <li>
+                      Thursdays (class Discord, 8 - 9 pm): Individual/Teams by appointment. Book an appointment <a href="#">Here (TBD)</a>
+                    </li>
+                  </ul>
+                  <!--Make appointment here: <a href="https://calendar.google.com/calendar/selfsched?sstoken=UUlfYmlBRU85cFg5fGRlZmF1bHR8NzFiZTgxODcyMjczYjgzNTBjMTVhM2RlODBmN2MwYTg">Book Appointment</a>.-->
+                  
+                  <b>Office Hour Rules</b>: 
+                  <ul>
+                    <!--
+                    <li>You can book one appointment per week AND you can only book one for the <b>current</b> week.</li>
+                    <li>Make sure that you can attend. Otherwise, cancel the appointment ASAP.</li>
+                    <li>You can invite others to your time (group of any size)</li>
+                  -->
+                    <li><b>Thematic Office Hours</b> (Ford 316, Mondays 5 - 6 pm):
+                      <ul>
+                        <li>
+                          Focused on concepts and high-level issues, not on individual issues with your code. Otherwise, book a individual office hours or ask the TAs.
+                        </li>
+                        <li>
+                           You can come with a group, or by yourself, and we'll discuss 3 or 4 different themes that are relevant to everyone.
+                        </li>
+                        <li>
+                          You can suggest the themes using Discord, by requesting them after class, or when you arrive at OHs.
+                        </li>
+                      </ul> 
+                    </li>
+
+                   <!--  <li>
+                      <b>Individual Office Hours</b> (Wednesdays 5 - 6 pm) :
+                      <ul>
+                        <li>
+                          We'll have 10-minute appointments that you can book <a href="#">Here (TBD)</a>. Please book a single slot/week and don't book more than a week in advance.
+                        </li>
+                        <li>
+                          Have your question(s) and all materials ready so that when we look at your screen, we can quickly see the problem. I recommend writing down the questions. Yoou might find the answer just by having to phrase the question correctly. 
+                        </li>
+                      </ul>
+                    </li> -->
+
+                    <li>
+                      <b>Online Office Hours</b> (class Discord, Thursdays 8 - 9 pm):
+                      <ul>
+                        <li>We'll meet through Discord and do Individual/Team questions in breakout rooms.</li> 
+                        <li>We'll have "10-minute" meetings but you can come early to try to sneak in before.</li>
+                        <li>If all appointments are taken, do still come in and I'll try to see you or establish a text exchange</li>
+                        <li>Have your question(s) ready and all materials ready so that when you share your screen we can quickly see the problem.</li>
+                        <li>Let me know through a direct Discord message if you'll arrive late.</li>
+                        <li>If nobody shows up after 20 minutes and I have no appointments, I will leave.</li>                        
+                      </ul>
+                    </li>
+
+                    
+                  </ul>
+                  <br>                  
+
+
+                  <b>TAs:</b>
+                  TBD
+                  Office Hours: Check Moodle                
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-light btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Objectives and Structure (<i>click to expand</i>)
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                  <b>Objectives</b> - In completing this class, students will...
+                </p>
+                <ul>
+                  <li>
+                    Demonstrate familiarity with key concepts in a procedural programming language such as: variables, data types, control structures, methods, input and output.
+                  </li>
+                  <li>
+                    Demonstrate the ability to use programming to solve problems appropriate to a beginning class in programming and software development.
+                  </li>
+                  <li>
+                    Acquire familiarity with rudimentary processes of software development that include: design, coding, testing, and debugging.
+                  </li>
+                </ul>      
+
+                <p>
+                  <b>Class Structure</b> - What type of work do we do and when do we do it?
+                  <br>
+                  <p class="mx-lg-3">
+                    We will meet three times a week and we'll try to map subjects to weeks. Every day has a different "style" but we'll generally try to keep the following schedule:
+                  </p>
+                  
+                </p>
+                <ul>
+                  <li>
+                    Mondays are about familiarizing ourselves with new ideas trying out simple examples.
+                  </li>
+                  <li>
+                    Wednesdays are about exploring the subject using exercises and practical problems. 
+                  </li>
+                  <li>
+                    Friday is about answering lingering questions and special cases, and for completing in-class labs.
+                  </li>
+                </ul>  
+
+                <p>
+                  <b>Assignments</b> - When and what are they about?
+                  <br>
+                  
+                </p>
+                <ul>
+                  <li>
+                    We will generally assign a Homework every Wednesday evening; If the subject is more complex, we won't release the HW until Friday.
+                  </li>
+                  <li>
+                    Homework assignments will be due on Tuesday evenings. Note that you will have the Thursday and following Monday office hours to seek support.
+                  </li>
+                  <li>
+                    For more complex subjects (HWs issued on a Friday), HWs will be due the following Friday.
+                  </li>
+                </ul>      
+
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-light btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Prerequisites and Student Responsibilities (<i>click to expand</i>)
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                  <b>Prerequisites</b>:
+                </p>
+
+                <ul>
+                  <li>
+                    None! All are welcome and capable.
+                  </li>
+                </ul>
+
+                <p>
+                  <b>Responsibilities</b> - Students must
+                </p>
+                <ul>
+                  <li>
+                    Attend all classes unless you are sick or there is an emergency. In these cases, please contact the professor.
+                  </li>
+                  <li>
+                    Interact, ask questions, and generally participate in class discussions. <!-- Participation is a graded part of the course. -->
+                  </li>
+                  <li>
+                    Complete the assigned preliminary readings and activities before each lecture.
+                  </li>
+                  <li>
+                    Complete programming problems individually unless working in a group as specified on the assignment in which case you can work only with those group members. We do plagiarism detection so don't throw the course away.
+                  </li>
+                  <li>
+                    When working with a group, it is essential that each group member pull their own, but also that other group members let them do so!
+                  </li>
+                </ul>
+                <p>
+                  <b>Course Philosophies</b>
+                </p>
+                <p class="px-4">
+                  Throughout the class, students should focus on adhering to the following general tenets: 
+                </p>
+                <ul>
+                  <li>
+                    Try it! -- A common question is "will this work", or "what will happen in this case". The only reasonable answer is "try it and see!" Your system will not blow up if you program incorrectly, and it is <i>essential</i> to learn to harness trial and error as one of the most effective ways to learn programming.
+                  </li>
+                  <li>
+                    Know your sources, and use them! -- The <a href="https://docs.python.org/3/"> Python (3.9.6) documentation</a> is invaluable to find utility methods to use. The syntax of Python is documented well in your ZyBook, and in online tutorials. Learn to use your sources productively to help to make progress.
+                  </li>
+                  <li>
+                    Be proud of your code! -- Properly indent it, simplify it where you can to make it more understandable, and comment it where appropriate. You're taking part in an art that most often is shared, and it matters if others can understand your code!
+                  </li>
+                  <li>
+                    Planning is the best debugging! -- You should never jump into code before thinking about it thoroughly. Design your programs by breaking them into independently implementable chunks, and write + debug them one by one.
+                  </li>
+                  <li>
+                    Practice methodical debugging! -- Spend time "stepping though" your program, statement by statement to understand the logic behind it, and why it is ending up in a buggy state. Do _not_ take a program that doesn't work, and modify smaller parts of it until it works. Understand why it doesn't work, and use that knowledge to change or even rewrite your program!
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h2 class="mb-0">
+                <button class="btn btn-light btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Course Materials (<i>click to expand</i>)
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+              <div class="card-body">
+                <ul>
+                  <li>Webpage for the course (here) <a href="./class-info.html"> Class Info</a></li>
+                  <li>Moodle: Course full name "CSC111-03: Introduction to Computer Science Through Programming" <br>
+                  Course Short name "CSC111-03_202201"; Category: Fall 2021 </li>
+                  <li>
+                      Repl.it: <br>
+                       Repl.it is a cloud based platform that allows the creation, assigning, completion, testing, and grading (manual or automatic) of programming assignments. You need to register for it (you'll receive an invitation from the instructor) so you can complete readings, exercises, and assignments.
+
+                  </li>
+                  <li>Discord: You'll receive an invitation to the server: <b>smith-f21-csc111-03</b></li>                  
+                  <li> For a detailed view of the Lectures and Activities, go to <a href="./schedule.html">Schedule</a> </li>
+                </ul>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingFive">
+              <h2 class="mb-0">
+                <button class="btn btn-light btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Grading (<i>click to expand</i>)
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                  <b>Grade Calculation</b>:
+                </p>
+                <ul>
+                  <li>Prep Readings and Exercises (ZyBook) :  <b>10%</b></li>
+                  <!-- <li>Labs:                         <b>20%</b></li> -->
+                  <li>Homework Assignments:                   <b>40%</b></li>
+                  <li>Midterm Exam/Assignment:                <b>15%</b></li>
+                  <li>Final Exam/Assignment:                  <b>15%</b></li>
+                  <li>Final Project:                          <b>20%</b></li>  
+                </ul>
+                <p>
+                  <b>Late Submissions</b>:
+                </p>
+                <p class="px-4">
+                  I will not accept any late submissions. <br>
+                  There will be enough assignments to make up for a missed prep activity or homework and still do well (but try not to miss anything).
+                  <br><br>
+
+                <!-- <p>
+                  For this semester only, we will give partial credit for small HW assignments and projects (not for prep readings and exercises). The partial credit will be:
+                </p>
+                <ul>
+                  <li>One day late: -20%</li>
+                  <li>Two days late: -40%</li>
+                  <li>After two days, no assignment will be graded.</li>
+                </ul> -->
+
+                  Submitting 1 second late is the same as a full day late. Plan ahead and submit early.
+                </p>
+
+                <p>
+                  <b>Collaborations</b>:
+                </p>
+                <p class="px-4">
+                  You can work on Homework assignments in <b>teams of 2</b> if and only if you satisfy the following conditions:
+                  <ol>
+                    <li>You submit code with a comment block at the top indicating which two students worked on the assignment.</li>
+                    <li>Both members of the team will <i>demo</i> the assignment to me (2-minute demo) during online office hours.</li>
+                  </ol>
+                </p> 
+                <p class="px-4">
+                  You can work on the final project on <b>teams of a maximum of 3</b>, and you must follow the same conditions as for the homework assignments.
+                </p>
+                <br><br>
+
+                  <b>Prep Activities</b>: 
+                  <p class="px-4">
+                  Prep activities are readings and exercises that must be completed in ZyBooks BEFORE the designated Lectures. These will be graded in the following way:
+                  <ul>
+                    <li>Completeness  [80%]: You get 80/100 simply by completing the activity before the designated time.</li>
+                    <li>Correctness   [20%]: The score you obtain in the activity (%) will constitute the remaining 20% of the prep activity grade.</li>
+                  </ul>
+                </p>
+
+                <br><br>
+
+                <b>Grade Pie</b>
+                <p><img class="img-fluid" src="./figures/GradePie.png"  style="width:80%"><p>
+
+                 <br><br>
+                 
+                 <p>
+                  <b>Accommodations</b>:                  
+                </p>
+                <p class="px-4">
+                  As individuals, we learn in different ways. I try to vary the activities used during the course to suit a variety of learning patterns, and I am always open for suggestions. Please come talk to me if you have an idea that will make the course more accessible to you and/or other students. If you need special accommodation, like extended exam time, please submit requests for accommodations in writing with proof of College support from the Office of Disabilities Service within the first two weeks of class. Let me know if you need help with this process.
+                </p> 
+                
+
+
+                <!-- <hr>
+                <p>
+                  <b>Notes on Grading during COVID-19</b>:
+                </p>
+                <p>
+                  COVID-19 has caused several changes to how we run the class.
+                </p>
+                <br>
+                <p class="px-4">
+                  Participation instead of Attendance:
+                </p>
+                <p class="px-5">
+                  In lieu of attendance, we will be keeping track of in-class and in-lab (synchronous) participation <b>or</b> your participation using asynchronous methods (Piazza, Office-Hours, Codio exercises). 
+                </p>
+                <p class="px-4">
+                  Synchronous vs Asynchronous Materials:
+                </p>
+                <p class="px-5">
+                  During COVID-19, some students might not be able to attend synchronously because of their timezone or their available technology. 
+                </p>
+                <p class="px-5">
+                  If you will not be able to attend (any) lectures and/or labs, you need to register as a fully-asynchronous student with the instructor (send me a detailed explanation using a private message on Piazza). If you miss few synchronous lectures (one or two) then you don't need to do this.
+                </p>
+                <p class="px-5">                  
+                  We will offer asynchronous options that need to be completed in a timely manner. 
+                  For these students, we will have a different way of counting participation:
+                </p>
+                <ul class="px-5">
+                  <li>You will be asked to participate in asynchronous team discussions using Piazza.</li>
+                  <li>If asked to, you will be required to attend office hours.</li>
+                  <li>You might be asked to complete oral interviews where you explain concepts or code, or do live coding. </li>
+                  <li>You might be asked to submit video recordings where you explain a concept, explain your code, or present a diagram. </li>
+                </ul> -->
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingSix">
+              <h2 class="mb-0">
+                <button class="btn btn-light btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    Academic Honesty (<i>click to expand</i>)
+                </button>
+              </h2>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                  Team assignments require collaboration amidst each team, but no collaboration between teams is permitted. 
+                  If you did not work in a team then you are not allowed to collaborate on the homework assignments. We use software to compare submissions, so please don't risk it. If you're having significant trouble with an assignment, please contact me. 
+                  <!-- Please refer to the academic integrity policy linked from the course web page. This policy will be strictly enforced. -->
+                  <br><br>
+                  Please check the <a href="https://www.smith.edu/about-smith/offices/student-affairs/student-handbook">Student Handbook</a> to see the rules for Academic Integrity.
+                </p>
+                <p>
+                  Just as you can do a google search for code online, it is trivial for us to do the same. If you feel pressured about an assignment, please come see me instead of cheating.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingSeven">
+              <h2 class="mb-0">
+                <button class="btn btn-light btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    Academic and Mental Health Resources (<i>click to expand</i>)
+                </button>
+              </h2>
+            </div>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                  The following are resources available to you that may provide assistance and support during the semester.
+                  <br>
+                  They provide help for learning, mental health, and wellness.
+                  <br><br>
+
+                  <b>Learning resources</b>:
+                  <ul>
+                    <li><a href="https://www.smith.edu/qlc/index.html"></a>Spinelli Center for Quantitative Learning </li>
+                    <li><a href="https://www.smith.edu/academics/jacobson-center">Jacobson Center for Writing, Teaching, and Learning</a></li>
+                    <li><a href="https://libguides.smith.edu/prf.php?account_id=14436">Teaching, Learning and Research Librarians</a></li>            
+                  </ul>
+
+                  <b>Mental Health and Wellness resources</b>:
+                  <ul>
+                    <li><a href="https://www.smith.edu/student-life/health-wellness/counseling-services/crisis-resources">Crisis Resources</a></li>
+                    <li><a href="https://www.smith.edu/student-life/health-wellness/counseling-services">Counseling Services</a></li>
+                    <li><a href="https://www.smith.edu/student-life/health-wellness/wellness-services">Wellness</a></li>           
+                  </ul>
+
+                  <b>Additional support resources</b>:
+                  <ul>
+                    <li><a href="https://www.smith.edu/about-smith/equity-inclusion/gender-identity-expression">Gender Identity and Expression Resources</a></li>
+                    <li><a href="https://smith.ethicspoint.com/">Report sexual misconduct and other forms of discrimination</a></li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingEight">
+              <h2 class="mb-0">
+                <button class="btn btn-light btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    Anonymous Feedback Form (<i>click to expand</i>)
+                </button>
+              </h2>
+            </div>
+            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                  We will add a link inside Moodle to an anonymous feedback form so you can let us know if there is anything getting in the way of your learning.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- END Acordion Extra-->
+
+        <p>
+          <h4>Acknowledgement</h4>
+
+          Some of the materials used in this course are derived from lectures, notes, or similar courses taught at this (thanks, Alicia, Joe, and Jordan) and other institutions. Appropriate references will be included on all such material.
+        </p>
+        
+
+      
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script>
+      $('#my-link').click(function(e) {
+          $('#collapseOne').collapse('show');       
+      });
+    </script>
+  </body>
+</html>

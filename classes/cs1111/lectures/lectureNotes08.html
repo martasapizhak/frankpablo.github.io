@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSCI 1111 Introduction to Software Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 1111</h1>
+      <p class="lead">Introduction to Software Development</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <!-- NAVBAR-->
+    <div class="container py-0">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures<span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>
+                <a class="dropdown-item" href="#">Codio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./lectureNotes07.html">Previous Lecture</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes09.html">Next Lecture</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <p>
+        <hr>
+      </p>
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 08: Chars (ASCII), Strings, and the String API</h1>
+      <p>
+        <br>
+      </p>
+
+
+      <h2>
+        Objectives
+      </h2>
+      <p>
+        By the end of this module, for simple HelloWorld-like
+      programs, you will be able to:
+        <ul>
+          <Li> Distinguish between characters and strings.
+          <li> Write simple code that works with characters and strings.
+          <li> Identify some syntax errors related to characters and strings.
+          <li> Have some stress relieving fun after that long integer module.
+        </ul>
+      </p>
+      
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Before Starting
+      </h2>
+
+      <ul>
+        <li>Read Sections <span style="color: #ff0000; font-weight: bold">8.01 to 8.03</span> in the Codio Course</li>
+      </ul>
+
+      <p>
+        If you do not have your Codio course ready, use any text editor or simple IDE. Some possibilities are:
+      </p>
+      <ul>
+        <li>Write using Sublime; Compile and run in the Terminal</li>
+        <li>Use IDEs like: IntelliJ, DrJava, or JGrasp</li>
+      </ul> 
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Catching Up</h2>
+
+      <p>
+        Before we move forward, let's catch up (complete any remaining work from the previous module)
+        <br>
+        In this case, make sure we've got:
+        <ol>
+          <li>Nested loops. Reading and writing! avoid initialization errors and bugs relating to the iterations.</li>
+        </ol>
+
+      </p>
+
+
+<p><br></p><hr><p><br></p>
+
+<!-- SIMHA START -->
+
+<h2>
+Characters vs strings
+</h2>
+
+
+
+<p> About <em>character</em>s:
+  <ul>
+  <li> The term <em>character</em> is used to mean:
+     <ul>
+     <li> Letters like 
+       <font color="#000000"><tt>a, b, X, Y</tt></font>.
+     <li> Symbols like
+       <font color="#000000"><tt>#, $, @, !</tt></font>.
+     </ul>
+  <p><li> Each character is a single symbol.
+  <p><li> The reserved word 
+    <span style="color: #33cc33; font-weight: bold"><tt>char</tt></span>
+       <!--<font color="#000000"><tt>char</tt></font>-->
+       is used to declare variables that hold such values.
+
+  <p><li> Pronounce 
+       <span style="color: #33cc33; font-weight: bold"><tt>char</tt></span>
+       <!--<font color="#000000"><tt>char</tt></font>-->
+       as the English word <em>char</em>, rhyming with "far".
+  </ul>
+
+<p> For example:
+    <!--<font size="+2">-->
+    <font color="#000000"><pre>
+<font color="#888888">
+public class CharExample {
+
+  public static void main (String[] argv) 
+  {</font>
+    char first = 'o';
+    char second = 'y';
+    char third = '!';
+    System.out.print (first);
+    System.out.print (second);
+    System.out.println (third);<font color="#888888">
+  }
+
+}
+</font>
+    </pre></font> </font>
+In this example:
+  <ul>
+  <li> The reserved word 
+       <font color="#000000"><tt>char</tt></font>
+       is used to declare the variable
+       <font color="#000000"><tt>first</tt></font>
+    <font size="+1">
+    <font color="#000000"><pre>
+  <b>char</b> first = 'o';
+    </pre></font>
+    </font>
+
+  <p><li> Single quotes delineate an actual character:
+    <font size="+1">
+    <font color="#000000"><pre>
+  char first = <b>'o'</b>;
+    </pre></font>
+    </font>
+  </ul>
+
+
+<span style='color:#06a015'><b><big>Activity 1</big></b></span>:
+In a file called
+       <font color="#000000"><tt>MyCharExample.java</tt></font>
+write up a similar example with different characters
+(expressing surprise).
+</font>
+
+<br><br>
+
+A <span style="color: #33cc33; font-weight: bold"><big><tt>String</tt></big></span>, on the other hand, has
+zero or more characters.
+
+<p> About strings:
+  <ul>
+  <li> Strings are declared using 
+       <span style="color: #33cc33; font-weight: bold"><big><tt>String</tt></big></span>
+       as in 
+    <font size="+1">
+    <font color="#000000"><pre>
+  <b>String</b> s = "meh";
+    </pre></font>
+    </font>
+
+  <li> Strings used double-quotes for delineation.
+  <p><li> Examples:
+       <font color="#000000"><tt>"meh"</tt></font>,
+       <font color="#000000"><tt>"yada yada"</tt></font>,
+       <font color="#000000"><tt>"Alfred E. Neumann"</tt></font>,
+       <font color="#000000"><tt>"The quick brown fox jumps over the
+       lazy dog"</tt></font>
+       
+  <p><li> It is possible to declare and use an empty string, as in:
+    <font size="+1">
+    <font color="#000000"><pre>
+  String s = <b>""</b>;
+    </pre></font>
+    </font>
+  </ul>
+
+<p>
+We'll look at some string examples further below.
+
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+Character examples
+</h2>
+
+
+
+<font color="#000000"><tt>char</tt></font>
+variables can be used in a for-loop, as in:
+    <!--<font size="+2">-->
+    <font color="#000000"><pre>
+<font color="#888888">
+public class CharExample2 {
+
+  public static void main (String[] argv) 
+  {</font>
+    for (char ch='a'; ch <= 'z'; ch++) {
+      System.out.print (ch);
+    }
+    System.out.println ();<font color="#888888">
+  }
+
+}
+</font>
+    </pre></font>
+    </font>
+
+
+<span style='color:#06a015'><b><big>Activity 2</big></b></span>:
+In a file called
+       <font color="#000000"><tt>MyCharExample2.java</tt></font>
+modify the above to print the letters in reverse order,
+from z to a.
+</font>
+
+<br><br>
+
+<h5>Characters and ASCII</h5>
+
+Characters are represented as integers in the machine.
+
+<p>
+It is often useful to work with the integer representation,
+and to go back and forth between representations. 
+<br><br>
+For example:
+    <!--<font size="+2">-->
+    <font color="#000000"><pre>
+<font color="#888888">
+public class CharExample3 {
+
+  public static void main (String[] argv) 
+  {</font>
+    <font color="#dc143c">// A typical char:</font>
+    char first = 'a';            
+
+    <font color="#dc143c">// Now extract the int representation:</font>
+    int i = (int) first;               
+    System.out.println (i);
+
+    <font color="#dc143c">// Perform integer arithmetic:</font>
+    int j = i+2;                 
+
+    <font color="#dc143c">// Convert (or cast) back to char:</font>
+    char third = (char) j;
+
+    <font color="#dc143c">// Print as char:</font>
+    System.out.println (third);<font color="#888888">
+  }
+
+}
+</font></pre></font> </font>
+
+
+<span style='color:#06a015'><b><big>Activity 3</big></b></span>:
+Write up, compile and execute the above program.
+</font>
+<br><br>
+
+Note:
+  <ul>
+  <li> The conversion from one <em>type</em> of variable (say,
+       <font color="#000000"><tt>int</tt></font>)
+       to another type (say, 
+       <font color="#000000"><tt>char</tt></font>)
+       is called <em>casting</em>.
+  <p><li> You would say "I'm casting a char into an int".
+
+  <p><li> The syntax is to have the target type in parens on the
+     right side of the assignment symbol:
+    <font size="+1">
+    <font color="#000000"><pre>
+  char third = <b>(char)</b> j;
+    </pre></font>
+    </font>
+
+  <p><li> In some cases, we don't explicitly need to cast. We could
+  have written
+    <font size="+1">
+    <font color="#000000"><pre>
+  <font color="#dc143c">// Going from char to int:</font>
+  int i = first;               
+    </pre></font>
+    </font>
+
+  <p><li> As a general <em>stylistic rule</em>, it's best to 
+    specify a cast even if not explictly required.
+     
+  <p><li> Why, then, does the compiler allow some casts without 
+    programmer intention stated explicitly?
+    <ul>
+    <li> It's considered safe to go from more specific to more general.
+    <li> All 
+       <font color="#000000"><tt>char</tt></font>'s
+        are
+       <font color="#000000"><tt>int</tt></font>'s
+    <li> But not the other way around.
+    <li> Thus, there are some integers that have no 
+       <font color="#000000"><tt>char</tt></font>
+       equivalent.
+    <li> The compiler then wants you to say "I know what I'm doing"
+      by explicitly stating the cast.
+    </ul>
+
+  </ul>
+
+
+
+
+<b>Important</b> digression:
+  <ul>
+  <li> We've learned a really important concept: <em>type</em>.
+  <p><li> That is, variables have a property called <em>type</em>.
+
+  <p><li> So far, we've seen integer, double, boolean, String, and character types.
+
+  <p><li> As it will turn out, every variable must have a type.
+
+  <p><li> There are strict rules in going back and forth between
+    types.
+
+  <p><li> These rules are very useful in helping programmers avoid
+    mistakes.
+
+  <p><li> For example, without "types" you could accidentally use
+    an int for 3.141 and have that incorrectly represented as 3.
+
+  <p><li> In a later module we will encounter a deeper understanding
+    of "types".
+  </ul>
+
+<p> OK, back to characters.
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 4</big></b></span>:
+In a file called
+       <font color="#000000"><tt>MyCharExample3.java</tt></font>
+write code to identify the integer values for 
+the capital letters 'A' to 'Z'. What are the characters
+represented by the integers 97 through 122?
+</font>
+
+<p><br></p><hr><p><br></p>
+
+
+<h2>
+Strings
+</h2>
+
+
+
+<p>
+Let's look at an illustrative example:
+    <!--<font size="+2">-->
+    <font color="#000000"><pre>
+<font color="#888888">
+public class StringExample {
+
+  public static void main (String[] argv) 
+  {</font>
+    <font color="#dc143c">// Declare a string variable and assign it an actual string:</font>
+    String s = "The quick brown fox jumps over the lazy dog";
+    System.out.println (s);
+
+    <font color="#dc143c">// Extract its length:</font>
+    int k = s.length ();
+    System.out.println (k);     <font color="#dc143c">// 43. Includes spaces.</font>
+
+    <font color="#dc143c">// You can identify any character in the string, such as:</font>
+    char c = s.charAt(0);
+    System.out.println (c);     <font color="#dc143c">// Prints 'T'.</font>
+
+    <font color="#dc143c">// The very useful concatenation operator +</font>
+    String s1 = "The";
+    String s2 = "quick";
+    String s3 = s1 + s2;        <font color="#dc143c">// s3 is "Thequick"</font>
+
+    <font color="#dc143c">// You can concatenate any number of strings in an expression:</font>
+    String s4 = "brown";
+    String s5 = s1 + " " + s2 + " " + s4;
+    System.out.println (s5);
+
+    <font color="#dc143c">// You can concatenate any other type:</font>
+    String allLetters = "";
+    for (char ch='a'; ch<='z'; ch++) {
+      allLetters = allLetters + ch;
+    }
+    System.out.println ("The alphabet: " + allLetters);
+
+    <font color="#dc143c">// Example with concatenating integers onto a string:</font>
+    String num1to10 = "";
+    for (int i=1; i<=10; i++) {
+      num1to10 = num1to10 + " " + i;
+    }
+    System.out.println ("Numbers 1 to 10: " + num1to10);
+
+    <font color="#dc143c">// Example with a BUG when concatenating integers onto a string:</font>
+    String num11to20 = "";
+    num11to20 = num11to20 + (11 + 12 + 14 + 15 +16 +17 +18 + 19 + 20);
+    System.out.println ("Numbers 11 to 20: " + num11to20);<font color="#888888">  
+  }
+
+}
+</font> </pre></font> </font>
+
+
+<span style='color:#06a015'><b><big>Activity 5</big></b></span>: 
+Write up the above program, compile and execute.
+</font>
+<br><br>
+
+Now let's understand the code:
+  <ul>
+  <li> First, the declaration using (with cap 'S') 
+       <font color="#000000"><tt>String</tt></font>
+    <font size="+1">
+    <font color="#000000"><pre>
+  String s = "The quick brown fox jumps over the lazy dog";
+    </pre></font>
+    </font>
+
+  <p><li> The variable is called 
+       <font color="#000000"><tt>s</tt></font>
+    and value of this variable is 
+       <font color="#000000"><tt>"The quick brown fox jumps over the lazy dog"</tt></font>.
+
+  <p><li> Now for something strange:
+    <font size="+1">
+    <font color="#000000"><pre>
+  int k = s.length ();
+    </pre></font>
+    </font>
+    It is possible to call a <em>method</em>, seemingly attached to 
+    the string itself.
+
+  <p><li> There are, it turns out, many such methods. Example:
+    <font size="+1">
+    <font color="#000000"><pre>
+  char c = s.charAt(0);
+    </pre></font>
+    </font>
+    This method even takes an integer argument (parameter)
+    like 
+       <font color="#000000"><tt>0</tt></font>.
+
+  <p><li> One of the most useful ways to combine strings is to 
+    <em>concatenate</em> (join) them using the 
+       <font color="#000000"><tt>+</tt></font>.
+    operator.
+    <font size="+1">
+    <font color="#000000"><pre>
+  String s5 = s1 + " " + s2 + " " + s4;
+    </pre></font>
+    </font>
+
+  <p><li> This is the same "plus" operator we used for integers.
+   It's doing double-duty as concatenation operator for strings.
+
+  <p><li> You can concatenate all kinds of things into strings.
+
+  <p><li> For example, integers:
+    <font size="+1">
+    <font color="#000000"><pre>
+  num1to10 = num1to10 + " " + i;
+    </pre></font>
+    </font>
+   Here, it's worth pointing out, 
+       <font color="#000000"><tt>num1to10</tt></font>
+   is a string variable but
+       <font color="#000000"><tt>i</tt></font>
+   is an integer variable.
+
+  <p><li> At long last, we can make output more friendly.
+
+  <p><li> Thus, instead of just printing
+    <font size="+1">
+    <font color="#000000"><pre>
+  System.out.println (allLetters);
+    </pre></font>
+    </font>
+  we print
+    <font size="+1">
+    <font color="#000000"><pre>
+  System.out.println ("The alphabet: " + allLetters);
+    </pre></font>
+    </font>
+
+  <p><li> Lastly, be careful when concatenating numbers to strings.
+
+    <font size="+1">
+    <font color="#000000"><pre>
+  num11to20 = num11to20 + (11 + 12 + 14 + 15 +16 +17 +18 + 19 + 20);
+    </pre></font>
+    </font>
+    That treats the first <b>+</b> as concatenation but the <b>+</b> inside the parenthesis as addition.
+  </ul>
+
+
+
+
+Strings can contain the escape characters we saw earlier in 
+<a href="./lectureNotes02.html">Lecture Notes 02</a>.
+
+<p> Example:
+    <!--<font size="+2">-->
+    <font color="#000000"><pre>
+<font color="#888888">
+public class StringExample2 {
+
+  public static void main (String[] argv) 
+  {</font>
+    String s = "";
+    
+    int last = 5;
+    for (int i=1; i<=last; i++) {
+      for (int j=1; j<=i; j++) {
+        s = s + "*";
+      }
+      s = s + "\n";
+    }
+    System.out.println ("A triangle with base=" + last + ":\n" + s);<font color="#888888">
+  }
+
+}
+</font>  </pre></font>  </font>
+
+
+<span style='color:#06a015'><b><big>Activity 6</big></b></span>: 
+Write up the above program, compile and execute. Change
+the base of the triangle to 10.
+</font>
+<br><br>
+
+
+<span style='color:#06a015'><b><big>Activity 7</big></b></span>:
+Trace the execution of the above program, showing how
+the string 
+<font color="#000000"><tt>s</tt></font>
+changes.
+
+</font>
+<br><br>
+
+Note:
+  <ul>
+  <li> Note that we inserted the "new line" symbol
+       <font color="#000000"><tt>\n</tt></font>
+   in two places.
+
+  <p><li> Once here:
+    <font size="+1">
+    <font color="#000000"><pre>
+    s = s + <b>"\n"</b>;
+    </pre></font>
+    </font>
+    and once here:
+    <font size="+1">
+    <font color="#000000"><pre>
+  System.out.println ("A triangle with base=" + last + ":<b>\n"</b> + s);
+    </pre></font>
+    </font>
+
+  </ul>
+
+
+It is convenient to use the short-cut version of "concatenation 
+to the same variable". Thus,
+instead of 
+    <font size="+1">
+    <font color="#000000"><pre>
+      <font color="#dc143c">// Concatenate to s and assign to s:</font>
+      s = s + "\n";
+    </pre></font>
+    </font>
+write
+    <font size="+1">
+    <font color="#000000"><pre>
+      <font color="#dc143c">// Short-cut version:</font>
+      s += "\n";
+    </pre></font>
+    </font>
+
+
+<span style='color:#06a015'><b><big>Activity 8</big></b></span>:
+In
+       <font color="#000000"><tt>MyStringExample2.java</tt></font>
+rewrite the above program (for base=10)
+using the short-cut version.
+</font>
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 9</big></b></span>:
+Consider this snippet of code:
+    <font size="+2">
+    <font color="#000000"><pre>
+    int q = 5;
+
+    System.out.println (q);
+    System.out.println ("q");
+    System.out.println ('q');
+
+    String s = "q";
+    char c = 'q';
+    </pre></font>  </font>
+What gets printed? Ponder about the differences between the three.
+</font>
+
+<p><br></p><hr><p><br></p>
+<!--
+
+<h2>
+Fun with strings
+</h2>
+
+
+
+<p> 
+We will occasionally introduce programs we've written to 
+both simplify your programming and yet allow for interesting
+examples.
+
+<p> If all we did was compute with integers, it would be boring.
+
+<p> You've already seen one example of such a tool:
+       <font color="#000000"><tt>DrawTool</tt></font>.
+
+<p> We'll now use 
+       <font color="#000000"><tt>WordTool</tt></font>,
+another tool that you will use by calling appropriate
+methods.
+
+<p> You are welcome and are encouraged to "look inside" by skimming
+over the code in any tool.
+
+<p> Let's start with an example:
+
+    <font color="#000000"><pre>
+<font color="#888888">
+public class RandomSentence {
+
+  public static void main (String[] argv) 
+  {</font>
+    <font color="#dc143c">//Get some random parts of speech:</font>
+    String adj = WordTool.getRandomAdjective ();
+    String noun = WordTool.getRandomNoun ();
+    String noun2 = WordTool.getRandomNoun ();
+    String verb = WordTool.getRandomVerb ();
+    String prep = WordTool.getRandomPreposition ();
+
+    <font color="#dc143c">// We'll try and make it past tense.</font>
+    verb = verb + "ed";
+
+    <font color="#dc143c">// Build a sentence.</font>
+    String sentence = "The " + adj + " " + noun + " " + verb + " " + prep + " a " + noun2;
+
+    <font color="#dc143c">// Print.</font>
+    System.out.println (sentence);<font color="#888888">
+  }
+
+}
+</font>  </pre></font>  </font>
+
+
+<b>6.13 Exercise</b>: 
+Write up the above program. You will also need to download
+both <b><a href="../useful/WordTool.java">WordTool.java</a></b>
+and 
+<b><a href="../useful/wordsWithPOSAndPron.txt">wordsWithPOSAndPron.txt</a></b>
+into the same directory as your code.
+Execute the code at least 10 times if not more.
+What's your favorite sentence?
+</font>
+
+
+
+<b>6.14 Exercise</b>: 
+Improve on the above program by writing your version
+of a random sentence in
+       <font color="#000000"><tt>MyRandomSentence.java</tt></font>,
+You can call methods to give you random conjunctions, 
+adverbs and other parts of speech.
+</font>
+
+<p><br></p><hr><p><br></p>
+
+-->
+
+
+
+<h2>
+Input from the terminal
+</h2>
+
+<p>
+  As we've seen before, we can use additional Java tools to force the program to wait until a user types input into the terminal.
+  <br><br>
+  The following is code is simillar to programs we've used before:
+</p>
+<!--
+<font color="#000000"><pre><font color="#000000">
+<font color="#dc143c">import java.util.Scanner; </font><font color="#bb7755">// Import the Scanner class</font>
+
+public class ScanAndParse
+{
+  public static void main(String args[]) 
+  {
+    <font color="#bb7755">// Prints prompt for user:</font>
+    System.out.println ("Give me a number and then press Enter: ");
+    
+    <font color="#bb7755">// Scanning code starts here</font>
+    <font color="#dc143c">Scanner myScanner = new Scanner (System.in);</font>
+    <font color="#dc143c">String s = myScanner.nextLine ();</font>
+    <font color="#bb7755">// Scanning code ends here</font>
+    
+    <font color="#bb7755">// Input conversion to Double starts here</font>
+    <font color="#bb00bb">double sAsDouble = Double.parseDouble(s);</font>
+    <font color="#bb7755">// Input conversion to Double ends here</font>
+       
+    System.out.println ("The number is: ");
+    System.out.println (sAsDouble);        
+  }
+}
+</font> </pre></font> </font>
+-->
+<div  class="container m-5">
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></td><td><pre style="margin: 0; line-height: 125%"><font color="#000000"><pre><font color="#000000">
+
+  <span style="color: #AA22FF; font-weight: bold">import</span> java.util.Scanner;<font color="#bb7755">  // Import the Scanner class</font>
+
+  <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">class</span> <span style="color: #0000FF">ScanAndParse</span>
+  <span style="color: #666666">{</span>
+    <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">static</span> <span style="color: #00BB00; font-weight: bold">void</span> <span style="color: #00A000">main</span><span style="color: #666666">(</span>String args<span style="color: #666666">[])</span>     
+    <span style="color: #666666">{</span>
+      <font color="#bb7755">// Prints prompt for user:</font>
+      System.out.println ("Give me a number and then press Enter: ");
+      
+      <font color="#bb7755">// Scanning code starts here</font>
+      <font color="#dc143c">Scanner myScanner = new Scanner (System.in);</font>
+      <font color="#dc143c">String s = myScanner.nextLine ();</font>
+      <font color="#bb7755">// Scanning code ends here</font>
+      
+      <font color="#bb7755">// Input conversion to Double starts here</font>
+      <font color="#bb00bb">double sAsDouble = Double.parseDouble(s);</font>
+      <font color="#bb7755">// Input conversion to Double ends here</font>
+         
+      System.out.println ("The number is: ");
+      System.out.println (sAsDouble);        
+    <span style="color: #666666">}</span>
+  <span style="color: #666666">}</span>  
+  </pre></td></tr></table></div>
+
+</div>
+
+
+<p>
+  These two things and the way they are written, will be explained in detail in a future module, but for now, here is a brief description of what is going on:
+<br><br>
+  <ul>
+    <li> <b></b> Scanner is like a <b></b> type. If we make one object of that type, it can be used to scan input from somewhere.</li>
+    <li>To be allowed to declare tha type, we need to tell Java where the description of what it does is located in the computer (line 1).</li>
+    <li>We create an object of type Scanner and initialize it so that ir reads from the terminal (line 11).</li>
+    <li>We read whatever is placed into the terminal into a string (line 12). The program will wait to run this line until it detects, fro the terminak, a newline ("Enter").</li>
+    <li>We use the expression <font color="#000000"><tt>Double.parseDouble(s)</tt></font> to resolve whatever is inside <font color="#000000"><tt>s</tt></font> into a double and we store it inside the variable <font color="#000000"><tt>sAsDouble</tt></font> (line 16).</li>
+  </ul>
+</p>
+
+<p><br></p><hr><p><br></p>
+
+
+<h2>
+The String API
+</h2>
+
+<p>
+  API means Application Programming Interface. It is a set of rules that people can interact with (Interface) for those people who wish to use a certain tool to create (Program) a Service (Application) of some sort. 
+  <br><br>
+  Another way of calling it would be: <b>rules for using our tool to program a service</b>.
+  <br><br>
+  Strings are tools that someone else made and that other people can use as long as they know how to declare, initialize, and access their methods.
+  <br><br>
+  In the next module, we'll use the <b>String API</b> to manipulate Strings in a more powerful way, which will include:
+
+  <ul>
+    <li>extracting the String's length</li>
+    <li>comparing Strings for equality or for alphabetic sorting</li>
+    <li>searching them for characters or substrings</li>
+    <li>extracting characters at specific positions</li>
+    <li>extracting substrings between specific positions</li>
+    <li>...and many more</li>
+  </ul>
+</p>
+
+
+<!-- SIMHA END -->
+
+      
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes07.html">Previous Lecture</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes09.html">Next Lecture</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+      <!--
+    <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script>
+ -->
+  </body>
+</html>

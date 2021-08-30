@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSCI 1111 Introduction to Software Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 1111</h1>
+      <p class="lead">Introduction to Software Development</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <!-- NAVBAR-->
+    <div class="container py-0">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img class="img-fluid mx-auto py-2" src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures<span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>
+                <a class="dropdown-item" href="#">Codio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./lectureNotes12.html">Previous Lecture</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes14.html">Next Lecture</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <p>
+        <hr>
+      </p>
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 13: More about 1-D Arrays</h1>
+      <p>
+        <br>
+      </p>
+
+      <h2>
+        Objectives
+      </h2>
+
+      <p>
+        <ul>
+          <li>Construct programs that manipulate arrays using loops </li>
+          <li>Identify the key mechanisms to traverse and manipulate arrays without loss of data</li>
+          <li>Distinguish the ways in which to traverse/access arrays using loops</li>
+          <li>Demonstrate how to trace through an array manipulation using a table</li>
+          <li>Identify and correct errors and bugs in the design of 1-D array exercises</li>
+        </ul>
+
+      </p>
+      
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Before Starting
+      </h2>
+
+      <ul>
+        <li>Read Sections <span style="color: #ff0000; font-weight: bold">13.01 to 13.03</span> in the Codio Course</li>
+      </ul>
+
+      <p>
+        If you do not have your Codio course ready, use any text editor or simple IDE. Some possibilities are:
+      </p>
+      <ul>
+        <li>Write using Sublime; Compile and run in the Terminal</li>
+        <li>Use IDEs like: IntelliJ, DrJava, or JGrasp</li>
+      </ul> 
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Catching Up</h2>
+
+      <p>
+        Before we move forward, let's catch up (complete any remaining work from the previous module)
+        <br>
+        In this case, make sure we've got:
+        <ol>
+          <li>One-Dimensional Arrays... Declaring, Initializing, and Accessing!</li>
+        </ol>
+
+      </p>
+
+
+<p><br></p><hr><p><br></p>
+
+
+<!-- SIMHA START -->
+
+
+<h2>
+More examples
+</h2>
+
+
+
+<p> Example 1: let's write a program to "rotate" an array:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/rotatepicture.png"><p>
+  <ul>
+  <li> Thus, we want to shift each element into the next position rightwards.
+  <p><li> The last element gets into the first position.
+
+  <p><Li> First, we'll use the help of an additional array to 
+     make this happen:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/rotateexample.png"><p>
+     <ul>
+     <li> We first copied elements <font color="#000000"><tt>A[0],...,A[n-2]</tt></font> into
+          locations ("boxes") <font color="#000000"><tt>B[1], ..., B[n-1]</tt></font>.
+     <li> Then, we copied <font color="#000000"><tt>A[n-1]</tt></font> into <font color="#000000"><tt>B[0]</tt></font>.
+     <Li> The array <font color="#000000"><tt>B</tt></font> is in the desired form.
+     <li> Lastly, we copied all of <font color="#000000"><tt>B</tt></font> into <font color="#000000"><tt>A</tt></font> 
+          so that <font color="#000000"><tt>A</tt></font> has the desired rotation.
+     </ul>
+
+<br><br>
+<span style='color:#06a015'><b><big>Activity 1</big></b></span>:
+Trace each array in each step, showing the contents. Use a table!! (columns should focus on important variables, like iterators, array contents, and indices)
+</font>
+
+
+  <p><li> It is possible to do without an additional array:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/rotateexample2.png"><p>
+  </ul>
+
+
+
+<span style='color:#06a015'><b><big>Activity 2</big></b></span>:
+Trace through the above example (<font color="#000000"><tt>RotateExample2.java</tt></font>)
+by hand to see how it works. Then, also trace through
+the version below and explain why it does not work:
+<br><br>
+
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/rotateexample3.png"><p>
+</font>
+
+<br><br>
+
+<h4>Reversing!</h4>
+
+
+<p> Next, in the second example, we'll write code to reverse an array:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/reversepicture.png"><p>
+<p> Here's a version that uses an additional
+    array:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/reverseexample.png"><p>
+
+
+<span style='color:#06a015'><b><big>Activity 3</big></b></span>:
+Trace through the program above by hand!! (use a table!).
+</font>
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 4</big></b></span>:
+Write code in 
+<font color="#000000"><tt>MyReverseExample.java</tt></font>
+to achieve reversal
+in the same array <font color="#000000"><tt>A</tt></font>,
+without using an extra array like
+<font color="#000000"><tt>B</tt></font>.
+</font>
+
+<br><br>
+<h4>Adding!</h4>
+
+<p> Example 3: adding two arrays
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/additionexample.png"><p>
+  <ul>
+  <li> Here, we have added two arrays element-by-element.
+  <p><Li> The resulting values are put into a third array 
+      (<font color="#000000"><tt>C</tt></font>).
+  </ul>
+
+
+<span style='color:#06a015'><b><big>Activity 5</big></b></span>:
+Trace through the program above (use a table!).
+</font>
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 6</big></b></span>:
+Write a different version
+(in <font color="#000000"><tt>AdditionExample2.java</tt></font>) that
+takes an array <font color="#000000"><tt>A</tt></font> and computes
+the following sum of two arrays, element by element, as in the
+above example. 
+However, in this case, you are to compute the sum (element-by-element)
+of the array <font color="#000000"><tt>A</tt></font> and its reversal, 
+putting the
+result into array <font color="#000000"><tt>B</tt></font>. 
+Do this without using a third array.
+</font>
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 7</big></b></span>:
+Trace through the program below by hand.
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/tracingexercise.png"><p>
+What does it print?
+</font>
+
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 8</big></b></span>:
+Trace through the program below by hand.
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/tracingexercise2.png"><p>
+What does it print?
+</font>
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 9</big></b></span>:
+Trace through the program below by hand.
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/tracingexercise3.png"><p>
+What does it print? 
+
+<br><br>
+Look up the definition of 
+<em>factorial</em> somewhere and relate that to 
+the computation above.
+</font>
+
+
+
+
+
+Note: in the exercise above, we learned a few new 
+things about using arrays:
+  <ul>
+  <li> Sometimes, we create one additional slot so that
+     we can use the index <font color="#000000"><tt>A[n]</tt></font> when convenient.
+  <p><li> A for-loop can have other variables that change
+    with the loop besides the loop variable.
+  </ul>
+
+
+
+
+
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+Reading and writing
+</h2>
+
+
+
+
+
+<p> Let's look at an example and how to read the code:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/reading.png"><p>
+  <ul>
+  <li> First, look for the array declaration and identify the 
+       <em>type</em> (e.g, <font color="#000000"><tt>int</tt></font> or <font color="#000000"><tt>double</tt></font> etc):
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/reading2.png"><p>
+      <ul>
+      <li> Say to yourself, "<font color="#000000"><tt>A</tt></font> is an array that holds 
+      <font color="#000000"><tt>double</tt></font>'s".
+      <li> "<font color="#000000"><tt>B</tt></font> is an array that holds 
+      <font color="#000000"><tt>int</tt></font>'s".
+      </ul>
+
+  <p><li> Then, look to see how much space is created:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/reading3.png"><p>
+      <ul>
+      <li> Say to yourself, "<font color="#000000"><tt>A</tt></font>'s size is 5, created
+           using the <font color="#000000"><tt>new</tt></font> operator".
+      <Li> "<font color="#000000"><tt>A</tt></font>'s elements are all initially <font color="#000000"><tt>0</tt></font>".
+      <Li> "<font color="#000000"><tt>B</tt></font>'s size is 5, directly initialized to
+           particular values".
+      </ul>
+
+  <p><Li> Now, check that, when variables are used to access
+     array components (slots), the bounds are right:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/reading4.png"><p>
+  </ul>
+
+
+
+
+<p> Writing:
+  <ul>
+  <Li> Writing the declaration:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/writing.png"><p>
+      <ul>
+      <li> No spaces between either the <em>type</em> (<font color="#000000"><tt>double</tt></font>),
+           nor between the brackets.
+      <li> A single space between the right bracket the array variable
+           name.
+      </ul>
+
+  <p><li> Creating space:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/writing2.png"><p>
+      <ul>
+      <li> A space on either side of the assignment operator, <font color="#000000"><tt>=</tt></font>.
+      <Li> A space on either side of the <font color="#000000"><tt>new</tt></font> reserved word.
+      <li> The space after the <font color="#000000"><tt>double</tt></font> is optional. (Here, we have 
+           a space.)
+      <li> No spaces for the size and brackets.
+      </ul>
+
+  <p><Li> Prefer the use of the <font color="#000000"><tt>new</tt></font> operator except
+      for small-ish arrays whose initial contents are known and fixed.
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/writing3.png"><p>
+
+  <p><li> No spaces when using the values in an array:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/writing4.png"><p>
+
+  </ul>
+
+
+
+<p> Using the array's built-in length. Consider this variation:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/lengthexample.png"><p>
+  <ul>
+  <li> We could either <font color="#000000"><tt>n</tt></font> or the array's length <font color="#000000"><tt>A.length</tt></font>.
+  <p><Li> So, which one should we use?
+     <ul>
+     <li> Generally, when the limit is a mathematically meaningful
+        variable like <font color="#000000"><tt>n</tt></font> above, you can use <font color="#000000"><tt>n</tt></font>.
+     <li> Otherwise, use the array's length.
+     </ul>
+
+  <p><li> Sometimes, using an array's length variable can make
+     a program needlessly verbose. 
+     <ul>
+     <li> For example, here's the array-reversal example using 
+          the length variable:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/lengthexample2.png"><p>
+     </ul>
+  </ul>
+
+
+
+
+<p> Variable names:
+  <ul>
+  <li> Here is the first length example, re-written with 
+       different variable names:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/verbose.png"><p>
+  <p><li> For a program this short, it is probably a bit verbose.
+  <p><li> Notice: we used different names for the loop variables
+       in the two for-loops.
+  </ul>
+
+
+
+
+
+
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+When things go wrong
+</h2>
+
+
+
+
+Which of the following have errors (syntax or bugs)
+and what are they? Can you tell just by reading?
+Don't pay attention to the purpose - just whether
+the program will compile or run.
+
+<br><br>
+
+
+<span style='color:#06a015'><b><big>Activity 10</big></b></span>:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/errorexample1.png"><p>
+<!-- out of bounds -->
+</font>
+
+
+
+<span style='color:#06a015'><b><big>Activity 11</big></b></span>:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/errorexample2.png"><p>
+<!-- no errors -->
+</font>
+
+
+<span style='color:#06a015'><b><big>Activity 12</big></b></span>:
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/errorexample3.png"><p>
+<!-- divide by zero. It runs, but shouldn't -->
+</font>
+
+
+
+<span style='color:#06a015'><b><big>Activity 13</big></b></span>:
+The following program has multiple errors. See if you
+can spot them by reading. Then in
+       <font color="#000000"><tt>ErrorExample4.java</tt></font>
+fix the errors by editing the program. The array
+       <font color="#000000"><tt>A</tt></font>
+needs to be an array of 
+       <font color="#000000"><tt>double</tt></font>'s.
+           <p><img class="img-fluid mx-auto py-2" src="../figures/lectureNotes12/errorexample4.png"><p>
+<!-- A[] needs to be of length 6. n needs to be defined. 
+System.out.println needs to be inside the for-loop. 
+-->
+</font>
+
+
+<!-- SIMHA END -->
+
+      
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes12.html">Previous Lecture</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes14.html">Next Lecture</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+      <!--
+    <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script>
+ -->
+  </body>
+</html>

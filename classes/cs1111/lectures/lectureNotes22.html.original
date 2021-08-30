@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSCI 1111 Introduction to Software Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <img class="float-right" src="../../../images/gw_primary_logo.png" alt="GWU" height="160">
+      <h1 class="display-3 m-0">CS 1111</h1>
+      <p class="lead">Introduction to Software Development</p>
+      <p class="lead">GWU Computer Science </p>
+    </div>
+
+    <!-- NAVBAR-->
+    <div class="container py-0">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../index.html">
+          <img class="img-fluid mx-auto py-2" src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures<span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">Project 1</a>
+                <a class="dropdown-item" href="#">Project 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Piazza</a>
+                <a class="dropdown-item" href="#">BBUltra</a>
+                <a class="dropdown-item" href="#">Codio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="./lectureNotes21.html">Previous Lecture</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes23.html">Next Module</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <p>
+        <hr>
+      </p>
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 22: Generics and Data Structures.</h1>
+      <p>
+        <br>
+      </p>
+
+      <h2>
+        Objectives
+      </h2>
+
+      <p>
+        By the end of this module, you will be able to:
+        <ul>
+          <li>Understand how to use Generics.</li>
+         <li>Utilize the ArrayList Java API.</li>
+         <li>Demonstrate understanding of the differences between ArrayList
+           and Java arrays.</li>
+        </ul>
+      </p>
+      
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Before Starting
+      </h2>
+
+      <!--
+      <ul>
+        <li>Read Sections <span style="color: #ff0000; font-weight: bold">16.01 to 16.03</span> in the Codio Course</li>
+      </ul>
+    -->
+
+      <p>
+        If you do not have your Codio course ready, use any text editor or simple IDE. Some possibilities are:
+      </p>
+      <ul>
+        <li>Write using Sublime; Compile and run in the Terminal</li>
+        <li>Use IDEs like: IntelliJ, DrJava, or JGrasp</li>
+      </ul> 
+<!--
+      <p><br></p><hr><p><br></p>
+
+      <h2>Catching Up</h2>
+
+      <p>
+        Before we move forward, let's catch up (complete any remaining work from the previous module)
+        <br>
+        In this case, make sure we've got:
+        <ol>
+          <li>One-Dimensional Arrays... Declaring, Initializing, and Accessing!</li>
+        </ol>
+
+      </p>
+-->
+
+<!-- SIMHA START -->
+
+<p><br></p><hr><p><br></p>
+
+<h2>
+ArrayList
+</h2>
+<table> <tr> <td height=8> &nbsp; </td> </tr> </table>
+
+<p>Data-structures are means for organizing and accessing data.  They
+  are one of the main topics in CSCI1112.</p>
+
+<p>Examples we've seen so far:</p>
+<ul>
+  <li>Two dimensional arrays for organizing spreadsheets, mazes, and
+    game state.</li>
+  <li>FBUsers and Nodes used to keep complex data and connect them to each other.</li>
+  <li>Strings for holding collections of characters.</li>
+</ul>
+
+
+<p>Please take a few minutes to browse
+  the <font color="black">ArrayList</font> <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html">Javadoc</a>
+  page.</p>
+
+  
+<span style='color:#06a015'><b><big>Activity 1 [Group Work]</big></b></span>: Questions -
+
+<ul>
+  <li><p>What do you think that this
+      means: <font color="black"><pre>public class ArrayList&lt;E&gt;</pre></font> What is the "&lt;E&gt;"?</p></li>
+  <li><p>ArrayLists are similar to arrays.  How do we find the value at
+      an index into the ArrayList?</p></li>
+  <li><p>How do we add/change a value at a specific index?</p></li>
+  <li><p>What is the equivalent of array's ".length"?</p></li>
+  <li><p>If we want to get the data in the ArrayList in an
+  array?</p></li>
+  <li><p>What if we want to do something similar to String's
+      ".substring" method?</p></li>
+</ul>
+</font>
+
+
+<p><br></p><hr><p><br></p>
+<h3>Generics</h3>
+
+<p>Data-structures contain data.  We want the <i>type</i> of the data
+  to be different, depending on what data we're organizing</p>
+<ul>
+  <li>Are we organizing contact information in a list of friends?</li>
+  <li>Are we organizing doubles in our spreadsheet?</li>
+  <li>Are we organizing Strings in a word processor?</li>
+</ul>
+
+<p>How do we have different arrays containing different types of
+  data?</p>
+<p><font size="+1" color="#000000"><pre>
+      FBUser[] friends = new FBUser[n];
+      double[][] spreadsheet = new double[4][10];
+      String[] sentences = new String[numSentences];
+</pre></font></p>
+
+<p>More complex data-structures must be implemented in Java classes
+  (often by us!). 
+  <br><br>
+  <b>However, we don't know how to write a class that can store data of a type that will be later specified by a client, or user of
+  our class</b>.</p>
+
+<p><i>Generics</i> enable us to write a class that stores data of a
+  type specified by the user of our class.</p>
+
+<p>What do generics look like?<p>
+<ul>
+  <li><p><font color="black"><pre>public class ArrayList<b>&lt;E&gt;</b></pre></font></p></li>
+  <li><p><b>E</b> is the type of data we want to hold in the ArrayList</p></li>
+  <li><p>Creating an ArrayList that holds Strings: 
+<p><font size="+1" color="#000000"><pre>
+      ArrayList&lt;String&gt; sentences = new ArrayList&lt;String&gt;();
+  </pre></font></p></li>
+  <li><p>Note:  we are specifying that we want to create an array
+      list <i>of strings</i></p></li>
+</ul>
+
+
+<span style='color:#06a015'><b><big>Activity 2 [Group Work]</big></b></span>: Write a program that
+  creates an ArrayList of Strings, put three strings into it, and then
+  print out the contents of the ArrayList as well as its size.
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 3 [Group Work]</big></b></span>:
+ Add code to your program to do the following:
+  <ul>
+    <li>Find the index of one of the strings.</li>
+    <li>Remove an item from the ArrayList and replace it with another
+      String.</li>
+    <li>Add Strings until you have a total of five, and then create an array of Strings that contains the middle three
+      Strings in the ArrayList.</li>
+  </ul>
+  For each of these, use <b>no loops</b> and only use the ArrayList
+  methods.
+</font>
+
+
+<p><br></p><hr><p><br></p>
+<h2>
+Other Data-Structures
+</h2>
+
+
+
+<p>Check out
+the <font color="black">LinkedList</font> <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedList.html">Javadoc</a>.
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 4 [Group Work]</big></b></span>: Questions -
+<ul>
+  <li>How do you add values to a linked list?</li>
+  <li>How do you find the value at an index?</li>
+  <li>Having a little Deja vu? <sup>("It happens when they change something.")</sup></li>
+</ul>
+<br><br>
+
+
+<span style='color:#06a015'><b><big>Activity 5 [Group Work]</big></b></span>: What is the
+  <a href="https://www.javatpoint.com/difference-between-arraylist-and-linkedlist" style="color: #555;"  target="_blank">difference</a> between arrays, ArrayLists, and LinkedLists?  Why does
+  Java have three implementations of ways of storing data?
+</font>
+
+<hr>
+<h4>An aside aboout class-types for primitives</h4>
+<p>
+
+  It turns out that all the familiar oprimitives (int, double, boolean, char, etc) have <b>Class types</b> that define some methods and properties for peerforming high level tasks with them. 
+
+<ul>
+  <li>For "int"s, you have a class type of <font size="+1" color="#000000">Integer</font></li>
+  <li>For "double"s, you have a class type of <font size="+1" color="#000000">Double</font></li>
+  <li>For "boolean"s, you have a class type of <font size="+1" color="#000000">Boolean</font></li>
+  <li>For "char"s, you have a class type of <font size="+1" color="#000000">Character</font></li>
+</ul>
+
+We've used these when converting to and from string:
+<br>
+<font size="+1">
+<font color="#000000"><pre><font color="#888888">
+public class CopyExample3 {
+
+  public static void main (String[] argv)
+  {</font>
+    String s = "123";
+    int num = Integer.parseInt(s);
+    System.out.println (num + 4);
+  <font color="#888888">}
+
+}</font>
+</pre></font> </font>
+This code willl print a <font size="+1" color="#000000"><tt>127</tt></font> rather than <font size="+1" color="#000000"><tt>1234</tt></font>.
+
+<br><br>
+<b>When using generics</b>: <br>
+If you want to use generics with "primitives", you must use the <b>Class type</b> instead of the primitive verision.
+</p>
+
+<span style='color:#06a015'><b><big>Activity 6 [Group Work]</big></b></span>: Add the 
+  following code to GenericsExample.java.  Then, fix the code so that it compiles and runs.
+</font>
+
+<p><font size="+1" color="#000000"><pre>
+ArrayList&lt;int&gt; al = new ArrayList&lt;int&gt;();
+al.add(10);
+System.out.println(al.get(0));
+</pre></font></p>
+
+<br><br>
+
+Note that there are corresponding types for
+<ul>
+  <li>double &#8594; Double</li>
+  <li>float &#8594;  Float</li>
+  <li>boolean &#8594; Boolean</li>
+</ul>
+Using these classes, Java automatically converts code such as 
+<p><font size="+1" color="#000000"><pre>
+ArrayList&lt;Integer&gt; al = new ArrayList&lt;Integer&gt;();
+al.add(10);
+</pre></font></p>
+to
+<p><font size="+1" color="#000000"><pre>
+ArrayList&lt;Integer&gt; al = new ArrayList&lt;Integer&gt;();
+al.add(Integer(10));
+</pre></font></p>
+<hr>
+
+
+
+<p>Check out
+the <font color="black">HashMap</font> <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/HashMap.html">Javadoc</a>.
+
+<br><br>
+<span style='color:#06a015'><b><big>Activity 7 [Group Work]</big></b></span>: Questions -
+<ul>
+  <li>What does the &lt;K,V&gt; mean in "Class HashMap&lt;K,V&gt;"?</li>
+  <li>The main operations for a HashMap are "get" and "put".  What do
+    you think a HashMap does?  What is its main use?</li>
+  <li>How is it different from LinkedList  and ArrayList?</li>
+</ul>
+<br><br>
+
+
+<span style='color:#06a015'><b><big>Activity 8 [Group Work]</big></b></span>: Write a program for
+  the IRS that lets us store people, and later look them up by their
+  social security number (SSN).  Use the person class below.  Add
+  three people objects to a HashMap, using their social security
+  number as the key.  Look them up, and print out their names.
+
+<p><font size="+1" color="#000000"><pre>
+public class Person {
+  private String name;
+  private int    ssn;
+  public Person(String n, int ssn) {
+    name = n;
+    this.ssn = ssn;
+  }
+  public String getName() {
+    return name;
+  }
+  public long getSsn() {
+    return ssn;
+  }
+}
+</pre></font></p>
+</font>
+
+
+<p><br></p><hr><p><br></p>
+<h2>
+JavaDoc Treasure Hunt
+</h2>
+<table> <tr> <td height=8> &nbsp; </td> </tr> </table>
+
+<br><br>
+
+<span style='color:#06a015'><b><big>Activity 9 [Group Work]</big></b></span>: 
+  Write a program that 
+  <ol>
+    <li>Creates an HashMap of People.</li>
+    <li>Populates it with a number of people (key = ssn, value =
+    Person object).</li>
+    <li>Creates an ArrayList with the same contents as all of the
+      values in the HashMap.</li>
+    <li>...without using loops.  It should work just the same if the
+    HashMap has 3 People, or 3 million.</li>
+  </ol>
+</font>
+
+<!-- SIMHA END -->
+
+      
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes21.html">Previous Lecture</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes23.html">Next Module</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+      <!--
+    <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script>
+ -->
+  </body>
+</html>
