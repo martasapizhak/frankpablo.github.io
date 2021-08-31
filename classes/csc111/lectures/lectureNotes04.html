@@ -136,7 +136,7 @@ w <span style="color: #333333">=</span> x <span style="color: #333333">+</span> 
 
         <br><br>
         <span style='color:#06a015'><b><big>Activity 1</big></b></span> [1 minute]: <br>
-        try it out, step by step, <a href="https://pythontutor.com/visualize.html#code=12%20%2B%206%0Ax%20%3D%205%0Ay%20%3D%202%0Az%20%3D%20x%20%2B%20y%0Aw%20%3D%20x%20%2B%201%20%2B%20y%20%2B%20123%20%2B%20z%0Aprint%28x%29%0Aprint%28y%29%0Aprint%28z%29%0Aprint%28w%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false">here</a>.
+        try it out, step by step, <a href="https://pythontutor.com/visualize.html#code=12%20%2B%206%0Ax%20%3D%205%0Ay%20%3D%202%0Az%20%3D%20x%20%2B%20y%0Aw%20%3D%20x%20%2B%201%20%2B%20y%20%2B%20123%20%2B%20z%0Aprint%28x%29%0Aprint%28y%29%0Aprint%28z%29%0Aprint%28w%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"  target="_blank">here</a>.
 
 
       </p>
@@ -239,7 +239,7 @@ w <span style="color: #333333">=</span> x <span style="color: #333333">+</span> 
 
         <span style='color:#06a015'><b><big>Activity 3</big></b></span> [2 minutes]: <br>
         <div class="mx-lg-5">
-          try it out, step by step, <a href="https://pythontutor.com/visualize.html#code=print%2817//5%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false">here</a>.
+          try it out, step by step, <a href="https://pythontutor.com/visualize.html#code=print%2817//5%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"  target="_blank">here</a>.
 
           <br><br>
           <ul>
@@ -276,7 +276,7 @@ w <span style="color: #333333">=</span> x <span style="color: #333333">+</span> 
 
         <span style='color:#06a015'><b><big>Activity 4</big></b></span> [1 minute]: <br>
         <div class="mx-lg-5">
-          try it out, step by step, <a href="https://pythontutor.com/visualize.html#code=print%2817%255%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false">here</a>.
+          try it out, step by step, <a href="https://pythontutor.com/visualize.html#code=print%2817%255%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"  target="_blank">here</a>.
           <br><br>
           <ul>
             <li>Now subtitute the parameter of the print statement for: "17 % -5"; What happens? Why?</li>
@@ -293,11 +293,11 @@ w <span style="color: #333333">=</span> x <span style="color: #333333">+</span> 
         For example: if a submarine works in 3 shifts of 8 hours (shift_0, shift_1, and shift_2 ), and it will go on a mission for 330 hours, which shift will be working when they arrive?
         <br><br>
         You can do integer division and modulo arithmetic like this:
-        <br>
+        <br><br>
         \( \texttt{num_days = 330 // 24 # this is 13 (total days) }\)
         <br>
-        \( \texttt{remaining_hours = 320 % 24 # this is 18 (which means that the last shift will be working) }\)
-        <br>
+        \( \texttt{remaining_hours = 320 % 24 # this is 18 }\)
+        <br><br>
         This means that the last shift will be working, since only two full shifts may fit in 18 hours.
       </p>
 
@@ -308,11 +308,17 @@ w <span style="color: #333333">=</span> x <span style="color: #333333">+</span> 
 
       <h3>Integers and Floats</h3>
       <p>
-        For numeric assignments, you'll see to main types:
+        For numeric assignments, you'll see two main types:
         <br><br>
         <ul>
           <li>Integers (no decimal expansion) : like <tt><b>x = 5</b></tt></li>
-          <li>Floats (with decimals; AKA "floating point numbers") : like <tt><b>q = 3.141592</b></tt></li>
+          <li>Floats (with decimals; AKA "floating point numbers") : like <tt><b>q = 3.141592</b></tt>
+            <br>
+            The float is represented internally by three elements, the <i>significant</i>, the <i>base</i>, and the <i>exponent</i>:
+            <br><br>
+            <img class="img-fluid" src="../figures/lecture04/floatRepresentation.png"  style="width:50%">
+            <br>
+             </li>
         </ul>
         
       </p>
@@ -351,14 +357,41 @@ w <span style="color: #333333">=</span> x <span style="color: #333333">+</span> 
 
         <h3>The <tt>int</tt> function</h3>
 
-        The <tt>int (</tt> &lt; text that can be read as a number &gt; <tt>)</tt> function accepts a string literal or a variable with a string inside (more on this later) and atttempts to convert it into an integer.
+        <!-- The <tt>int (</tt> &lt; text that can be read as a number &gt; <tt>)</tt>  -->
+        The int function function 
+
+        \[ \texttt{ int ( $<$ text that can be read as a number $>$ )} \]
+
+        accepts a string literal or a variable with a string inside (more on this later) and attempts to convert it into an integer.
         <br><br>
 
         The following is one way of using it:
         <br><br>
         <div class="mx-lg-5">
           <span style='color:#06a015'><b><big>Activity 5</big></b></span> [1 minute]: <br>
-        Run the following <a href="https://pythontutor.com/visualize.html#code=num_text%20%3D%20input%28'Write%20a%20number%20in%20the%20range%20%281-9%29%3A%20'%29%0Anum%20%3D%20int%28num_text%29%3B%0Aprint%28num%20%2B%201%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%224%22%5D&textReferences=false">program</a>;
+        Run the following <a href="https://pythontutor.com/visualize.html#code=num_text%20%3D%20input%28'Write%20a%20number%20in%20the%20range%20%281-9%29%3A%20'%29%0Anum%20%3D%20int%28num_text%29%3B%0Aprint%28num%20%2B%201%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%224%22%5D&textReferences=false"  target="_blank">program</a>;
+        <br><br>
+        Now comment out the middle statement and run it again. What happens?
+        </div>
+
+        <br><br>
+
+
+
+        <h3>The <tt>float</tt> function</h3>
+
+        The float function function 
+
+        \[ \texttt{ float ( $<$ text that can be read as a number $>$ )} \]
+
+        accepts a string literal or a variable with a string inside (more on this later) and attempts to convert it into a float.
+        <br><br>
+
+        The following is one way of using it:
+        <br><br>
+        <div class="mx-lg-5">
+          <span style='color:#06a015'><b><big>Activity 6</big></b></span> [1 minute]: <br>
+        Run the following <a href="https://pythontutor.com/visualize.html#code=num_text%20%3D%20input%28'Write%20a%20float%20number%20in%20the%20range%20%281-9%29%3A%20'%29%0Anum%20%3D%20float%28num_text%29%3B%0Aprint%28num%20*%202%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%223.57%22%5D&textReferences=false"  target="_blank">program</a>;
         <br><br>
         Now comment out the middle statement and run it again. What happens?
         </div>
