@@ -127,9 +127,7 @@
       <!-- CONTENT BELOW -->
 
 
-      <h1>Lecture Notes 04: 
-        <br>
-      More on Logic Gates</h1>
+      <h1>Lecture Notes 04: Logic Gates</h1>
       <p>
         <br>
       </p>
@@ -137,8 +135,10 @@
 
       This class we'll discuss:
       <ul>
-        <li>Recap: Boolean logic</li>
-        <li>Recap: Transistor </li>
+        <li>Recap: Boolean logic and functions</li>
+        <li>Recap: Water Analogy </li>
+        <li>The Diode</li>
+        <li>The Transistor</li>
         <li>Circuit symbols</li>
         <li>Integrated Circuits</li>
         <li>Building the basic gates</li>
@@ -152,381 +152,130 @@
       <p><br></p><hr><p><br></p>
 
         <div class="mx-lg-5">
-          <img id="image" class="img-responsive" src="../figures/lecture03/bigPicture-gates.png" alt="" style="width:80%">
+          <img id="image" class="img-responsive" src="../figures/lecture04/bigPicture-gates.png" alt="" style="width:80%">
           <br>
           <span style='color:#888888'>For now, we're looking at the "what?" not the "how?"</span>
         </div>  
+
+
       <p><br></p><hr><p><br></p>
 
-      <h2>Review: Binary and its operations</h2>
+      <h2>Recap: Boolean Logic</h2>
       <p>
-        We say that binary is a positional number system with a base of 2:
+        recall that we can combine logical operators to obtain a truth value output: 
         <br>
-        \[
-          \begin{alignat}{2}
-            0b11011000001 &=& \: 1*2^{10} \: & + & \: 1*2^9 \: &+& \: 0*2^8 &+& \: 1*2^7 \: &+& \: 1*2^6 \: &+& \: 0*2^5 \: &+& \: 0*2^4 \: &+& \: 0*2^3 \: &+& \: 0*2^2 &+& \: 0*2^1 \: &+& \: 1*2^0 \: & &\qquad\\
-            \qquad        &=& \: 1024     \: & + & \: 512   \: &+& \: 0     &+& \:   128 \: &+& \: 64    \: &+& \:     0 \: &+& \:     0 \: &+& \:     0 \: &+& \: 0     &+& \: 0 \: &+& \: 1 \: &=& \: 1729
-          \end{alignat} 
-        \]
+        <img id="image" class="img-responsive" src="../figures/lecture04/truthTables.png" alt="" style="width:70%">
+        <br><br>
+        Now, we want to convert this <b>logic</b> that uses <b>truth values</b> into <b>circuits</b> that use <b>electrical signlas</b>.
+      </p>
+  
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Recap: The Water Analogy</h2>
+      <p>
+        recall that we can use water to build intuition about how circuits and signals work 
+        <br>
+        <img id="image" class="img-responsive" src="../figures/lecture04/waterAnalogy.png" alt="" style="width:50%">
+        <br><br>
+      </p>
+
+<!--       
+      <h2>Boolean logic</h2>
+      <p>
+        Boolean logic is a series of rules for combining truth values.
         <br><br>
 
-        We can do all sorts of arithmetic ( \( +,-,*,\backslash \) ) and logical operations ( \( NOT, OR, AND\) ).
+        These help in the analysis of the combinations of electrical signals since we can take a logical <b>true</b> as a representation for the presence of a current, and a logical <b>false</b> as one for the absence of a current.
+        <br><br>
+        The following table sumarizes the opertors we discussed:
+        <br><br>
+        <img id="image" class="img-responsive" src="../figures/lecture04/booleanLogic.png" alt="" style="width:80%">
         <br><br>
 
-        Two additional logical operations to check are: XOR and NAND.
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span> :[2 minutes] : Find the truth value of the following expressions:
+        <br>
+
+        <div class="container mx-lg-5">
+          <ol>
+            <li> NOT ( 0 AND ( 0 OR 1) )</li>
+            <li> 1 OR (0 AND ( NOT (1) ) )</li>
+          </ol>
+        </div>
+
         <br><br>
 
+        <h3>Boolean Functions</h3>
 
-        <h4>NOR</h4>
-        NOR is the negative or negated OR.
+        Boolean Functions are the application of logical functions that combine these rules to variables that hold truth values.
         <br><br>
-        We can show the effect of this operator using a table:
-        <table class="tg inlineTable">
-          <thead>
-            <tr>
-              <th class="tg-0lax">p</th>
-              <th class="tg-0lax">q</th>
-              <th class="tg-0lax">p NOR q</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-            </tr>
-            <tr>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-            </tr>
-            <tr>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-            </tr>
-            <tr>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-            </tr>
-          </tbody>
-        </table>
+        A way of analyzing these is to use <b>truth-tables</b> for the combinations of the input parameters (variables):
+
+        <br><br>
+        Example: 
+        <br>
+        <big><b>f(x, y, z) = (x OR y) AND (NOT(y) AND z)</b></big>
+        <br><br>
+        <img id="image" class="img-responsive" src="../figures/lecture04/functionTruthTable.png" alt="" style="width:40%">
         <br><br>
 
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> :[2 minutes] : What is the result for the missing output?
+        <br><br>
+      </p>
 
+       -->
 
+      <p><br></p><hr><p><br></p>
 
-        <h4>XOR</h4>
-        XOR (AKA: the exclusive disjunction operator) is a <i>binary</i> operator; <i>it is true if its operands are different</i>.
+      <h2>The Diode</h2>
+      <p>
+        The diode is an electric component that acts like a "one way valve" but for current, instead of water. 
         <br><br>
-        We can show the effect of this operator using a table:
-        <table class="tg inlineTable">
-          <thead>
-            <tr>
-              <th class="tg-0lax">p</th>
-              <th class="tg-0lax">q</th>
-              <th class="tg-0lax">p XOR q</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-            </tr>
-            <tr>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-            </tr>
-            <tr>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-            </tr>
-            <tr>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-            </tr>
-          </tbody>
-        </table>
+        The symbol for a diode is like an arrow with a barrier (current can onl pass in the direction of the arrow):
         <br><br>
-        <img class="img-fluid" src="../figures/lecture03/xor.png" alt="Exclusive Disjunction" style="width:20%">
-        <br><br>
-        Note: other symbols you might see are: \( p \nleftrightarrow q \text{, }  p\oplus q \text{, } p\veebar q  \text{, } p\not\equiv q \).
-        <br><br>
-
-
-        
-        <h4>NAND</h4>
-        NAND is the negated AND operator.
-        <br><br>
-        We can show the effect of this operator using a table:
-        <table class="tg inlineTable">
-          <thead>
-            <tr>
-              <th class="tg-0lax">p</th>
-              <th class="tg-0lax">q</th>
-              <th class="tg-0lax">p NAND q</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-            </tr>
-            <tr>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-            </tr>
-            <tr>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-            </tr>
-            <tr>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-              <td style="min-width:40px" class="tg-0lax">1</td>
-              <td style="min-width:40px" class="tg-0lax">0</td>
-            </tr>
-          </tbody>
-        </table>   
-        <br><br>
-
-        <img class="img-fluid" src="../figures/lecture03/nand.png" alt="Conjunction" style="width:20%">
-        <br><br>
-        <span style='color:#888888'>Note that we're labeling on the outside for clarity, but the label refers to the interior of each circle</span>
+        <img class="img-max" src="../figures/lecture04/diode.png" alt="magic" style="width:30%">
         <br><br>
       </p>
 
       <p><br></p><hr><p><br></p>
       
-
-      <h2>What else can we represent with bits?</h2>
-      <p>
-
-
-        <ul>
-          <li>A yes/no piece of information (Also called a <b>Boolean</b> value) \(\checkmark\)</li>
-          <li>numbers \(\checkmark\)</li>
-          <li>letters \(?\)</li>
-          <li>images \(?\)</li>
-          <li>sound \(?\)</li>
-          <li>video \(?\)</li>
-        </ul>
-      </p>
-
-      Let's do images first.
-
-      <br><br>
-
-
-      <h3>Storing Images</h3>
-
-      <p>
-        <span style='color:#06a015'><b><big>Activity 1</big></b></span> :[2 minutes] : How would you store an image in a computer?
-        <br>
-        <div class="container mx-lg-5">
-          <span style='color:#000000'>One possible answer</span>: 
-          <div class="mx-lg-5">
-            <details>
-              <summary>(Wait; then Click)<br><br></summary>
-              <p>
-                <div class="row">
-                  <div class="col-lg-6 col-md-6 col-xs-6 thumb">                    
-                      <a class="thumbnail" href="#">
-                          <img class="img-responsive" src="../figures/lecture03/invader.png" alt="From space!" style="width:70%">
-                      </a>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-xs-6 thumb">                    
-                      <a class="thumbnail" href="#">
-                          <img class="img-responsive" src="../figures/lecture03/r2d2.png" alt="blip blip bloop" style="width:40%">
-                      </a>
-                  </div>
-                  <br><br>
-                  Which could be saved as a series of 0s and 1s in memory.
-                  <br>
-                  An example is shown below:
-                </div>
-                <br><br>
-                  <img class="img-responsive" src="../figures/lecture03/invaderBits.png" alt="From space!" style="width:34%">
-                  <br>
-                <br><br>
-                How would you store color images?!!!
-                <div class="mx-lg-5">
-                  <details>
-                    <summary>(Wait; then Click)<br><br></summary>
-                    <p>
-                      <img class="img-responsive" src="../figures/lecture03/channels.png" alt="rgb" style="width:70%">
-                      <br>
-                      We would keep three different "grids" of values, one for each channel.
-                    </p>
-                  </details>
-                </div>
-              </p>
-            </details>
-          </div>
-        </div> 
-      </p>
-
-      <br><br>
-
-
-      <h3>Storing letters</h3>
-
-      <p>
-        <span style='color:#06a015'><b><big>Activity 2</big></b></span> :[2 minutes] : How would you store a letter in a computer?
-        <br>
-        <div class="container mx-lg-5">
-          <span style='color:#000000'>One possible answer</span>: 
-          <div class="mx-lg-5">
-            <details>
-              <summary>(Wait; then Click)<br><br></summary>
-              <p>
-                Is this a good idea?
-                <br>
-                <img class="img-responsive" src="../figures/lecture03/gridLetter.png" alt="nope" style="width:50%">           
-                <br><br>
-                So, how would you do it?
-                <br>
-                <div class="mx-lg-5">
-                  <details>
-                    <summary>(Wait; then Click)<br><br></summary>
-                    <p>
-                      <img class="img-responsive" src="../figures/lecture03/ascii.png" alt="table" style="width:70%">
-                      <br>
-                      <span style='color:#888888'>(from https://theasciicode.com.ar/)</span>
-                      <br><br>
-                      Note: It's ONLY when we need to print them to a screen (or paper) that the numbers must be converted to shapes.
-                      <br>
-                      in the meantime, the computer just needs to know <b>Oh!, this number is to be treated as a letter</b>!.
-                    </p>
-                  </details>
-                </div>
-
-              </p>
-            </details>
-          </div>
-        </div> 
-        <br><br>
-
-        What do you notice about the storage approach?
-        <br>
-        How many bits do we need?
-
-      </p>
-
-      <br><br>
-
-
-      <h3>Storing Video</h3>
-
-      <p>
-        <span style='color:#06a015'><b><big>Activity 3</big></b></span> :[2 minutes] : How would you store video?
-        <br>
-        <div class="mx-lg-5">
-          <details>
-            <summary>(Wait; then Click)<br><br></summary>
-            <p>
-              Multiple images would do the trick.
-              <br><br>
-              Note that, for better <i>compression</i>, you could simply store the "changes between frames". 
-            </p>
-          </details>
-        </div>
-
-      </p>
-
-      <br><br>
-
-
-
-      <h3>Storing Sound</h3>
-
-      <p>
-        <span style='color:#06a015'><b><big>Activity 4</big></b></span> :[2 minutes] : How would you store sound?
-        <br>
-        <div class="mx-lg-5">
-          <details>
-            <summary>(Wait; then Click)<br><br></summary>
-            <p>
-              You could store notes!
-              <br>
-              In physics-terms, that means we just need to store the frequencies and their duration.
-              <br><br>
-              Excellent example <a href="https://www.tinkercad.com/things/8DeBovBdmEl-buzz-music-player">here</a> 
-            </p>
-          </details>
-        </div>
-
-      </p>
-
-      <br><br>
-
-      <h3>What else can we represent with bits?</h3>
-      <p>
-
-
-        <ul>
-          <li>A yes/no piece of information (Also called a <b>Boolean</b> value) \(\checkmark\)</li>
-          <li>numbers \(\checkmark\)</li>
-          <li>letters \(\checkmark\)</li>
-          <li>images \(\checkmark\)</li>
-          <li>sound \(\checkmark\)</li>
-          <li>video \(\checkmark\)</li>
-        </ul>
-      </p>
-
-      <br><br>
-
-      Now the big question ... <b>How do we do this physically (with actual electricity)?</b>
-
-      <p><br></p><hr><p><br></p>
-
-      <h2>Boolean Logic into Digital Logic</h2>
-      <p>
-        The term "Boolean" comes from a mathematician called George Boole. 
-        <br><br>
-        Several additional rules and derived principles have been developed based on the basic rules seen above; these are called  <a href="https://en.wikipedia.org/wiki/Boolean_algebra">Boolean algebra</a>.
-        <br><br>
-
-        This is important to us because they give us the theoretical basis to perform a large amount of operations with Truth values of the form 0/1, which can be translated to electric circuits.
-
-        <br><br> This is how we go from "conceptual" computation to "actual" computation.
-
-      </p>
-
-      <br><br>
-
-      <p><br></p><hr><p><br></p>
-
       <h2>The Transistor</h2>
       <p>
-        A transistor is an electronics component that lets electricity pass through from one of its input pins (collector) to one of its output pins (emitter) if there is an input on the third <i>signal</i> pin (base). 
-        <br><br>
-        <img class="img-max" src="../figures/lecture03/transistor.png" alt="magic" style="width:30%">
-        <br><br>
-        The brilliance here is that <i>this allows an electric signal (that can be programmed) to control another electric signal</i>; making the electric component capable of self-guidance.
 
-        To explain how we do this, we'll use an analogy with water and pipes, which contains: 
-        <ul>
-          <li>a water reservoir</li>
-          <li>valves</li>
-          <li>water circuits</li>
+        <!-- Before reviewing the transistor, let's revisit the <b>Water Analogy</b>:
+        <br><br>
+
+        <h3>The Water Analogy</h3>
+
+        This time, we'll include the equivalent scenarios for Current, Voltage, and Resistance.
+        <br><br>
+        In the image shown below, 
+        <ul>          
+          <li><b>Voltage</b>: corresponds to the <b>difference in pressure</b> (difference in electric potential) between two ends of a circuit</li>
+          <li><b>Current</b>: corresponds to the <b>flow of water</b> (flow of electic charge) through the pipes (wires)</li>
+          <li><b>Resistance</b>: corresponds to the <b>opposition to flow</b> due to a smaller passage or the higher friction of a denser material (lower conductivity)</li>
         </ul>
         <br>
-        <img id="image" class="img-responsive" src="../figures/lecture03/waterTransistor2.png" alt="" style="width:60%">
+        <img id="image" class="img-responsive" src="../figures/lecture04/waterAnalogy.png" alt="" style="width:50%">
         <br><br>
+        
 
-        If you look at the water system, depending on what the "water circuit 2" does, 
-        <ul>
-          <li>the water could come out of the <span style='color:#ff0000'>red</span> path and close the vale;</li>
-          <li>or it could come through the <span style='color:#0000ff'>blue</span> path and open the vale.</li>
-        </ul>
+        <br><br>
+        The following image shows a water-circuit next to its analogous electrical circuit:
+        <br><br>
+        <img id="image" class="img-responsive" src="../figures/lecture04/waterCircuit.png" alt="" style="width:50%">
+        <br><br>
+        A battery generates a difference in electric potential between two ends of a circuit; 
+        <br>
+        For its <b>water analogy</b>, you can imagine a "pump" that pushes water through one end of a pipe system and collects it on the other.
+        <br><br> -->
+
+
+        A transistor is an electronics component that lets electricity pass through from one of its input pins (collector) to one of its output pins (emitter) if there is an input on the third <i>signal</i> pin (base). 
+        <br><br>
+        <img class="img-max" src="../figures/lecture04/transistor.png" alt="magic" style="width:30%">
+        <br><br>
+        The brilliance here is that <i>this allows an electric signal (that can be programmed) to control another electric signal</i>; making the electric component capable of self-guidance.
         <br><br>
 
         The transistor works like that:
@@ -535,19 +284,51 @@
           <li>if there IS a <b>signal</b> into the <i>base</i>, then current flows from the <i>collector</i> into the <i>emitter</i> (and one can use that current to do other things);</li>
         </ul>
 
-        We can join several of these transistors in different ways to create circuits that reproduce the logic operations seen above: NOT, OR, AND, NOR, NAND, and XOR.
-        <br><br>
-        One example is shown below (no need to memorize):
-        <br>
-        <img class="img-max" src="../figures/lecture03/norTTL.png" alt="magic" style="width:50%">
-        <br>
-        <span style='color:#888888'>The \(  - \kern-0.4em \large{\blacktriangleright} \kern-0.35em | \kern-0.32em -\) symbol is for a <b>diode</b>, this simply lets the current flow in a single direction (that of the arrow).</span>
         <br><br>
 
-        There are several arrangements like this that can generate the desired outputs. We call these "Logic Gates".
+        The following is an animation of a simplified transistor:
+        <br><br>
+        <img id="image" class="img-responsive" src="../figures/lecture04/off-on.gif" alt="" style="width:80%">
+        <br><br>
+
+        One of the main uses of a transistor is as a <b>switch</b>, where some signal allows the passage of current to another part of the circuit.
+        <br><br>
+
+        However, the signal can be a low-voltage (low current) one and it might allow the passage of a HIGH-voltage (high-current) one. <br>
+        Because of this, transistors can also be used as <b>Amplifiers</b>:
+        <br><br>
+        <img id="image" class="img-responsive" src="../figures/lecture04/off-on-signal.gif" alt="" style="width:80%">
+        <br><br>
+
+
+        We can join several of these transistors in different ways to create circuits that reproduce logic operations on input variables (signals).
+
+
       </p>
 
-      <br><br>
+      <p><br></p><hr><p><br></p>
+      
+      <h2>Combining transistors to generate logic</h2>
+      <p>
+
+        Given the way transistors work, and using the simplified operation shown above, 
+
+        <br>
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span> :[2 minutes] : Analyze this diagram and discover the behavior of the circuit:
+        <br><br>
+
+        <div class="container mx-lg-5">
+          <img id="image" class="img-responsive" src="../figures/lecture04/mysteryGateAND.png" alt="" style="width:40%">
+          <br><br>
+          <ol>
+            <li> How should we analyze it?</li>
+            <li> What does this resemble in Boolean Logic?</li>
+          </ol>
+        </div>
+
+
+
+      </p>
 
       <p><br></p><hr><p><br></p>
 
@@ -561,12 +342,12 @@
         <div class="row">
           <div class="col-lg-6 col-md-6 col-xs-6 thumb border-right">                    
               <a class="thumbnail" href="#">
-                  <img class="img-responsive" src="../figures/lecture03/truthTables.png" alt="truth!" style="width:100%">
+                  <img class="img-responsive" src="../figures/lecture04/truthTables.png" alt="truth!" style="width:100%">
               </a>
           </div>
           <div class="col-lg-6 col-md-6 col-xs-6 thumb">                    
               <a class="thumbnail" href="#">
-                  <img class="img-responsive" src="../figures/lecture03/gates.png" alt="gates" style="width:100%">
+                  <img class="img-responsive" src="../figures/lecture04/gates.png" alt="gates" style="width:100%">
               </a>
           </div>
         </div>
@@ -575,7 +356,7 @@
 
         Let's see one simplified view of a gate in and how the transistors help the logic:
         <br>
-        <img class="img-responsive" src="../figures/lecture03/andGate.png" alt="and" style="width:70%">
+        <img class="img-responsive" src="../figures/lecture04/andGate.png" alt="and" style="width:70%">
         <br><br>
         The transistors act as switches that can let current flow through or not.
         <br>
@@ -585,21 +366,84 @@
         <br><br>
         In the water analogy, it is like a pipe with a reservoir in one side and two valves in series. 
         <br>
-        <img class="img-responsive" src="../figures/lecture03/andWater.png" alt="and" style="width:70%">
+        <img class="img-responsive" src="../figures/lecture04/andWater.png" alt="and" style="width:70%">
         <br><br>
         Either both valves are open or no water flows.
+
+        <br><br>
+
+        Note that in this example, instead of water pressure, we are using gravity. I have added this example in case you see it somewhere else in the literature or on the web.
+
+        <br><br>
+
+        <br>
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> :[2 minutes] : Analyze this diagram and discover the behavior of the circuit:
+        <br><br>
+
+        <div class="container mx-lg-5">
+          <img id="image" class="img-responsive" src="../figures/lecture04/mysteryGateOR.png" alt="" style="width:40%">
+          <br><br>
+          <ol>
+            <li> What does this resemble in Boolean Logic?</li>
+          </ol>
+        </div>
+
+
+        <h3>Building a NOT circuit</h3>
+
+        We need two switches to build a NOT:
+        <br><br>
+
+        <div class="row">
+          <div class="col-lg-5 col-md-5 col-xs-5 thumb">
+              <a class="thumbnail" href="#">
+                  <img id="image" class="img-responsive" src="../figures/lecture04/NOTcircuit.png" alt="" style="width:80%">
+              </a>
+          </div>
+          <div class="col-lg-5 col-md-5 col-xs-5 thumb">
+              <ul>
+                <li>\(\texttt{V}^+\) is a constant source of high voltage</li>
+                <li><img id="image" class="img-responsive" src="../figures/lecture04/GND.png" alt="" style="width:10%"> is a ground connection (low voltage)</li>
+                <li><b>A</b> is the input wire</li>
+                <li><b>Y</b> is the output wire</li>
+                <li>The triangles in the switches indicate</li>
+                <li>
+                  differing response to the gate input: 
+                  <ul>
+                    <li>when one is open,</li>
+                    <li>the other will be closed</li>
+                  </ul>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <br><br>
+
+        The way it works is shown below:
+        <br><br>
+        
+        <img id="image" class="img-responsive" src="../figures/lecture04/NOT-switches.gif" alt="" style="width:50%">
+        <br><br>
+
+
+
+        
+        <br><br>
+
+
       </p>
 
 
+
+      
       <p><br></p><hr><p><br></p>
 
-      <h4>Before next class (Tuesday 09/14)</h4>
+      <h4>Before next class (TODO)</h4>
       <br><br>
       <b>[Due for everyone]</b> 
       <br>
       <ul>
-        <li>Homework 1 (in Moodle), due on Tuesday at 11:59 PM.</li>
-        <li>Review the class notes for Quiz #1.</li>
+        <li> ???</li>
       </ul>
       
 

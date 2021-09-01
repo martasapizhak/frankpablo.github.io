@@ -129,7 +129,7 @@
 
       <h1>Lecture Notes 03: 
         <br>
-      Representing things with Binary and Logic Gates</h1>
+        Content in Binary and Boolean Logic</h1>
       <p>
         <br>
       </p>
@@ -139,11 +139,8 @@
       <ul>
         <li>Review: Binary and its operations</li>
         <li>More binary operators</li>        
-        <li>Recap: Representing objects using binary</li>        
-        <li>Boolean Logic into Digital Logic</li>
-        <li>The Diode</li>
-        <li>The Transistor</li>
-        <li>Logic Gates</li>
+        <li>Representing objects using binary</li> 
+        <li>Boolean Logic</li>        
       </ul>
 
 
@@ -151,7 +148,7 @@
       <p><br></p><hr><p><br></p>
 
         <div class="mx-lg-5">
-          <img id="image" class="img-responsive" src="../figures/lecture03/bigPicture-gates.png" alt="" style="width:80%">
+          <img id="image" class="img-responsive" src="../figures/lecture03/bigPicture-bits.png" alt="" style="width:80%">
           <br>
           <span style='color:#888888'>For now, we're looking at the "what?" not the "how?"</span>
         </div>  
@@ -478,11 +475,12 @@
           <li>sound \(\checkmark\)</li>
           <li>video \(\checkmark\)</li>
         </ul>
+      
+
+        <br><br>
+
+        Now the big question ... <b>How do we do this physically (with actual electricity)?</b>
       </p>
-
-      <br><br>
-
-      Now the big question ... <b>How do we do this physically (with actual electricity)?</b>
 
       <p><br></p><hr><p><br></p>
 
@@ -497,22 +495,96 @@
 
         <br><br> This is how we go from "conceptual" computation to "actual" computation.
 
+
+        <h3>The Basics of Boolean logic</h3>
+
+        Boolean logic is a series of rules for combining truth values.
+        <br><br>
+
+        These help in the analysis of the combinations of electrical signals since we can take a logical <b>true</b> as a representation for the presence of a current, and a logical <b>false</b> as one for the absence of a current.
+        <br><br>
+        The following table sumarizes the opertors we discussed:
+        <br><br>
+        <img id="image" class="img-responsive" src="../figures/lecture03/booleanLogic.png" alt="" style="width:80%">
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 5</big></b></span> :[2 minutes] : Find the truth value of the following expressions:
+        <br>
+
+        <div class="container mx-lg-5">
+          <ol>
+            <li> NOT ( 0 AND ( 0 OR 1) )</li>
+            <li> 1 OR (0 AND ( NOT (1) ) )</li>
+          </ol>
+        </div>
+
+        <br><br>
+
+        <h3>Boolean Functions</h3>
+
+        Boolean Functions are the application of logical functions that combine these rules to variables that hold truth values.
+        <br><br>
+        A way of analyzing these is to use <b>truth-tables</b> for the combinations of the input parameters (variables):
+
+        <br><br>
+        Example: 
+        <br>
+        <big><b>f(x, y, z) = (x OR y) AND (NOT(y) AND z)</b></big>
+        <br><br>
+        <img id="image" class="img-responsive" src="../figures/lecture03/functionTruthTable.png" alt="" style="width:40%">
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 6</big></b></span> :[2 minutes] : What is the result for the missing output?
+        <br><br>
+
+        Before reviewing the electric components that let us do computation, let's present the <b>Water Analogy</b>:
+        <br><br>
+
+        <h3>The Water Analogy</h3>
+
+        Water can be used to help gain intuition when learning circuits
+        <br><br>
+
+        We will use it to explain the concepts of Current, Voltage, and Resistance.
+        <br><br>
+        In the image shown below, 
+        <ul>          
+          <li><b>Voltage</b>: corresponds to the <b>difference in pressure</b> (difference in electric potential) between two ends of a circuit</li>
+          <li><b>Current</b>: corresponds to the <b>flow of water</b> (flow of electic charge) through the pipes (wires)</li>
+          <li><b>Resistance</b>: corresponds to the <b>opposition to flow</b> due to a smaller passage or the higher friction of a denser material (lower conductivity)</li>
+        </ul>
+        <br>
+        <img id="image" class="img-responsive" src="../figures/lecture03/waterAnalogy.png" alt="" style="width:50%">
+        <br><br>
+        
+
+        <br><br>
+        The following image shows a water-circuit next to its analogous electrical circuit:
+        <br><br>
+        <img id="image" class="img-responsive" src="../figures/lecture03/waterCircuit.png" alt="" style="width:50%">
+        <br><br>
+        A battery generates a difference in electric potential between two ends of a circuit; 
+        <br>
+        For its <b>water analogy</b>, you can imagine a "pump" that pushes water through one end of a pipe system and collects it on the other.
+        <br><br>
+
+
+        <big><b>Next class: Transforming Boolea Logic into Electrical Components!</b></big>
+
       </p>
 
-      <br><br>
 
+<!-- 
       <p><br></p><hr><p><br></p>
 
       <h2>The Diode</h2>
       <p>
-        The diode is an electric component that acts like a "one way valve" for current. 
+        The diode is an electric component that acts like a "one way valve" but for current, instead of water. 
         <br><br>
         The symbol for a diode is like an arrow with a barrier (current can onl pass in the direction of the arrow):
         <br><br>
         <img class="img-max" src="../figures/lecture03/diode.png" alt="magic" style="width:30%">
         <br><br>
-
-
       </p>
 
       <p><br></p><hr><p><br></p>
@@ -524,6 +596,7 @@
         <img class="img-max" src="../figures/lecture03/transistor.png" alt="magic" style="width:30%">
         <br><br>
         The brilliance here is that <i>this allows an electric signal (that can be programmed) to control another electric signal</i>; making the electric component capable of self-guidance.
+
 
         To explain how we do this, we'll use an analogy with water and pipes, which contains: 
         <ul>
@@ -549,6 +622,9 @@
         </ul>
 
         We can join several of these transistors in different ways to create circuits that reproduce the logic operations seen above: NOT, OR, AND, NOR, NAND, and XOR.
+
+
+
         <br><br>
         One example is shown below (no need to memorize):
         <br>
@@ -557,7 +633,7 @@
         <span style='color:#888888'>Remember, the \(  - \kern-0.4em \large{\blacktriangleright} \kern-0.35em | \kern-0.32em -\) symbol is for a <b>diode</b>, this simply lets the current flow in a single direction (that of the arrow).</span>
         <br><br>
 
-        There are several arrangements like this that can generate the desired outputs. We call these "Logic Gates".
+        There are several arrangements like this that can generate the desired outputs. We call these "Logic Gates". 
       </p>
 
       <br><br>
@@ -603,7 +679,7 @@
         Either both valves are open or no water flows.
       </p>
 
-
+ -->
       <p><br></p><hr><p><br></p>
 
       <h4>Before next class (Tuesday 09/14)</h4>
