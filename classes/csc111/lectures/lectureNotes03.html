@@ -104,30 +104,32 @@
 
     <p><br></p><hr><p><br></p>              
 
-      <h2>From Bytecode to Python</h2>
+      <h2>How do we get from 0s and 1s to Python?</h2>
       <br><br>
       <p>
-        <li>
-          A <b>Low-Level</b> language like Bytecode, (AKA Machine-code) is composed of the set of instructions that can be directly executed by the computer's central processing unit (CPU). It is "Machine-speak" and it is very distant from English.
-        </li>
-        <br>
+        <ul>
+          <li>
+            A <b>Low-Level</b> language like Machine-code is composed of the set of instructions that can be directly executed by the computer's central processing unit (CPU). It is "Machine-speak" and it is very distant from English.
+          </li>
+          <br>
+          <li>
+            A way of letting humans read and write programs that then get executed is to write them using an unambiguous language that is closer to English and then converting these to Machine-Code that the computer can execute. 
+            <br><br>
 
-        <li>
-          A way of letting humans read and write programs that then get executed is to write them using an unambiguous language that is closer to English and then converting these to Bytecode or Machine-Code that the computer can execute. 
-          <br><br>
+            This <b>intermediate-level language</b> (one of which is <b>Assembly Language</b>) is still unambiguous but is also more human-readable.
+          </li>
+          <br>
 
-          This <b>intermediate-level language</b> (one of which is <b>Assembly Language</b>) is still unambiguous but is also more human-readable.
-        </li>
-        <br>
+          <li>
+            Finally, one can repeat the process of abstraction and create an even more readable language that can itself be translated into assembly language.
+            <br><br> 
 
-        <li>
-          Finally, one can repeat the process of abstraction and create an even more readable language that can itself be translated into assembly language.
-          <br><br> 
+            These programming languages that are closer to English and that allow you to use abstract terms and instructions are called <b>High-Level Languages</b>. Some of these are (C, C++, java, Python, etc).
+          </li>
+        </ul>
 
-          These programming languages that are closer to English and that allow you to use abstract terms and instructions are called <b>High-Level Languages</b>. Some of these are (C, C++, java, Python, etc).
-        </li>
+        <br><br>     
 
-        <br><br>
         And now, let's look at high-level programming.
       </p>
 
@@ -227,6 +229,23 @@
 
       </p>
       <br><br>
+
+
+        <h3>From High-Level Python to Execution</h3>
+
+        
+        The idea is that we write in Python, and then we process it so that the computer can execute.
+        <br><br>
+        Python does this in two steps:
+        <ul>
+          <li>Python Source code gets <i>compiled</i> into <b>Bytecode</b>
+            <br>
+            Bytecode is an intermediate language that details operands, operations, and memory locations
+          </li>
+          <li>The Bytecode then gets <i>Interpreted</i> by the Python Virtual Machine and executed in the computer (one by one)
+          </li>
+        </ul>
+ 
 
       <p><br></p><hr><p><br></p>
 
