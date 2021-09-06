@@ -825,6 +825,47 @@
         <li>Review the class notes</li>
         <li>Come to online OHs; bring questions, jokes, or simply come and listen.</li>
       </ul>
+
+
+      <p><br></p><hr><p><br></p>    
+
+      <h2>1-Minute Debrief</h2>
+
+      <p>
+        Please fill this out before leaving:
+        <br>
+        <div id="passw">
+          <div>
+              <!-- (THE PASSWORD IS numbers) -->
+              Enter the password to proceed:
+          </div>
+          <div>
+            <input type="password" id="password" onkeydown="if (event.keyCode == 13) document.getElementById('button').click()" /> 
+            <!-- IMPORTANT! this part is so if you click enter, it works. -->
+          </div>
+                    
+          <div>
+            <br/>
+            <input id="button" type="button" value="Reveal" onclick="if (document.getElementById('password').value == 'numbers') { 
+            document.getElementById('HIDDENDIV').classList.toggle('show');   document.getElementById('passw').style.display='none'; } 
+            else {  alert('Invalid Password!'); password.setSelectionRange(0, password.value.length);   } " />
+          </div>
+            <!-- it will autoselect wrong input if wrong -->
+            <br /><br /><br />
+        </div>
+        <br><br>
+
+        <div id="HIDDENDIV">
+          <style type="text/css">
+            .tg  {border-collapse:collapse;border-spacing:0;}
+            .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+              overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+              font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg .tg-0lax{text-align:left;vertical-align:top}
+          </style>
+          <a href="https://forms.gle/UC7YHCnsEeZPKaHh6">1-Minute Debrief</a>
+        </div>
         
 
 
