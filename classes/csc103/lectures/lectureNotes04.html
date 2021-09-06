@@ -29,6 +29,10 @@
         display: none;
       }
 
+      #HIDDENDIV.show  {
+        display: block;
+      }
+
       #table td {
           padding: 1em;
           border: 1px solid black;
@@ -387,7 +391,7 @@
             <li> What does this resemble in Boolean Logic?</li>
           </ol>
         </div>
-
+        <br><br>
 
         <h3>Building a NOT circuit</h3>
 
@@ -436,7 +440,7 @@
 
       <p><br></p><hr><p><br></p>
 
-      <h2>Summing up: Notations for Boolean functions</h2>
+      <h2>From Notations for Boolean functions to Circuit Diagrams</h2>
 
       <p>
         There are three ways in which we can represent Boolean functions:
@@ -456,23 +460,199 @@
       <h2>Circuit Diagrams</h2>
 
       <p>
-        <big><b>TODO: ADD DEMO: https://logic.ly/demo/</b></big>
+        Let's now look at converting the truth tables and algebraic notations into actual circuits!
+        <br><br>
+        We will be using the <b>simplified</b> circuit symbols that represent each gate. 
+        <br><br>
+
+        <h4>Working Backwards</h4>
+
+        Before building complex circuits, let's analyze one (break it into parts and understand its function).
+        <br><br>
+        <span style='color:#06a015'><b><big>Activity 3</big></b></span> :[2 minutes] : Analyze this diagram and discover the behavior of the circuit:
+        <br><br>
+
+        <div class="container mx-lg-5">
+          <img id="image" class="img-responsive" src="../figures/lecture04/testCircuit.png" alt="" style="width:40%">
+          <br><br>
+          Express the output (<b>Y</b>) in terms of the inputs ( <b>A</b>, <b>B</b>, <b>C</b>).
+          <ol>
+            <li>Express this circuit in algebraic notation.</li>
+            <li>
+              Fill out the following table:
+              <br>
+              <img id="image" class="img-responsive" src="../figures/lecture04/testTable.png" alt="" style="width:40%">
+            </li>
+          </ol>
+        </div>
+
+        <h4>Working Forwards</h4>
+
+        <br><br>
+        We're going to produce two circuits using an online simulator.
+        <br><br>
+        The link for the simulator is this one: <big><b> <a href="https://logic.ly/demo/">logic.ly</a></b></big>
+        <br><br>
+        The following image shows the main view of the work area:
+        <br><br>
+        <img id="image" class="img-responsive" src="../figures/lecture04/logiclyWorkArea.png" alt="" style="width:50%">
+        <br>
+        (No need to buy it!)
+        <br><br>
+        The following are the symbols for "input", "lightbulb output", and a "NOT" gate.
+        <br><br>
+        <img id="image" class="img-responsive" src="../figures/lecture04/inOutNo.png" alt="" style="width:50%">
+        <br><br>
+        The following are the symbols for "and", an "or", and "NOT" gates.
+        <br><br>
+        <img id="image" class="img-responsive" src="../figures/lecture04/andOrNot.png" alt="" style="width:50%">
+        <br><br>
+        The following is the "label" sign (to mark or annotate your circuits).
+        <br><br>
+        <img id="image" class="img-responsive" src="../figures/lecture04/label.png" alt="" style="width:35%">
+        <br><br>
+
+        You can see several examples here: <a href="https://logic.ly/demo/samples">logic.ly samples</a>.
+
+        <br><br>
+
+        <h3>Circuit Exercises</h3>
+
+        <span style='color:#06a015'><b><big>Activity 4</big></b></span> :[3 minutes] : Use the simulator to replicate this circuit and extract its truth table or algebraic expression:
+        <div class="container mx-lg-5">
+            <br><br>
+            <img id="image" class="img-responsive" src="../figures/lecture04/circuitWithFeedback.png" alt="" style="width:35%">
+            <br><br>
+            You'll note that the output is "fed-back" to the input. That is OK. Simply build the circuit to test how it works and follow the rules to build a table.
+            <ol>
+              <li>First: How many inputs does this have?</li>
+              <li>Second: Build the algebraic notation and/or truth table (you can use the actual circuit to verify)</li>
+              <li>Third: Are all input-output combinations possible?</li>
+            </ol>
+        </div>
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 5</big></b></span> :[3 minutes] : Use the simulator to construct the circuit for the following expression: 
+
+        \[ Y=( \overline{A \cdot B} ) \oplus (C+D) \]
+
+        <br><br>
+
+        If we have time:
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 6</big></b></span> :[3 minutes] : Create the diagram and truth table for the following circuit:
+        <br><br>
+        <img id="image" class="img-responsive" src="../figures/lecture04/testCircuit2.png" alt="" style="width:35%">
+        <br><br>
+        Note that:
+        <br>
+        <img id="image" class="img-responsive" src="../figures/lecture04/noContact.png" alt="" style="width:35%">
+        <br><br>
       </p>
       
-
-
-
       
       <p><br></p><hr><p><br></p>
 
-      <h4>Before next class (TODO)</h4>
+      <h2>The Format for the Final Project</h2>
+
+      <p>
+        The final project will have the following format:
+
+        <ul>
+          <li>Teams of two or three</li>
+          <li>Each team will chose a topic (see below)</li>
+          <li>You will write a 3-4 page essay (1000 - 1500 words)</li>
+          <li>You will prepare an oral presentation (which we might convert to a video presentation if needed)</li>
+          <li>You will focus on a specific aspect of computer technology and:
+            <ul>
+              <li>Explain how it works</li>
+              <li>Discuss the current "state of the art" for this technology</li>
+              <li>Where might any advances (based on current research) take this technology</li>
+              <li>Discuss possible consequences for society (good/bad) from the advancement of this technology</li>
+            </ul>
+          </li>
+          <li>[OPTIONAL] You may include a 1-page short story based on this technology (I am partial to Sci-fi, horror, mystery, and comedy).</li>
+        </ul>
+        <br><br>
+
+        <h3>Topics:</h3>
+        <ol>
+          <li>Multi-core processors</li>
+          <li>Smartphone</li>
+          <li>Tablet</li>
+          <li>Parallel computing</li>
+          <li>Sensor technology</li>
+          <li>Chatbots</li>
+          <li>Cloud gaming</li>
+          <li>Smart speakers (Alexa, Siri, Cortana)</li>
+          <li>Computing in the medical world (bioinformatics, biomedical informatics)</li>
+          <li>Speech recognition technology and software</li>
+          <li>Wearable computing</li>
+          <li>Sensor technology</li>
+          <li>Nanotechnology and computing</li>
+          <li>Supercomputers</li>
+          <li>Quantum computers</li>
+          <li>Robotics</li>
+        </ol>
+      </p>
+
+      <p><br></p><hr><p><br></p>      
+
+      <h4>Before next class (Thursday 09/16)</h4>
       <br><br>
       <b>[Due for everyone]</b> 
       <br>
       <ul>
-        <li> ???</li>
+        <li>Submit Homework 1 in Moodle before Wednesday 09/15 at 11:59</li>
+        <li>Start making teams and choosing topics</li>
       </ul>
       
+
+      <p><br></p><hr><p><br></p>    
+
+      <h2>1-Minute Debrief</h2>
+
+      <p>
+        Please fill this out before leaving:
+        <br>
+<div id="passw">
+          <div>
+              <!-- (THE PASSWORD IS true) -->
+              Enter the password to proceed:
+          </div>
+          <div>
+            <input type="password" id="password" onkeydown="if (event.keyCode == 13) document.getElementById('button').click()" /> 
+            <!-- IMPORTANT! this part is so if you click enter, it works. -->
+          </div>
+                    
+          <div>
+            <br/>
+            <input id="button" type="button" value="Reveal" onclick="if (document.getElementById('password').value == 'logic') { 
+            document.getElementById('HIDDENDIV').classList.toggle('show');   document.getElementById('passw').style.display='none'; } 
+            else {  alert('Invalid Password!'); password.setSelectionRange(0, password.value.length);   } " />
+          </div>
+            <!-- it will autoselect wrong input if wrong -->
+            <br /><br /><br />
+        </div>
+        <br><br>
+
+        <div id="HIDDENDIV">
+          <style type="text/css">
+            .tg  {border-collapse:collapse;border-spacing:0;}
+            .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+              overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+              font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg .tg-0lax{text-align:left;vertical-align:top}
+          </style>
+          <a href="https://forms.gle/UC7YHCnsEeZPKaHh6">1-Minute Debrief</a>
+        </div>     
+
+
+        
+      </p>
 
 
 
