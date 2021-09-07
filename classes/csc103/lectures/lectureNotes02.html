@@ -19,6 +19,10 @@
         display: none;
       }
 
+      #HIDDENDIV.show  {
+        display: block;
+      }
+
       #table td {
           padding: 1em;
           border: 1px solid black;
@@ -168,7 +172,9 @@
         <br><br>
 
         And <b>why move from analog to digital?</b> ... <span style='color:#06a015'><b><big><i>Precision</i>!</big></b></span> 
-        
+        <br>
+        <span><small>(and compact representation)</small></span>.
+        <br><br>
 
         <br><br>
 
@@ -180,10 +186,20 @@
       
       <p><br></p><hr><p><br></p>
 
-      <h2>The minimum amount of knowledge</h2>
+      <h2>The Minimum Amount of Knowledge</h2>
       <br><br>
 
       <p>
+        <h4>Part 1: The Medium</h4>
+        <br><br>
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span> :[2 minutes] : What is the size of the most accurate map of a region?
+
+        <br><br>
+        We want to chose a good way to <b>represent</b> reality.
+        <br><br>
+        Step 1: choose the <b>medium</b>.
+        <br><br>
+
         Moving gears takes a lot of energy and is slow. 
         <br>
         Also, analog machines suffer from <b>non-ideal</b> effects (inaccuracy, loss, leaks, friction, etc).
@@ -197,9 +213,10 @@
         <b>Electricity is that medium</b>.
         <br>
         However, we need to be able to satisfy some requirements!
-        <br><br>
+        <br><br><br>
 
-        <b>List of Requirements</b>:
+        <h4>Part 2: The Requirements</h4>
+        <br><br>
         <ul>
           <li>Represent and Save information</li>
           <li>Solve mathematical and logical expressions</li>          
@@ -209,7 +226,11 @@
         </ul>
         <br>
 
-        <span style='color:#06a015'><b><big>Activity 1</big></b></span> :[2 minutes] : how do we do these things with an Abacus?
+        <!-- <span style='color:#06a015'><b><big>Activity 1</big></b></span> :[2 minutes] : how do we do these things with an Abacus?
+        <br><br> -->
+
+        <br><br>
+        <h4>Part 3: Questions about information</h4>
         <br><br>
 
         Lets start with: <b>representing and saving information</b>
@@ -263,7 +284,7 @@
         </ul>
         <br><br>
 
-        The term <b>bit</b> is derived from <b>binary digit</b>, a logical state (relation between a proposition and the truth) with one of two values.
+        The term <b>bit</b> is derived from <b>binary <a href="https://en.wikipedia.org/wiki/Numerical_digit">digit</a></b>, a logical state (relation between a proposition and the truth) with one of two values.
         <br><br>  
 
         It is common to represent these with \( 0 \) and \( 1 \), but as you can see below, we can use another approach (OFF/ON) with the same results.
@@ -327,7 +348,7 @@
                 if we look at a pipe or a container with input and output ports, we could ask:
                 <ul>
                   <li>How much water is in there?: that points at an analog "quantity", which as we said before, suffers from some issues.</li>
-                  <li>But more importantly: <b>is there water in it?</b></li>
+                  <li>But more importantly: <b>is there water flowing in it?</b></li>
                 </ul> 
                 <br>
                 So, to get a <b>bit</b>, we ask: "is there water flow through this pipe?"<br>
