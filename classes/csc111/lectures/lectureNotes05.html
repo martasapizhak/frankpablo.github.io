@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSC 111 Introduction to Computer Science Through Programming</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+      .img-max {
+        max-width: 500px;
+        width:50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <!-- <img class="float-right" src="../../images/gw_primary_logo.png" alt="GWU" height="160"> -->
+      <img class="float-right" src="../../../images/SmithLogoStack-cmyk.png" alt="SmithLogo" height="120">
+      <h1 class="display-3 m-0">CSC 111</h1>
+      <p class="lead">Introduction to Computer Science Through Programming</p>
+      <p class="lead">Smith Computer Science </p>
+    </div>
+
+    <div class="container py-0"><!-- was 1-->
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info <span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">TBD 1</a>
+                <a class="dropdown-item" href="#">TBD 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project (if any)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Discord</a>
+                <a class="dropdown-item" href="#">Moodle</a>
+                <a class="dropdown-item" href="#">Repl.it</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Previous Module</a>
+              </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes05.html">Next Module</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <br><br>
+
+
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 05: String and formatting basics</h1>
+      <p>
+        <br>
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+       
+
+      <h2>Strings</h2>
+
+      <p>
+        Strings are <b>sequences of characters</b> with some nice properties and "powers". 
+        <br><br>
+
+        We can store strings inside variables or we can use them directly (for example when printing).
+        <br><br>
+
+        One type of string (which we've used before) is a <b>String Literals</b>.
+        <br>
+        String literals are strings that are explicitly specified in a source program by surrounding them with <b>single or double quotes</b>.
+
+
+        <br><br>
+        For example, in the program shown below:
+        <br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&#39;hello world!&#39;</span>)
+</pre></div>
+
+
+        The string literal is: <span style='color:#882222'><i>hello world!</i></span> since it is the text surrounded by single quotes.
+        <br><br>
+
+        A basic property of Strings is that they:
+
+        <ul>
+          <li>should be interpreted as literal text and</li>
+          <li>NOT as python commands of some sort</li>
+        </ul>
+        <br><br>
+
+        For example, in the program shown below:
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&#39;5 + 7&#39;</span>)
+</pre></div>
+
+        <br>
+
+        There is no expression to be executed inside the print statement since it is a string literal: <span style='color:#882222'><i>5 + 7</i></span>.
+        <br><br>
+
+
+        <h3>String variables</h3>
+
+        We can assign string literals to variables that "hold" the text for later use.
+        <br><br>
+        An example is shown below:
+        <br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">word <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&#39;bird&#39;</span>
+<span style="color: #007020">print</span> (word)
+</pre></div>
+        <span style='color:#888888'><i>link <a href="https://www.youtube.com/watch?v=9AZA6fREkoA">here</a>, in case you haven't heard (not in class)</i></span>
+        <br><br>
+
+
+
+        <h3>Strings and indices</h3>
+
+        A string, as we said, is composed of a sequence of characters.
+        <br><br>
+        Each character has a specific position in the string. We call this position its <b>index</b> and <b>we start indexing at 0</b>.
+        <br><br>
+
+        For example, the string literal <span style='color:#882222'><i>hello world!</i></span> is composed of the following characters at the following indices:
+        <br>
+        <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-0lax{text-align:left;vertical-align:top}
+        </style>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-0lax">0</th>
+            <th class="tg-0lax">1</th>
+            <th class="tg-0lax">2</th>
+            <th class="tg-0lax">3</th>
+            <th class="tg-0lax">4</th>
+            <th class="tg-0lax">5</th>
+            <th class="tg-0lax">6</th>
+            <th class="tg-0lax">7</th>
+            <th class="tg-0lax">8</th>
+            <th class="tg-0lax">9</th>
+            <th class="tg-0lax">10</th>
+            <th class="tg-0lax">11</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-0lax">h</td>
+            <td class="tg-0lax">e</td>
+            <td class="tg-0lax">l</td>
+            <td class="tg-0lax">l</td>
+            <td class="tg-0lax">o</td>
+            <td class="tg-0lax"></td>
+            <td class="tg-0lax">w</td>
+            <td class="tg-0lax">o</td>
+            <td class="tg-0lax">r</td>
+            <td class="tg-0lax">l</td>
+            <td class="tg-0lax">d</td>
+            <td class="tg-0lax">!</td>
+          </tr>
+        </tbody>
+        </table>        
+
+        <br><br>
+
+        <b>Why do we start at 0?</b>
+        <br>
+        Think of an index as the number of "places" away from the start of the string.
+        <br>
+        Another point of view is that of a competition, where we have a "champion" (at the top) and then "1st runner up", "2nd runner up", and so forth.
+        <br><br>
+
+
+
+        <h3>String built-in functions</h3>
+
+        Each string is like a little machine. 
+        <ul>
+          <li>It has some structured contents that are safe inside (the sequence of characters in their indices)</li>
+          <li>It also has some "abilities", which allow us to use some built-in functions</li>
+        </ul>
+        <br><br>
+
+        To show how it works, we'll use the <b><tt>len()</tt></b> (from <i>length</i>) built in function:
+        <br><br>
+
+        Try out <a href="https://pythontutor.com/visualize.html#code=word%20%3D%20'bird'%0Aprint%20%28word%29%0Aword_length%20%3D%20len%28word%29%0Aprint%28word_length%29%0A%23%20print%20%28%20len%28word%29%20%29%20is%20more%20efficient&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> this code snippet</a>
+
+        <br><br><br>
+
+        <big><b>TODO... for later</b></big>
+
+        <br><br><br>
+
+
+
+
+
+        <!-- LATER -->
+        <br><br>
+
+        <h4>What if you want to include single quotes in your string literal?</h4>
+        Let's say you want to print the sentence: <span style='color:#882222'><i>That's great!</i></span>. 
+        <br>
+        You'll notice it has a single quote in the text.
+        <br><br>
+
+        You can use <b>double quotes</b> to surround text that contains single quotes.
+        <br><br>
+
+        So you could write the following:
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&quot;print(&#39;hello world!&#39;)&quot;</span>)
+</pre></div>
+
+<br><br>
+
+        and the part inside double quotes  <span style='color:#882222'><i>print('hello world!')</i></span> will NOT be executed as a  statement, it will be interpreted literally.
+
+
+         <!-- LATER -->
+         <h4>What if you want to include double quotes in your string literal?</h4>
+
+         <!-- MENTION escape characters -->
+
+
+      </p>
+
+
+    <p><br></p><hr><p><br></p>
+
+      <h4>Before next class (Wednesday)</h4>
+      <b>[Due for everyone]</b> Complete ZyBook chapter 1.21 and 3.1, and ZyLabs 1.31, and 1.32<br>
+      Note: chapter 3.1 is a bit complex, but don't worry, we'll discuss it together during lecture.
+
+      <br><br>
+
+      <b>[Optional]</b> play around with the <b><tt>input</tt></b>, <b><tt>int</tt></b>, <b><tt>float</tt></b>, and <b><tt>eval</tt></b> functions (using the base code linked above). <br>
+      This will give you some advantage in the assignment to come.
+
+
+
+  
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Previous Module</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes05.html">Next Module</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+   
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+    <!-- <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script> -->
+  </body>
+</html>
