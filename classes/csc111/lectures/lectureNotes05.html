@@ -78,10 +78,10 @@
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Previous Module</a>
+                <a class="nav-link mx-lg-2" href="./lectureNotes04.html">Previous Module</a>
               </li>
             <li class="nav-item ">
-              <a class="nav-link mx-lg-2" href="./lectureNotes05.html">Next Module</a>
+              <a class="nav-link mx-lg-2" href="./lectureNotes06.html">Next Module</a>
             </li>
           </ul>
         </div>
@@ -104,9 +104,7 @@
 
       <p><br></p><hr><p><br></p>
 
-       
-
-      <h2>Strings</h2>
+      <h2>Intro to Strings</h2>
 
       <p>
         Strings are <b>sequences of characters</b> with some nice properties and "powers". 
@@ -117,10 +115,11 @@
 
         One type of string (which we've used before) is a <b>String Literals</b>.
         <br>
-        String literals are strings that are explicitly specified in a source program by surrounding them with <b>single or double quotes</b>.
-
-
+        String literals are strings that are explicitly specified in a source program by surrounding them with <b>single, double, and even triple quotes</b>.
+        <br>
+        <span style='color:#888888'>(That's why triiple quotes are not comments... they are unused string literals!)</span>
         <br><br>
+
         For example, in the program shown below:
         <br>
 <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&#39;hello world!&#39;</span>)
@@ -158,7 +157,7 @@
 <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">word <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&#39;bird&#39;</span>
 <span style="color: #007020">print</span> (word)
 </pre></div>
-        <span style='color:#888888'><i>link <a href="https://www.youtube.com/watch?v=9AZA6fREkoA">here</a>, in case you haven't heard (not in class)</i></span>
+        <span style='color:#888888'><i>link <a href="https://youtu.be/9AZA6fREkoA?t=8", target='blank'>here</a>, in case you haven't heard (not in class)</i></span>
         <br><br>
 
 
@@ -224,34 +223,88 @@
         Another point of view is that of a competition, where we have a "champion" (at the top) and then "1st runner up", "2nd runner up", and so forth.
         <br><br>
 
+        <h4>Accessing a specific character in a String</h4>
+        Say we have the string <b><tt>hello world!</tt></b> saved in a variable called <b><tt>greeting</tt></b>.
+        <br><br> 
+        We can "access" or "retreive" (without removing) a character from a String by indicating <b>which index in particular inside the string you are interested in getting</b>.
+        <br><br>
+        You do this  by using the <b>square bracket</b> notation: 
+        <br><br>
+
+        <b><tt>greeting[6]</tt></b>
+        <br><br>
+
+        This would obtain the  character in the index equal to <b>6</b>: character <b><tt>w</tt></b>.
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span> [2 minutes]: <br>
+        Try out <a href="https://pythontutor.com/visualize.html#code=greeting%20%3D%20'hello%20world!'%0Aprint%28greeting%29%0Aprint%28%29%0Aprint%28greeting%5B6%5D%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"  target="_blank"> this code snippet</a>     
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> [1 minute]: <br>
+        What is the largest index we are allowed to use? 
+        <br>
+        Try accessing a larger one in the code linked above.
+
+        <br><br>  
+      </p>
 
 
-        <h3>String built-in functions</h3>
+      <p><br></p><hr><p><br></p>
 
-        Each string is like a little machine. 
+      <h2>Built-in functions for Strings</h2>
+
+      <p>
+        There are some functions to which we "feed" a string as input and some that are "internal abilities of a string".
+        <br><br>
+
+        <h4>function with a string parameter</h4>
+        These are functions that accept a string parameter.
+        <br>
+        You already know one of these: &nbsp;&nbsp; <b><tt>print( &lt;your string here&gt; ) </tt></b>
+        <br><br>
+
+        To show how it works, we'll use the <b><tt>len( &lt;your string here&gt; ) </tt></b> built in function (from <i>length</i>):
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 3</big></b></span> [2 minutes]: <br>
+        Try out <a href="https://pythontutor.com/visualize.html#code=word%20%3D%20'bird'%0Aprint%20%28word%29%0Aword_length%20%3D%20len%28word%29%0Aprint%28word_length%29%0A%23%20print%20%28%20len%28word%29%20%29%20is%20more%20efficient&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"  target="_blank"> this code snippet</a>
+
+        <br><br>
+
+        <h4>internal string functions</h4>
+        Each string is like a little machine. Think of it as a car. We call these <b>Objects</b>.
         <ul>
-          <li>It has some structured contents that are safe inside (the sequence of characters in their indices)</li>
-          <li>It also has some "abilities", which allow us to use some built-in functions</li>
+          <li>It has some structured contents (the sequence of characters in their indices) that are safe inside (like people in a car)</li>
+          <li>It also has some "abilities", which are implemented as functions that the string "machine" can do (like steering, accelerating, etc).</li>
         </ul>
+        <br>
+        To make use of the internal functions of an object is to use the <b><tt><span style='color:#aa0000'>dot</span></tt></b> notation: 
+        <br>
+        &nbsp;&nbsp; <tt> <span style='color:#059013'>&lt;your string here&gt;</span> <span style='color:#aa0000'><big><b>.</b></big></span> &lt;<span style='color:#000088'>name of function&gt; </span>  ( <span style='color:#885500'>&lt;parameters&gt; </span>  )</tt></b>
+         <br><br>
+         
+         Example:
+         <br>
+
+
+         &nbsp;&nbsp; <tt> <span style='color:#059013'>greeting</span><span style='color:#880000'><big><b>.</b></big></span><span style='color:#000088'>lower</span>(  )</tt></b>
+         <br><br>
+
+         The <b>dot</b> notation means: "Look inside and access".
+         <br>
+         So, in the example: &nbsp;&nbsp; <tt> <span style='color:#059013'>greeting</span><span style='color:#880000'><big><b>.</b></big></span><span style='color:#000088'>lower</span>(  )</tt></b>&nbsp;&nbsp;, the compiler understands that we want to: 
+         <br>
+         <li>look inside the variable <b><tt>greeting</tt></b>, and use its function called <b><tt>lower</tt></b>, and give it no parameters.</li>
+         <br>
+         <span style='color:#888888'>(the function <tt>lower()</tt> converts the string litteral to lowercase)</span>
+
+
         <br><br>
 
-        To show how it works, we'll use the <b><tt>len()</tt></b> (from <i>length</i>) built in function:
-        <br><br>
-
-        Try out <a href="https://pythontutor.com/visualize.html#code=word%20%3D%20'bird'%0Aprint%20%28word%29%0Aword_length%20%3D%20len%28word%29%0Aprint%28word_length%29%0A%23%20print%20%28%20len%28word%29%20%29%20is%20more%20efficient&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> this code snippet</a>
-
-        <br><br><br>
-
-        <big><b>TODO... for later</b></big>
-
-        <br><br><br>
-
-
-
-
-
-        <!-- LATER -->
-        <br><br>
+        <h3>Special characters inside strings</h3>
+        Sometimes you want to put special characters inside a string that would mess up our string.
 
         <h4>What if you want to include single quotes in your string literal?</h4>
         Let's say you want to print the sentence: <span style='color:#882222'><i>That's great!</i></span>. 
@@ -270,26 +323,195 @@
 
         and the part inside double quotes  <span style='color:#882222'><i>print('hello world!')</i></span> will NOT be executed as a  statement, it will be interpreted literally.
 
+         <br><br>
 
-         <!-- LATER -->
          <h4>What if you want to include double quotes in your string literal?</h4>
 
-         <!-- MENTION escape characters -->
+         We could use triple quotes (but this is getting ridiculous). 
+         <br><br>
 
+         Triple quotes have another property: <b>They allow you to write multiline string literals</b> (that's why people use them as comments).
+         <br><br>
+
+         <h4>Is there another way?</h4>
+         The answer is YES! 
+         <br><br>
+         We can use <b>escape characters</b>. 
+         <br><br>
+
+         <h3>Escape Characters</h3>
+         Escape charaters tell the <b>python interpreter</b> (actually, the compiler for the statement), to interpret the next symbol in a different way than usual.
+         <br><br>
+        The character that tells the compiler to start the escape sequence is <b>the backslash</b> <b><tt>&nbsp;&nbsp;\&nbsp;&nbsp;</tt></b>
+        <br><br>
+
+        Some escape sequences are:
+        <br>
+        <ul>
+          <li><b><tt>\'</tt></b>&nbsp;&nbsp; this tells the compiler to interpret the single quote as a single quote and NOT as the start or end of a string</li>
+          <li><b><tt>\"</tt></b>&nbsp;&nbsp; this tells the compiler to interpret the double quote as a double quote and NOT as the start or end of a string</li>
+          <li><b><tt>\n</tt></b>&nbsp;&nbsp; this tells the compiler to insert a <b>newline</b> instead of the letter <b><tt>n</tt></b></li>
+        </ul>
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>The format function</h2>
+
+      <p>
+        format is one of the string internal functions. We can access it using the <b><tt>dot notation</tt></b>.
+        <br>
+
+        format allows us to do fancy formatting on string litterals. 
+        <br><br>
+
+        Before we use it, let's talk about <b>placeholders</b>: 
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          Solve the following "riddle":
+          <br><br>
+          If I write the sentence: <br>
+
+          <b><tt> " The <span style="text-decoration: underline; white-space: pre;"> &nbsp;&nbsp;&nbsp;&nbsp; </span>  ate the <span style="text-decoration: underline; white-space: pre;">&nbsp;&nbsp;&nbsp;&nbsp; </span> " </tt></b>, 
+          <br><br>
+
+          and I mention that the two nouns to be used are <b><tt>dog</tt></b>, and <b><tt>pizza</tt></b>, 
+          <br><br>
+          What should the completed sentence be?
+        </div>
+
+        <br>
+
+        If you think that was not very hard, then you'll master the <b><tt>format</tt></b> function.
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture05/dogoPizza.png"  style="width:30%">
+
+        <br><br>
+
+        <h3>Using the format function</h3>
+
+        <b><tt>format</tt></b> uses placeholders to know where to insert certain items.
+        <br><br>
+
+        A basic example is the following:
+        <br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&#39;the {} ate the {}.&#39;</span><span style="color: #333333">.</span>format(<span style="background-color: #fff0f0">&#39;dog&#39;</span> , <span style="background-color: #fff0f0">&#39;pizza&#39;</span> ))
+</pre></div>        
+
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 4</big></b></span> [2 minutes]: <br>
+        try it out in the <a href="https://pythontutor.com/visualize.html#code=print%28'the%20%7B%7D%20ate%20the%20%7B%7D.'.format%28'dog'%20,%20'pizza'%20%29%29%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="blank">python visualizer</a>
+        <br><br>
+        <li>Here, the placeholders are the pairs of curly brackets: <b><tt>{}</tt></b>, and the items are the parameters passed to the <b><tt>format</tt></b> function (inside the parens).</li>
+        <li>Note that there are the same number of placeholders as items</li>
+        <br><br>
+
+
+        So why do something so complicated just to write a sentence?
+        <br><br>
+        because we can:
+        <ul>
+          <li>use values and variables as items, and</li>
+          <li>add formatting instructions to the placeholders!!!</li>
+        </ul>
+
+        <br><br>
+
+        <h3>Using variables inside format</h3>
+        In some applications, you want to print a formatted string that depends on the value contained in a variable.
+        <br><br>
+
+        An example:
+        <br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">word1 <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&#39;dog&#39;</span>
+word2 <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&#39;pizza&#39;</span>
+<span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&#39;the {} ate the {}.&#39;</span><span style="color: #333333">.</span>format(word1 , word2 ))
+</pre></div>     
+
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 5</big></b></span> [2 minutes]: <br>
+        try it out in the <a href="https://pythontutor.com/visualize.html#code=word1%20%3D%20'dog'%0Aword2%20%3D%20'pizza'%0Aprint%28'the%20%7B%7D%20ate%20the%20%7B%7D.'.format%28word1%20,%20word2%20%29%29%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="blank">python visualizer</a>
+        <br><br>
+
+
+        <h3>Adding formatting hints</h3>
+        You can add formatting hints <b>inside the placeholder</b> for the item you want to format.
+        <br><br>
+
+        An example: 
+        <br>
+
+        <span style='color:#06a015'><b><big>Activity 6</big></b></span> [2 minutes]: <br>
+        try it out in the <a href="https://pythontutor.com/visualize.html#code=item1%20%3D%20'a'%0Aitem2%20%3D%20ord%28'a'%29%0Aprint%28'the%20character%20symbol%20%7B%3As%7D%20has%20ascii%20number%20%7B%3Ad%7D,%20and%20binary%20value%20%7B%3Ab%7D'.format%28item1%20,%20item2,%20item2%20%29%29%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="blank">python visualizer</a>
+        <br><br>
 
       </p>
+
+    <p><br></p><hr><p><br></p>
+      
+      <h2>Concatenating strings</h2>
+
+      <p>
+        Strings have another nice property, which is, <b>we can concatenate them using th <tt>+</tt> operator.</b>
+        <br><br>
+        To <b>concatenate</b> is to place one after the other.
+        <br><br>
+
+        The following example shows how to concatenate two strings (and more):
+        <br><br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">my_string <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&#39;The pizza&#39;</span> <span style="color: #333333">+</span> <span style="background-color: #fff0f0">&#39; is $&#39;</span> <span style="color: #888888">#first concatenation</span>
+<span style="color: #007020">print</span> (my_string)
+<span style="color: #007020">print</span> ()
+<span style="color: #007020">print</span> ( my_string, <span style="background-color: #fff0f0">&#39;20&#39;</span>,<span style="background-color: #fff0f0">&#39;, please&#39;</span> ) <span style="color: #888888">#multi-element print</span>
+</pre></div>
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 7</big></b></span> [2 minutes]: <br>
+        try it out in the <a href="https://pythontutor.com/visualize.html#code=my_string%20%3D%20'The%20pizza'%20%2B%20'%20is%20%24'%20%23first%20concatenation%0Aprint%20%28my_string%29%0Aprint%20%28%29%0Aprint%20%28%20my_string,%20'20',',%20please'%20%29%20%23multi-element%20print%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="blank">python visualizer</a>
+        <br><br>
+
+        Note that the <b><tt>comma notation</tt></b> inside print causes a space to be added between printed items. 
+        <br>
+        This causes the dollar sign to be separated from the number and the comma to be separated by one space from the number (annoying no?)
+        <br><br>
+        <span style='color:#06a015'><b><big>Activity 8</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          Replace the last print statement for one that uses concatenation so that we get the following output:
+          <br><br>
+          <b><tt>The pizza is $20, please</tt></b>
+        </div>
+      </p>  
+
+    <p><br></p><hr><p><br></p>
+      
+      <h2>Using Repl.it</h2>
+
+      <p>
+        Now, please access the replit exercise: <a href="https://replit.com/team/csc111f21s3/String-Concatenation-Example">String Concatenation</a>
+        <br>
+        And repeat the "fix" there.
+
+        <br><br>
+
+        Now, let's talk about Assignment 01.
+      </p>   
 
 
     <p><br></p><hr><p><br></p>
 
       <h4>Before next class (Wednesday)</h4>
-      <b>[Due for everyone]</b> Complete ZyBook chapter 1.21 and 3.1, and ZyLabs 1.31, and 1.32<br>
-      Note: chapter 3.1 is a bit complex, but don't worry, we'll discuss it together during lecture.
+      <b>[Due for everyone]</b>  <b><big>TODO</big></b><br>
 
       <br><br>
 
-      <b>[Optional]</b> play around with the <b><tt>input</tt></b>, <b><tt>int</tt></b>, <b><tt>float</tt></b>, and <b><tt>eval</tt></b> functions (using the base code linked above). <br>
-      This will give you some advantage in the assignment to come.
+      <b>[Optional]</b> <b><big>TODO</big></b><br>
 
 
 
@@ -308,10 +530,10 @@
             </ul>
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Previous Module</a>
+                <a class="nav-link mx-lg-2" href="./lectureNotes04.html">Previous Module</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link mx-lg-2" href="./lectureNotes05.html">Next Module</a>
+                <a class="nav-link mx-lg-2" href="./lectureNotes06.html">Next Module</a>
               </li>
             </ul>
           </div>
