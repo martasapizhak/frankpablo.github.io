@@ -160,6 +160,197 @@
 
       <h2>Review: Binary and its operations</h2>
       <p>
+        <br>
+        <h4>First, a reminder of the decimal positional system</h4>
+        The following shows the "value of each place" for the decimal system and the digits <b>2,510,709,364</b> :
+        <br>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax">multiplier:</th>
+    <th class="tg-0lax">2</th>
+    <th class="tg-0lax">5</th>
+    <th class="tg-0lax">1</th>
+    <th class="tg-0lax">0</th>
+    <th class="tg-0lax">7</th>
+    <th class="tg-0lax">0</th>
+    <th class="tg-0lax">9</th>
+    <th class="tg-0lax">3</th>
+    <th class="tg-0lax">6</th>
+    <th class="tg-0lax">4</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">place:</td>
+    <td class="tg-0lax">1,000,000,000</td>
+    <td class="tg-0lax">100,000,000</td>
+    <td class="tg-0lax">10,000,000</td>
+    <td class="tg-0lax">1,000,000</td>
+    <td class="tg-0lax">100,000</td>
+    <td class="tg-0lax">10,000</td>
+    <td class="tg-0lax">1,000</td>
+    <td class="tg-0lax">100</td>
+    <td class="tg-0lax">10</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+</tbody>
+</table>        
+<br><br>
+
+This can be rewritten using "power" notation (note that the exponents change once when moving positions to the left):
+<br>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax">multiplier:</th>
+    <th class="tg-0lax">2</th>
+    <th class="tg-0lax">5</th>
+    <th class="tg-0lax">1</th>
+    <th class="tg-0lax">0</th>
+    <th class="tg-0lax">7</th>
+    <th class="tg-0lax">0</th>
+    <th class="tg-0lax">9</th>
+    <th class="tg-0lax">3</th>
+    <th class="tg-0lax">6</th>
+    <th class="tg-0lax">4</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">place:</td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(10^9\)</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(10^8\)</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(10^7\)</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(10^6\)</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(10^5\)</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(10^4\)</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(10^3\)</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(10^2\)</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(10^1\)</span></td>
+    <td class="tg-0lax">\(10^0\)</td>
+  </tr>
+</tbody>
+</table>
+<br><br>
+
+<h4>Now, an example of the binary positional system</h4>
+        The following shows the "value of each place" for the decimal system and the digits <b>1101011101</b> :
+        <br>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax">multiplier:</th>
+    <th class="tg-0lax">1</th>
+    <th class="tg-0lax">0</th>
+    <th class="tg-0lax">1</th>
+    <th class="tg-0lax">1</th>
+    <th class="tg-0lax">1</th>
+    <th class="tg-0lax">0</th>
+    <th class="tg-0lax">1</th>
+    <th class="tg-0lax">0</th>
+    <th class="tg-0lax">1</th>
+    <th class="tg-0lax">1</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">place:</td>
+    <td class="tg-0lax">512</td>
+    <td class="tg-0lax">256</td>
+    <td class="tg-0lax">128</td>
+    <td class="tg-0lax">64</td>
+    <td class="tg-0lax">32</td>
+    <td class="tg-0lax">16</td>
+    <td class="tg-0lax">8</td>
+    <td class="tg-0lax">4</td>
+    <td class="tg-0lax">2</td>
+    <td class="tg-0lax">1</td>
+  </tr>
+</tbody>
+</table>        
+<br><br>
+
+This can be rewritten using "power" notation (note that the exponents change once when moving positions to the left) <br>
+The only changes are:
+<ol>
+  <li>the "base" for each opsition is now 2 (instead of 10)</li>
+  <li>we're on;y allowed to use the multipliers: 1 and 0</li>
+</ol>
+<br>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax">multiplier:</th>
+    <th class="tg-0lax">1</th>
+    <th class="tg-0lax">0</th>
+    <th class="tg-0lax">1</th>
+    <th class="tg-0lax">1</th>
+    <th class="tg-0lax">1</th>
+    <th class="tg-0lax">0</th>
+    <th class="tg-0lax">1</th>
+    <th class="tg-0lax">0</th>
+    <th class="tg-0lax">1</th>
+    <th class="tg-0lax">1</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">place:</td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(2^9\)</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(2^8\)</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(2^7\)</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(2^6\)</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(2^5\)</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(2^4\)</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(2^3\)</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(2^2\)</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">\(2^1\)</span></td>
+    <td class="tg-0lax">\(2^0\)</td>
+  </tr>
+</tbody>
+</table>
+<br><br>
+
+<!--         <br><br>
+        The following shows the "value of each place" for the binary system:
+
+
+        <br><br>
+
         We say that binary is a positional number system with a base of 2:
         <br>
         \[
@@ -168,10 +359,206 @@
             \qquad        &=& \: 1024     \: & + & \: 512   \: &+& \: 0     &+& \:   128 \: &+& \: 64    \: &+& \:     0 \: &+& \:     0 \: &+& \:     0 \: &+& \: 0     &+& \: 0 \: &+& \: 1 \: &=& \: 1729
           \end{alignat} 
         \]
+        <br><br> -->
+
+        <h3>Converting binary to decimal</h3>
+        You just add the "position" values that we use! (those that have a multiplier of 1).
+        <br><br>
+        <h3>Converting decimal to binary</h3>
+        Follow these steps:
+        <ol>
+          <li>find the largest position value that fits in the decimal number \(N\)</li>
+          <li>assign a multiplier of <b>1</b> to that position</li>
+          <li>subtract the position value from \(N\) to obtain the remainder \(r\)</li>
+          <li>make \(N \leftarrow r\)</li>
+          <li>repeat the operation until \(r\) is 0</li>
+        </ol>
+        <br><br>
+        Example:
+
+        if \(N = 88\), the steps are:
+
+        \[
+          \begin{alignat}{2}
+          &1. \texttt{ The largest position value that fits 88 is 64 (exponent is 6} \\
+          &2. \texttt{ The current binary number is: } 1_6 \sqcup_5 \sqcup_4 \sqcup_3 \sqcup_2  \sqcup_1 \sqcup_0 \\
+          &3. \texttt{ The remainder is: } 88 - 64 = 24 \\
+          &4. \texttt{ The next number $N$ is: } 24 \\
+          &1. \texttt{ The largest position value that fits 24 is 16 (exponent is 4)} \\
+          &2. \texttt{ The current binary number is: } 1_6 0_5 1_4 \sqcup_3 \sqcup_2  \sqcup_1 \sqcup_0 \\
+          &3. \texttt{ The remainder is: } 24 - 16 = 8 \\
+          &4. \texttt{ The next number $N$ is: } 8 \\
+          &1. \texttt{ The largest position value that fits 8 is 8 (exponent is 3)} \\
+          &2. \texttt{ The current binary number is: } 1_6 0_5 1_4 1_3 \sqcup_2  \sqcup_1 \sqcup_0 \\
+          &3. \texttt{ The remainder is: } 8 - 8 = 0 \\
+          &4. \texttt{ Since $r=0$ all other multipliers are 0s  }  1_6 0_5 1_4 1_3 0_2  0_1 0_0
+          \end{alignat}
+        \]
+        Final number: <b>0b1011000</b>
+
+
         <br><br>
 
-        We can do all sorts of arithmetic ( \( +,-,*,\backslash \) ) and logical operations ( \( NOT, OR, AND\) ).
+        We can do all sorts of arithmetic ( \( +,-,*,\backslash \) ) operations.
         <br><br>
+
+        For quick transformations, use <big><a href="https://bitwisecmd.com/"  target="_blank">bitwiseCmd</a></big>
+
+      </p>
+      <br><br>
+
+      <h2>Logical Operators</h2>
+      <br><br>
+      <p>
+        Logical operations refer to operations on variables that can contain truth values: true and false, usually denoted 1 and 0, respectively. 
+        <br><br>
+        Think of these as operations on the "truth-value of a statement".
+        <br><br>
+
+        <h4>NOT</h4>
+        NOT is an operation that can be applied to a single bit; since the operation applies to a "single" operand, 
+        <br>
+        it is called a  <i>unary</i> operation.
+        <br><br>
+        When <b>NOT</b> is applied to a single bit (lets call it <b>p</b>), we can get the following table:
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">NOT p</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+          </tbody>
+        </table>      
+        <br><br>
+        <img id="image" class="img-responsive" src="../figures/lecture02/not.png" alt="" style="width:20%">
+        <br>
+        <span style='color:#888888'>Note that we're labeling on the outside for clarity, but the label refers to the interior of each circle</span>
+        <br><br>
+        Note that, if \(p\) denotes the operand, \(\text{NOT } p\) can be written as \(\sim p\), \(\neg p\), \(\bar{p}\) or even \(!p\).
+        <br><br>
+
+
+
+        <h4>OR</h4>
+        OR (AKA: the disjunction operator) is an operation that is applied to pairs of operands, 
+        <br>
+        it is called a  <i>binary</i> operation.
+        <br><br>
+        it is true if any of its operands is true</i>.
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">q</th>              
+              <th class="tg-0lax">p OR q</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+          </tbody>
+        </table>
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture02/or.png" alt="Disjunction" style="width:20%">
+        <br><br>
+        Note: other symbols you might see are: \( p\lor q \text{, } p+ q  \text{, } p\mid q \).
+        <br><br>
+        
+        <h4>AND</h4>
+        AND (AKA: the conjunction operator) is a <i>binary</i> operator; <i>it is true if and only if both of its operands are true</i>.
+        <br><br>
+        We can show the effect of this operator using a table:
+        <table class="tg inlineTable">
+          <thead>
+            <tr>
+              <th class="tg-0lax">p</th>
+              <th class="tg-0lax">q</th>
+              <th class="tg-0lax">p AND q</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+              <td style="min-width:40px" class="tg-0lax">0</td>
+            </tr>
+            <tr>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+              <td style="min-width:40px" class="tg-0lax">1</td>
+            </tr>
+          </tbody>
+        </table>   
+        <br><br>
+
+        <img class="img-fluid" src="../figures/lecture02/and.png" alt="Conjunction" style="width:20%">
+        <br><br>
+        <span style='color:#888888'>Note that we're labeling on the outside for clarity, but the label refers to the interior of each circle</span>
+        <br><br>
+        Note: other symbols you might see are: \( p \wedge q \text{, } p\cdot q  \text{, } p\&q \).
+        <br><br>
+
+        <h3>Examples</h3>
+
+        <span style='color:#06a015'><b><big>Activity 10</big></b></span> [Group: 1 minute (if we have time)]: <br>
+        <div class="mx-lg-5">
+          What is the result of the following assertions (what do they depend on?): 
+          <br>
+          <ul>
+            <li>I will go play tennis if <span style='color:#fe6d21'>it is sunny</span> AND I <span style='color:#0000ff'>finish grading</span>;</li>
+            <li>I will go play tennis if it is mountain day OR I finish grading;</li>
+            <li>I will go play tennis if it is NOT raining;</li>
+          </ul>                  
+        </div>
+
+
+        <br><br>
+
+        It turns out that AND, OR, and NOT are necessary and sufficient to implement <b>any</b> boolean function.
+
+
+        <br><br>
+
+        <h3>More Logical Operations</h3>
+
 
         Two additional logical operations to check are: XOR and NAND.
         <br><br>
@@ -213,8 +600,6 @@
           </tbody>
         </table>
         <br><br>
-
-
 
 
         <h4>XOR</h4>
