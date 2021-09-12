@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSC 111 Introduction to Computer Science Through Programming</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+      .img-max {
+        max-width: 500px;
+        width:50%;
+      }
+    
+      .card {
+          /*width: 130px;*/
+          /*height: 195px;*/
+          position: relative;
+          display: inline-block;
+      }
+      .card .img-top {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 99;
+      }
+      .card:hover .img-top {
+          display: inline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <!-- <img class="float-right" src="../../images/gw_primary_logo.png" alt="GWU" height="160"> -->
+      <img class="float-right" src="../../../images/SmithLogoStack-cmyk.png" alt="SmithLogo" height="120">
+      <h1 class="display-3 m-0">CSC 111</h1>
+      <p class="lead">Introduction to Computer Science Through Programming</p>
+      <p class="lead">Smith Computer Science </p>
+    </div>
+
+    <div class="container py-0"><!-- was 1-->
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info <span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">TBD 1</a>
+                <a class="dropdown-item" href="#">TBD 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project (if any)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Discord</a>
+                <a class="dropdown-item" href="#">Moodle</a>
+                <a class="dropdown-item" href="#">Repl.it</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes05.html">Previous Module</a>
+              </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes07.html">Next Module</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <br><br>
+
+
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 06: Intro to Functions</h1>
+      <p>
+        <br>
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Recap and Catch-up: Strings</h2>
+
+      <p>
+
+        We will finish the activities from the previous lecture if we did not finish then.
+        
+      </p>
+
+
+
+
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Execution Control Flow</h2>
+
+      <p>
+        When a program gets executed, it is executed one statement at a time.
+        <br><br>
+        One seemingly dumb question one could ask is: <b>which one comes next</b>?
+        <br><br>
+
+        <h4>An example with music</h4>
+        <br><br>
+
+        The execution of a piece of classical music depends on many things:
+        <ol>
+          <li>The piece</li>
+          <li>The arrangement</li>
+          <li>The conductor</li>
+          <li>The number of musicians</li>
+          <li>The instruments</li>
+        </ol>
+
+        So, let's say that we are talking about something like this:
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture06/pianoRecital.png"  style="width:50%">
+        <br><br>
+        
+
+        So, that the musician and conductor is the same, and they follow sheet music that looks like this:
+        
+        <br><br>
+        <div class="card">
+          <img src="../figures/lecture06/imperialMarchSheet1.png" alt="Card Back" style="width:50%">
+          <img src="../figures/lecture06/imperialMarchSheet2.png" class="img-top" alt="Card Front"  style="width:50%">
+        </div>
+        <br><br>
+
+        Pretty easy.
+        <br><br>
+
+        Now imagine that the context is this one:
+
+        <br><br>
+        <div class="card">
+          <img src="../figures/lecture06/orchestra1.png" alt="Card Back" style="width:80%">
+          <img src="../figures/lecture06/orchestra2.png" class="img-top" alt="Card Front"  style="width:80%">
+        </div>
+        (And there are many musicians and one conductor)
+        <br><br>
+
+        Also, the sheet music might be <b>different for each instrument</b>!!!
+
+        <br>
+        How could this ever work!
+        <br><br>
+
+        One possible solution (not necessarily how it is actually done) is the following:
+        <br>
+        (Look at the image below)
+        <br><br>
+
+        <ol>
+          <li>Despite each instrument being capable of playing many different tunes (don't hover over image),</li>
+          <li>we could pick <b>a specific tune</b> for each instrument and let it know <b>when</b> to execute it (hover over image).</li>
+        </ol>
+        
+
+
+        <br><br>
+        <div class="card">
+          <img src="../figures/lecture06/manyPiecesPerInstrument.png" alt="Card Back" style="width:80%">
+          <img src="../figures/lecture06/eachInstrumentAPart.png" class="img-top" alt="Card Front"  style="width:80%">
+        </div>
+
+        <br><br>
+        <ul>                
+          <li>If the Sheet music that the <b>Conductor</b> is reading indicates that it is the violin's turn, 
+            <br>
+            She points to the violin section:
+            <br><br>
+            <img class="img-fluid" src="../figures/lecture06/orchestraLayout1.png"  style="width:50%">
+            <br>
+            And they do their bit.          
+          </li>
+          <br>
+          <li>If the Sheet music that the <b>Conductor</b> is reading indicates that it is the trumpet's turn, 
+            <br>
+            She points to the trumpet section:
+            <br><br>
+            <img class="img-fluid" src="../figures/lecture06/orchestraLayout2.png"  style="width:50%">
+            <br>
+            And they do their bit.          
+          </li>
+          <br>
+          <li>If the Sheet music that the <b>Conductor</b> is reading indicates that it is the piano's turn, 
+            <br>
+            She points to the piano section:
+            <br><br>
+            <img class="img-fluid" src="../figures/lecture06/orchestraLayout3.png"  style="width:50%">
+            <br>
+            And they do their bit.          
+          </li>
+          <br>
+
+        </ul>
+
+
+        As an audience member, you would simply hear a sequence o tunes played by some sequence of instruments (in reality you might have simultaneous instruments playing, but let's <i>keep the analogy simple</i>).
+
+        <br><br>
+
+        However, in practice, the <b>flow of execution</b> is going from one location to another!
+        <br><br>
+
+        <h3>What does this look like for a program?</h3>
+
+        (I'm glad you asked)
+        <br><br>
+
+        <h4>"Single person version"</h4>
+
+        If a single person playing notes in a straight sequence looks like this:
+        <br><br>
+        \[A, A, A, F, C, A, F, C, A,  ... E, E, E, F, C, G, F, C, A\]
+        <br><br>
+        <img class="mx-auto d-block" src="../figures/lecture06/DarthVaderThemeNotes.png"  style="width:50%">
+        <br>
+        And sounds like this:
+        <br>
+
+        <audio controls>
+          <!-- <source src="horse.ogg" type="audio/ogg"> -->
+          <source src="../figures/lecture06/DarthVaderTheme.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <br><br>
+        Then the program could be imagined like this:
+        <br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;A&#39;</span>)
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;A&#39;</span>)
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;A&#39;</span>)
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;F&#39;</span>)
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;C&#39;</span>)
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;A&#39;</span>)
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;F&#39;</span>)
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;C&#39;</span>)
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;A&#39;</span>)
+<span style="color: #007020">print</span>()
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;E&#39;</span>)
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;E&#39;</span>)
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;E&#39;</span>)
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;F&#39;</span>)
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;C&#39;</span>)
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;G&#39;</span>)
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;F&#39;</span>)
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;C&#39;</span>)
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;A&#39;</span>)
+</pre></div>
+
+      You may open and run the program: Functions Example 01 in Replit
+      <br><br>
+
+      What's wrong with this? Not much.
+      <br><br>
+      But can we make this a bit more <b>concise</b>?
+      <br><br>
+
+      <h4>"Calling different players"</h4>
+
+      <b>Let's try grouping repeated sections and assigning that section to a function</b>:
+      <br><br>
+      That would be like giving a sequence of notes to one musician and another sequence to another musician.
+      <br><br>
+      The <b>conductor</b> (control flow) would then <b>call on</b> (invoke) the correct section at the correct time:
+      <br><br>
+      This might look, in code, like this:
+      <br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">tripleA</span>():
+  <span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&#39;A</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">A</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">A&#39;</span>)
+
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">FCA</span>():
+  <span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&#39;F</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">C</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">A&#39;</span>)
+
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">tripleE</span>():
+  <span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&#39;E</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">E</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">E&#39;</span>)
+
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">FCG</span>():
+  <span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&#39;F</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">C</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">G&#39;</span>)  
+
+tripleA()
+FCA()
+FCA()
+<span style="color: #007020">print</span>()
+tripleE()
+FCG()
+FCA()
+</pre></div>
+        You may open and run the program: Functions Example 02 in Replit
+        <br><br>
+
+        Here, there are <b>Two types of code blocks</b>:
+        <ol>
+          <li>The "sheet music" code blocks: which is the sequence of statements to execute IF that part is <b>called upon</b>
+            <br>
+            <img class="mx-auto d-block" src="../figures/lecture06/sectionDefinition.png"  style="width:20%">
+            <br><br>
+          and</li>
+          <li>The "Conductor conducting" code section: which is the sequence of instructions carried out
+            <br>
+            <img class="mx-auto d-block" src="../figures/lecture06/sectionCalls.png"  style="width:20%">
+            <br><br>
+          </li>
+
+        </ol>
+
+        <br><br>
+
+        <big><b>THIS is where it gets good...</b></big>
+
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          How is it that we get the <b>same</b> result?
+          <br><br>
+          Can somebody venture a guess at what is the sequence followed in the control flow? 
+          <br>
+          (just tell me the sequence of line numbers that is executed in the following image)
+          <br><br>
+          <img class="mx-auto d-block" src="../figures/lecture06/numberedDarthVader.png"  style="width:40%">
+          <br><br>
+
+
+          <div id="passw">
+          <div>
+              <!-- (THE PASSWORD IS fun) -->
+              Enter the password to proceed:
+          </div>
+          <div>
+            <input type="password" id="password" onkeydown="if (event.keyCode == 13) document.getElementById('button').click()" /> 
+            <!-- IMPORTANT! this part is so if you click enter, it works. -->
+          </div>
+                    
+          <div>
+            <br/>
+            <input id="button" type="button" value="Reveal" onclick="if (document.getElementById('password').value == 'fun') { 
+            document.getElementById('HIDDENDIV').classList.toggle('show');   document.getElementById('passw').style.display='none'; } 
+            else {  alert('Invalid Password!'); password.setSelectionRange(0, password.value.length);   } " />
+          </div>
+            <!-- it will autoselect wrong input if wrong -->
+            <br /><br /><br />
+        </div>
+        <br><br>
+
+        <div id="HIDDENDIV">
+          Definitions: <b>11-12</b>, <b>14-15</b>, <b>17-18</b>, <b>20-21</b>, 23, <b>12</b>,
+          <br><br>
+
+          Invocations: 24, <b>15</b>, 25, <b>15</b>, 26, 27, <b>18</b>, 28, <b>21</b>, 29, <b>15</b>
+        </div>
+      </div>
+
+      </p>
+
+    <p><br></p><hr><p><br></p>
+
+
+
+
+
+
+
+      <h2>Functions: Motivation</h2>
+
+      <p>  
+        Answer the following questions:
+
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          Why go through the trouble of doing all of this?
+          <br><br>
+          What possible benefit could we get by using these "functions"?
+          <br><br>
+
+          <div id="passw">
+          <div>
+              <!-- (THE PASSWORD IS order) -->
+              Enter the password to proceed:
+          </div>
+          <div>
+            <input type="password" id="password" onkeydown="if (event.keyCode == 13) document.getElementById('button').click()" /> 
+            <!-- IMPORTANT! this part is so if you click enter, it works. -->
+          </div>
+                    
+          <div>
+            <br/>
+            <input id="button" type="button" value="Reveal" onclick="if (document.getElementById('password').value == 'order') { 
+            document.getElementById('HIDDENDIV').classList.toggle('show');   document.getElementById('passw').style.display='none'; } 
+            else {  alert('Invalid Password!'); password.setSelectionRange(0, password.value.length);   } " />
+          </div>
+            <!-- it will autoselect wrong input if wrong -->
+            <br /><br /><br />
+        </div>
+        <br><br>
+
+        <div id="HIDDENDIV">
+          <ol>
+            <li>Reuse: Avoid unnecessary repetition</li>
+            <li>Reduce: Modular structure, better organization</li>
+            <li>Recycle: Use functions that you created a while ago for something you need now!</li>
+          </ol>
+        </div>
+        </div>
+
+        <br><br>
+
+        Ok. Let's say you buy this. 
+        <br>
+        How do we actually make and use these functions?
+
+      </p>
+
+    <p><br></p><hr><p><br></p>
+
+      <h2>Functions: remember Built-in functions?</h2>
+
+      <p> 
+
+      </p>
+
+    <p><br></p><hr><p><br></p>
+
+      <h2>Functions: How to make them?</h2>
+
+      <p> 
+        We called the ones you make "User-defined" functions.
+        <br><br>
+
+
+      </p>
+
+    <p><br></p><hr><p><br></p>
+
+      <h2>Functions: Terminology?</h2>
+
+      <p> 
+       
+      </p>  
+
+    <p><br></p><hr><p><br></p>
+
+      <h2>Functions: Indentation</h2>
+
+      <p> 
+       
+      </p>    
+
+    <p><br></p><hr><p><br></p>
+
+      <h4>Before next class (Monday)</h4>
+      <b>[Due for everyone]</b>  
+      <br>
+      <b><big>Remember that Assignment 01 is due on 09/22 BEFORE 11:59 PM</big></b><br>
+
+      <br><br>
+
+      <b>[Optional]</b> <b><big>TODO</big></b><br>
+
+
+
+  
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes05.html">Previous Module</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes07.html">Next Module</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+   
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+    <!-- <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script> -->
+  </body>
+</html>
