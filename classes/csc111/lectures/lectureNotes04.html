@@ -112,7 +112,7 @@
         <b>Expressions</b> are combinations of variables and values that must be "resolved" and turned into a combined value before the statement is completely executed.
         <br><br>
 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000DD; font-weight: bold">1</span> <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">6</span>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000DD; font-weight: bold">12</span> <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">6</span>
 x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">5</span>
 y <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">2</span>
 z <span style="color: #333333">=</span> x <span style="color: #333333">+</span> y
@@ -128,7 +128,7 @@ w <span style="color: #333333">=</span> x <span style="color: #333333">+</span> 
         Examples of expressions in Python are:
         <ol>
           <li><tt>12 + 6</tt>&nbsp;&nbsp;&nbsp;&nbsp; : this expression resolves to an <tt>18</tt> but is not saved in a variable; </li> 
-          <li><tt>x = 6</tt> &nbsp;&nbsp;&nbsp;&nbsp; : the right-hand-side of the "=" sign (value 6) is a 'trivial' expression, since it is already a value);</li>
+          <li><tt>x = 5</tt> &nbsp;&nbsp;&nbsp;&nbsp; : the right-hand-side of the "=" sign (value 6) is a 'trivial' expression, since it is already a value);</li>
           <li><tt>y = 2</tt> &nbsp;&nbsp;&nbsp;&nbsp; : same as above;</li>
           <li><tt>z = x + y</tt> &nbsp;&nbsp;&nbsp;&nbsp; : here, the expression that needs resolving is <tt>x + y</tt>; it will resolve to the value <tt>7</tt></li>
           <li><tt>w = x + 1 + y + 123 + z</tt>&nbsp;&nbsp;&nbsp;&nbsp; : again, the expression is on the right-hand side of the "=" sign; this one combines numbers and variables.</li>
@@ -155,7 +155,7 @@ w <span style="color: #333333">=</span> x <span style="color: #333333">+</span> 
           <li>Addition: <tt><b>y = x + 7</b></tt> &nbsp;&nbsp; it may contain constants (7) or variables.</li> 
           <li>Subtraction: <tt><b>z = y - 2</b></tt>&nbsp;&nbsp; it may contain constants (2) or variables</li>
           <li>Multiplication: <tt><b>m = x * 5</b></tt> &nbsp;&nbsp; it may contain constants (5) or variables</li>
-          <li>Division: <tt><b>n = m / 5</b></tt> &nbsp;&nbsp; it may contain constants (10) or variables</li>
+          <li>Division: <tt><b>n = m / 5</b></tt> &nbsp;&nbsp; it may contain constants (5) or variables</li>
           <li>Integer Division: <tt><b>n = n // 2</b></tt> &nbsp;&nbsp; it may contain constants (2) or variables; same as floor(n/2)</li>
           <li>Exponentiation(Power): <tt><b>p = n ** 2</b></tt> &nbsp;&nbsp; it may contain constants (2) or variables; same as \(n^2\)</li>
           <li>Modular arithmetic (Modulo): <tt><b>q = 9 % 3</b></tt> &nbsp;&nbsp; it may contain constants (3) or variables
@@ -165,7 +165,7 @@ w <span style="color: #333333">=</span> x <span style="color: #333333">+</span> 
 
         A negative value simply has the  minus sign before the number : <tt><b>-</b>3</tt> (unary operator "-"").
         <br>
-        Note that that is the same as \( -1 * 3\)!
+        Note that that is the same as \( -1 * 3\)
         <br><br>
 
         When multiple operators and operands, the order of operation follows the PEMDAS rule:
@@ -354,6 +354,8 @@ w <span style="color: #333333">=</span> x <span style="color: #333333">+</span> 
         <h4>Terminology: "parse":</h4>
         <br>
         To <b>parse</b> means to "break into parts and interpret". In this context, it means that Python "treats" the input in a specific way.
+        <br><br>
+        For example: in the sentence ... "Your son's only surviving grandfather has only one grandchild. That grandchild's only parent is an expert parser.", <b>Who is the expert parser?</b>
         <br><br> <br><br>
 
         Some additional details on some functions:
@@ -408,6 +410,29 @@ w <span style="color: #333333">=</span> x <span style="color: #333333">+</span> 
         The str function returns the string version of an object; we'll talk about strings in a future class; for now think of them as the "literal text" version of an object.
 
         <br><br>
+
+
+        <h3>The <tt>ord</tt> function</h3>
+
+        ord() function accepts a string of unit length as an argument and returns the Unicode equivalence of the passed argument.
+        <br>
+        ASCII is a subset of Unicode so, for our purposes, ord returns the ASCII number-value of a character. 
+
+        <br><br>
+
+
+        <h3>The <tt>chr</tt> function</h3>
+
+        The chr() function returns a character (a string) whose Unicode code point is the integer.
+        <br>
+        ASCII is a subset of Unicode so, for our purposes, chr returns the ASCII character for an int (int the right range. 
+
+        <br><br>
+
+
+        
+
+        
 
 
         <h3>The <tt>eval</tt> function</h3>
