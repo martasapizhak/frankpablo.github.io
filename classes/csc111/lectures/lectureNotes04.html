@@ -441,7 +441,7 @@ w <span style="color: #333333">=</span> x <span style="color: #333333">+</span> 
         <br><br>
         Let's try out a couple examples (<b>This will be important for Assignment 01</b>):
         <br>
-        Try this <a href="https://pythontutor.com/visualize.html#code=x%20%3D%205%0Ay%20%3D%207%0Az%20%3D%20eval%28%22x%20%2B%20y%22%29%0Aprint%28type%28x%29%29%0Aprint%28type%28y%29%29%0Aprint%28type%28z%29%29%0Aprint%28z%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false">basic one first</a> 
+        Try this <a href="https://pythontutor.com/visualize.html#code=x%20%3D%205%0Ay%20%3D%207%0Az%20%3D%20eval%28%22x%20%2B%20y%22%29%0Aprint%28type%28x%29%29%0Aprint%28type%28y%29%29%0Aprint%28type%28z%29%29%0Aprint%28z%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="blank">basic one first</a> 
         <br><br>
         <div class="mx-lg-5">
           <span style='color:#06a015'><b><big>Activity 6</big></b></span> [3 minutes]: <br>
@@ -453,6 +453,7 @@ w <span style="color: #333333">=</span> x <span style="color: #333333">+</span> 
             <li>What happens if we enter the value <b><tt>5.0</tt></b> instead?</li>
             <li>How can we fix that?</li>
             <li>What happens if instead of  \( \texttt{ z = eval("x + y") } \), we use  \( \texttt{z = eval(x + y) } \)?</li>
+            <li>What would happen here: <tt>print( eval( str(x) + "*" + str(y) ) )</tt></li>
           </ol>
         </div>
 
@@ -493,17 +494,17 @@ w <span style="color: #333333">=</span> x <span style="color: #333333">+</span> 
 
       <p><br></p><hr><p><br></p>
 
-      <h2>Output (to the console)</h2>
+      <h2>Display: AKA Output (to the console)</h2>
 
       <p>
-        We've been working with the <tt>print</tt> function in order to get some output on the console.
+        We've been working with the <tt>print</tt> function in order to get something displayed on the console.
         <br><br>
 
         Let's see a couple variations on its use:
         <br>
-        We will implement these in <a href="https://pythontutor.com/visualize.html#code=num%20%3D%20int%28input%28%22write%20an%20int%3A%20%22%29%29%0Aprint%20%28%22The%20square%20of%20the%20number%20is%3A%20%22%29%0Aprint%28num**2%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%223%22%5D&textReferences=false">this template</a>.
+        We will implement these in <a href="https://pythontutor.com/visualize.html#code=num%20%3D%20int%28input%28%22write%20an%20int%3A%20%22%29%29%0Aprint%20%28%22The%20square%20of%20the%20number%20is%3A%20%22%29%0Aprint%28num**2%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%223%22%5D&textReferences=false" target="blank">this template</a>.
         <br><br>
-        You'll see the following output in the console:        
+        You'll see the following <i>output</i> in the console:        
         <br>
         <img class="img-fluid" src="../figures/lecture04/print01.png"  style="width:40%">
         <br>
