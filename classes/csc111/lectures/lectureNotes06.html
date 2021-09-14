@@ -32,6 +32,14 @@
       .card:hover .img-top {
           display: inline;
       }
+
+      #HIDDENDIV {
+        display: none;
+      }
+
+      #HIDDENDIV.show  {
+        display: block;
+      }
     </style>
   </head>
 
@@ -376,13 +384,13 @@ FCA()
               Enter the password to proceed:
           </div>
           <div>
-            <input type="password" id="password" onkeydown="if (event.keyCode == 13) document.getElementById('button').click()" /> 
+            <input type="password" id="password" onkeydown="if (event.keyCode == 13) document.getElementById('button1').click()" /> 
             <!-- IMPORTANT! this part is so if you click enter, it works. -->
           </div>
                     
           <div>
             <br/>
-            <input id="button" type="button" value="Reveal" onclick="if (document.getElementById('password').value == 'fun') { 
+            <input id="button1" type="button" value="Reveal" onclick="if (document.getElementById('password').value == 'fun') { 
             document.getElementById('HIDDENDIV').classList.toggle('show');   document.getElementById('passw').style.display='none'; } 
             else {  alert('Invalid Password!'); password.setSelectionRange(0, password.value.length);   } " />
           </div>
@@ -421,35 +429,20 @@ FCA()
           What possible benefit could we get by using these "functions"?
           <br><br>
 
-          <div id="passw">
-          <div>
-              <!-- (THE PASSWORD IS order) -->
-              Enter the password to proceed:
+          <div class="mx-lg-5">
+            <details>
+              <summary>(Wait; then Click)<br><br></summary>
+              <p>
+                <ol>
+                  <li>Reuse: Avoid unnecessary repetition</li>
+                  <li>Reduce: Modular structure, better organization</li>
+                  <li>Recycle: Use functions that you created a while ago for something you need now!</li>
+                </ol>
+                
+              </p>
+            </details>
           </div>
-          <div>
-            <input type="password" id="password" onkeydown="if (event.keyCode == 13) document.getElementById('button').click()" /> 
-            <!-- IMPORTANT! this part is so if you click enter, it works. -->
-          </div>
-                    
-          <div>
-            <br/>
-            <input id="button" type="button" value="Reveal" onclick="if (document.getElementById('password').value == 'order') { 
-            document.getElementById('HIDDENDIV').classList.toggle('show');   document.getElementById('passw').style.display='none'; } 
-            else {  alert('Invalid Password!'); password.setSelectionRange(0, password.value.length);   } " />
-          </div>
-            <!-- it will autoselect wrong input if wrong -->
-            <br /><br /><br />
-        </div>
-        <br><br>
 
-        <div id="HIDDENDIV">
-          <ol>
-            <li>Reuse: Avoid unnecessary repetition</li>
-            <li>Reduce: Modular structure, better organization</li>
-            <li>Recycle: Use functions that you created a while ago for something you need now!</li>
-          </ol>
-        </div>
-        </div>
 
         <br><br>
 
@@ -461,11 +454,79 @@ FCA()
 
     <p><br></p><hr><p><br></p>
 
-      <h2>Functions: remember Built-in functions?</h2>
+      <h2>Functions: API for Built-in functions</h2>
 
       <p> 
+        We use built-in functions depending how they were constructed.
+        <br>
+        We know hoe to use a thing whe it is intuitive OR when it comes with instructions!
+        <br><br>
 
+        The instructions for using built-in functions for programming an application is called the <br>
+        <b>Application Programming Interface</b>, or API.
+        <br><br>
+
+        A good API for Python can be found here: <a href="https://docs.python.org/3/c-api/index.html">Python 3.9.7 API</a>
+        <br><br>
+
+        The API section specific to built-in functions can be found here: <a href="https://docs.python.org/3/library/functions.html">Built-In Functions in Python 3.9.7 API</a>
+
+        <br><br>
+
+        For example,  the info for the <tt>eval</tt> function will have a way of using it: 
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture06/eval-API.png"  style="width:50%">
+        <br>
+        Note that the things in brackets are optional parameters (you can choose to add them if you need them).
+
+        <br><br>
+        As an example of how to read the input, is with the <tt>round</tt> function, indicated like this:
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture06/round-API.png"  style="width:50%">
+        <br>
+        Where one can use it with: 
+        <ol>
+          <li><tt>round(2.672)</tt> &nbsp;&nbsp; # which will round up to 3; or, with</li>
+          <li><tt>round(2.672, 2)</tt> &nbsp;&nbsp; # which will round down to 2.67</li>
+        </ol>
+        <br>
+        The description also indicates what the function <b>returns</b> if anything at all
       </p>
+
+    <p><br></p><hr><p><br></p>
+
+      <h2>Before proceeding: Indentation in Python</h2>
+
+      <p> 
+        Indentation means something in python.
+        <br><br>
+        A piece of code indented with respect to the previous line means "this code block is <b>inside the previous block header</b>".
+        <br><br>
+        this is like when we use parenthesis to group operations in arithmetic; 
+        <br>
+        In the following example:
+        \[ z =  3*( 9 + 8/( 4 ) - 5 ) \] 
+        <br>
+        In this example, we could group the operations like this:
+        \[
+          z = 3 * (\overbrace{
+            9 + 
+            \underbrace{8/4}_\text{this first} 
+            +
+            5
+           }^\text{add 3 elements})
+         \]
+        <br><br>
+
+        In Python, indentation indicates the begining and end of a section block.
+        <br>
+        It is structured like a piece of text where you indent once every time you start a new section or sub-section:
+        <br><br>
+        <center>
+          <img class="img-fluid" src="../figures/lecture06/blocks.png"  style="width:50%">
+        </center>
+        <br>
+      </p>  
 
     <p><br></p><hr><p><br></p>
 
@@ -475,29 +536,244 @@ FCA()
         We called the ones you make "User-defined" functions.
         <br><br>
 
+        We follow some rules to make a function:
+        <br><br>
+
+        <ol>
+          <li>use the <b><tt>def</tt></b> keyword to let the interpreter know that what follows is a <b>function definition</b> 
+            <br>(it doesn't matter where the def goes as long as it is defined above where it is invoked)<br>
+          when the Python interpreter encounters the def (or class) keywords, it only stores those definitions for later use and doesn’t actually execute them until you tell it to</li>
+          <li>indicate the name of the function (use <a href="https://www.python.org/dev/peps/pep-0008/">Python coding conventions</a>.</li>
+          <li>add a parenthesis pair to indicate the <b>input parameter section</b></li>
+          <li>inside the parens, add a coma-sepparated list of input parameters</li>
+          <li>add a colon <tt>(&nbsp; : &nbsp;)</tt> to indicate the start of the function body</li>
+          <li><b>indent once</b> (2 or 4 spaces is standard)</li>
+          <li>add the body of the function</li>
+          <li>IF the function is expected to <b>return</b> something, add the keyword <b><tt>retrn</tt></b>, followed by the value or variable you wish to return</li>
+        </ol>
+        <br><br>
+        
+        <h3>Example 1</h3>
+        <br><br>
+        Let's Build a function that has the following characteristics:
+        <ul>
+          <li>it acccepts no input</li>
+          <li>it returns no output</li>
+          <li>it simply prints a default message to the console (sound familiar)</li>
+        </ul>
+        <br><br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># function definition</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">hi</span>():
+  <span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&quot;hello world!&quot;</span>)
+</pre></div>
+        <br><br>
+
+        The body of the function is indented once to tell python that it is <b>inside</b> the function.
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 3</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          Note that, if you put this in a program and run it (Try the <b>Scratch Pad</b> Project in Replit), it does nothing!
+        <br>
+        <b>Why?</b>
+        <br><br>
+          <div class="mx-lg-5">
+            <details>
+              <summary>(Wait; then Click)<br><br></summary>
+              <p>
+                that is just the function definition!
+                <br>
+                It's like writing the sheet music but not playing it.
+                <br><br>
+
+                We need a statement to <b>invoke</b> (or call) the function!                
+              </p>
+            </details>
+          </div>
+        </div>
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 4</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          Next, how do we call the function?
+        <br><br>
+          <div class="mx-lg-5">
+            <details>
+              <summary>(Wait; then Click)<br><br></summary>
+              <p>
+                Using its name directly!
+                <br><br>
+                Note that, since it does not take any parameters, we do not add any <b>arguments</b> to the function invocation!
+              </p>
+            </details>
+          </div>
+        </div>
+
+        <br><br>
+
+        <h3>Example 2</h3>
+        <br><br>
+        Let's Build a function that has the following characteristics:
+        <ul>
+          <li>it accepts 1 input parameter (an integer)</li>
+          <li>it returns no output</li>
+          <li>it simply prints a default message to the console (sound familiar)</li>
+        </ul>
+        <br><br>
+
+        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># function definition</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">append</span>(num):
+  <span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&quot;I got this input:&quot;</span>, end<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot; &quot;</span>)
+  <span style="color: #007020">print</span>(num)
+
+<span style="color: #888888"># statement area</span>
+append(<span style="color: #0000DD; font-weight: bold">2</span>)
+</pre></div>
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 5</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          Write and run this code
+        </div>
+
+        <br><br>
+
+        <h3>Example 3</h3>
+        <br><br>
+        Let's Build a function that has the following characteristics:
+        <ul>
+          <li>it accepts 1 input parameter (an integer)</li>
+          <li>it returns as output the next integer</li>
+          <li>it does not print anything to console</li>
+        </ul>
+        <br><br>
+
+        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># function definition</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">next</span>(num):
+  <span style="color: #008800; font-weight: bold">return</span> num <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">1</span>
+
+<span style="color: #888888"># statement area</span>
+nxt <span style="color: #333333">=</span> <span style="color: #007020">next</span>(<span style="color: #0000DD; font-weight: bold">2</span>)
+<span style="color: #007020">print</span>(nxt)
+</pre></div>
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 6</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          Write and run this code
+        </div>
+
+        <br><br>
+
+
+        <h3>Example 4</h3>
+        <br><br>
+        Let's Build a function that has the following characteristics:
+        <ul>
+          <li>it accepts 2 input parameters (two integers)</li>
+          <li>it returns as output the remainder of dividing the first by the second integer</li>
+          <li>it does not print anything to console</li>
+        </ul>
+        <br><br>
+
+        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># function definition</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">mod</span>(a, b):
+  <span style="color: #008800; font-weight: bold">return</span> a<span style="color: #333333">%</span>b
+
+<span style="color: #888888"># statement area</span>
+remainder <span style="color: #333333">=</span> mod(<span style="color: #0000DD; font-weight: bold">256</span>, <span style="color: #0000DD; font-weight: bold">5</span>)
+<span style="color: #007020">print</span>(remainder)
+</pre></div>
+
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 7</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          Write and run this code
+        </div>
+
+        <br><br>
+
+
+
+
+          
+
+        
+
+        
 
       </p>
 
     <p><br></p><hr><p><br></p>
 
-      <h2>Functions: Terminology?</h2>
+      <h2>Functions: Terminology</h2>
 
       <p> 
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax">Term</th>
+    <th class="tg-0lax">Meaning</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">function</td>
+    <td class="tg-0lax">A named block of code</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">definition</td>
+    <td class="tg-0lax">The list of statements constituting the body of the function: def</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">call</td>
+    <td class="tg-0lax">Using the function's name to transfer executing control to it</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">invocation</td>
+    <td class="tg-0lax">Invoking a funtion is the same as calling it</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">parameter</td>
+    <td class="tg-0lax">An identifier/variable set in the function definition to recieve input passed to the function</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">argument</td>
+    <td class="tg-0lax">The value passed to the function and bound to the parameter</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">binding, bound</td>
+    <td class="tg-0lax">The act of assigning a variable/parameter a specific value</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">return value</td>
+    <td class="tg-0lax">The value of the expression returned via return</td>
+  </tr>
+</tbody>
+</table>        
        
       </p>  
-
-    <p><br></p><hr><p><br></p>
-
-      <h2>Functions: Indentation</h2>
-
-      <p> 
-       
-      </p>    
+ 
 
     <p><br></p><hr><p><br></p>
 
       <h4>Before next class (Monday)</h4>
       <b>[Due for everyone]</b>  
+      <br>
+      TODO
       <br>
       <b><big>Remember that Assignment 01 is due on 09/22 BEFORE 11:59 PM</big></b><br>
 
