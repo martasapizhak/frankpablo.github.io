@@ -107,12 +107,10 @@
       <!-- CONTENT BELOW -->
 
 
-      <h1>Lecture Notes 02: Binary!!!</h1>
+      <h1>Lecture Notes 02: Intro to Logic and Proofs</h1>
       <p>
         <br>
       </p>
-
-<span style='color:#ff0000'><b><big>There are 10 types of people in the world: those who understand binary, and those who don’t</big></b></span>
       
       <h2>Outline </h2>
 
@@ -657,12 +655,14 @@
         <br><br>
       </p>
 
+      <br><br>  
+
       <h3>More operators: Implication</h3>
 
       <p>
         <b>Implication</b>, symbol \(\rightarrow\), AKA <b>IMPLIES</b>, is a binary operator that states that:
         <br>
-        <i>IF p is true, then q <b>must also true</b></i>
+        <i>IF p is true, then q <b>must also be true</b></i>
         <br><br>
         We can show the effect of this operator using a table:
         <br><br>
@@ -728,11 +728,23 @@
         "<b>All the vampires in the world are resistant to moonlight</b>"
         <br><br>
         Is (vacuously) True because there are no vampires in the world (I hope).
-        <br>
+        <br><br>
         <img class="img-fluid" src="../figures/lecture02/scienceVsVamp.png" alt="Science!" style="width:40%">
         <br><br>
-        <span style='color:#06a015'><b><big>Activity 5</big></b></span> [2 minutes]: Can you draw the Venn Diagram for this one?
+
+        The left of the \(\rightarrow\) operator in an implication is called the <b>antecedent</b>, and the sentence to the right is called the <b>consequent</b>.
+
         <br><br>
+
+        The best way to remember the way implication works is with this statement:
+        <br>
+        The truth value of an implication is false if and only if its antecedent is true and its consequent is false; otherwise, the truth value is true.
+
+        <br><br>
+
+        
+        <span style='color:#06a015'><b><big>Activity 5</big></b></span> [2 minutes]: Can you draw the Venn Diagram for this one?
+
 
         <div class="container mx-lg-5">
           <span style='color:#888888'>One possible answer: 
@@ -745,6 +757,7 @@
         </div>
       </p>
 
+      <br><br>
 
       <h3>More operators: If and only if</h3>
 
@@ -848,10 +861,11 @@
         <br><br>
         <span style='color:#06a015'><b><big>Activity 7</big></b></span> [2 minutes]: What can you infer if you do not hear a honk?
         <br><br>
-        <span style='color:#888888'> You can we have a driver behind us; 
-          <br>the driver saw the sign;
-          <br>they have a working horn
-          <br>people in this town take bumper stickers seriously
+        <span style='color:#888888'> You can assume that 
+          <br>&nbsp;&nbsp;we have a driver behind us; 
+          <br>&nbsp;&nbsp;the driver saw the sign;
+          <br>&nbsp;&nbsp;they have a working horn
+          <br>&nbsp;&nbsp;people in this town take bumper stickers seriously
         </span>
       </p>
 
@@ -882,7 +896,9 @@
           <li>\(\rightarrow\)</li>
           <li>\(\Leftrightarrow\)</li>
         </ul>
-        when several of the same operator are in a row (i.e. \(a ∧ b ∧ c\)), evaluate from left to right
+        when several of the same operator are in a row (i.e. \(a ∧ b ∧ c\)), evaluate from left to right.
+        <br><br>
+        <span style='color:#888888'>(There are a couple of cases where this is not true, but we won't look at those here)</span>
       </p>
       <br><br>
 
@@ -974,6 +990,11 @@
             </tr>
           </tbody>
           </table>  
+          <br><br>
+          A Tautology is an assertion that is always true.
+          <br>
+          In its most basic form, it is:
+          \[ q \lor \neg q \]
         </div>
       </p>
       <br><br>
@@ -984,7 +1005,17 @@
       
       <span style='color:#06a015'><b><big>Activity 9</big></b></span> [1 minute]: What can you tell about the following proposition?
       <br><br>
-      \[ q \lor \neg q \]
+      \[ q \wedge \neg q \]
+
+      <div class="container mx-lg-5">
+        <span style='color:#888888'>answer: 
+          <details><summary>(Wait; then Click)</summary>
+            <p>
+              <i>This proposition is always false!</i><br>
+            </p>
+          </details>
+        </span>
+      </div>
 
 
       <p><br></p><hr><p><br></p>
@@ -998,7 +1029,7 @@
         <br><br>
         As we mentioned before, using English leaves you exposed to ambiguity, contradictions, or language artifacts.
         <br><br>
-        We can create a convincing argument using propositional logic by chaining together a series of boolean statements until we get to the desired conclusion.
+        In propositional logic, we can create a convincing argument using propositional logic by chaining together a series of boolean statements until we get to the desired conclusion.
       </p>
       <br><br>
 
@@ -1060,7 +1091,7 @@
         <ul>
           <li>Yak is the best dog</li>
           <li>half of all dogs are better than all cats</li> 
-          <li>Therefore: \(Yak is better than all cats\)</li>
+          <li>Therefore: <tt>Yak is better than all cats</tt></li>
         </ul>
       </p>
       <br><br>
@@ -1132,12 +1163,16 @@
         </ul>
         An example of a full proof by contrapositive would  be:
         <br><br>
-        <i>Proof</i>: We will prove the contrapositive of this claim, i.e. that
-        for any integer k, if k is even, 3k + 1 is odd.
-        So, suppose that k is an integer and k is even. Then, k = 2m for
-        some integer m. Then 3k + 1 = 3(2m) + 1 = 2(3m) + 1. Since m
-        is an integer, so is 3m. So 3k + 1 must be odd, which is what we
-        needed to show.
+        <i>Proof</i>: We will prove the contrapositive of this claim, 
+        i.e. that <b>for any integer k, if k is even, 3k + 1 is odd</b>.
+        <br>
+        Suppose that k is an integer and k is even. Then, k = 2m for some integer m. 
+        <br>
+        Then 3k + 1 = 3(2m) + 1 = 2(3m) + 1. 
+        <br>
+        Since m is an integer, so is 3m. If we say n = 3m, Then 2(3m) + 1 = 2n + 1, which is an odd number.
+        <br>
+        This means 3k + 1 = 2(3m)+1 = 2n + 1 = an odd number, which is what we needed to show.
         <br><br>
         <span style='color:#888888'>Example from the University of Illinois Urbana-Champaign, CS173</span>
       </p>
