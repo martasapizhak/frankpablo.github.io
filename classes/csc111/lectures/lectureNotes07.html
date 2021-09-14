@@ -129,20 +129,72 @@
 
       <p><br></p><hr><p><br></p>
 
-      <h2>Recap and Catch-up: Building simple Functions and the Execution Flow</h2>
+      <h2>Recap: Simple Functions and the Execution Flow</h2>
 
       <p>
 
-        We will finish the activities from the previous lecture if we did not finish then.
-        
+        <b>First</b>: we will finish the activities from the previous lecture if we did not finish then.
+        <br><br>
+
+        <b>Then</b>: Recap of the execution flow with a simple function:
+<br><br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># function definition</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">next</span>(num):
+  <span style="color: #008800; font-weight: bold">return</span> num <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">1</span>
+
+<span style="color: #888888"># statement area</span>
+nxt <span style="color: #333333">=</span> <span style="color: #007020">next</span>(<span style="color: #0000DD; font-weight: bold">2</span>)
+<span style="color: #007020">print</span>(nxt)
+<span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&quot;done!&quot;</span>)
+</pre></div>
+
+         Use the <a href="https://pythontutor.com/visualize.html#code=%23%20function%20definition%0Adef%20append%28num%29%3A%0A%20%20print%28%22I%20got%20this%20input%3A%22,%20end%3D%22%20%22%29%0A%20%20print%28num%29%0A%0A%23%20statement%20area%0Aappend%282%29%0Aprint%28%22done!%22%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="blank">Python Tutor</a>
+
+        <br><br>
+
+        Things to notice:
+        <ol>
+          <li>the def block is saved but not executed</li>
+          <li>execution follows starts in a top-bottom sequence (<b>for now!</b>)</li>
+          <li>the execution <b>jumps</b> to the body of the def block when an invocation is made, changing the control flow</li>
+          <li>the "parameter" <b><tt>num</tt></b> "receives" a value, it is used, and then... what happens to it?</li>
+          <li>after the function is executed, we return where we left off (after the invocation</li>
+        </ol>
+
+        <br><br>
+
+        <h4>Why Functions?</h4>
+
+        As we said: 
+        <ol>
+          <li>Reuse: Avoid unnecessary repetition</li>
+          <li>Reduce: Modular structure, better organization</li>
+          <li>Recycle: Use functions that you created a while ago for something you need now!</li>
+        </ol>
       </p>
 
 
       <p><br></p><hr><p><br></p>
 
-      <h2>Blah</h2>
+      <h2>Scope</h2>
 
       <p>
+        Scope refers to the "area of influence" of a variable or name.
+        <br>
+        It is the block of code in which it is "alive" and where it could be used.
+        <br><br>
+
+        If you notice the code for our example, <b><tt>num</tt></b> exists for a brief period of time.
+        <br><br>
+
+        It's "alive" from the moment the function <b><tt>next</tt></b> is invoked and the <i>argument</i> (\(2\)) is inserted into the function <i>parameter</i> <b><tt>num</tt></b>.
+        <br><br>
+
+        We say that the variable <tt>num</tt> is <b>bound</b> to 2.
+        <br><br>
+
+        Lastly, <tt>num</tt> is no longer saved after the function returns.
+
       </p>
  
 
