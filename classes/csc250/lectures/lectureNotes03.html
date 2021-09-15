@@ -233,9 +233,22 @@
           <li>List Environments</li>
           <li>Math Environment and symbols</li>
         </ul>
-        You can open <a href="../resources/latex_basics.tex" download>latex_basics.tex</a> in Overleaf and see the tex source as well as the resulting pdf.
+        You can copy-paste the contents of <a href="../resources/latex_basics.tex" download>latex_basics.tex</a> into Overleaf and see the tex source as well as the resulting pdf.
+        <br><br>
+        You can also <b>Import a Zip file with the necessary info</b>. Try this one: <a href="../resources/CSC250-A01.zip" download>CSC250-A01.zip</a>
         <br><br>
 
+        here are some links to help you with:
+        <ul>
+          <li><a href="https://www.overleaf.com/learn/latex/Mathematical_expressions">Mathematical Expressions</a></li>
+          <li><a href="https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols"> Mathematical symbols in Latex</a>.</li>
+          <li><a href="https://www.overleaf.com/learn/latex/Subscripts_and_superscripts">Subscripts and Superscripts</a></li>
+          <li><a href="https://www.overleaf.com/learn/latex/Brackets_and_Parentheses">Brackets and Parentheses</a></li>
+          <li><a href="https://www.overleaf.com/learn/latex/Fractions_and_Binomials">Fractions and Binomials</a></li>
+          <li><a href="https://www.overleaf.com/learn/latex/Aligning_equations_with_amsmath">Aligning equations or statements</a></li>          
+          <li><a href="https://www.overleaf.com/learn/latex/Tables">Tables</a></li>
+        </ul>
+         <br><br>
         I am happy to help with the formatting during office hours.
       </p>
       <br><br>
@@ -366,6 +379,11 @@
         //# sourceURL=pen.js
       </script>  
 
+      <br><br>
+
+      <span style='color:#888888'>(If the searhcer above gives you trouble, try it <a href="https://regexr.com/65mgq" target='blank'>here</a>)</span>
+      <br><br>
+
       <p>          
       <span style='color:#06a015'><b><big>Activity 1</big></b></span> [1 minute]: 
       <br>
@@ -484,7 +502,7 @@
         <ul>
           <li>
             A <b>set</b> is a group of items under the same property. <br>
-            We'll use set operations like union (\(\cup\)), cross-product (\(\times\)), and complement ( of \(A\) is \( \bar{A} \));
+            We'll use set operations like union (\(\cup\)), concatenation, and complement ( of \(A\) is \( \bar{A} \));
           </li>
           <li>
             \( \emptyset \) : the set with no members is called the <b>empty set</b>: \( \emptyset \) or \(\{ \} \) ;
@@ -518,18 +536,31 @@
             For example: If \(A: \{ white  \text{, }  blue\}\), and \(B: \{ duck  \text{, }  rabbit\}\), 
             <br>
             The union would be: \(A\cup B: \{ white  \text{, }  blue  \text{, }  duck  \text{, }  rabbit\}\)
+            <br><br>
+            Another example: If \(A: \{ 0  \text{, }  1\}\), and \(B: \{ x  \text{, }  y\}\), 
+            <br>
+            The union would be: \(A\cup B: \{ 0  \text{, }  1  \text{, }  x  \text{, }  y\}\)
           </li>
           <br>
           <li>
             The <b>Concatenation</b> of two sets \(A\) and \(B\): \(A\circ B\) or simply \(AB\) is the set that has a sequences of two symbols: a member of \(A\) before a member of \(B\): \(AB: \{ whiteduck   \text{, } whiterabbit  \text{, }  blueduck  \text{, }  bluerabbit \}\).
-            <br>
+            <br><br>
             <div class="mx-3"> Note that in the expression \(AB\), we're saying "any element from \(A\) followed by any element from \(B\)", not "all of \(A\) followed by all of \(B\)"! </div>
+            <br>
+            Another example: If \(A: \{ 0  \text{, }  1\}\), and \(B: \{ x  \text{, }  y\}\), 
+            <br>
+            \(AB: \{ 0x   \text{, } 0y  \text{, }  1x  \text{, }  1y \}\).
+
           </li>
           <br>
           <li>
             The <b>Star</b> (or <b>Kleen Star</b>) operator \(A^*\) is a <i>unary</i> operator that returns the set of sequences that have zero or more symbols from a set \(A\):
             <br>
             \(A^*: \{ \emptyset \text{, } white  \text{, } blue  \text{, } whiteblue  \text{, } bluewhite \text{, } whitewhiteblue \text{, } whitebluewhite \text{, } \dots\}\)
+            <br><br>
+            Another example: If \(A: \{ 0  \text{, }  1\}\),
+            <br>
+            \(A^*: \{ \emptyset \text{, } 0  \text{, } 1  \text{, } 01  \text{, } 10 \text{, } 001 \text{, } 010 \text{, } \dots\}\)
           </li>
         </ul>
       </p>
