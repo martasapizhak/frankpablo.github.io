@@ -122,7 +122,7 @@
       <!-- CONTENT BELOW -->
 
 
-      <h1>Lecture Notes 07: More about Functions</h1>
+      <h1>Lecture Notes 07: Functions And The Branch</h1>
       <p>
         <br>
       </p>
@@ -131,81 +131,511 @@
 
       <h2>Recap: Simple Functions and the Execution Flow</h2>
 
-      <p>
+        <p>
 
-        <b>First</b>: we will finish the activities from the previous lecture if we did not finish then.
-        <br><br>
+          <b>First</b>: we will finish the activities from the previous lecture if we did not finish then.
+          <br><br>
 
-        <b>Then</b>: Recap of the execution flow with a simple function:
-<br><br>
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># function definition</span>
-<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">next</span>(num):
-  <span style="color: #008800; font-weight: bold">return</span> num <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">1</span>
+          <b>Then</b>: Recap of the execution flow with a simple function:
+  <br><br>
+  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># function definition</span>
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">next</span>(num):
+    <span style="color: #008800; font-weight: bold">return</span> num <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">1</span>
 
-<span style="color: #888888"># statement area</span>
-nxt <span style="color: #333333">=</span> <span style="color: #007020">next</span>(<span style="color: #0000DD; font-weight: bold">2</span>)
-<span style="color: #007020">print</span>(nxt)
-<span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&quot;done!&quot;</span>)
-</pre></div>
+  <span style="color: #888888"># statement area</span>
+  nxt <span style="color: #333333">=</span> <span style="color: #007020">next</span>(<span style="color: #0000DD; font-weight: bold">2</span>)
+  <span style="color: #007020">print</span>(nxt)
+  <span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&quot;done!&quot;</span>)
+  </pre></div>
 
-         Use the <a href="https://pythontutor.com/visualize.html#code=%23%20function%20definition%0Adef%20append%28num%29%3A%0A%20%20print%28%22I%20got%20this%20input%3A%22,%20end%3D%22%20%22%29%0A%20%20print%28num%29%0A%0A%23%20statement%20area%0Aappend%282%29%0Aprint%28%22done!%22%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="blank">Python Tutor</a>
+           Use the <a href="https://pythontutor.com/visualize.html#code=%23%20function%20definition%0Adef%20append%28num%29%3A%0A%20%20print%28%22I%20got%20this%20input%3A%22,%20end%3D%22%20%22%29%0A%20%20print%28num%29%0A%0A%23%20statement%20area%0Aappend%282%29%0Aprint%28%22done!%22%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="blank">Python Tutor</a>
 
-        <br><br>
+          <br><br>
 
-        Things to notice:
-        <ol>
-          <li>the def block is saved but not executed</li>
-          <li>execution follows starts in a top-bottom sequence (<b>for now!</b>)</li>
-          <li>the execution <b>jumps</b> to the body of the def block when an invocation is made, changing the control flow</li>
-          <li>the "parameter" <b><tt>num</tt></b> "receives" a value, it is used, and then... what happens to it?</li>
-          <li>after the function is executed, we return where we left off (after the invocation</li>
-        </ol>
+          Things to notice:
+          <ol>
+            <li>the def block is saved but not executed</li>
+            <li>execution follows starts in a top-bottom sequence (<b>for now!</b>)</li>
+            <li>the execution <b>jumps</b> to the body of the def block when an invocation is made, changing the control flow</li>
+            <li>the "parameter" <b><tt>num</tt></b> "receives" a value, it is used, and then... what happens to it?</li>
+            <li>after the function is executed, we return where we left off (after the invocation</li>
+          </ol>
 
-        <br><br>
+          <br><br>
 
-        <h4>Why Functions?</h4>
+          <h4>Why Functions?</h4>
 
-        As we said: 
-        <ol>
-          <li>Reuse: Avoid unnecessary repetition</li>
-          <li>Reduce: Modular structure, better organization</li>
-          <li>Recycle: Use functions that you created a while ago for something you need now!</li>
-        </ol>
-      </p>
+          As we said: 
+          <ol>
+            <li>Reuse: Avoid unnecessary repetition</li>
+            <li>Reduce: Modular structure, better organization</li>
+            <li>Recycle: Use functions that you created a while ago for something you need now!</li>
+          </ol>
+        </p>
+
+
+        <p><br></p><hr><p><br></p>
+
+        <h2>Scope</h2>
+
+        <p>
+          Scope refers to the "area of influence" of a variable or name.
+          <br>
+          It is the block of code in which it is "alive" and where it could be used.
+          <br><br>
+
+          If you notice the code for our example, <b><tt>num</tt></b> exists for a brief period of time.
+          <br><br>
+
+          It's "alive" from the moment the function <b><tt>next</tt></b> is invoked and the <i>argument</i> (\(2\)) is inserted into the function <i>parameter</i> <b><tt>num</tt></b>.
+          <br><br>
+
+          We say that the variable <tt>num</tt> is <b>bound</b> to 2.
+          <br><br>
+
+          Lastly, <tt>num</tt> is no longer saved after the function returns.
+          <br><br>  
+
+
+          Let's see another example:
+          <br><br>
+          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1  
+   2  
+   3  
+   4  
+   5  
+   6  
+   7  
+   8  
+   9  
+  10  
+  11  
+  12  
+  13  
+  14  
+  15  </pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># This is the Definition Section</span>
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">addThree</span>(x):
+      <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;the input was: &#39;</span> <span style="color: #333333">+</span> <span style="color: #007020">str</span>(x) ) <span style="color: #888888"># concatenation</span>
+      y <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>       <span style="color: #888888"># not necessary </span>
+      y <span style="color: #333333">=</span> x <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">3</span>
+      <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;I will return:&#39;</span>, y) <span style="color: #888888"># comma notation</span>
+      <span style="color: #008800; font-weight: bold">return</span> y
+
+  <span style="color: #888888"># This is the Action Section</span>
+  x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">7</span>
+  <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;The value of x before </span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\&#39;</span><span style="background-color: #fff0f0">addThree</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\&#39;</span><span style="background-color: #fff0f0"> is:&#39;</span>, x)
+  x <span style="color: #333333">=</span> addThree(x)
+  <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;The value of x after </span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\&#39;</span><span style="background-color: #fff0f0">addThree</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\&#39;</span><span style="background-color: #fff0f0"> is:&#39;</span>, x)
+  <span style="color: #888888"># Was it the value you expected?</span>
+  <span style="color: #888888"># Could I print y here?</span>
+  </pre></td></tr></table></div>
+
+
+          <br><br>
+
+
+          Answer the following questions before you try it out in the Python Tutor:
+          <br><br>
+          <span style='color:#06a015'><b><big>Activity 1</big></b></span> [2 minutes]: <br>
+          <div class="mx-lg-5">
+            <ol>
+              <li>What value of <b><tt>x</tt></b> will be printed at the end?</li>
+              <li>What is happening with <b><tt>x</tt></b> when we invoke <b><tt>addThree(x)</tt></b>?</li>
+              <li>What is happening with <b><tt>x</tt></b> after we invoke <b><tt>addThree(x)</tt></b>?</li>
+              <li>What is happening with <b><tt>x</tt></b> when we return from <b><tt>addThree(x)</tt></b>?</li>
+              <li>Can we print <b><tt>y</tt></b> at the end?</li>
+            </ol>
+          </div>
+
+          <br><br>
+
+
+          Try it out in the  <a href="https://pythontutor.com/visualize.html#code=%23%20This%20is%20the%20Definition%20Section%0Adef%20addThree%28x%29%3A%0A%20%20%20%20print%20%28'the%20input%20was%3A%20'%20%2B%20str%28x%29%20%29%20%23%20concatenation%0A%20%20%20%20y%20%3D%200%20%20%20%20%20%20%20%23%20not%20necessary%20%0A%20%20%20%20y%20%3D%20x%20%2B%203%0A%20%20%20%20print%20%28'I%20will%20return%3A',%20y%29%20%23%20comma%20notation%0A%20%20%20%20return%20y%0A%0A%23%20This%20is%20the%20Action%20Section%0Ax%20%3D%207%0Aprint%20%28'The%20value%20of%20x%20before%20%5C'addThree%5C'%20is%3A',%20x%29%0Ax%20%3D%20addThree%28x%29%0Aprint%20%28'The%20value%20of%20x%20after%20%5C'addThree%5C'%20is%3A',%20x%29%0A%23%20Was%20it%20the%20value%20you%20expected%3F%0A%23%20Could%20I%20print%20y%20here%3F&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" terget="blank">Python Tutor</a>
+
+          <br><br>
+
+          <h3>The Global Scope</h3>
+
+          As you can see from where some variables are visualized in the Python Tutor, there is something called <b>The Global Scope</b>!
+          <br><br>
+
+          The global scope corresponds to the maximum scope of the python program (the most external one).
+          <br><br>
+
+          creating variabls at this level let;s <b>any other part of the program interact with it</b>.
+
+          <br><br>
+
+          <b>Global variables are frowned upon</b> because of this.
+
+          <br><br>
+
+          Some reasons for this is that one might have unexpected side effects from functions using a <b>global variable</b>.
+
+          <br><br>
+
+          if you see the <b><tt>global</tt></b> keyword used inside a function, that is telling Python to look for the variable in the global scope.
+          <br>
+          This opens up the chance for that function to modify the variable.
+          <br><br>
+          ZyBooks mentions and uses them, but we'll try to avoid using them as we learn more about functions and scope.
+
+          <br><br>
+
+          We will see more details about <b>scope</b> when we see <b>Conditionals</b> (below).
+
+        </p>
 
 
       <p><br></p><hr><p><br></p>
 
-      <h2>Scope</h2>
+      <h2>Arguments,  Parameters, and Local Variables</h2> 
 
       <p>
-        Scope refers to the "area of influence" of a variable or name.
+
+        As you saw above, we have several values being saved into variables and use differently depending on their scope.
+        <br><br>
+
+        First, a couple definitions:
+        <br><br>
+
+        <h4>Arguments</h4>
         <br>
-        It is the block of code in which it is "alive" and where it could be used.
+        In the code shown above, 
+        <br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">x <span style="color: #333333">=</span> addThree(x)
+</pre></div>
+        <br>
+        <b><tt>x</tt></b> is present both as an <b>argument</b> (value or variable passed to a function) of the function <b><tt>addThree</tt></b>, <br>
+        and as the <b>Left-Hand-Side</b> variable in the assignment.
+        <br><br>
+        The order of execution is:
+        <ol>
+          <li>First resolve the value of <b><tt>x</tt></b></li>
+          <li>then <b>copy</b> that value into the <b>parameter used inside the function</b></li>
+          <li>Once the function returns, assign the return value to the <b>Left-Hand-Side</b> variable of the assignment.</li>
+        </ol>
+
         <br><br>
 
-        If you notice the code for our example, <b><tt>num</tt></b> exists for a brief period of time.
+        <h4>Parameters</h4>
+        <br>
+        In the function definition for <b><tt>addThree</tt></b>, we have:
+        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">addThree</span>(x):
+</pre></div>
+
+        <br>
+
+        Which has a single <b>parameter</b> that will be received as input.
+        <br><br>
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> [2 minutes]: <br>
+          <div class="mx-lg-5">
+            Answer the following questions:
+            <ol>
+              <li>What is this parameter's Scope?</li>
+              <li>Does it matter how we name this variable as long as it is a valid identifier? (try it)</li>
+            </ol>
+          </div>
+
+          <br><br>
+
+        <h4>Local Variables</h4>
+        <br>
+
+          Once a function has been <b>invoked</b> with arguments, the values of the arguments are copied into the appropriate parameters and used inside the function as <b>local variables</b> (with the scope local to the function only).
+          <br><br>
+
+          You can also declaree additional variables inside the function and use them while inside the function.
+          <br><br>
+
+          <span style='color:#06a015'><b><big>Activity 3</big></b></span> [2 minutes]: <br>
+          <div class="mx-lg-5">
+            What is an example of a local variable inside <b><tt>addThree</tt></b>?
+          </div>
+      </p>
+
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Function Composition</h2> 
+
+      <p>
+        Function calls can be used as the argument of another function.
+        <br><br>
+        This might sound odd and complicated, but it is just like a pipeline of transformations that we link up.
         <br><br>
 
-        It's "alive" from the moment the function <b><tt>next</tt></b> is invoked and the <i>argument</i> (\(2\)) is inserted into the function <i>parameter</i> <b><tt>num</tt></b>.
+        We've also been doing it for a while:
+        <br><br>
+        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&#39;The next number is: &#39;</span> <span style="color: #333333">+</span> <span style="color: #007020">str</span>( <span style="color: #0000DD; font-weight: bold">1</span> <span style="color: #333333">+</span> <span style="color: #007020">int</span>( <span style="color: #007020">input</span>(<span style="background-color: #fff0f0">&#39;number?&#39;</span>) ) ) )
+</pre></div>
+  
+          <br><br>
+
+          <span style='color:#06a015'><b><big>Activity 4</big></b></span> [2 minutes]: <br>
+          <div class="mx-lg-5">
+            What is the output?
+          </div>
+
+          <br><br>
+
+          Try <a href="https://pythontutor.com/visualize.html#code=print%28'The%20next%20number%20is%3A%20'%20%2B%20str%28%201%20%2B%20int%28%20input%28'number%3F'%29%20%29%20%29%20%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%223%22%5D&textReferences=false" target="blank">it out</a>
+
+          <br><br>
+
+          Another example: 
+
+          <br><br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># Definition Section</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">times3</span> (num):
+    <span style="color: #008800; font-weight: bold">return</span> num<span style="color: #333333">*</span><span style="color: #0000DD; font-weight: bold">3</span>
+
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">minus1</span> (num):
+    <span style="color: #008800; font-weight: bold">return</span> num <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">1</span>
+
+<span style="color: #888888"># Action section</span>
+x <span style="color: #333333">=</span> <span style="color: #007020">input</span> (<span style="background-color: #fff0f0">&#39;gimme a num: &#39;</span>) 
+x <span style="color: #333333">=</span> <span style="color: #007020">int</span>(x)                  <span style="color: #888888"># this redefines x</span>
+y <span style="color: #333333">=</span> minus1( times3(x) )
+<span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&#39;the output of 3x+1 is:&#39;</span>,y)
+</pre></div>
+
+
+
+          <br><br>
+
+          Answer the following questions before trying it out:
+          <br><br>
+
+          <span style='color:#06a015'><b><big>Activity 5</big></b></span> [2 minutes]: <br>
+          <div class="mx-lg-5">
+             <ol>
+              <li>Which function is called first?</li>
+              <li>Where does the return value of the first function go?</li>
+            </ol>
+          </div>
+
+          <br><br>
+
+          Try <a href="https://pythontutor.com/visualize.html#code=%23%20Definition%20Section%0Adef%20times3%20%28num%29%3A%0A%20%20%20%20return%20num*3%0A%0Adef%20minus1%20%28num%29%3A%0A%20%20%20%20return%20num%20-%201%0A%0A%23%20Action%20section%0Ax%20%3D%20input%20%28'gimme%20a%20num%3A%20'%29%20%0Ax%20%3D%20int%28x%29%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20this%20redefines%20x%0Ay%20%3D%20minus1%28%20times3%28x%29%20%29%0Aprint%28'the%20output%20of%203x%2B1%20is%3A',y%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="blank">it out</a>
+      </p>
+
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>The <big><b>main</b></big> Function</h2> 
+
+      <p>
+        There is a way to force Python to start execution inside a function.
         <br><br>
 
-        We say that the variable <tt>num</tt> is <b>bound</b> to 2.
+        This is useful for two reasons:
+        <ol>
+          <li>First, that let's us have a "starting scope" that is NOT the Global scope</li>
+          <li>It let's you use the file in another program <b>without executing it!!!</b>.
+            <br>
+          Example: imagine you want to quote a phrase from a famous song (let's say "The Galaxy Song", by Eric Idle) but you don't remember it. 
+          <br>
+          In this case, you want to look it up (say in google), and use it. <br>
+          You don't want for it to <a href="https://www.youtube.com/watch?v=buqtdpuZxvk">actually start playing!</a></li>
+        </ol>
+
         <br><br>
 
-        Lastly, <tt>num</tt> is no longer saved after the function returns.
+        So how do we get the program to start inside a function?
+        <br><br>
+
+        <h3>Forcing the start of a <b>main</b> function</h3>
+
+        The following construction is standard in a Pyhton program that we want to be able to <br>
+         1) execute starting in a know location (main), and <br>  
+         2) import into another python program (and use any functions defined in it)
+         <br><br>
+
+         The construction we'll use is this one: 
+         <br><br>
+         <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1  
+2  
+3  
+4  
+5  </pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">main</span>():
+    <span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&quot;Hello World!&quot;</span>)
+
+<span style="color: #008800; font-weight: bold">if</span> __name__ <span style="color: #333333">==</span> <span style="background-color: #fff0f0">&quot;__main__&quot;</span>:
+    main()
+</pre></td></tr></table></div>
+
+        <br><br>
+        Try <a href="https://pythontutor.com/visualize.html#code=def%20main%28%29%3A%0A%20%20%20%20print%28%22Hello%20World!%22%29%0A%0Aif%20__name__%20%3D%3D%20%22__main__%22%3A%0A%20%20%20%20main%28%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="blank">it out</a>
+        
+        <br><br>
+
+        Let's see another example, to get a better idea of how this works:
+        <br><br>
+
+        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  </pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">main</span>():
+    <span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&quot;Larry&quot;</span>)
+
+<span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&quot;Curly&quot;</span>)
+
+<span style="color: #008800; font-weight: bold">if</span> __name__ <span style="color: #333333">==</span> <span style="background-color: #fff0f0">&quot;__main__&quot;</span>:
+    main()
+    
+<span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&quot;Moe&quot;</span>)
+</pre></td></tr></table></div>
+        <br><br>
+
+          Answer the following question before trying it out:
+          <br><br>
+
+          <span style='color:#06a015'><b><big>Activity 6</big></b></span> [2 minutes]: <br>
+          <div class="mx-lg-5">
+             <ol>
+              <li>What is the output of this program?</li>
+            </ol>
+          </div>
+
+          <br><br>
+
+          Try <a href="https://pythontutor.com/visualize.html#code=def%20main%28%29%3A%0A%20%20%20%20print%28%22Larry%22%29%0A%0Aprint%28%22Curly%22%29%0A%0Aif%20__name__%20%3D%3D%20%22__main__%22%3A%0A%20%20%20%20main%28%29%0A%20%20%20%20%0Aprint%28%22Moe%22%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="blank">it out</a>
+
+
+          <br><br>
+
+          We will not explain this section yet:
+          <br>
+          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">if</span> __name__ <span style="color: #333333">==</span> <span style="background-color: #fff0f0">&quot;__main__&quot;</span>:
+    main()
+</pre></div>
+
+          <br><br>
+
+          Sufice it to say: <b>It forces the sart of the function <tt>main</tt></b>.
+          <br><br>
+
 
       </p>
- 
+
+    <p><br></p><hr><p><br></p>
+
+      <h2>Using ONLY functions</h2>
+
+      <p>
+        Let's see how we can use only functions and avoid using the global scope:
+        <br><br>
+
+        Check this example:
+        <br><br>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1  
+ 2  
+ 3  
+ 4  
+ 5  
+ 6  
+ 7  
+ 8  
+ 9  
+10  
+11  
+12  
+13  
+14  
+15  
+16  
+17  
+18  
+19  
+20  
+21  
+22  
+23  
+24  
+25  
+26  
+27  
+28  
+29  
+30  
+31  
+32  
+33  
+34  </pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># Definition Section</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">getInt</span> (prompt):
+    <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;inside getInt&#39;</span>) <span style="color: #888888"># this is not necessary</span>
+    out <span style="color: #333333">=</span> <span style="color: #007020">int</span> ( <span style="color: #007020">input</span>(prompt) )
+    <span style="color: #008800; font-weight: bold">return</span> out
+
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">getLetter</span> (prompt):
+    <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;inside getLetter&#39;</span>) <span style="color: #888888"># this is not necessary</span>
+    out <span style="color: #333333">=</span> <span style="color: #007020">input</span>(prompt)
+    <span style="color: #008800; font-weight: bold">return</span> out    
+
+<span style="color: #888888"># Does caesar cipher encoding for a single letter</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">getCipher</span> ( my_letter, my_int):
+    <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;inside getCipher&#39;</span>) <span style="color: #888888"># this is not necessary</span>
+    upper_letter <span style="color: #333333">=</span> my_letter<span style="color: #333333">.</span>upper() 
+    ascii_num <span style="color: #333333">=</span> <span style="color: #007020">ord</span>(upper_letter) 
+    alphabet_num <span style="color: #333333">=</span> ascii_num <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">65</span> <span style="color: #888888"># A&#39;s ascii num is 65</span>
+    new_alphabet_num <span style="color: #333333">=</span> alphabet_num <span style="color: #333333">+</span> my_int <span style="color: #888888"># &lt;-- Q1</span>
+    new_alphabet_num <span style="color: #333333">=</span> new_alphabet_num <span style="color: #333333">%</span> <span style="color: #0000DD; font-weight: bold">26</span> <span style="color: #888888"># &lt;-- Q2</span>
+    new_ascii_num <span style="color: #333333">=</span> new_alphabet_num <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">65</span>
+    new_upper_letter <span style="color: #333333">=</span> <span style="color: #007020">chr</span>(new_ascii_num)
+    <span style="color: #008800; font-weight: bold">return</span> new_upper_letter
+
+
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">main</span>():
+    <span style="color: #888888"># Action section</span>
+    x <span style="color: #333333">=</span> getInt (<span style="background-color: #fff0f0">&#39;Gimme an Int in (0 to 26): &#39;</span>) 
+    let <span style="color: #333333">=</span> getLetter (<span style="background-color: #fff0f0">&#39;Gimme a letter: &#39;</span>) 
+    cipher <span style="color: #333333">=</span> getCipher( let, x ) <span style="color: #888888"># Note the order of the arguments</span>
+    <span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&#39;The plaintext is: &#39;</span>, let)
+    <span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&#39;The ciphertext is: &#39;</span>, cipher)
+    
+<span style="color: #008800; font-weight: bold">if</span> __name__ <span style="color: #333333">==</span> <span style="background-color: #fff0f0">&quot;__main__&quot;</span>:
+    main()
+</pre></td></tr></table></div>
+
+        <br><br>
+
+        Answer the following questions before trying it out:
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 7</big></b></span> [5 minutes]: <br>
+        <div class="mx-lg-5">
+           <ol>
+            <li>What is the output of this program?</li>
+            <li>What is happening in line 18 (Q1 comment)?</li>
+            <li>What is happening in line 19 (Q2 comment)?</li>
+            <li>What happens if we input a 1 and a "z"?</li>
+          </ol>
+        </div>
+
+        <br><br>
+
+        Try <a href="https://pythontutor.com/visualize.html#code=%23%20Definition%20Section%0Adef%20getInt%20%28prompt%29%3A%0A%20%20%20%20print%20%28'inside%20getInt'%29%20%23%20this%20is%20not%20necessary%0A%20%20%20%20out%20%3D%20int%20%28%20input%28prompt%29%20%29%0A%20%20%20%20return%20out%0A%0Adef%20getLetter%20%28prompt%29%3A%0A%20%20%20%20print%20%28'inside%20getLetter'%29%20%23%20this%20is%20not%20necessary%0A%20%20%20%20out%20%3D%20input%28prompt%29%0A%20%20%20%20return%20out%20%20%20%20%0A%0A%23%20Does%20caesar%20cipher%20encoding%20for%20a%20single%20letter%0Adef%20getCipher%20%28%20my_letter,%20my_int%29%3A%0A%20%20%20%20print%20%28'inside%20getCipher'%29%20%23%20this%20is%20not%20necessary%0A%20%20%20%20upper_letter%20%3D%20my_letter.upper%28%29%20%0A%20%20%20%20ascii_num%20%3D%20ord%28upper_letter%29%20%0A%20%20%20%20alphabet_num%20%3D%20ascii_num%20-%2065%20%23%20A's%20ascii%20num%20is%2065%0A%20%20%20%20new_alphabet_num%20%3D%20alphabet_num%20%2B%20my_int%20%23%20%3C--%20Q1%0A%20%20%20%20new_alphabet_num%20%3D%20new_alphabet_num%20%25%2026%20%23%20%3C--%20Q2%0A%20%20%20%20new_ascii_num%20%3D%20new_alphabet_num%20%2B%2065%0A%20%20%20%20new_upper_letter%20%3D%20chr%28new_ascii_num%29%0A%20%20%20%20return%20new_upper_letter%0A%0A%0Adef%20main%28%29%3A%0A%20%20%20%20%23%20Action%20section%0A%20%20%20%20x%20%3D%20getInt%20%28'Gimme%20an%20Int%20in%20%280%20to%2026%29%3A%20'%29%20%0A%20%20%20%20let%20%3D%20getLetter%20%28'Gimme%20a%20letter%3A%20'%29%20%0A%20%20%20%20cipher%20%3D%20getCipher%28%20let,%20x%20%29%20%23%20Note%20the%20order%20of%20the%20arguments%0A%20%20%20%20print%28'The%20plaintext%20is%3A%20',%20let%29%0A%20%20%20%20print%28'The%20ciphertext%20is%3A%20',%20cipher%29%0A%20%20%20%20%0Aif%20__name__%20%3D%3D%20%22__main__%22%3A%0A%20%20%20%20main%28%29%0A%20%20%20%20%20%20%0A%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%221%22,%22g%22%5D&textReferences=false" target="blank">it out</a>
+
+
+          <br><br>
+
+      </p>
+  
+
 
     <p><br></p><hr><p><br></p>
 
       <h4>Before next class (Monday)</h4>
-      <b>[Due for everyone]</b>  
-      <br>
-      TODO
-      <br>
-      <b><big>Remember that Assignment 01 is due on 09/22 BEFORE 11:59 PM</big></b><br>
+      <b>[Due for everyone]</b>  <b><big>TODO</big></b><br>
 
       <br><br>
 
