@@ -400,10 +400,57 @@ FCA()
         <br><br>
 
         <div id="HIDDENDIV">
-          Definitions: <b>11-12</b>, <b>14-15</b>, <b>17-18</b>, <b>20-21</b>, 23, <b>12</b>,
+<!--           Definitions: <b>11-12</b>, <b>14-15</b>, <b>17-18</b>, <b>20-21</b>, 
           <br><br>
 
-          Invocations: 24, <b>15</b>, 25, <b>15</b>, 26, 27, <b>18</b>, 28, <b>21</b>, 29, <b>15</b>
+          Invocations: 23, <b>12</b>, 24, <b>15</b>, 25, <b>15</b>, 26, 27, <b>18</b>, 28, <b>21</b>, 29, <b>15</b> -->
+          <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax">Definitions</th>
+    <th class="tg-0lax">11-12</th>
+    <th class="tg-0lax">14-15</th>
+    <th class="tg-0lax">17-18</th>
+    <th class="tg-0lax">20-21</th>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax"></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">Actions</td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">23</span></td>
+    <td class="tg-0lax">(11)-12</td>
+    <!-- <td class="tg-0lax"><span style="font-weight:700;font-style:normal">(11)-12</span></td> -->
+    <td class="tg-0lax">24</td>
+    <td class="tg-0lax">(14)-15</td>
+    <td class="tg-0lax">25</td>
+    <td class="tg-0lax">(14)-15</td>
+    <td class="tg-0lax">26</td>
+    <td class="tg-0lax">27</td>
+    <td class="tg-0lax">(17)-18</td>
+    <td class="tg-0lax">28</td>
+    <td class="tg-0lax">(20)-21</td>
+    <td class="tg-0lax">29</td>
+    <td class="tg-0lax">(14)-15</td>
+  </tr>
+</tbody>
+</table>
         </div>
       </div>
 
@@ -442,6 +489,7 @@ FCA()
               </p>
             </details>
           </div>
+        </div>  
 
 
         <br><br>
@@ -509,17 +557,17 @@ FCA()
         <br>
         In this example, we could group the operations like this:
         \[
-          z = 3 * (\overbrace{
+          z = \underbrace{3 * (\overbrace{
             9 + 
             \underbrace{8/4}_\text{this first} 
             +
             5
-           }^\text{add 3 elements})
+           }^\text{add 3 elements}) }_\text{Multiply}
          \]
         <br><br>
 
         In Python, indentation indicates the begining and end of a section block.
-        <br>
+        <br><br>
         It is structured like a piece of text where you indent once every time you start a new section or sub-section:
         <br><br>
         <center>
@@ -547,7 +595,7 @@ FCA()
           <li>add a parenthesis pair to indicate the <b>input parameter section</b></li>
           <li>inside the parens, add a coma-sepparated list of input parameters</li>
           <li>add a colon <tt>(&nbsp; : &nbsp;)</tt> to indicate the start of the function body</li>
-          <li><b>indent once</b> (2 or 4 spaces is standard)</li>
+          <li><b>indent once </b> <a href="https://www.youtube.com/watch?v=SsoOG6ZeyUI">(2 or 4 <b>spaces</b> is standard, and it can be done with a single <b>tab</b>)</a> </li>
           <li>add the body of the function</li>
           <li>IF the function is expected to <b>return</b> something, add the keyword <b><tt>retrn</tt></b>, followed by the value or variable you wish to return</li>
         </ol>
@@ -573,7 +621,7 @@ FCA()
 
         <span style='color:#06a015'><b><big>Activity 3</big></b></span> [2 minutes]: <br>
         <div class="mx-lg-5">
-          Note that, if you put this in a program and run it (Try the <b>Scratch Pad</b> Project in Replit), it does nothing!
+          Note that, if you put this in a program and run it (Try the <a href="https://replit.com/team/csc111f21s3/Scratchpad">Scratch Pad</a> Project in Replit), it does nothing!
         <br>
         <b>Why?</b>
         <br><br>
@@ -638,7 +686,7 @@ append(<span style="color: #0000DD; font-weight: bold">2</span>)
         <div class="mx-lg-5">
           Write and run this code in replit.
           <br><br>
-          Now, let;s try it out in the Python Tutor!: <a href="https://pythontutor.com/visualize.html#code=%23%20function%20definition%0Adef%20append%28num%29%3A%0A%20%20print%28%22I%20got%20this%20input%3A%22,%20end%3D%22%20%22%29%0A%20%20print%28num%29%0A%0A%23%20statement%20area%0Aappend%282%29%0Aprint%28%22done!%22%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="blank">here</a>
+          Now, let's try it out in the Python Tutor!: <a href="https://pythontutor.com/visualize.html#code=%23%20function%20definition%0Adef%20append%28num%29%3A%0A%20%20print%28%22I%20got%20this%20input%3A%22,%20end%3D%22%20%22%29%0A%20%20print%28num%29%0A%0A%23%20statement%20area%0Aappend%282%29%0Aprint%28%22done!%22%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="blank">here</a>
           <br><br>
           There are several things to notice here, which we will discuss more deeply next class.
         </div>
