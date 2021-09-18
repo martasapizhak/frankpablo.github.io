@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSC 250  Theory of Computation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>    
+    <style>
+      .img-max {
+        max-width: 500px;
+        width:50%;
+      }
+
+      #HIDDENDIV {
+        display: none;
+      }
+
+      #HIDDENDIV.show  {
+        display: block;
+      }
+
+      @import url('https://fonts.googleapis.com/css?family=Inter|Dosis&display=swap');
+
+      /* Crucial */
+      .highlight {
+        background-color: #EEF43B;
+          padding-right: 0px;
+          padding-left: 0px;
+      }
+
+
+      /* Just for styling */
+      /*body {
+        font-family: 'Inter', sans-serif;
+      }*/
+
+      /*.container {
+        box-sizing: border-box;
+        margin: 0 auto;
+        max-width: 960px;
+        padding: 0 2%;
+      }*/
+
+      .search-container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto 20px auto;
+        max-width: 450px;
+        padding: 0 2%;
+      }
+
+      label {
+        color: #535353;
+        font-family: 'Dosis', sans-serif;
+        font-size: 14px;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+      }
+
+      input {
+        background: #fff;
+        border: 1px solid #535353;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        height: 38px;
+        line-height: 38px;
+        outline: none;
+        padding: 0 10px;
+        transition: all 0.5s;
+        width: 100%;
+      }
+
+      input:focus {
+        border: 1px solid #3a5bd3;
+        box-shadow: 0 0 4px 0 #7d90de;
+      }
+
+      blockquote {
+        background-color: #f1f1f1;
+        border-radius: 0 4px 4px 0;
+        color: #515151;
+        font-style: italic;
+        line-height: 1.7;
+        margin: 0;
+        padding: 20px 40px 20px 20px;
+        position: relative;
+      }
+
+      blockquote::before {
+        color: #ccc;
+        content: '”';
+        font-size: 80px;
+        position: absolute;
+        right: 30px;
+        top: -20px;
+      }
+
+      figcaption {
+        color: #aaa;
+        font-size: 14px;
+        font-style: italic;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        text-align: center;
+      }
+
+    </style>
+
+
+
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <!-- <img class="float-right" src="../../images/gw_primary_logo.png" alt="GWU" height="160"> -->
+      <img class="float-right" src="../../../images/SmithLogoStack-cmyk.png" alt="SmithLogo" height="120">
+      <h1 class="display-3 m-0">CSC 250</h1>
+      <p class="lead">Theory of Computation</p>
+      <p class="lead">Smith Computer Science </p>
+    </div>
+
+    <div class="container py-0"><!-- was 1-->
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info <span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">TBD 1</a>
+                <a class="dropdown-item" href="#">TBD 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project (if any)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Discord</a>
+                <a class="dropdown-item" href="#">Moodle</a>
+                <a class="dropdown-item" href="#">Repl.it</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Previous Module</a>
+              </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes05.html">Next Module</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <br><br>
+
+
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 04: <br>
+      Finite Automata</h1>
+      <p>
+        <br>
+      </p>
+      <h2>Outline </h2>
+
+      This class we'll discuss:
+      <ul>
+        <li>Recap: RegEx (colorful example)</li>
+        <li>Finite Automata (AKA Finite State Machines)</li>
+        <li>Formal Definitions</li>
+        <li>FA properties</li>
+      </ul>
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Recap: RegExes  
+      </h2>
+
+      <p>
+        Let's go over the following examples:
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/regexColors.png" alt="Regex Colors!" style="width:80%">
+        <br><br>
+
+        How about the Languages generated?
+        <br><br>
+        Regular Languages are more powerful than Finite Languages (can encompass more)
+        <br>
+          <img class="img-fluid" src="../figures/lecture03/regLangs.png" alt="more descriptive power!" style="width:50%">
+        </p>
+        <br><br>
+        <center>Still confused about RExs? Go to Office Hours with Winnie!! (and with me)</center>
+        
+      </p>
+      
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Algorithms: Code, RegExes, and Diagrams   
+      </h2>
+
+      <p>
+        As we saw above, a n algorithm can be <i>encoded</i> as:
+        <ol>
+          <li>RegEx</li>
+          <li>(pseudo) Code </li>
+        </ol>
+        But we know that a piece of code can also be drawn using things like a "Flow Diagram"!
+        <br><br>
+        In this section, we'll use a special type of diagram called a <b>State Diagram</b>.
+
+        <br><br>
+
+        <h3>State Diagram</h3>
+
+        A State diagram looks like this:
+
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/stateDiagram.png" alt="not a map" style="width:80%">
+        <br><br><br><br>
+
+        <h3>Finite Automaton AKA: Finite State Machine (FSM)</h3>
+
+        
+        <ol>
+          <li>Finite number of states</li>
+          <li>Follows Rules that have been programmed beforehand</li>
+        </ol>
+
+
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/FSM.png" alt="phsm" style="width:80%">
+        <br><br>
+
+        <h3>Operation Examples</h3>
+
+        <h4>Example 01: Processing a String</h4>
+
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/processingString01.png" alt="proc 1!" style="width:80%">
+        <br><br>
+
+        <h4>Example 02: Processing a String</h4>
+
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/processingString02.png" alt="proc 2!" style="width:80%">
+        <br><br>
+
+        <h4>Example 03: Processing a String</h4>
+
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/processingString03.png" alt="proc 3!" style="width:80%">
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          Try to build your own machine. One that "Accepts" this set:
+          <br><br>
+          <img class="img-fluid" src="../figures/lecture04/zeroFollowedBy1.png" alt="zero 1 zero 1!" style="width:80%">
+          <br><br>
+
+          <div class="mx-lg-5">
+            <details>
+              <summary>(Wait; then Click)<br><br></summary>
+              <p>
+                <br><br>
+                <img class="img-fluid" src="../figures/lecture04/zeroFollowedBy1FSM.png" alt="0 one 0 one!" style="width:80%">
+                <br><br>
+              </p>
+            </details>
+          </div>
+        </div>  
+
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Alphabets and languages  
+      </h2>
+
+      <p>
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/alphabetsAndLangs.png" alt="Alphabeast!" style="width:80%">
+        <br><br>
+
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Formal Definition  
+      </h2>
+
+      <p>
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/formalDef.png" alt="very formal" style="width:80%">
+        <br><br>
+
+        <h3>Our Last Example:</h3>
+
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/defLastExample.png" alt="DEFINE!" style="width:80%">
+        <br><br>
+
+        <h3>Operators in FSMs: OR</h3>
+
+        How might we handle a language that contains an or?
+        <br><br>
+        Example:
+
+        <center>{w|w doesn’t contain either 00 or 11 as a substring}</center>
+
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/orFSM.png" alt="ORRRRRR!" style="width:80%">
+        <br><br>
+
+        Let's try one basic example:
+
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/exampleString00.png" alt="Yak is a good dog!" style="width:80%">
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          Explain the sequence of states for these words:
+          <ul>
+            <li>
+              101010
+            </li>
+            <li>
+              010110
+            </li>
+            <li>
+              110011
+            </li>
+          </ul>
+        </div>  
+
+        <br><br>
+
+
+        
+        <span style='color:#06a015'><b><big>Activity 3</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          Answer the following questions:
+
+          <div class="mx-lg-5">
+            <li>What is the descriptive power of Finite Automata?</li>
+            <details>
+              <summary>(Wait; then Click)<br><br></summary>
+              <br><br>
+                We need to compare it with regular expressions... we'll do that bit by bit.
+              <br><br>
+                <img class="img-fluid" src="../figures/lecture03/regLangs.png" alt="Reg Lang descriptive power!" style="width:50%">
+            </details>
+            <br><br>
+
+            <li>Are there languages that <b>Cannot</b> be described by a finite automaton?</li>
+            <br>
+            (try to come up with a counter example)
+            <details>
+              <summary>(Wait; then Click)<br><br></summary>
+              <br><br>
+                YES! NON Regular Languages!
+              <br><br>
+                <img class="img-fluid" src="../figures/lecture04/nonRegularExample.png" alt="Can't do it!" style="width:100%">
+              <br><br>
+            </details>
+          </div>
+        </div>  
+
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>
+        Useful Properties  
+      </h2>
+
+      <p>
+        These are some properties that can help you deduce, generalize, or analyze FSMs with respect to their RegEx and Regular Languages.
+        <br><br>
+
+        <h3>Complement</h3>
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/complement.png" alt="complement!" style="width:80%">
+        <br><br><br><br>
+
+        <h3>Intersection</h3>
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/intersection.png" alt="interX!" style="width:80%">
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 4</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          How would you prove this (by construction)?
+
+          <div class="mx-lg-5">
+            <details>
+              <summary>(Wait; then Click)<br><br></summary>
+              <br><br>
+                <ol>
+                  <li>run both machines “in parallel”</li>
+                  <li>accept <b>if (and only if) both</b> reach an accepting state</li>
+                </ol>              
+            </details>
+            <br><br>
+          </div>
+        </div>  
+
+        Example:
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/intersectionExample.png" alt="interX Exmpl!" style="width:50%">
+        <br><br>
+
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/intersectionSolution.png" alt="inX Exmpl!" style="width:50%">
+        <br><br>
+
+
+        <br><br>
+
+        <h4>Intersection: General Rule</h4>
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/intersectionRule.png" alt="inX rule!" style="width:100%">
+        <br><br>
+
+
+
+        <br><br><br><br>
+
+        <h3>Union</h3>
+
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/union.png" alt="uni | on!" style="width:80%">
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 5</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          How would you prove this (by construction)?
+
+          <div class="mx-lg-5">
+            <details>
+              <summary>(Wait; then Click)<br><br></summary>
+              <br><br>
+                <ol>
+                  <li>run both machines “in parallel”</li>
+                  <li>accept if <b>either</b> reach an accepting state</li>
+                </ol>              
+            </details>
+            <br><br>
+          </div>
+        </div>  
+
+        Example:
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/unionExample.png" alt="union Exmpl!" style="width:50%">
+        <br><br>
+
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/unionSolution.png" alt="union Sol" style="width:50%">
+        <br><br>
+
+
+        <br><br>
+
+        <h4>Intersection: General Rule</h4>
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture04/unionRule.png" alt="union rule" style="width:100%">
+        <br><br>
+
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h4>Next Class: DFA vs NFA vs RE!!</h4>
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h4>Before next class (Wednesday 09/22)</h4>
+      <br>      
+      <b>[Due for everyone]</b>
+      <div class="mx-5">
+       Finish Problem Set 1 (Come to OHs if you want help!!)
+      </div> 
+      <br>
+      <b>[Optional]</b> 
+      <div class="mx-5">
+        Read the next Lecture in advance!
+      </div>
+      <br><br>
+
+
+
+
+
+  
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes03.html">Previous Module</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes05.html">Next Module</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+   
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+<!--     <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script> -->
+
+
+  </body>
+</html>
