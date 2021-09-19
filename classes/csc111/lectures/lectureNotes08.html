@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../../../images/pabloFaceIcon.png">
+    <title>CSC 111 Introduction to Computer Science Through Programming</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4aded636f8.js" crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+      .img-max {
+        max-width: 500px;
+        width:50%;
+      }
+    
+      .card {
+          /*width: 130px;*/
+          /*height: 195px;*/
+          position: relative;
+          display: inline-block;
+      }
+      .card .img-top {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 99;
+      }
+      .card:hover .img-top {
+          display: inline;
+      }
+
+      #HIDDENDIV {
+        display: none;
+      }
+
+      #HIDDENDIV.show  {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-1">
+      <!-- <img class="float-right" src="../../images/gw_primary_logo.png" alt="GWU" height="160"> -->
+      <img class="float-right" src="../../../images/SmithLogoStack-cmyk.png" alt="SmithLogo" height="120">
+      <h1 class="display-3 m-0">CSC 111</h1>
+      <p class="lead">Introduction to Computer Science Through Programming</p>
+      <p class="lead">Smith Computer Science </p>
+    </div>
+
+    <div class="container py-0"><!-- was 1-->
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+        <a class="navbar-brand" href="../../../../index.html">
+          <img src="../../../images/pabloFaceIcon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarFive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../../../index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-lg-2" href="../class-info.html">Class Info <span class="sr-only">(current page)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../schedule.html">Schedule and Lectures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="../labs.html">Labs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Homework
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="#">HW Assignments</a>
+                <a class="dropdown-item" href="#">TBD 1</a>
+                <a class="dropdown-item" href="#">TBD 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Final Project (if any)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools and Links
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Discord</a>
+                <a class="dropdown-item" href="#">Moodle</a>
+                <a class="dropdown-item" href="#">Repl.it</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">School Calendar</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes06.html">Previous Module</a>
+              </li>
+            <li class="nav-item ">
+              <a class="nav-link mx-lg-2" href="./lectureNotes08.html">Next Module</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container  pb-5">
+      <div class="col-xs-0 col-md-2"></div>
+      <div class="col-xs-12 col-md-10">
+      <br><br>
+
+
+      <!-- CONTENT BELOW -->
+
+
+      <h1>Lecture Notes 08: Conditionals and Operators</h1>
+      <p>
+        <br>
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>The IF statement</h2>
+
+      <p>
+
+        An <b>If block</b> is a piece of code that will be executed only when a condition (a boolean expression) is evaluated as <b>True</b>.
+        <br><br>
+
+        This is what it looks like:
+
+        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">if</span> <span style="color: #333333">&lt;</span>condition<span style="color: #333333">&gt;</span> :
+    <span style="color: #333333">&lt;</span>Block To Execute<span style="color: #333333">&gt;</span>
+</pre></div>
+
+        <br><br>
+        Notice the main parts:
+        <br><br>
+        <ul>
+          <li>The Keyword <b>if</b></li>
+          <li>a condition: expression that evaluates to True or False</li>
+          <li>A colon (&nbsp; : &nbsp;)</li>
+          <li>The block of code that is executed if the condition is true</li>
+        </ul>
+        <br><br>
+
+        An Example:
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  </pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># before the if</span>
+x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">2</span>
+
+<span style="color: #888888"># if statement</span>
+<span style="color: #008800; font-weight: bold">if</span> x <span style="color: #333333">&gt;</span> <span style="color: #0000DD; font-weight: bold">0</span>:
+  <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;positive&#39;</span>) <span style="color: #888888"># if body</span>
+
+<span style="color: #888888"># after the if</span>
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;done&#39;</span>)
+</pre></td></tr></table></div>
+
+        <br><br>
+
+        <h3>Comparison Operators</h3>
+        <br><br>
+
+        The condition inside the if statement <b><tt>x < 2</tt></b> can be read as: 
+        <br>
+        <b><tt>IF x has a value that is smaller than 2, resolve to True; False otherwise</tt></b>.
+        <br><br>
+
+        The basic numeric comparison operators are:
+        <br>
+        <ul>
+          <li>\(<\): less than &nbsp; example: <b><tt>x < 2</tt></b></li>
+          <li>\(\leq\): less or equal than &nbsp; example: <b><tt>x &leq; 2</tt></b></li>
+          <li>\(>\): greater than &nbsp; example: <b><tt>x > 2</tt></b></li>
+          <li>\(\geq\): greater or equal than &nbsp; example: <b><tt>x &geq; 2</tt></b></li>
+        </ul>
+
+        <br><br>
+        Also, you'll notice that in the example, the if statement is sandwitched between two statements. 
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          What is the order of operations executed in this code?
+          <details>
+            <summary>(Wait; then Click)<br><br></summary>
+              In this case, it is simple: 2, 5, 6, 9
+          </details>
+          <br><br>
+          What is the order of operations if we change the value assigned to <tt>x</tt> to <tt>-1</tt>?
+          <details>
+            <summary>(Wait; then Click)<br><br></summary>
+              It <b>skips the body!!</b>: 2, 5, 9
+          </details>
+          <br><br>
+          
+        </div>
+
+        <br>
+
+        <h3>Equality</h3>
+        <br><br>
+
+        Asking the question:
+        <br>
+        <b><tt>Is this equal to that</tt></b> is tricky, since we are already using the equals sign (&nbsp;  = &nbsp; ) to indicate an <b>assignment</b>.
+
+        <br><br>
+
+        This is why we need to have a different way of checking for equality.
+        <br><br>
+
+        The symbols we use to ask for equality are the <b>double equal signs</b> (&nbsp;  == &nbsp; ).
+        <br><br>
+        For example:
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># before the if</span>
+x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">2</span>
+
+<span style="color: #888888"># if statement</span>
+<span style="color: #008800; font-weight: bold">if</span> x <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">2</span>:
+  <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;it is a two&#39;</span>) <span style="color: #888888"># if body</span>
+
+<span style="color: #888888"># after the if</span>
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;done&#39;</span>)
+</pre></div>
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          What hapens if we use a single equals for the comparison?
+        </div>      
+
+        <br><br>
+        <h3>Difference</h3>
+        <br><br>
+
+        Asking the question:
+        <br>
+        <b><tt>Is this different to that</tt></b> uses the sign (&nbsp;  != &nbsp; ).  
+
+
+        <br><br>
+
+        Example:
+
+        <br><br>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># before the if</span>
+x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">2</span>
+
+<span style="color: #888888"># if statement</span>
+<span style="color: #008800; font-weight: bold">if</span> x <span style="color: #333333">!=</span> <span style="color: #0000DD; font-weight: bold">0</span>:
+    <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;x is not zero&#39;</span>)
+
+<span style="color: #888888"># after the if</span>
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;done&#39;</span>)
+</pre></div>
+
+
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 3</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          Write an example, using the scratch pad, where:
+          <ol>
+            <li>The program asks for an input integer</li>
+            <li>The program indicates whether the integer is positive, negative, or Zero</li>
+          </ol>
+        </div>  
+
+        <br><br>
+
+        <h3>Complex expressions</h3>
+        <br><br>
+
+        The condition can be anything that evaluates to True or False.
+        <br><br>
+        For example, the following is a valid condition:
+        <br><br>
+        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># before the if</span>
+x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">6</span>
+
+<span style="color: #888888"># complex condition</span>
+<span style="color: #008800; font-weight: bold">if</span> x<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">2</span> <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">0</span>:
+    <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;x is divisible by 2&#39;</span>)
+
+<span style="color: #888888"># after the if</span>
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;done&#39;</span>)
+</pre></div>
+
+
+
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>The IF-ELSE statement</h2>
+
+      <p>
+        In the example above, we have three options that <i>can be executed</i>.
+        <br><br>
+        The nature of the problem makes it so that one of them always is (a number has to be <0, 0, or >= than 0).
+        <br><br>
+        However, there are problems where a sequence of if statements might not be ideal, because there is always        
+        a default option: <b>none of them get executed!</b>
+
+        <br><br>
+        For example:
+        <br><br>
+
+        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># before the if</span>
+x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">2</span>
+y <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">2</span>
+
+<span style="color: #888888"># if statement</span>
+<span style="color: #008800; font-weight: bold">if</span> x <span style="color: #333333">&lt;</span> y:
+  <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;x is smallest&#39;</span>)
+
+<span style="color: #888888"># another (independent) if statement</span>
+<span style="color: #008800; font-weight: bold">if</span> x <span style="color: #333333">&gt;</span> y:
+  <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;y is smallest&#39;</span>)
+
+<span style="color: #888888"># after the if</span>
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;done&#39;</span>)
+</pre></div>
+
+
+
+        <br><br><br><br>
+
+        If we want one of two options to be executed, we can use an <b><tt>IF-Else</tt></b> statement.
+        <br><br>
+        This is what it looks like:
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">if</span> <span style="color: #333333">&lt;</span>condition<span style="color: #333333">&gt;</span> :
+    <span style="color: #333333">&lt;</span>Block To Execute<span style="color: #333333">&gt;</span>
+<span style="color: #008800; font-weight: bold">else</span>:
+    <span style="color: #333333">&lt;</span>Alternative Block To Execute<span style="color: #333333">&gt;</span>
+</pre></div>
+        <br><br>
+
+        Notice that the else has no condition.
+        <br>
+        It is the alternative that gets ecxecuted when the <b><tt>IF</tt></b> block is not.
+
+
+        <br><br>
+
+        This is an example of how to use it:
+        <br><br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># before the if</span>
+x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">2</span>
+y <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">2</span>
+
+<span style="color: #888888"># if-else statement</span>
+<span style="color: #008800; font-weight: bold">if</span> x <span style="color: #333333">&lt;</span> y:
+  <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;x is smallest&#39;</span>)
+<span style="color: #008800; font-weight: bold">else</span>:
+  <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;y is smaller or equal than x&#39;</span>)
+
+<span style="color: #888888"># after the if</span>
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;done&#39;</span>)
+</pre></div>
+
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 4</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          Write an example, using the scratch pad, where:
+          <ol>
+            <li>The program asks for an input integer</li>
+            <li>The program indicates whether the integer is greater than zero or not</li>
+          </ol>
+        </div> 
+
+      </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>The IF-ELIF-ELSE statement</h2>
+
+      <p>
+        What happens when we want alternative paths, <b>each with its own condition</b>?
+        <br><br>
+        It turns out that you can combine IF and IF-ELSE statements to do anything, but to make things easier, 
+        <br>
+        Python provides the if-elif-else block:
+        <br><br>
+        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">if</span> <span style="color: #333333">&lt;</span>condition<span style="color: #333333">&gt;</span> :
+    <span style="color: #333333">&lt;</span>Block To Execute<span style="color: #333333">&gt;</span>
+<span style="color: #008800; font-weight: bold">elif</span> <span style="color: #333333">&lt;</span>condition<span style="color: #333333">&gt;</span>:
+    <span style="color: #333333">&lt;</span>Another Block To Execute<span style="color: #333333">&gt;</span>
+<span style="color: #008800; font-weight: bold">else</span>:
+    <span style="color: #333333">&lt;</span>Default Block To Execute<span style="color: #333333">&gt;</span>
+</pre></div>
+        <br><br>
+
+        An example of how to use it:
+
+        <br><br>
+        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># before the if</span>
+x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">2</span>
+y <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">2</span>
+
+<span style="color: #888888"># if-elif-else statement</span>
+<span style="color: #008800; font-weight: bold">if</span> x <span style="color: #333333">&lt;</span> y:
+    <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;x is smallest&#39;</span>)
+<span style="color: #008800; font-weight: bold">elif</span> x <span style="color: #333333">&gt;</span> y:
+    <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;y is smallest&#39;</span>)
+<span style="color: #008800; font-weight: bold">else</span>:
+    <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;x and y are equal&#39;</span>)
+
+<span style="color: #888888"># after the if</span>
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;done&#39;</span>)
+</pre></div>
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 5</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          Try it out in the scratch pad
+          <ol>
+            <li>Then modify it to display who the greatest is</li>
+          </ol>
+        </div> 
+
+
+
+      </p>
+
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Cascading If statements</h2>
+
+      <p>
+        Sometimes, we want sub-conditions to be true before we perform an action.
+        <br><br>
+
+        Think of the following situation:
+        <br><br>
+        A professor issues two assignments <b>X</b> and <b>Y</b>.
+        <br>
+        And the rules for grading are: 
+        <ol>
+          <li>If students flunk <b>X</b> (a passing grade is 60), they need a grade of 80 or above in <b>Y</b> to pass the class (C+)</li>.
+          <li>If students pass <b>X</b>, and if they also get 80 or above in <b>Y</b>, students get a final grade of A (otherwise C+).</li>
+        </ol>
+
+        <br>
+
+        <span style='color:#06a015'><b><big>Activity 6</big></b></span> [4 minutes]: <br>
+        <div class="mx-lg-5">
+          How would we code this using the if blocks (of any kind) seen above?          
+        </div> 
+        
+        <br><br><br>
+
+        The following is an alternative:
+        <br><br>
+
+        <b>We can have conditional statements INSIDE conditional statements</b>
+        <br><br>
+
+        For example, you could have this:
+        <br>
+
+        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># before the if</span>
+x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">6</span>
+
+<span style="color: #888888"># a &quot;nested&quot; conditional</span>
+<span style="color: #008800; font-weight: bold">if</span> x<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">2</span> <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">0</span>:
+    <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;x is divisible by 2&#39;</span>)
+    <span style="color: #008800; font-weight: bold">if</span> x<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">3</span> <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">0</span>:
+        <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;x is divisible by 6&#39;</span>)
+
+<span style="color: #888888"># after the if</span>
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;done&#39;</span>)
+</pre></div>
+
+
+
+        <br><br>
+
+        Let's see a diagram of the solution to the problem shown above:
+        <br><br>
+          <img id="image" class="img-responsive" src="../figures/lecture08/flunkPassA.png" alt="" style="width:80%">
+        <br><br>      
+
+        <span style='color:#06a015'><b><big>Activity 7</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          Write the code for the logic shown in the diagram. Use the scratch pad.
+          <br><br>
+
+
+        </div> 
+        
+
+
+         <!--  <ol>
+            <li>Try it out in the scratch pad</li>
+          </ol> -->
+
+      </p>
+
+      <p><br></p><hr><p><br></p>
+
+      <h2>Forgotten Expressions</h2>
+
+      <p>
+        I forgot to show you some "shorthand" for some arithmetic operations:
+        <br><br>
+
+        <ul>
+          <li><b><tt>+=</tt></b> is an increment operator. <br>
+          Example:
+          <br>
+          Try this example in the <a href="https://pythontutor.com/visualize.html#code=x%20%3D%202%0Ax%2B%3D1%0Aprint%28x%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="blank">Python Tutor</a>          
+          </li>
+          <li><b><tt>-=</tt></b> is a decrement operator. <br>
+          Example:
+          <br>
+          Try this example in the <a href="https://pythontutor.com/visualize.html#code=x%20%3D%202%0Ax-%3D1%0Aprint%28x%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="blank">Python Tutor</a>
+          </li>
+        </ul>
+      </p>
+
+  
+
+      <p><br></p><hr><p><br></p>
+
+      <h4>Before next class (Friday)</h4>
+      <b>[Due for everyone]</b>  ZyBooks Sections 2.5, 2.6, 2.7<br>
+
+      <br><br>
+
+      <b>[Optional]</b> <b><big>TODO</big></b><br>
+
+
+
+  
+      <div class="col-xs-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-1">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Go to the Top</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./lectureNotes06.html">Previous Module</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-lg-2" href="./lectureNotes08.html">Next Module</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+
+   
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- PFB, Added For class Ctrl+C->Ctrl-V deterrence -->
+    <!-- <script type="text/JavaScript">
+     //courtesy of BoogieJack.com
+     function killCopy(e){ return false }
+     function reEnable(){ return true }
+     document.onselectstart=new Function ("return false")
+     if (window.sidebar){
+         document.onmousedown=killCopy
+         document.onclick=reEnable
+     }
+   </script> -->
+  </body>
+</html>
