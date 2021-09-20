@@ -179,7 +179,7 @@
         <h2>Scope</h2>
 
         <p>
-          Scope refers to the "area of influence" of a variable or name.
+          Scope refers to the "<b>area of influence</b>" of a variable or name.
           <br>
           It is the block of code in which it is "alive" and where it could be used.
           <br><br>
@@ -199,36 +199,36 @@
 
           Let's see another example:
           <br><br>
-          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1  
-   2  
-   3  
-   4  
-   5  
-   6  
-   7  
-   8  
-   9  
-  10  
-  11  
-  12  
-  13  
-  14  
-  15  </pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># This is the Definition Section</span>
-  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">addThree</span>(x):
-      <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;the input was: &#39;</span> <span style="color: #333333">+</span> <span style="color: #007020">str</span>(x) ) <span style="color: #888888"># concatenation</span>
-      y <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>       <span style="color: #888888"># not necessary </span>
-      y <span style="color: #333333">=</span> x <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">3</span>
-      <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;I will return:&#39;</span>, y) <span style="color: #888888"># comma notation</span>
-      <span style="color: #008800; font-weight: bold">return</span> y
+        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1  
+ 2  
+ 3  
+ 4  
+ 5  
+ 6  
+ 7  
+ 8  
+ 9  
+10  
+11  
+12  
+13  
+14  
+15  </pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># This is the Definition Section</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">addThree</span>(x):
+    <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;the input was: &#39;</span> <span style="color: #333333">+</span> <span style="color: #007020">str</span>(x) ) <span style="color: #888888"># concatenation</span>
+    y <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>       <span style="color: #888888"># not necessary </span>
+    y <span style="color: #333333">=</span> x <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">3</span>
+    <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;I will return:&#39;</span>, y) <span style="color: #888888"># comma notation</span>
+    <span style="color: #008800; font-weight: bold">return</span> y
 
-  <span style="color: #888888"># This is the Action Section</span>
-  x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">7</span>
-  <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;The value of x before </span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\&#39;</span><span style="background-color: #fff0f0">addThree</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\&#39;</span><span style="background-color: #fff0f0"> is:&#39;</span>, x)
-  x <span style="color: #333333">=</span> addThree(x)
-  <span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;The value of x after </span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\&#39;</span><span style="background-color: #fff0f0">addThree</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\&#39;</span><span style="background-color: #fff0f0"> is:&#39;</span>, x)
-  <span style="color: #888888"># Was it the value you expected?</span>
-  <span style="color: #888888"># Could I print y here?</span>
-  </pre></td></tr></table></div>
+<span style="color: #888888"># This is the Action Section</span>
+x <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">7</span>
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;The value of x before </span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\&#39;</span><span style="background-color: #fff0f0">addThree</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\&#39;</span><span style="background-color: #fff0f0"> is:&#39;</span>, x)
+x <span style="color: #333333">=</span> addThree(x)
+<span style="color: #007020">print</span> (<span style="background-color: #fff0f0">&#39;The value of x after </span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\&#39;</span><span style="background-color: #fff0f0">addThree</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\&#39;</span><span style="background-color: #fff0f0"> is:&#39;</span>, x)
+<span style="color: #888888"># Was it the value you expected?</span>
+<span style="color: #888888"># Could I print y here?</span>
+</pre></td></tr></table></div>
 
 
           <br><br>
@@ -262,7 +262,7 @@
           The global scope corresponds to the maximum scope of the python program (the most external one).
           <br><br>
 
-          creating variabls at this level let;s <b>any other part of the program interact with it</b>.
+          creating variabls at this level let's <b>any other part of the program interact with it</b>.
 
           <br><br>
 
@@ -281,8 +281,10 @@
           ZyBooks mentions and uses them, but we'll try to avoid using them as we learn more about functions and scope.
 
           <br><br>
+          The general rule is: <b>A variable's scope is that of the innermost function, class or module in which they're assigned.</b>
+          <br><br>
 
-          We will see more details about <b>scope</b> when we see <b>Conditionals</b> (below).
+          We will see more details about <b>scope</b> when we see <b>Conditionals</b> (next class).
 
         </p>
 

@@ -196,7 +196,7 @@
       <!-- CONTENT BELOW -->
 
 
-      <h1>Lecture Notes 04: <br>
+      <h1>Lecture Notes 05: <br>
       DFAs, NFAs, and REs</h1>
       <p>
         <br>
@@ -235,7 +235,7 @@
         <img class="img-fluid" src="../figures/lecture04/setDif.png" alt="uni | on!" style="width:80%">
         <br><br>
 
-        <span style='color:#06a015'><b><big>Activity 6</big></b></span> [2 minutes]: <br>
+        <span style='color:#06a015'><b><big>Activity 1</big></b></span> [2 minutes]: <br>
         <div class="mx-lg-5">
           How would you prove this (draw the Venn Diagram and use previous properties)?
 
@@ -259,14 +259,9 @@
           </div>
         </div>  
 
+        <br><br>
 
-      <p><br></p><hr><p><br></p>
 
-      <h2>
-        FA Properties
-      </h2>
-
-      <p>
 
         <h3>Concatenation</h3>
 
@@ -274,7 +269,7 @@
         <img class="img-fluid" src="../figures/lecture04/Concatenation.png" alt="con Kat" style="width:80%">
         <br><br>
 
-        <span style='color:#06a015'><b><big>Activity 7</big></b></span> [2 minutes]: <br>
+        <span style='color:#06a015'><b><big>Activity 2</big></b></span> [2 minutes]: <br>
         <div class="mx-lg-5">
           How would you prove this (by construction)?
 
@@ -305,6 +300,37 @@
         <br><br>
         And we can't do that yet.
 
+        <br><br>
+
+        An example of the logic and the issue: 
+        <ol>
+          <li>Say we have: \(M_1\): all strings with an odd number of 1's</li>
+          <li>And \(M_2\): all strings with alternating 0s and 1s</li>
+          <li>Is \(L(M_3) = L(M_1)\circL(M_2)\) FA-recognizable? </li>
+          <li>Say we have the string \(101001101010101\)</li>
+          <li>is this recognizable if we split the string into \(x_1\) and \(x_2\)</li>
+          <li>such that \(M_1\) recognizes \(x_1\), and</li>
+          <li>such that \(M_2\) recognizes \(x_2\)</li>
+          <li>What happens if \(x_1 = 101001101\) and \(x_2 = 010101\)?</li>
+          <li>What happens if \(x_1 = 1010011\) and \(x_2 = 01010101\)?</li>
+        </ol>
+
+
+        <br><br>
+
+
+
+        <h3>Kleene Star</h3>
+
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture05/KleeneClosure.png" alt="con Kat" style="width:80%">
+        <br><br>
+
+        <ol>
+          <li>Start with FA M_1</li>
+          <li>Build another FA M_2, with L(M_2) = L(M_1 )^∗</li>
+          <li>Same problem as with concatenation: we need to guess…</li>         
+        </ol>
 
       </p>
 
@@ -315,6 +341,10 @@
       </h2>
 
       <p>
+
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture05/Nondeterminism.png" alt="con Kat" style="width:80%">
+        <br><br>
       </p>
 
       <p><br></p><hr><p><br></p>
@@ -324,6 +354,38 @@
       </h2>
 
       <p>
+
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture05/NonDetFormalDef.png" alt="con Kat" style="width:80%">
+        <br><br>
+
+        <span style='color:#06a015'><b><big>Activity 3</big></b></span> [2 minutes]: <br>
+        <div class="mx-lg-5">
+          Why would this be useful at all?
+        </div>
+
+
+        <br><br>
+
+        Remember Union?
+        <br><br>
+
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture05/RememberUnion.png" alt="con Kat" style="width:80%">
+        <br><br>
+
+        With an NFA:
+        <br><br>
+
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture05/UnionExmplWithNFA.png" alt="con Kat" style="width:80%">
+        <br><br>
+
+        So how do NFA's <b>Compute</b>?
+        <br><br>
+        <img class="img-fluid" src="../figures/lecture05/HowNFAsCompute.png" alt="con Kat" style="width:80%">
+        <br><br>
+
       </p>
 
       <p><br></p><hr><p><br></p>
